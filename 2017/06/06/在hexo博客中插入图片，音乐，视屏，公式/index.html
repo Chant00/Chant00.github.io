@@ -113,7 +113,7 @@
 <meta property="og:image" content="http://yoursite.com/media/2.png">
 <meta property="og:image" content="http://yoursite.com/media/image.png">
 <meta property="og:image" content="http://yoursite.com/media/3.png">
-<meta property="og:updated_time" content="2017-06-06T07:25:59.000Z">
+<meta property="og:updated_time" content="2017-06-06T09:02:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在hexo博客中插入图片，音乐，视屏，公式">
 <meta name="twitter:description" content="摘要：如何简洁优雅地在hexo博客中插入图片，音乐，视屏，公式.这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？">
@@ -423,7 +423,7 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h3 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h3><p>如何简洁优雅地在hexo博客中插入图片，音乐，视屏，公式.<br>这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h3 id="摘要："><a href="#摘要：" class="headerlink" title="摘要："></a>摘要：</h3><p>如何简洁优雅地在hexo博客中插入图片，音乐，视屏，公式.<br>这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？</p>
 <a id="more"></a>
 <h3 id="页内跳转"><a href="#页内跳转" class="headerlink" title="页内跳转"></a>页内跳转</h3><p>添加一则小技巧，实现markdown页内跳转。<br>html标签实现</p>
 <pre><code>1.    定义一个锚(id)：&lt;span id=&quot;jump&quot;&gt;跳转到的地方&lt;/span&gt;
@@ -481,7 +481,9 @@
 				}
 			});
 		</script>
-<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><h4 id="1使用标签插入视频"><a href="#1使用标签插入视频" class="headerlink" title="1使用标签插入视频"></a>1使用标签插入视频</h4><h5 id="1-1使用iframe标签插入视频"><a href="#1-1使用iframe标签插入视频" class="headerlink" title="1.1使用iframe标签插入视频"></a>1.1使用iframe标签插入视频</h5><p>右键视频，复制嵌入代码，直接将嵌入代码粘贴进你的markdown文章就OK啦。<br><img src="/media/3.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/xqf2DJgucsU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><h4 id="1使用标签插入视频"><a href="#1使用标签插入视频" class="headerlink" title="1使用标签插入视频"></a>1使用标签插入视频</h4><h5 id="1-1使用iframe标签插入视频"><a href="#1-1使用iframe标签插入视频" class="headerlink" title="1.1使用iframe标签插入视频"></a>1.1使用iframe标签插入视频</h5><p>右键视频，复制嵌入代码，直接将嵌入代码粘贴进你的markdown文章就OK啦。<br><img src="/media/3.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;https://www.youtube.com/embed/xqf2DJgucsU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
+<p>此方法的成败与hexo主题有关，在本主题下加载嵌入失败，在别的主题下，比如<a href="https://chant01.github.io/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/" target="_blank" rel="external">maupassant</a>成功。</p>
 <iframe width="854" height="480" src="https://www.youtube.com/embed/xqf2DJgucsU" frameborder="0" allowfullscreen></iframe>
 
 <h5 id="1-2使用embed标签插入视屏"><a href="#1-2使用embed标签插入视屏" class="headerlink" title="1.2使用embed标签插入视屏"></a>1.2使用embed标签插入视屏</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;embed height=&quot;415&quot; width=&quot;544&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;//static.hdslb.com/miniloader.swf&quot; flashvars=&quot;aid=8506694&amp;page=1&quot; pluginspage=&quot;//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&quot;&gt;&lt;/embed&gt;</div></pre></td></tr></table></figure>
