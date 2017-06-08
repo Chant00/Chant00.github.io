@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Bigdata,Hive,Hbase," />
+  <meta name="keywords" content="概率论,先验概率,后验概率," />
 
 
 
@@ -101,18 +101,21 @@
 
 
 
-<meta name="description" content="从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。">
+<meta name="description" content="当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。概率论的神奇之处在于，它居然能从不确定性中找到确定性。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HIVE和HBASE区别">
-<meta property="og:url" content="http://chant00.com/2017/06/06/2017-06-06/index.html">
+<meta property="og:title" content="概率论迷思">
+<meta property="og:url" content="http://chant00.com/2017/06/07/2017-06-07/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。">
-<meta property="og:image" content="http://chant00.com/media/hiveHbase.jpg">
-<meta property="og:updated_time" content="2017-06-06T07:39:23.000Z">
+<meta property="og:description" content="当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。概率论的神奇之处在于，它居然能从不确定性中找到确定性。">
+<meta property="og:image" content="http://chant00.com/media/14968900682614.jpg">
+<meta property="og:image" content="http://chant00.com/media/14968901016340.jpg">
+<meta property="og:image" content="http://chant00.com/media/14968897485952.jpg">
+<meta property="og:image" content="http://chant00.com/media/14969063400963.jpg">
+<meta property="og:updated_time" content="2017-06-08T08:51:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HIVE和HBASE区别">
-<meta name="twitter:description" content="从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。">
-<meta name="twitter:image" content="http://chant00.com/media/hiveHbase.jpg">
+<meta name="twitter:title" content="概率论迷思">
+<meta name="twitter:description" content="当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。概率论的神奇之处在于，它居然能从不确定性中找到确定性。">
+<meta name="twitter:image" content="http://chant00.com/media/14968900682614.jpg">
 
 
 
@@ -140,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/2017/06/06/2017-06-06/"/>
+  <link rel="canonical" href="http://chant00.com/2017/06/07/2017-06-07/"/>
 
 
 
 
 
-  <title>HIVE和HBASE区别 | Chant</title>
+  <title>概率论迷思 | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +319,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/06/2017-06-06/">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/07/2017-06-07/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chant">
@@ -333,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HIVE和HBASE区别</h1>
+          <h1 class="post-title" itemprop="name headline">概率论迷思</h1>
         
 
         <div class="post-meta">
@@ -345,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T14:45:30+08:00">
-                2017-06-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-07T10:58:19+08:00">
+                2017-06-07
               </time>
             
 
@@ -368,8 +371,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">Bigdata</span>
+                  <a href="/categories/重读概率论/" itemprop="url" rel="index">
+                    <span itemprop="name">重读概率论</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/重读概率论/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
                   </a>
                 </span>
 
@@ -386,7 +400,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/06/2017-06-06/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/06/07/2017-06-07/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -417,41 +431,46 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p><img src="/media/hiveHbase.jpg" alt="hiveHbase"><br>从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。<br>概率论的神奇之处在于，它居然能从不确定性中找到确定性。</p>
 <a id="more"></a>
-<p>如果英语不错的话，请直接跳到<a href="#jump">英文原版</a></p>
-<h3 id="1-两者分别是什么？"><a href="#1-两者分别是什么？" class="headerlink" title="1. 两者分别是什么？"></a>1. 两者分别是什么？</h3><blockquote>
-<p>Apache Hive</p>
-</blockquote>
-<p>是一个构建在Hadoop基础设施之上的数据仓库。通过Hive可以使用HQL语言查询存放在HDFS上的数据。HQL是一种类SQL语言，这种语言最终被转化为Map/Reduce. <strong>虽然Hive提供了SQL查询功能，但是Hive不能够进行交互查询–因为它只能够在Haoop上批量的执行Hadoop。</strong></p>
+<p>本文不教科书，只是阐述我的观点和思考，如有谬误，欢迎讨论或指正。</p>
+<h3 id="一些有趣的观点："><a href="#一些有趣的观点：" class="headerlink" title="一些有趣的观点："></a>一些有趣的观点：</h3><p>一个事情有N种发生的可能性，我们不能确信哪种会发生，是因为我们不能控制结果的发生，影响结果的许多因素不在我们的支配范围之内，这些因素影响结果的机理或者我们不知道，或者太复杂以至于超出了我们大脑或电脑的运算能力。比如：我们不确定掷硬币得到正面或反面，是因为我们的能力不足以用一些物理方程来求解这个结果。再比如：你不能断定你期末能考88分，因为出题、阅卷的不是你。</p>
 <blockquote>
-<p>Apache HBase</p>
+<p>对于未发生之事，我们无法掌握其所有参数或无法计算。对于已经发生之事，事情都已经发生了，结果已定，也会因为掌握的信息不全而产生所谓概率。<br>即过去发生的事情虽然事实上是确定的，但因为我们的无知，它成了随机的。</p>
 </blockquote>
-<p>是一种Key/Value系统，一种运行于HDFS顶层的NoSQL(=Not Only SQL，泛指非关系型的数据库)数据库系统。区别于Hive，HBase具备随即读写功能，是一种面向列的数据库。<strong>和Hive不一样，Hbase的能够在它的数据库上实时运行，而不是运行MapReduce任务。</strong> <em>Hbase被分区为表格，表格又被进一步分割为列簇。列簇必须使用schema定义，列簇将某一类型列集合起来（列不要求schema定义）。例如，“message”列簇可能包含：“to”, ”from” “date”, “subject”, 和”body”. 每一个 key/value对在Hbase中被定义为一个cell，每一个key由row-key，列簇、列和时间戳组成。</em> 在Hbase中，行是key/value映射的集合，这个映射通过row-key来唯一标识。Hbase利用Hadoop的基础设施，可以利用通用的设备进行水平的扩展。</p>
-<h3 id="2-两者的特点"><a href="#2-两者的特点" class="headerlink" title="2. 两者的特点"></a>2. 两者的特点</h3><pre><code>Hive帮助熟悉SQL的人运行MapReduce任务。因为它是JDBC兼容的，同时，它也能够和现存的SQL工具整合在一起。**运行Hive查询会花费很长时间，因为它会默认遍历表中所有的数据。** 虽然有这样的缺点，一次遍历的数据量可以通过Hive的分区机制来控制。分区允许在数据集上运行过滤查询，这些数据集存储在不同的文件夹内，查询的时候只遍历指定文件夹（分区）中的数据。这种机制可以用来，例如，只处理在某一个时间范围内的文件，只要这些文件名中包括了时间格式。
-HBase通过存储key/value来工作。它支持四种主要的操作:
-•    添加或更新数据行
-•    扫描获取某范围内的cells
-•    为某一具体数据行返回对应的cells
-•    从数据表中删除数据行/列，或列的描述信息
-•    列信息可用于获取数据变动前的取值（透过HBase压缩策略可以删除列信息历史记录来释放存储空间）。
-</code></pre><p>虽然HBase包括表格，但是schema仅仅被表格和列簇所要求，列不需要schema。Hbase的表格包括增加/计数功能。</p>
-<h3 id="3-限制"><a href="#3-限制" class="headerlink" title="3. 限制"></a>3. 限制</h3><p>Hive不支持常规的SQL更新语句，如：数据插入，更新，删除。因为其对数据的操作是针对整个数据表的。另外，由于hive在hadoop上运行批量操作，<strong>它需要花费很长的时间，通常是几分钟到几个小时才可以获取到查询的结果</strong>。<em>Hive必须提供预先定义好的schema将文件和目录映射到列，并且Hive与ACID不兼容。</em><br>HBase查询是通过特定的语言来编写的，这种语言需要重新学习。类SQL的功能可以通过Apache Phonenix实现，<strong>但这是以必须提供schema为代价的</strong>。另外，Hbase也并不是兼容所有的ACID特性，虽然它支持某些特性。<strong>最后但是最重要的–为了运行Hbase，Zookeeper是必须的</strong>，zookeeper是一个用来进行分布式协调的服务，这些服务包括配置服务，维护元信息和命名空间服务。</p>
-<h3 id="4-应用场景"><a href="#4-应用场景" class="headerlink" title="4. 应用场景"></a>4. 应用场景</h3><p>Hive适合用来 <strong>对一段时间内的数据进行分析查询，适用于网络日志等数据量大、静态的数据查询</strong> 。例如，用来计算趋势或者网站的日志。<strong>Hive不应该用来进行实时的查询。因为它需要很长时间才可以返回结果</strong>。<br>    Hbase非常适合用来 <strong>进行大数据的实时查询</strong>。<em>Facebook用Hbase进行消息和实时的分析。它也可以用来统计Facebook的连接数。</em></p>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><p>Hive和Hbase是两种基于Hadoop的不同技术–Hive是一种类SQL的引擎，并且运行MapReduce任务，Hbase是一种在Hadoop之上的NoSQL 的Key/vale数据库。当然，<strong>这两种工具是可以同时使用的。就像用Google来搜索，用FaceBook进行社交一样，Hive可以用来进行统计查询，HBase可以用来进行实时查询，数据也可以从Hive写到Hbase，设置再从Hbase写回Hive。<br>例如：利用Hive处理静态离线数据，利用HBase进行联机实时查询，而后对两者间的结果集进行整合归并，从而使得数据完整且永葆青春，为进一步的商业分析提供良好支持。</strong></p>
-<p><span id="jump"> </span></p>
-<h3 id="6-英文原版"><a href="#6-英文原版" class="headerlink" title="6.英文原版"></a>6.英文原版</h3><p>万一你英语不错却翻不了墙，那多尴尬啊。😂给你准备了英文原版，请享用。</p>
-<h3 id="Hive-vs-HBase"><a href="#Hive-vs-HBase" class="headerlink" title="Hive vs. HBase"></a>Hive vs. HBase</h3><blockquote>
-<p>By Saggi Neumann  Big Data  May 26, 2014</p>
+<p>我们在某个地方挖出了一块瓷器的碎片，它可能是孔子的夜壶，可能是秦始皇的餐具，也可能是隔壁老王的破茶壶从他家到垃圾站又被埋在了这个地方。</p>
+<blockquote>
+<p>因此：概率在实质上就是无知，而不是说事物本身是随机的。</p>
 </blockquote>
-<p>Comparing Hive with HBase is like comparing Google with Facebook - although they compete over the same turf (our private information), they don’t provide the same functionality. But things can get confusing for the Big Data beginner when trying to understand what Hive and HBase do and when to use each one of them. Let’s try and clear it up.</p>
-<h4 id="What-They-Do"><a href="#What-They-Do" class="headerlink" title="What They Do"></a>What They Do</h4><p>Apache Hive is a data warehouse infrastructure built on top of Hadoop. It allows for querying data stored on HDFS for analysis via HQL, an SQL-like language that gets translated to MapReduce jobs. Despite providing SQL functionality, Hive does not provide interactive querying yet - it only runs batch processes on Hadoop.<br>Apache HBase is a NoSQL key/value store which runs on top of HDFS. Unlike Hive, HBase operations run in real-time on its database rather than MapReduce jobs. HBase is partitioned to tables, and tables are further split into column families. Column families, which must be declared in the schema, group together a certain set of columns (columns don’t require schema definition). For example, the “message” column family may include the columns: “to”, “from”, “date”, “subject”, and “body”. Each key/value pair in HBase is defined as a cell, and each key consists of row-key, column family, column, and time-stamp. A row in HBase is a grouping of key/value mappings identified by the row-key. HBase enjoys Hadoop’s infrastructure and scales horizontally using off the shelf servers.</p>
-<h4 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h4><p>Hive can help the SQL savvy to run MapReduce jobs. Since it’s JDBC compliant, it also integrates with existing SQL based tools. Running Hive queries could take a while since they go over all of the data in the table by default. Nonetheless, the amount of data can be limited via Hive’s partitioning feature. Partitioning allows running a filter query over data that is stored in separate folders, and only read the data which matches the query. It could be used, for example, to only process files created between certain dates, if the files include the date format as part of their name.<br>HBase works by storing data as key/value. It supports four primary operations: put to add or update rows, scan to retrieve a range of cells, get to return cells for a specified row, and delete to remove rows, columns or column versions from the table. Versioning is available so that previous values of the data can be fetched (the history can be deleted every now and then to clear space via HBase compactions). Although HBase includes tables, a schema is only required for tables and column families, but not for columns, and it includes increment/counter functionality.</p>
-<h4 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h4><p>Hive does not currently support update statements. Additionally, since it runs batch processing on Hadoop, it can take minutes or even hours to get back results for queries. Hive must also be provided with a predefined schema to map files and directories into columns and it is not ACID compliant.<br>HBase queries are written in a custom language that needs to be learned. SQL-like functionality can be achieved via Apache Phoenix, though it comes at the price of maintaining a schema. Furthermore, HBase isn’t fully ACID compliant, although it does support certain properties. Last but not least - in order to run HBase, ZooKeeper is required - a server for distributed coordination such as configuration, maintenance, and naming.</p>
-<h4 id="Use-Cases"><a href="#Use-Cases" class="headerlink" title="Use Cases"></a>Use Cases</h4><p>Hive should be used for analytical querying of data collected over a period of time - for instance, to calculate trends or website logs. Hive should not be used for real-time querying since it could take a while before any results are returned.<br>HBase is perfect for real-time querying of Big Data. Facebook use it for messaging and real-time analytics. They may even be using it to count Facebook likes.</p>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>Hive and HBase are two different Hadoop based technologies - Hive is an SQL-like engine that runs MapReduce jobs, and HBase is a NoSQL key/value database on Hadoop. But hey, why not use them both? Just like Google can be used for search and Facebook for social networking, Hive can be used for analytical queries while HBase for real-time querying. Data can even be read and written from Hive to HBase and back again.</p>
-<p>参考文献：<br>主要源于：<a href="http://www.cnblogs.com/justinzhang/p/4273470.html" target="_blank" rel="external">HIVE和HBASE区别</a> 汉化于 <a href="https://www.xplenty.com/blog/2014/05/hive-vs-hbase/?%20utm_source=dzone&amp;utm_medium=link&amp;utm_term=upd&amp;utm_campaign=May%202014%20Blog%205.22" target="_blank" rel="external">原文出处</a><br>部分源于：<a href="http://www.chinastor.com/a/hbase/0G3Z532014.html" target="_blank" rel="external">浅谈Hive vs. HBase 区别在哪里
-</a></p>
+<p>这一点很重要，不要误以为概率应该是客观事实。如果你有上帝视角的话，那么一切都是注定，任何事的概率都是100%，也就没有所谓概率之说了。</p>
+<p>所以概率论是建立在人们有限的认知中的，不是真正的客观事实。也就是说当孔子一看，这貌似是自己的夜壶啊，他认为这是夜壶的概率为70%，秦始皇一看那块碎片，朕心中只装的下江山，哪来的餐具，在他看来的餐具的概率是1/3，然而，老王的却早已看穿一切，那块碎片割过他的手所以他记得格外清楚，茶壶概率为100%。每个人所知道的信息决定了他所认知的概率。</p>
+<p>就像狼人杀，这里假设游戏是7个人+上帝，1号和2号玩家是狼人，发完牌的时候就已经注定谁是狼人了。对于上帝和1、2号而言，没有概率可言，或者说1、2号是狼人的概率是100%。而对于平民而言，他除了自己，他无法找出理由认为谁是狼人，只好用古典概率的等可能假设，认为其他每个人是狼人的概率都是1/6，随着游戏的进行，预言家掌握更多的信息，他修正了自己的概率，而平民也根据自己掌握的信息修正自己概率，于是大家对于谁是狼人这件事都有了不同的概率。</p>
+<p>注意到上面这个故事中，不难发现，假设碎片只有夜壶，餐具，茶壶这三种可能，即一开始概率应该是各1/3。从孔子到老王，他们都用各自掌握的信息修正了关于这个碎片是什么的概率。这就引出了先验概率和后验概率的概念。</p>
+<h3 id="先验概率（Prior-probability）与后验概率-Posterior-probability"><a href="#先验概率（Prior-probability）与后验概率-Posterior-probability" class="headerlink" title="先验概率（Prior probability）与后验概率(Posterior probability)"></a>先验概率（Prior probability）与后验概率(Posterior probability)</h3><p>事情还没有发生,要求这件事情发生的可能性的大小,是先验概率.<br>事情已经发生,要求这件事情发生的原因是由某个因素引起的可能性的大小,是后验概率.</p>
+<h4 id="先看看来自wiki的定义："><a href="#先看看来自wiki的定义：" class="headerlink" title="先看看来自wiki的定义："></a>先看看来自wiki的定义：</h4><blockquote>
+<p>Similarly, the prior probability of a random event or an uncertain proposition is the unconditional probability that is assigned before any relevant evidence is taken into account.</p>
+<p>In Bayesian statistics, the posterior probability of a random event or an uncertain proposition is the conditional probability that is assigned after the relevant evidence or background is taken into account. Similarly, the posterior probability distribution is the probability distribution of an unknown quantity, treated as a random variable, conditional on the evidence obtained from an experiment or survey. “Posterior”, in this context, means after taking into account the relevant evidence related to the particular case being examined.<br>要注意的是这是在贝叶斯统计中。不是公理化的概率定义。</p>
+</blockquote>
+<h4 id="再看看《概率论与数理统计（陈希孺）》"><a href="#再看看《概率论与数理统计（陈希孺）》" class="headerlink" title="再看看《概率论与数理统计（陈希孺）》"></a>再看看《概率论与数理统计（陈希孺）》</h4><p><img src="/media/14968900682614.jpg" alt=""><br><img src="/media/14968901016340.jpg" alt=""></p>
+<p><img src="/media/14968897485952.jpg" alt=""></p>
+<p>举一个的简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，还没还有摸球，就问概率，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率，第一次和第二次摸球这件事都已经发生了，但是我们不知道，比如第一次我们是闭着眼摸完又放回去了，便产生了概率之说。第一问事情未发生（或者说发生了，但是相对于未发生得情况，我们并没有掌握任何更多的信息）我们认为概率是3/5,第三问，我们知道了第二次摸到红球这件事，或者说证据，以此来修正这个概率，就像推理小说一样。<br>关于先验概率和后验概率，推荐阅读：<br><a href="https://wenku.baidu.com/view/90499599a98271fe900ef930.html" target="_blank" rel="external">数理统计中的两个学派——频率学派和Bayes学派</a>(1990年的期刊，能找到也是不容易）</p>
+<h4 id="一个笑话引发的血案："><a href="#一个笑话引发的血案：" class="headerlink" title="一个笑话引发的血案："></a>一个笑话引发的血案：</h4><p>病人：我听说这个手术成功概率为1%，我是不是该放弃治疗？<br>医生：你放心，我敢保证这次手术100%会成功。<br>病人：真的？为什么？<br>医生：因为我已经失败了99次了。</p>
+<p>这是很多人都会犯的“常识”错误，也是经常让人迷惑的地方。可能在这个笑话里，大家没什么深刻感受，那换个例子，比如：A已经抛了100次硬币，每次都是正面，那么下一次反面的几率是不是更大？即使是统计学专业的学生也经常迷糊（比如统计学渣的我），我就一直纳闷，按照<a href="http://baike.baidu.com/link?url=rliSEcDnpJArLoIki5x-X2735xHFMo1VNLPNEBTRAJkPuoj3LcTNgtpaUyQuVFG8V14izi-oId92sbc4edM56Lm-pOu9tiFYeJJhP1QekyytshFvvNHSTPy6oxotuJEU" target="_blank" rel="external">大数定律</a>（<a href="https://www.zhihu.com/question/19911209" target="_blank" rel="external">知乎的解释</a>），如果抛硬币的次数足够多，他就应该是正反各1/2的分布啊，A都抛了100次正面了，下一次就该是反面几率更大了啊。可是每次抛硬币应该是相互独立的，也就是说之前抛无数次也不该影响下一次的概率，即1/2。这个问题的争论，请参考<a href="http://blog.sina.com.cn/s/blog_4ce95d300100fwz3.html" target="_blank" rel="external">先验概率与后验概率的区别（老迷惑了）</a>。</p>
+<p>我比较认可比较的解释是其评论中的一段话，当然，前提是你得清楚频率（ <strong>千万别把频率直接等同于概率</strong>），概率的古典定义和统计定义以及公理化定义。</p>
+<blockquote>
+<p>从网上的资料来看，概率本身有多种解释。每一种解释都有一定的漏洞。如果不是研究概率的根本问题（逻辑一致），我们在自己的研究领域不太可能会遇到这些漏洞。（PS:这里必须要说明的是，概率有多种定义（古典定义和统计定义以及公理化定义），但这不是三国演义，我柯早已一统天下，概率的公理化定义有且只有一个，没有漏洞。当然这里所说的逻辑不一致应该是指数理统计中的频率学派和贝叶斯学派之争）<br><img src="/media/14969063400963.jpg" alt=""></p>
+<p>频率学派和贝叶斯学派都有存在的理由。频率学派的“无穷次实验”，贝叶斯学派的“先验概率”，都是有争议的。<br>楼主的第4问，前提是承认了频率学派的观点，但注意它们的观点有一个无穷次实验的假设。我揣测楼主的观点是，因为已经抛了100次正面了，那么，后面抛反面的次数应该多一点，不然总和就不是1/2了，再根据频率学派的观点，出现的频率多一点，于是概率也就大一点。从理论上来说，任何有限次的正面，都不会影响无穷次实验的结果比率。所以，“后面抛负面的次数应该多一点”这一点是不成立的，即使后面的反面的次数少一些，也不会影响这个比率。常数+无穷大=无穷大</p>
+</blockquote>
+<p>关于概率论，一直有许多搞不懂的问题，迷迷糊糊混过四年。在学习HMM和CRF高楼大厦时，发现地基已碎，一边百度基础概念一边学，更是痛苦万分。在搜寻问题时产生更多的问题，终于在重新读了概率论前几章后，算是豁然开朗了很多，所以打算重读概率论，夯实基础，我应该会开个重读概率论的分类，有很多事要做，就并行处理吧，不知道会不会半途而废，也不知道半途而废的概率是多少（当然，我可以凭经验先给出一个主观先验概率，在以后的过程中再慢慢修正得到后验概率，直到概率为0或1），但是有些疑惑终究会推着我去探寻。</p>
+<h3 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h3><p><a href="http://blog.csdn.net/pongba/article/details/2958094" target="_blank" rel="external">数学之美番外篇：平凡而又神奇的贝叶斯方法</a></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a href="http://blog.sina.com.cn/s/blog_4ce95d300100fwz3.html" target="_blank" rel="external">先验概率与后验概率的区别（老迷惑了）</a></li>
+<li><a href="http://blog.csdn.net/passball/article/details/5859878" target="_blank" rel="external">先验概率与后验概率及贝叶斯公式</a></li>
+<li>《概率论与数理统计》–陈希孺</li>
+<li><a href="https://wenku.baidu.com/view/90499599a98271fe900ef930.html" target="_blank" rel="external">数理统计中的两个学派——频率学派和Bayes学派
+</a></li>
+<li>《概率论与数理统计》–盛骤，谢式千，潘承毅编.-4版</li>
+</ol>
 
       
     </div>
@@ -481,11 +500,11 @@ HBase通过存储key/value来工作。它支持四种主要的操作:
       
         <div class="post-tags">
           
-            <a href="/tags/Bigdata/" rel="tag"># Bigdata</a>
+            <a href="/tags/概率论/" rel="tag"># 概率论</a>
           
-            <a href="/tags/Hive/" rel="tag"># Hive</a>
+            <a href="/tags/先验概率/" rel="tag"># 先验概率</a>
           
-            <a href="/tags/Hbase/" rel="tag"># Hbase</a>
+            <a href="/tags/后验概率/" rel="tag"># 后验概率</a>
           
         </div>
       
@@ -498,8 +517,8 @@ HBase通过存储key/value来工作。它支持四种主要的操作:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/" rel="next" title="在hexo博客中插入图片，音乐，视频，公式">
-                <i class="fa fa-chevron-left"></i> 在hexo博客中插入图片，音乐，视频，公式
+              <a href="/2017/06/06/2017-06-06homeTest/" rel="next" title="那些你常用但是却不知道如何用英文表达的句子">
+                <i class="fa fa-chevron-left"></i> 那些你常用但是却不知道如何用英文表达的句子
               </a>
             
           </div>
@@ -507,10 +526,6 @@ HBase通过存储key/value来工作。它支持四种主要的操作:
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/06/2017-06-06homeTest/" rel="prev" title="那些你常用但是却不知道如何用英文表达的句子">
-                那些你常用但是却不知道如何用英文表达的句子 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -708,7 +723,7 @@ HBase通过存储key/value来工作。它支持四种主要的操作:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-两者分别是什么？"><span class="nav-number">1.</span> <span class="nav-text">1. 两者分别是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-两者的特点"><span class="nav-number">2.</span> <span class="nav-text">2. 两者的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-限制"><span class="nav-number">3.</span> <span class="nav-text">3. 限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-应用场景"><span class="nav-number">4.</span> <span class="nav-text">4. 应用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-总结"><span class="nav-number">5.</span> <span class="nav-text">5. 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-英文原版"><span class="nav-number">6.</span> <span class="nav-text">6.英文原版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive-vs-HBase"><span class="nav-number">7.</span> <span class="nav-text">Hive vs. HBase</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-They-Do"><span class="nav-number">7.1.</span> <span class="nav-text">What They Do</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Features"><span class="nav-number">7.2.</span> <span class="nav-text">Features</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Limitations"><span class="nav-number">7.3.</span> <span class="nav-text">Limitations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Use-Cases"><span class="nav-number">7.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">7.5.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有趣的观点："><span class="nav-number">1.</span> <span class="nav-text">一些有趣的观点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先验概率（Prior-probability）与后验概率-Posterior-probability"><span class="nav-number">2.</span> <span class="nav-text">先验概率（Prior probability）与后验概率(Posterior probability)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先看看来自wiki的定义："><span class="nav-number">2.1.</span> <span class="nav-text">先看看来自wiki的定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再看看《概率论与数理统计（陈希孺）》"><span class="nav-number">2.2.</span> <span class="nav-text">再看看《概率论与数理统计（陈希孺）》</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个笑话引发的血案："><span class="nav-number">2.3.</span> <span class="nav-text">一个笑话引发的血案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读："><span class="nav-number">3.</span> <span class="nav-text">推荐阅读：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
