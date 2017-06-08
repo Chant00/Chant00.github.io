@@ -111,7 +111,7 @@
 <meta property="og:image" content="http://chant00.com/media/14968901016340.jpg">
 <meta property="og:image" content="http://chant00.com/media/14968897485952.jpg">
 <meta property="og:image" content="http://chant00.com/media/14969063400963.jpg">
-<meta property="og:updated_time" content="2017-06-08T08:51:46.000Z">
+<meta property="og:updated_time" content="2017-06-08T09:34:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="概率论迷思">
 <meta name="twitter:description" content="当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。概率论的神奇之处在于，它居然能从不确定性中找到确定性。">
@@ -431,7 +431,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。<br>概率论的神奇之处在于，它居然能从不确定性中找到确定性。</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。<br>概率论的神奇之处在于，它居然能从不确定性中找到确定性。</p>
 <a id="more"></a>
 <p>本文不教科书，只是阐述我的观点和思考，如有谬误，欢迎讨论或指正。</p>
 <h3 id="一些有趣的观点："><a href="#一些有趣的观点：" class="headerlink" title="一些有趣的观点："></a>一些有趣的观点：</h3><p>一个事情有N种发生的可能性，我们不能确信哪种会发生，是因为我们不能控制结果的发生，影响结果的许多因素不在我们的支配范围之内，这些因素影响结果的机理或者我们不知道，或者太复杂以至于超出了我们大脑或电脑的运算能力。比如：我们不确定掷硬币得到正面或反面，是因为我们的能力不足以用一些物理方程来求解这个结果。再比如：你不能断定你期末能考88分，因为出题、阅卷的不是你。</p>
@@ -451,7 +451,7 @@
 <p>Similarly, the prior probability of a random event or an uncertain proposition is the unconditional probability that is assigned before any relevant evidence is taken into account.</p>
 <p>In Bayesian statistics, the posterior probability of a random event or an uncertain proposition is the conditional probability that is assigned after the relevant evidence or background is taken into account. Similarly, the posterior probability distribution is the probability distribution of an unknown quantity, treated as a random variable, conditional on the evidence obtained from an experiment or survey. “Posterior”, in this context, means after taking into account the relevant evidence related to the particular case being examined.<br>要注意的是这是在贝叶斯统计中。不是公理化的概率定义。</p>
 </blockquote>
-<h4 id="再看看《概率论与数理统计（陈希孺）》"><a href="#再看看《概率论与数理统计（陈希孺）》" class="headerlink" title="再看看《概率论与数理统计（陈希孺）》"></a>再看看《概率论与数理统计（陈希孺）》</h4><p><img src="/media/14968900682614.jpg" alt=""><br><img src="/media/14968901016340.jpg" alt=""></p>
+<h4 id="再看看书上的解释"><a href="#再看看书上的解释" class="headerlink" title="再看看书上的解释"></a>再看看书上的解释</h4><p>在此墙裂推荐<a href="http://baike.baidu.com/item/%E9%99%88%E5%B8%8C%E5%AD%BA" target="_blank" rel="external">陈希孺院士</a>的<a href="https://pan.baidu.com/share/link?shareid=2886575657&amp;uk=1544463416&amp;fid=265734025" target="_blank" rel="external">《概率论与数理统计》</a>，这是<a href="https://book.douban.com/subject/2201479/" target="_blank" rel="external">豆瓣</a>、<a href="https://www.zhihu.com/question/19754027" target="_blank" rel="external">知乎</a>的书评和推荐。陈老这本书之所以受到如此簇拥，在于它授人以渔而非授人以鱼，你读一读就是知道。<br><img src="/media/14968900682614.jpg" alt=""><br><img src="/media/14968901016340.jpg" alt=""></p>
 <p><img src="/media/14968897485952.jpg" alt=""></p>
 <p>举一个的简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，还没还有摸球，就问概率，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率，第一次和第二次摸球这件事都已经发生了，但是我们不知道，比如第一次我们是闭着眼摸完又放回去了，便产生了概率之说。第一问事情未发生（或者说发生了，但是相对于未发生得情况，我们并没有掌握任何更多的信息）我们认为概率是3/5,第三问，我们知道了第二次摸到红球这件事，或者说证据，以此来修正这个概率，就像推理小说一样。<br>关于先验概率和后验概率，推荐阅读：<br><a href="https://wenku.baidu.com/view/90499599a98271fe900ef930.html" target="_blank" rel="external">数理统计中的两个学派——频率学派和Bayes学派</a>(1990年的期刊，能找到也是不容易）</p>
 <h4 id="一个笑话引发的血案："><a href="#一个笑话引发的血案：" class="headerlink" title="一个笑话引发的血案："></a>一个笑话引发的血案：</h4><p>病人：我听说这个手术成功概率为1%，我是不是该放弃治疗？<br>医生：你放心，我敢保证这次手术100%会成功。<br>病人：真的？为什么？<br>医生：因为我已经失败了99次了。</p>
@@ -459,14 +459,14 @@
 <p>我比较认可比较的解释是其评论中的一段话，当然，前提是你得清楚频率（ <strong>千万别把频率直接等同于概率</strong>），概率的古典定义和统计定义以及公理化定义。</p>
 <blockquote>
 <p>从网上的资料来看，概率本身有多种解释。每一种解释都有一定的漏洞。如果不是研究概率的根本问题（逻辑一致），我们在自己的研究领域不太可能会遇到这些漏洞。（PS:这里必须要说明的是，概率有多种定义（古典定义和统计定义以及公理化定义），但这不是三国演义，我柯早已一统天下，概率的公理化定义有且只有一个，没有漏洞。当然这里所说的逻辑不一致应该是指数理统计中的频率学派和贝叶斯学派之争）<br><img src="/media/14969063400963.jpg" alt=""></p>
-<p>频率学派和贝叶斯学派都有存在的理由。频率学派的“无穷次实验”，贝叶斯学派的“先验概率”，都是有争议的。<br>楼主的第4问，前提是承认了频率学派的观点，但注意它们的观点有一个无穷次实验的假设。我揣测楼主的观点是，因为已经抛了100次正面了，那么，后面抛反面的次数应该多一点，不然总和就不是1/2了，再根据频率学派的观点，出现的频率多一点，于是概率也就大一点。从理论上来说，任何有限次的正面，都不会影响无穷次实验的结果比率。所以，“后面抛负面的次数应该多一点”这一点是不成立的，即使后面的反面的次数少一些，也不会影响这个比率。常数+无穷大=无穷大</p>
+<p>频率学派和贝叶斯学派都有存在的理由。频率学派的“无穷次实验”，贝叶斯学派的“先验概率”，都是有争议的。<br>楼主的第4问，前提是承认了频率学派的观点，但注意它们的观点有一个无穷次实验的假设。我揣测楼主的观点是，因为已经抛了100次正面了，那么，后面抛反面的次数应该多一点，不然总和就不是1/2了，再根据频率学派的观点，出现的频率多一点，于是概率也就大一点。从理论上来说，任何有限次的正面，都不会影响无穷次实验的结果比率。所以，“后面抛反面的次数应该多一点”这一点是不成立的，即使后面的反面的次数少一些，也不会影响这个比率。常数+无穷大=无穷大</p>
 </blockquote>
 <p>关于概率论，一直有许多搞不懂的问题，迷迷糊糊混过四年。在学习HMM和CRF高楼大厦时，发现地基已碎，一边百度基础概念一边学，更是痛苦万分。在搜寻问题时产生更多的问题，终于在重新读了概率论前几章后，算是豁然开朗了很多，所以打算重读概率论，夯实基础，我应该会开个重读概率论的分类，有很多事要做，就并行处理吧，不知道会不会半途而废，也不知道半途而废的概率是多少（当然，我可以凭经验先给出一个主观先验概率，在以后的过程中再慢慢修正得到后验概率，直到概率为0或1），但是有些疑惑终究会推着我去探寻。</p>
 <h3 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a>推荐阅读：</h3><p><a href="http://blog.csdn.net/pongba/article/details/2958094" target="_blank" rel="external">数学之美番外篇：平凡而又神奇的贝叶斯方法</a></p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
 <li><a href="http://blog.sina.com.cn/s/blog_4ce95d300100fwz3.html" target="_blank" rel="external">先验概率与后验概率的区别（老迷惑了）</a></li>
 <li><a href="http://blog.csdn.net/passball/article/details/5859878" target="_blank" rel="external">先验概率与后验概率及贝叶斯公式</a></li>
-<li>《概率论与数理统计》–陈希孺</li>
+<li><a href="https://pan.baidu.com/share/link?shareid=2886575657&amp;uk=1544463416&amp;fid=265734025" target="_blank" rel="external">《概率论与数理统计》–陈希孺</a></li>
 <li><a href="https://wenku.baidu.com/view/90499599a98271fe900ef930.html" target="_blank" rel="external">数理统计中的两个学派——频率学派和Bayes学派
 </a></li>
 <li>《概率论与数理统计》–盛骤，谢式千，潘承毅编.-4版</li>
@@ -723,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有趣的观点："><span class="nav-number">1.</span> <span class="nav-text">一些有趣的观点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先验概率（Prior-probability）与后验概率-Posterior-probability"><span class="nav-number">2.</span> <span class="nav-text">先验概率（Prior probability）与后验概率(Posterior probability)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先看看来自wiki的定义："><span class="nav-number">2.1.</span> <span class="nav-text">先看看来自wiki的定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再看看《概率论与数理统计（陈希孺）》"><span class="nav-number">2.2.</span> <span class="nav-text">再看看《概率论与数理统计（陈希孺）》</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个笑话引发的血案："><span class="nav-number">2.3.</span> <span class="nav-text">一个笑话引发的血案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读："><span class="nav-number">3.</span> <span class="nav-text">推荐阅读：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有趣的观点："><span class="nav-number">1.</span> <span class="nav-text">一些有趣的观点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先验概率（Prior-probability）与后验概率-Posterior-probability"><span class="nav-number">2.</span> <span class="nav-text">先验概率（Prior probability）与后验概率(Posterior probability)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先看看来自wiki的定义："><span class="nav-number">2.1.</span> <span class="nav-text">先看看来自wiki的定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再看看书上的解释"><span class="nav-number">2.2.</span> <span class="nav-text">再看看书上的解释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个笑话引发的血案："><span class="nav-number">2.3.</span> <span class="nav-text">一个笑话引发的血案：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读："><span class="nav-number">3.</span> <span class="nav-text">推荐阅读：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

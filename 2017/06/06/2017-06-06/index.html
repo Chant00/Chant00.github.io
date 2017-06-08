@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。">
 <meta property="og:image" content="http://chant00.com/media/hiveHbase.jpg">
-<meta property="og:updated_time" content="2017-06-06T07:39:23.000Z">
+<meta property="og:updated_time" content="2017-06-08T09:21:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HIVE和HBASE区别">
 <meta name="twitter:description" content="从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。">
@@ -450,7 +450,7 @@ HBase通过存储key/value来工作。它支持四种主要的操作:
 <h4 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h4><p>Hive does not currently support update statements. Additionally, since it runs batch processing on Hadoop, it can take minutes or even hours to get back results for queries. Hive must also be provided with a predefined schema to map files and directories into columns and it is not ACID compliant.<br>HBase queries are written in a custom language that needs to be learned. SQL-like functionality can be achieved via Apache Phoenix, though it comes at the price of maintaining a schema. Furthermore, HBase isn’t fully ACID compliant, although it does support certain properties. Last but not least - in order to run HBase, ZooKeeper is required - a server for distributed coordination such as configuration, maintenance, and naming.</p>
 <h4 id="Use-Cases"><a href="#Use-Cases" class="headerlink" title="Use Cases"></a>Use Cases</h4><p>Hive should be used for analytical querying of data collected over a period of time - for instance, to calculate trends or website logs. Hive should not be used for real-time querying since it could take a while before any results are returned.<br>HBase is perfect for real-time querying of Big Data. Facebook use it for messaging and real-time analytics. They may even be using it to count Facebook likes.</p>
 <h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>Hive and HBase are two different Hadoop based technologies - Hive is an SQL-like engine that runs MapReduce jobs, and HBase is a NoSQL key/value database on Hadoop. But hey, why not use them both? Just like Google can be used for search and Facebook for social networking, Hive can be used for analytical queries while HBase for real-time querying. Data can even be read and written from Hive to HBase and back again.</p>
-<p>参考文献：<br>主要源于：<a href="http://www.cnblogs.com/justinzhang/p/4273470.html" target="_blank" rel="external">HIVE和HBASE区别</a> 汉化于 <a href="https://www.xplenty.com/blog/2014/05/hive-vs-hbase/?%20utm_source=dzone&amp;utm_medium=link&amp;utm_term=upd&amp;utm_campaign=May%202014%20Blog%205.22" target="_blank" rel="external">原文出处</a><br>部分源于：<a href="http://www.chinastor.com/a/hbase/0G3Z532014.html" target="_blank" rel="external">浅谈Hive vs. HBase 区别在哪里
+<p>参考资料：<br>主要源于：<a href="http://www.cnblogs.com/justinzhang/p/4273470.html" target="_blank" rel="external">HIVE和HBASE区别</a> 汉化于 <a href="https://www.xplenty.com/blog/2014/05/hive-vs-hbase/?%20utm_source=dzone&amp;utm_medium=link&amp;utm_term=upd&amp;utm_campaign=May%202014%20Blog%205.22" target="_blank" rel="external">原文出处</a><br>部分源于：<a href="http://www.chinastor.com/a/hbase/0G3Z532014.html" target="_blank" rel="external">浅谈Hive vs. HBase 区别在哪里
 </a></p>
 
       

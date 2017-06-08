@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="目的：java程序调用远程服务器的shell脚本来实现服务的起、停、重启。">
 <meta property="og:image" content="http://image.jiantuku.com/17-6-4/80160967.jpg?attname=file_1496584141329_3b57.png&e=1496584810&token=el7kgPgYzpJoB23jrChWJ2gV3HpRl0VCzFn8rKKv:24Xu8-YbrqzYKvsT6uoA8NUefVk=">
-<meta property="og:updated_time" content="2017-06-05T16:56:18.000Z">
+<meta property="og:updated_time" content="2017-06-08T09:23:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java远程调用shell脚本">
 <meta name="twitter:description" content="目的：java程序调用远程服务器的shell脚本来实现服务的起、停、重启。">
@@ -443,6 +443,7 @@
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">    RemoteShellExecutor(<span class="string">"10.10.10.100"</span>, <span class="string">"root"</span>, <span class="string">"123123"</span>);</div><div class="line">    String proName = <span class="string">"entranceMain.sh"</span>;</div><div class="line">    String para = <span class="string">"1"</span>;</div><div class="line">        System.out.println(executor.exec(<span class="string">"server.sh.Chant start "</span> + proName +<span class="string">" "</span>+ para));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>将start换为restart，stop，测试结果如下，注意pid发生变化，说明重启成功。<br><img src="http://image.jiantuku.com/17-6-4/80160967.jpg?attname=file_1496584141329_3b57.png&amp;e=1496584810&amp;token=el7kgPgYzpJoB23jrChWJ2gV3HpRl0VCzFn8rKKv:24Xu8-YbrqzYKvsT6uoA8NUefVk=" alt=""></p>
+<h3 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h3><p><a href="http://www.cnblogs.com/zjrodger/p/5551385.html" target="_blank" rel="external">Java程序调用远程Shell脚本</a></p>
 
       
     </div>
@@ -693,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目的："><span class="nav-number">1.</span> <span class="nav-text">目的：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言（废话）："><span class="nav-number">2.</span> <span class="nav-text">前言（废话）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文："><span class="nav-number">3.</span> <span class="nav-text">正文：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step1-准备脚本"><span class="nav-number">3.1.</span> <span class="nav-text">Step1.准备脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step2-java程序远程调用shell"><span class="nav-number">3.2.</span> <span class="nav-text">Step2.java程序远程调用shell</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目的："><span class="nav-number">1.</span> <span class="nav-text">目的：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前言（废话）："><span class="nav-number">2.</span> <span class="nav-text">前言（废话）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正文："><span class="nav-number">3.</span> <span class="nav-text">正文：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step1-准备脚本"><span class="nav-number">3.1.</span> <span class="nav-text">Step1.准备脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step2-java程序远程调用shell"><span class="nav-number">3.2.</span> <span class="nav-text">Step2.java程序远程调用shell</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料："><span class="nav-number">4.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
             
 
           </div>
