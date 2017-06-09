@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chant00.com/tags/index.html</loc>
+    
+    <lastmod>2017-06-09T08:26:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/about/index.html</loc>
+    
+    <lastmod>2017-06-09T08:26:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/</loc>
     
     <lastmod>2017-06-09T08:23:11.000Z</lastmod>
@@ -40,20 +54,6 @@
     <loc>http://chant00.com/categories/index.html</loc>
     
     <lastmod>2017-06-08T09:58:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/tags/index.html</loc>
-    
-    <lastmod>2017-06-08T09:48:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/about/index.html</loc>
-    
-    <lastmod>2017-06-08T09:42:27.000Z</lastmod>
     
   </url>
   
