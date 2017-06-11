@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-10T15:47:43.000Z</updated>
+  <updated>2017-06-11T16:23:49.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一部公益小短片cogs</title>
+    <link href="http://chant00.com/2017/06/11/cogs/"/>
+    <id>http://chant00.com/2017/06/11/cogs/</id>
+    <published>2017-06-11T07:08:30.000Z</published>
+    <updated>2017-06-11T16:23:49.000Z</updated>
+    
+    <summary type="html">
+    
+      With over a thousand shares on Facebook within a few hours of its launch, a new animated film for AIME appears to have already struck a chord.
+    
+    </summary>
+    
+      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
+    
+    
+      <category term="English" scheme="http://chant00.com/tags/English/"/>
+    
+      <category term="cogs" scheme="http://chant00.com/tags/cogs/"/>
+    
+  </entry>
   
   <entry>
     <title>Aaron Ralston’s Story</title>
