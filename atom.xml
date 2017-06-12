@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-11T16:26:39.000Z</updated>
+  <updated>2017-06-12T02:29:23.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一部公益小短片cogs</title>
+    <title>挣脱你的轨道--一则公益小短片《cogs》</title>
     <link href="http://chant00.com/2017/06/11/cogs/"/>
     <id>http://chant00.com/2017/06/11/cogs/</id>
     <published>2017-06-11T07:08:30.000Z</published>
-    <updated>2017-06-11T16:26:39.000Z</updated>
+    <updated>2017-06-12T02:29:23.000Z</updated>
     
     <summary type="html">
     
@@ -34,6 +34,8 @@
       <category term="English" scheme="http://chant00.com/tags/English/"/>
     
       <category term="cogs" scheme="http://chant00.com/tags/cogs/"/>
+    
+      <category term="animated short film" scheme="http://chant00.com/tags/animated-short-film/"/>
     
   </entry>
   
@@ -136,7 +138,7 @@
     <link href="http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/"/>
     <id>http://chant00.com/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/</id>
     <published>2017-06-05T16:45:09.000Z</published>
-    <updated>2017-06-09T08:23:11.000Z</updated>
+    <updated>2017-06-12T02:23:51.000Z</updated>
     
     <summary type="html">
     
