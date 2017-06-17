@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-12T02:35:36.000Z</updated>
+  <updated>2017-06-17T16:05:22.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA中文乱码问题</title>
+    <link href="http://chant00.com/2017/06/17/2017-06-17/"/>
+    <id>http://chant00.com/2017/06/17/2017-06-17/</id>
+    <published>2017-06-17T14:10:49.000Z</published>
+    <updated>2017-06-17T16:05:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;导入eclipse项目时，出现中文乱码的所有解决办法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://chant00.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chant00.com/tags/java/"/>
+    
+      <category term="IDEA" scheme="http://chant00.com/tags/IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>挣脱你的轨道--一则公益小短片《cogs》</title>
