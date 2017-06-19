@@ -111,7 +111,7 @@
 <meta property="og:image" content="http://chant00.com/media/14977132437332.jpg">
 <meta property="og:image" content="http://chant00.com/media/14977132883018.jpg">
 <meta property="og:image" content="http://chant00.com/media/14977134374212.jpg">
-<meta property="og:updated_time" content="2017-06-17T16:05:22.000Z">
+<meta property="og:updated_time" content="2017-06-17T16:07:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IDEA中文乱码问题">
 <meta name="twitter:description" content="导入eclipse项目时，出现中文乱码的所有解决办法。">
@@ -447,7 +447,7 @@
 <p>接着你就会看到乱码已经变成中文了，但是这对我还没结束，由于我将页面改成了GBK编码，但这并不是我想要的，我想要的是utf8的编码格式。</p>
 <p>第三步，就是再次点击设置编码地方，然后选择UTF-8格式，这次就是选择Convert，这就结束了。</p>
 <p>相信有些朋友已经有点头绪了。这个“Reload”选择后不会改变文件和内容的编码格式，而是将IDE本身的解码格式由我原先的UTF-8换成了 GBK，由GBK的解码格式解GBK的文件就不会再看到乱码。而“Convert”是将GBK格式的文件内容转换成了UTF-8，同时将IDE的解码格式 也换成UTF-8。<br>所以之前说的，如果你第一次选择了“Convert”那么就会由原来的乱码弄成另一种乱码，反正我是没弄回来过。</p>
-<h3 id="控制台输出是乱码"><a href="#控制台输出是乱码" class="headerlink" title="控制台输出是乱码"></a>控制台输出是乱码</h3><p>比如:System.out.println(“中文”);执行这句话控制台输出乱码，这个问题在Run-&gt;Edit configurations中的VM options里<br>加上-Dfile.encoding=UTF-8，就好了，这种问题是操作系统不是中文环境导致的。<br><img src="/media/14977132437332.jpg" alt=""><br><img src="/media/14977132883018.jpg" alt=""></p>
+<h3 id="控制台输出是乱码"><a href="#控制台输出是乱码" class="headerlink" title="控制台输出是乱码"></a>控制台输出是乱码</h3><p>比如:System.out.println(“中文”);执行这句话控制台输出乱码，这个问题在Run-&gt;Edit configurations中的VM options里加上-Dfile.encoding=UTF-8，就好了，这种问题是操作系统不是中文环境导致的。<br><img src="/media/14977132437332.jpg" alt=""><br><img src="/media/14977132883018.jpg" alt=""></p>
 <h3 id="所有配置都没问题但仍然输出乱码"><a href="#所有配置都没问题但仍然输出乱码" class="headerlink" title="所有配置都没问题但仍然输出乱码"></a>所有配置都没问题但仍然输出乱码</h3><p>这个时候只有一种解释：IDEA把你的字体编码弄错了，但是在哪里弄错的呢。经过多次排查寻找，终于，在项目的目录下有个.idea的文件夹，这个文件夹里有个encodings.xml的文件,里面记录了你某些文件对应的特殊编码，为什么会有这种编码呢，因为之前我无意中点了右下角的编码，改了一下，就被idea记录到 encodings.xml中，当你再次访问的时候，它就会用那种编码。我说IDEA你那么智能你妈知道吗？只要把encodings.xml里面的除了UTF-8的都删了就好啦（我的所有字体都是UTF-8）！<br><img src="/media/14977134374212.jpg" alt=""></p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
 <li><a href="http://www.cnblogs.com/wxd0108/p/5479442.html" target="_blank" rel="external">idea中的汉语注释出现乱码的解决方案</a></li>
@@ -497,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/11/cogs/" rel="next" title="挣脱你的轨道--一则公益小短片《cogs》">
-                <i class="fa fa-chevron-left"></i> 挣脱你的轨道--一则公益小短片《cogs》
+              <a href="/2017/06/17/2017-06-19/" rel="next" title="Java设计模式————六大原则">
+                <i class="fa fa-chevron-left"></i> Java设计模式————六大原则
               </a>
             
           </div>
@@ -584,7 +584,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -606,7 +606,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
