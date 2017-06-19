@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://chant00.com/2017/06/19/回调/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？">
-<meta property="og:updated_time" content="2017-06-19T15:18:10.000Z">
+<meta property="og:updated_time" content="2017-06-19T15:25:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java阻塞与非阻塞的同步异步，以及回调">
 <meta name="twitter:description" content="怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？">
@@ -481,7 +481,7 @@
 <p>测试类代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.easyway.test;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		</div><div class="line">		Employee emp = <span class="keyword">new</span> Employee();</div><div class="line">		</div><div class="line">		<span class="comment">//将回调对象（上层对象）传入，注册</span></div><div class="line">		emp.setCallBack(<span class="keyword">new</span> Boss());</div><div class="line">		</div><div class="line">		<span class="comment">//开启控制器对象运行</span></div><div class="line">		emp.doSome();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="回调总结"><a href="#回调总结" class="headerlink" title="回调总结"></a>回调总结</h3><p>要明确的一点是，首先要搞清回调函数出现的原因，也就是适用场景，才能搞清楚回调机制，不然事倍功半。</p>
-<p>最后，再举一例，为了使我们写的函数接近完美，就把一部分功能外包给别人，让别人个性化定制，至于别人怎么实现不管，我唯一要做的就是定义好相关接口，这一设计允许了底层代码调用高层定义的子程序，增强程序灵活性，和反射有着异曲同工之妙，这才是回调的真正原因！</p>
+<p>最后，再举一例，为了使我们写的函数接近完美，就把一部分功能外包给别人，让别人个性化定制，至于别人怎么实现不管，我唯一要做的就是定义好相关接口，<strong>这一设计允许了底层代码调用高层定义的子程序，增强程序灵活性，和反射有着异曲同工之妙，这才是回调的真正原因！</strong></p>
 <p>用一段话来总结下回调：上层模块封装时，很难预料下层模块会如何实现，因此，上层模块只需定义好自己需要但不能预料的接口（也就是回调接口），当下层模块调用上层模块时，根据当前需要的实现回调接口，并通过注册或参数方式传入上层模块即可，这样就实现下层调用上层，并且上层还能根据传入的引用来调用下层的具体实现，将程序的灵活性大大的增加了。</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
 <li><a href="http://blog.csdn.net/bjyfb/article/details/10462555#" target="_blank" rel="external">Java回调机制解析–代码</a></li>
