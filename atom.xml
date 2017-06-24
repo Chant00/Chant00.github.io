@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-21T15:11:23.000Z</updated>
+  <updated>2017-06-24T14:38:08.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,73 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java基本数据类型转换原理以及数据溢出处理</title>
+    <link href="http://chant00.com/2017/06/24/java%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://chant00.com/2017/06/24/java数据结构/</id>
+    <published>2017-06-24T02:24:49.000Z</published>
+    <updated>2017-06-24T14:38:08.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h3 id=&quot;Java中x-x-1-与x-1-的一点区别&quot;&gt;&lt;a href=&quot;
+    
+    </summary>
+    
+      <category term="java" scheme="http://chant00.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://chant00.com/tags/java/"/>
+    
+      <category term="数据类型" scheme="http://chant00.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记（二）--容器</title>
+    <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B02/"/>
+    <id>http://chant00.com/2017/06/22/python笔记2/</id>
+    <published>2017-06-22T02:25:49.000Z</published>
+    <updated>2017-06-22T16:26:53.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h3 id=&quot;list-和-tuple&quot;&gt;&lt;a href=&quot;#list-和-t
+    
+    </summary>
+    
+      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记--数据类型</title>
+    <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B01/"/>
+    <id>http://chant00.com/2017/06/22/python笔记1/</id>
+    <published>2017-06-22T02:24:49.000Z</published>
+    <updated>2017-06-22T08:36:09.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;看完了尚学堂的java300集（除了手写服务器和设计模式部分），由于不是按顺序看的，最后复习了多线程，昨晚写完多线程的博客，java学习算是告一段落了，现在向Python发起进攻。&lt;br&gt;有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java多线程</title>
     <link href="http://chant00.com/2017/06/21/2017-06-21/"/>
     <id>http://chant00.com/2017/06/21/2017-06-21/</id>
     <published>2017-06-21T02:24:49.000Z</published>
-    <updated>2017-06-21T15:11:23.000Z</updated>
+    <updated>2017-06-23T06:13:43.000Z</updated>
     
     <summary type="html">
     
@@ -141,9 +203,9 @@
       <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
     
     
-      <category term="test" scheme="http://chant00.com/tags/test/"/>
-    
       <category term="English" scheme="http://chant00.com/tags/English/"/>
+    
+      <category term="test" scheme="http://chant00.com/tags/test/"/>
     
   </entry>
   
