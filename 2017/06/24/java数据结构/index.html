@@ -101,30 +101,18 @@
 
 
 
-<meta name="description" content="Java中x=x+1 与x+=1 的一点区别许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。
-
-Java语言规范中讲到，复合赋值E1 op= E2等价于简单赋值E1 = (T)((E1)op(E2) 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.
-
-1234">
+<meta name="description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基本数据类型转换原理以及数据溢出处理">
 <meta property="og:url" content="http://chant00.com/2017/06/24/java数据结构/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="Java中x=x+1 与x+=1 的一点区别许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。
-
-Java语言规范中讲到，复合赋值E1 op= E2等价于简单赋值E1 = (T)((E1)op(E2) 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.
-
-1234">
+<meta property="og:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
 <meta property="og:image" content="http://chant00.com/media/1.gif">
 <meta property="og:image" content="http://chant00.com/media/2.gif">
-<meta property="og:updated_time" content="2017-06-24T14:38:08.000Z">
+<meta property="og:updated_time" content="2017-06-24T14:56:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基本数据类型转换原理以及数据溢出处理">
-<meta name="twitter:description" content="Java中x=x+1 与x+=1 的一点区别许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。
-
-Java语言规范中讲到，复合赋值E1 op= E2等价于简单赋值E1 = (T)((E1)op(E2) 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.
-
-1234">
+<meta name="twitter:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
 <meta name="twitter:image" content="http://chant00.com/media/1.gif">
 
 
@@ -450,7 +438,8 @@ Java语言规范中讲到，复合赋值E1 op= E2等价于简单赋值E1 = (T)((
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h3 id="Java中x-x-1-与x-1-的一点区别"><a href="#Java中x-x-1-与x-1-的一点区别" class="headerlink" title="Java中x=x+1 与x+=1 的一点区别"></a>Java中x=x+1 与x+=1 的一点区别</h3><p>许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。<br><a id="more"></a></p>
+<h3 id="Java中x-x-1-与x-1-的一点区别"><a href="#Java中x-x-1-与x-1-的一点区别" class="headerlink" title="Java中x=x+1 与x+=1 的一点区别"></a>Java中x=x+1 与x+=1 的一点区别</h3><p>许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。</p>
 <blockquote>
 <p>Java语言规范中讲到，复合赋值<code>E1 op= E2</code>等价于简单赋值<code>E1 = (T)((E1)op(E2)</code> 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.</p>
 </blockquote>

@@ -439,119 +439,14 @@
 
       
         
-          
-            <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h3 id="Java中x-x-1-与x-1-的一点区别"><a href="#Java中x-x-1-与x-1-的一点区别" class="headerlink" title="Java中x=x+1 与x+=1 的一点区别"></a>Java中x=x+1 与x+=1 的一点区别</h3><p>许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。</p>
-<blockquote>
-<p>Java语言规范中讲到，复合赋值<code>E1 op= E2</code>等价于简单赋值<code>E1 = (T)((E1)op(E2)</code> 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlusEqualTest</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">short</span> s1 = <span class="number">1</span>;</div><div class="line">        s1 = (<span class="keyword">short</span>) (s1 + <span class="number">1</span>);<span class="comment">//如果不加转换是不能通过编译的</span></div><div class="line">        System.out.println(<span class="string">"s1 = "</span> + s1);</div><div class="line"></div><div class="line">        <span class="keyword">short</span> s2 = <span class="number">1</span>;</div><div class="line">        s2 += <span class="number">1</span>;</div><div class="line">        System.out.println(<span class="string">"s2 = "</span> + s2);</div><div class="line"></div><div class="line">        <span class="keyword">short</span> s3 = Short.MAX_VALUE;<span class="comment">//32767</span></div><div class="line">        <span class="keyword">short</span> s4 = s3;</div><div class="line">        s3 += <span class="number">1</span>;</div><div class="line">        System.out.println(<span class="string">"s3 += 1 结果为"</span> + s3);</div><div class="line">        s4 = (<span class="keyword">short</span>) (s4 + <span class="number">1</span>);</div><div class="line">        System.out.println(<span class="string">"s3 = (short)(s3 + 1) 结果为"</span> + s4);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//输出结果如下：</span></div><div class="line">s1 = <span class="number">2</span></div><div class="line">s2 = <span class="number">2</span></div><div class="line">s3 += <span class="number">1</span> 结果为-<span class="number">32768</span></div><div class="line">s3 = (<span class="keyword">short</span>)(s3 + <span class="number">1</span>) 结果为-<span class="number">32768</span></div></pre></td></tr></table></figure>
-<h3 id="数据溢出咋办呢"><a href="#数据溢出咋办呢" class="headerlink" title="数据溢出咋办呢"></a>数据溢出咋办呢</h3><p>如上程序，为什么s3 = (short)(s3 + 1) 结果为-32768呢？很明显是数据超出其表示范围了，可是数据溢出后是怎么处理的呢？此事说来话长……</p>
-<h4 id="数据类型基础知识储备"><a href="#数据类型基础知识储备" class="headerlink" title="数据类型基础知识储备"></a>数据类型基础知识储备</h4><table>
-<thead>
-<tr>
-<th>基本类型</th>
-<th>位数</th>
-<th>范围</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>byte(字节)</td>
-<td>8</td>
-<td>-128 至 127</td>
-<td>0</td>
-</tr>
-<tr>
-<td>shot(短整型)</td>
-<td>16</td>
-<td>-32768(-2^15 ) 至 32767(2^15-1 )</td>
-<td>0</td>
-</tr>
-<tr>
-<td>int(整型)</td>
-<td>32</td>
-<td>-2147483648(-2^31 )至2147483647(2^31-1 )</td>
-<td>0</td>
-</tr>
-<tr>
-<td>long(长整型)</td>
-<td>64</td>
-<td>-2^63 至2^63-1</td>
-<td>0L或0l</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>1</td>
-<td>0,1或true，false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>char</td>
-<td>8</td>
-<td>\u0000至\uffff</td>
-<td>\u0000\</td>
-</tr>
-<tr>
-<td>float</td>
-<td>32</td>
-<td>1.4E-45至3.4028235E38</td>
-<td>0.0f</td>
-</tr>
-<tr>
-<td>double</td>
-<td>64</td>
-<td>4.9E-324至1.7976931348623157E308</td>
-<td>0.0d</td>
-</tr>
-</tbody>
-</table>
-<h4 id="类型转换的原理"><a href="#类型转换的原理" class="headerlink" title="类型转换的原理"></a>类型转换的原理</h4><ul>
-<li><strong>真值</strong>：这个就看字面意思，<code>int a = -1</code>;a的真值就是<code>-1</code>.</li>
-<li><strong>原码</strong>：int类型的-1的二进制表示，由于-1是负数，又是int类型的，所以他需要32个二进制来表示，二进制的最高位是符号位，所以为1，1的二进制为1，所以-1的二进制表示为<code>1000 0000 0000 0000 0000 0000 0000 0001</code>；</li>
-<li><strong>反码</strong>：正数的反码就是原码，负数的反码是在原码的基础上，符号位不变，其余位取反。所以int类型的-1的反码是<code>1111 1111 1111 1111 1111 1111 1111 1110</code>。</li>
-<li><strong>补码</strong>：正数的补码就是原码，负数的补码是在其反码的基础上加1。所以，int类型的-1的补码是 <code>1111 1111 1111 1111 1111 1111 1111 1111</code>。</li>
-<li><strong>补位</strong>：补位是二进制中在扩充位数的时候，位数不够需要在左边补齐，补齐的方式为如果是正数的补位，左边全部补0，负数左边全部补1（也就是说补位的时候补足的是符号位）。<h5 id="自动转换（从高位向低位转换）："><a href="#自动转换（从高位向低位转换）：" class="headerlink" title="自动转换（从高位向低位转换）："></a>自动转换（从高位向低位转换）：</h5>将a位的变量A转换为b位的B：A–&gt;补码–&gt;截取（去掉前a-b位，只保留后b位）–&gt;补码–&gt;B。<br>示例：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=-<span class="number">1</span>；<span class="keyword">byte</span> b=（<span class="keyword">byte</span>）a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>1000 0000 0000 0000 0000 0000 0000 0001<br>补码<br>1111 1111 1111 1111 1111 1111 1111 1111<br>截取（保留后8位）<br><del>1111 1111 1111 1111 1111 1111</del> 1111 1111<br>即1111 1111<br>补码<br>1000 0001<br>即真值为-1</p>
-<h5 id="强制转换（从低位向高位转换时）："><a href="#强制转换（从低位向高位转换时）：" class="headerlink" title="强制转换（从低位向高位转换时）："></a>强制转换（从低位向高位转换时）：</h5><p>(byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double)<br>补码–&gt;补位–&gt;补码<br>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> a =-<span class="number">1</span>；<span class="keyword">int</span> b=a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure></p>
-<p>1000 0001<br>补码<br>1111 1111<br>补位<br>1111 1111 1111 1111 1111 1111 1111 1111<br>补码<br>1000 0000 0000 0000 0000 0000 0000 0001<br>即真值为-1</p>
-<h5 id="数据溢出处理"><a href="#数据溢出处理" class="headerlink" title="数据溢出处理"></a>数据溢出处理</h5><p>示例1：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">255</span>;<span class="keyword">byte</span> b=(<span class="keyword">byte</span>)a; <span class="comment">//b的值为什么是-1?</span></div></pre></td></tr></table></figure></p>
-<p>0000 0000 0000 0000 0000 0000 1111 1111<br>补码<br>0000 0000 0000 0000 0000 0000 1111 1111<br>截取<br>1111 1111<br>补码<br>1000 0001<br>即真值为-1<br>示例2：<br>大家在自己算一下（byte）234的结果是什么，然后在IDE里在运行下看和自己手写算出来的一样吗。这里（byte）234的手写结果是150，但是150是超出了byte的表示范围的，所以这里还有一次转化？？？后面是怎么转化的呢？</p>
-<h3 id="定点数与浮点数区别"><a href="#定点数与浮点数区别" class="headerlink" title="定点数与浮点数区别"></a>定点数与浮点数区别</h3><h4 id="定点数"><a href="#定点数" class="headerlink" title="定点数"></a>定点数</h4><p>在计算机系统的发展过程中，曾经提出过多种方法表达实数。典型的比如相对于浮点数的定点数（Fixed Point Number）。在这种表达方式中，小数点固定的位于实数所有数字中间的某个位置。货币的表达就可以使用这种方式，比如 99.00 或者 00.99 可以用于表达具有四位精度（Precision），小数点后有两位的货币值。<em>由于小数点位置固定，所以可以直接用四位数值来表达相应的数值</em>。<em>SQL 中的 NUMBER 数据类型就是利用定点数来定义的</em>。还有一种提议的表达方式为有理数表达方式，即用两个整数的比值来表达实数。<br>定点数表达法的缺点在于其形式过于僵硬，固定的小数点位置决定了固定位数的整数部分和小数部分，不利于同时表达特别大的数或者特别小的数。</p>
-<h4 id="浮点数（float-point-number）"><a href="#浮点数（float-point-number）" class="headerlink" title="浮点数（float-point-number）"></a>浮点数（float-point-number）</h4><p>最终，绝大多数现代的计算机系统采纳了所谓的浮点数表达方式。<em>这种表达方式利用科学计数法来表达实数，即用一个尾数（Mantissa ），一个基数（Base），一个指数（Exponent）以及一个表示正负的符号来表达实数</em>。比如 123.45 用十进制科学计数法可以表达为 1.2345 × 10^2 ，其中 1.2345 为尾数，10 为基数，2 为指数。浮点数利用指数达到了浮动小数点的效果，从而可以灵活地表达更大范围的实数。</p>
-<p><strong>NOTE</strong>: 尾数有时也称为有效数字（Significand）。尾数实际上是有效数字的非正式说法。</p>
-<p>同样的数值可以有多种浮点数表达方式，比如上面例子中的 123.45 可以表达为 12.345 × 10^1 ，0.12345 × 10^3 或者 1.2345 × 10^2 。因为这种多样性，有必要对其加以规范化以达到统一表达的目标。规范的（Normalized）浮点数表达方式具有如下形式：</p>
-<p>$±d_0.d_1d_2…d_i × β^e , (0 ≤ d_i &lt; β)$</p>
-<p>其中 d.dd…d 即尾数，β 为基数，e 为指数。尾数中数字的个数称为精度，在本文中用 p 来表示。每个数字 d 介于 0 和基数之间，包括 0。小数点左侧的数字不为 0。</p>
-<p>基于规范表达的浮点数对应的具体值可由下面的表达式计算而得：<br>$±(d_0 + d<em>1β^{e-1} + … + d</em>{i-1}β ^ {e-(i-1)}+ d_iβ^{e-i} ), (0 ≤ d_i &lt; β)$<br>对于十进制的浮点数，即基数 β 等于 10 的浮点数而言，上面的表达式非常容易理解，也很直白。计算机内部的数值表达是基于二进制的。从上面的表达式，我们可以知道，二进制数同样可以有小数点，也同样具有类似于十进制的表达方式。只是此时 β 等于 2，而每个数字$d_i$ 只能在 0 和 1 之间取值。比如二进制数 1001.101 相当于 1 × 2^3 + 0 × 2^2 + 0 × 2^1 + 1 × 2^0 + 1 × 2^-1 + 0 × 2^-2 + 1 × 2^-3 ，对应于十进制的 9.625。其规范浮点数表达为 1.001101 × 2^3。</p>
-<h4 id="IEEE-浮点数"><a href="#IEEE-浮点数" class="headerlink" title="IEEE 浮点数"></a>IEEE 浮点数</h4><p>计算机中是用有限的连续字节保存浮点数的。保存这些浮点数当然必须有特定的格式，Java 平台上的浮点数类型 float 和 double 采纳了 IEEE 754 标准中所定义的单精度 32 位浮点数和双精度 64 位浮点数的格式。</p>
-<h5 id="float和double内存结构"><a href="#float和double内存结构" class="headerlink" title="float和double内存结构"></a>float和double内存结构</h5><p>在 IEEE 标准中，浮点数是将特定长度的连续字节的所有二进制位分割为特定宽度的符号域，指数域和尾数域三个域，其中保存的值分别用于表示给定二进制浮点数中的符号，指数和尾数。<br>float的指数位有8位，而double的指数位有11位，分布如下：<br><img src="/media/1.gif" alt="1"></p>
-<p>float：<br>        1bit（符号位） 8bits（指数位） 23bits（尾数位）<br><img src="/media/2.gif" alt="2"></p>
-<p>double：<br>        1bit（符号位） 11bits（指数位） 52bits（尾数位）</p>
-<p>第二个域为指数域（图中标注为指数位），对应于我们之前介绍的二进制科学计数法中的指数部分。其中单精度数为 8 位，双精度数为 11 位。以单精度数为例，8 位的指数为可以表达 0 到 255 之间的 255 个指数值。但是，指数可以为正数，也可以为负数。为了处理负指数的情况，实际的指数值按要求需要加上一个偏差（Bias）值作为保存在指数域中的值，单精度数的偏差值为 127，而双精度数的偏差值为 1023。比如，单精度的实际指数值 0 在指数域中将保存为 127；而保存在指数域中的 64 则表示实际的指数值 -63。 偏差的引入使得对于单精度数，实际可以表达的指数值的范围就变成 -127 到 128 之间（包含两端）。我们不久还将看到，实际的指数值 -127（保存为 全 0）以及 +128（保存为全 1）保留用作特殊值的处理。这样，实际可以表达的有效指数范围就在 -127 和 127 之间。在本文中，最小指数和最大指数分别用 emin 和 emax 来表达。</p>
-<p>于是，float的指数范围为<code>-128~+127</code>，而double的指数范围为<code>-1024~+1023</code>，并且指数位是按补码的形式来划分的。<br>其中负指数决定了浮点数所能表达的绝对值最小的非零数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。<br>float的范围为???<code>-2^128 ~ +2^127</code>，也即<code>-3.40E+38 ~ +3.40E+38</code>；double的范围为???<code>-2^1024 ~ +2^1023</code>，也即<code>-1.79E+308(这里与IDEA打印出的最小值不符，博主会慢慢查证再来修改) ~ +1.79E+308</code>。</p>
-<p>之所以不能用f1==f2来判断两个数相等，是因为虽然f1和f2在可能是两个不同的数字，但是受到浮点数表示精度的限制，有可能会错误的判断两个数相等</p>
-<h5 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h5><p>float和double的精度是由尾数的位数来决定的。浮点数在内存中是按科学计数法来存储的，其整数部分始终是一个隐含着的“1”，由于它是不变的，故不能对精度造成影响。</p>
-<ul>
-<li>float：2^23 = 8388608，一共七位，由于最左为1的一位省略了，这意味着最多能表示8位数： 2*8388608 = 16777216 。有8位有效数字，但绝对能保证的为7位，也即==float的精度为7~8位有效数字==；</li>
-<li>double：2^52 = 4503599627370496，一共16位，同理，==double的精度为16~17位==。</li>
-</ul>
-<p>图例中的第三个域为尾数域，其中单精度数为 23 位长，双精度数为 52 位长。除了我们将要讲到的某些特殊值外，IEEE 标准要求浮点数必须是规范的。这意味着尾数的小数点左侧必须为 1，因此我们在保存尾数的时候，可以省略小数点前面这个 1，从而腾出一个二进制位来保存更多的尾数。这样我们实际上用 23 位长的尾数域表达了 24 位的尾数。比如对于单精度数而言，二进制的 1001.101（对应于十进制的 9.625）可以表达为 1.001101 × 23，所以实际保存在尾数域中的值为 00110100000000000000000，即去掉小数点左侧的 1，并用 0 在右侧补齐。</p>
-<p>值得注意的是，对于单精度数，由于我们只有 24 位的尾数（其中一位隐藏），所以可以表达的最大尾数为 224 - 1 = 16,777,215。特别的，16,777,216 是偶数，所以我们可以通过将它除以 2 并相应地调整指数来保存这个数，这样 16,777,216 同样可以被精确的保存。相反，数值 16,777,217 则无法被精确的保存。由此，我们可以看到单精度的浮点数可以表达的十进制数值中，真正有效的数字不高于 8 位。事实上，对相对误差的数值分析结果显示有效的精度大约为 7.22 位。参考下面的示例：</p>
-<p>true value|16,777,215|16,777,216|16,777,217|16,777,218|16,777,219<br>|—|—|—|—|—|—<br>stored value|16,777,215|1.6777215E7|1.6777216E7|1.6777216E7|1.6777218E7</p>
-<p>根据标准要求，无法精确保存的值必须向最接近的可保存的值进行舍入。这有点像我们熟悉的十进制的四舍五入，即不足一半则舍，一半以上（包括一半）则进。不过对于二进制浮点数而言，还多一条规矩，就是当需要舍入的值刚好是一半时，不是简单地进，而是在前后两个等距接近的可保存的值中，取其中最后一位有效数字为零者。从上面的示例中可以看出，奇数都被舍入为偶数，且有舍有进。我们可以将这种舍入误差理解为”半位”的误差。所以，为了避免 7.22 对很多人造成的困惑，有些文章经常以 7.5 位来说明单精度浮点数的精度问题。</p>
-<p>可以试试在IDE中运行一下代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> f1 = <span class="number">16777215f</span>;  </div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;  </div><div class="line">    System.out.println(f1);  </div><div class="line">    f1++;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>输出结果除了第一个是1.6777215E7其余全都是1.6777216E7，不是for循环出了问题，而是因为16,777,216在计算机中即1.6777216E7，+1后依旧等于1.6777216E7。</p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
-<li><a href="http://www.cnblogs.com/heshan664754022/archive/2013/04/01/2994028.html" target="_blank" rel="external">Java中x=x+1 与x+=1 的一点区别</a></li>
-<li><a href="http://lwx522.iteye.com/blog/2087638" target="_blank" rel="external">java中数据溢出处理</a></li>
-<li><a href="https://my.oschina.net/u/190643/blog/652174" target="_blank" rel="external">java 类型转换的原理</a></li>
-<li><a href="http://blog.csdn.net/cppptr/article/details/573372" target="_blank" rel="external">深入浅出浮点数Floating Point Number In a Nutshell</a></li>
-</ol>
-
-          
+          <p>朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/24/java数据结构/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -693,28 +588,14 @@
 
       
         
-          
-            <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h3 id="list-和-tuple"><a href="#list-和-tuple" class="headerlink" title="list 和 tuple"></a>list 和 tuple</h3><p>list 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。</p>
-<h4 id="list"><a href="#list" class="headerlink" title="list"></a>list</h4><p>list类似于数组，是一个<strong>可变</strong>的<strong>有序</strong>表，元素的数据类型也可以不同,ist元素也可以是另一个list。<br>如<code>classmates = [&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;]</code>，索引从0开始到<code>len(classmates)-1</code>，如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素：<code>classmates[-1]</code>,以此类推，可以获取倒数第2个、倒数第3个<code>classmates[-2]</code>。<br>方法：<br>append()末尾添加元素<br>insert()指定位置插入元素<br>pop()删除末尾元素或pop(i)指定位置<code>i</code>元素，它还会返回被删除元素。<br>del()删除指定位置元素<br>list(tup)将不可变的元祖tup转换为可变的list<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">classmates.append(<span class="string">'Adam'</span>)</div><div class="line">classmates.insert(<span class="number">1</span>, <span class="string">'Jack'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop()</div><div class="line"><span class="string">'Adam'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop(<span class="number">1</span>)</div><div class="line"><span class="string">'Jack'</span></div><div class="line"><span class="comment"># del语句</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">-1</span>, <span class="number">1</span>, <span class="number">66.25</span>, <span class="number">333</span>, <span class="number">333</span>, <span class="number">1234.5</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[<span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a</div><div class="line">[<span class="number">1</span>, <span class="number">66.25</span>, <span class="number">333</span>, <span class="number">333</span>, <span class="number">1234.5</span>]</div><div class="line"><span class="comment"># 删除部分</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[<span class="number">2</span>:<span class="number">4</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a</div><div class="line">[<span class="number">1</span>, <span class="number">66.25</span>, <span class="number">1234.5</span>]</div><div class="line"><span class="comment"># 清空</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a[:]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a</div><div class="line">[]</div><div class="line"><span class="comment"># del还可以直接删除整个list变量（不是清空）</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">del</span> a</div><div class="line"><span class="comment">#tuple转换为list</span></div><div class="line">aTuple = (<span class="number">123</span>, <span class="string">'xyz'</span>, <span class="string">'zara'</span>, <span class="string">'abc'</span>);</div><div class="line">aList = list(aTuple)</div></pre></td></tr></table></figure></p>
-<h4 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h4><p>tuple是一个<strong>不可变</strong>的<strong>有序</strong>表，tuple和list非常类似，但是tuple一旦初始化就不能修改，比如同样是列出同学的名字：<code>classmates = (&#39;Michael&#39;, &#39;Bob&#39;, &#39;Tracy&#39;)</code><br>现在，classmates这个tuple不能变了，自然也就没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用classmates[0]，classmates[-1]，但不能赋值成另外的元素。</p>
-<p>不可变的tuple有什么意义？因为tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple。<br>需示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 定义一个空的tuple</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>t = ()</div><div class="line"><span class="comment"># 定义一个只有一个元素的tuple</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">4</span>,)</div></pre></td></tr></table></figure></p>
-<p><strong>注意：</strong></p>
-<ol>
-<li><code>t = (4)</code>定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。所以，只有1个元素的tuple定义时必须加一个逗号,，来消除歧义。</li>
-<li>当tuple中嵌套list时，tuple是对list的指向不变，但list可变，。</li>
-</ol>
-<h3 id="dict和set"><a href="#dict和set" class="headerlink" title="dict和set"></a>dict和set</h3><h4 id="dict"><a href="#dict" class="headerlink" title="dict"></a>dict</h4><p>dict全称dictionary，类似于java中的map，使用键-值（key-value）存储（key要求唯一性），具有极快的查找速度。<br>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">d = &#123;<span class="string">'Michael'</span>: <span class="number">95</span>, <span class="string">'Bob'</span>: <span class="number">75</span>, <span class="string">'Tracy'</span>: <span class="number">85</span>&#125;</div><div class="line"><span class="comment">#或者用更麻烦的方法</span></div><div class="line">d = &#123;&#125;</div><div class="line">d[<span class="string">'a'</span>] = <span class="number">1</span></div><div class="line">d[<span class="string">'b'</span>] = <span class="number">2</span></div></pre></td></tr></table></figure></p>
-<p>方法：<br>get()<br>pop() 删除指定元素<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">d = &#123;<span class="string">'Michael'</span>: <span class="number">95</span>, <span class="string">'Bob'</span>: <span class="number">75</span>, <span class="string">'Tracy'</span>: <span class="number">85</span>&#125;</div><div class="line"><span class="comment"># 若key不存在，则返回None。</span></div><div class="line"><span class="comment"># 注意：返回None的时候,Python的交互式命令行不显示结果。</span></div><div class="line">d.get(<span class="string">'Tom'</span>)</div><div class="line"><span class="comment"># 指定默认值。如果key不存在自己指定的value</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>d.get(<span class="string">'Tom'</span>, <span class="number">-1</span>)</div><div class="line"><span class="number">-1</span></div><div class="line"><span class="comment"># pop(key)，删除key-value,返回被删除的value</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>d.pop(<span class="string">'Bob'</span>)</div><div class="line"><span class="number">75</span></div></pre></td></tr></table></figure></p>
-<p>请务必注意，dict内部存放的顺序和key放入的顺序是没有关系的。<br>和list比较，dict有以下几个特点：</p>
-<pre><code>1.    查找和插入的速度极快，不会随着key的增加而变慢；
-2.    需要占用大量的内存，内存浪费多。
-</code></pre><p>而list相反：</p>
-<pre><code>1.    查找和插入的时间随着元素的增加而增加；
-2.    占用空间小，浪费内存很少。
-</code></pre><p>所以，dict是用空间来换取时间的一种方法。</p>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>set是无序不重复的集合。可以这样理解：<em>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。</em></p>
-
-          
+          <h3 id="list-和-tuple"><a href="#list-和-tuple" class="headerlink" title="list 和 tuple"></a>list 和 tuple</h3><p>list 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/22/python笔记2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
