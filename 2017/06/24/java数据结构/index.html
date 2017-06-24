@@ -109,7 +109,7 @@
 <meta property="og:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
 <meta property="og:image" content="http://chant00.com/media/1.gif">
 <meta property="og:image" content="http://chant00.com/media/2.gif">
-<meta property="og:updated_time" content="2017-06-24T14:56:16.000Z">
+<meta property="og:updated_time" content="2017-06-24T16:31:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基本数据类型转换原理以及数据溢出处理">
 <meta name="twitter:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
@@ -510,9 +510,9 @@
 <li><strong>原码</strong>：int类型的-1的二进制表示，由于-1是负数，又是int类型的，所以他需要32个二进制来表示，二进制的最高位是符号位，所以为1，1的二进制为1，所以-1的二进制表示为<code>1000 0000 0000 0000 0000 0000 0000 0001</code>；</li>
 <li><strong>反码</strong>：正数的反码就是原码，负数的反码是在原码的基础上，符号位不变，其余位取反。所以int类型的-1的反码是<code>1111 1111 1111 1111 1111 1111 1111 1110</code>。</li>
 <li><strong>补码</strong>：正数的补码就是原码，负数的补码是在其反码的基础上加1。所以，int类型的-1的补码是 <code>1111 1111 1111 1111 1111 1111 1111 1111</code>。</li>
-<li><strong>补位</strong>：补位是二进制中在扩充位数的时候，位数不够需要在左边补齐，补齐的方式为如果是正数的补位，左边全部补0，负数左边全部补1（也就是说补位的时候补足的是符号位）。<h5 id="自动转换（从高位向低位转换）："><a href="#自动转换（从高位向低位转换）：" class="headerlink" title="自动转换（从高位向低位转换）："></a>自动转换（从高位向低位转换）：</h5>将a位的变量A转换为b位的B：A–&gt;补码–&gt;截取（去掉前a-b位，只保留后b位）–&gt;补码–&gt;B。<br>示例：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=-<span class="number">1</span>；<span class="keyword">byte</span> b=（<span class="keyword">byte</span>）a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure>
-</li>
+<li><strong>补位</strong>：补位是二进制中在扩充位数的时候，位数不够需要在左边补齐，补齐的方式为如果是正数的补位，左边全部补0，负数左边全部补1（也就是说补位的时候补足的是符号位）。</li>
 </ul>
+<h5 id="自动转换（从高位向低位转换）："><a href="#自动转换（从高位向低位转换）：" class="headerlink" title="自动转换（从高位向低位转换）："></a>自动转换（从高位向低位转换）：</h5><p>将a位的变量A转换为b位的B：A–&gt;补码–&gt;截取（去掉前a-b位，只保留后b位）–&gt;补码–&gt;B。<br>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=-<span class="number">1</span>；<span class="keyword">byte</span> b=（<span class="keyword">byte</span>）a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure></p>
 <p>1000 0000 0000 0000 0000 0000 0000 0001<br>补码<br>1111 1111 1111 1111 1111 1111 1111 1111<br>截取（保留后8位）<br><del>1111 1111 1111 1111 1111 1111</del> 1111 1111<br>即1111 1111<br>补码<br>1000 0001<br>即真值为-1</p>
 <h5 id="强制转换（从低位向高位转换时）："><a href="#强制转换（从低位向高位转换时）：" class="headerlink" title="强制转换（从低位向高位转换时）："></a>强制转换（从低位向高位转换时）：</h5><p>(byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double)<br>补码–&gt;补位–&gt;补码<br>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> a =-<span class="number">1</span>；<span class="keyword">int</span> b=a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure></p>
 <p>1000 0001<br>补码<br>1111 1111<br>补位<br>1111 1111 1111 1111 1111 1111 1111 1111<br>补码<br>1000 0000 0000 0000 0000 0000 0000 0001<br>即真值为-1</p>
