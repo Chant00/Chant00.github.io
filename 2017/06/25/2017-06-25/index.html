@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-25T11:46:13.000Z">
+<meta property="og:updated_time" content="2017-06-25T12:22:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（三）--for else还有这种操作？">
 <meta name="twitter:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
@@ -446,6 +446,8 @@
 <p>A <strong>break</strong> statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and <strong>continues</strong> with the next item, or with the else clause if there is no next item.</p>
 </blockquote>
 <p>也就是说，<strong>正常情况下else语句会在循环完成（遍历完整个expression_list）后执行</strong>。但是<strong>如果有break发生时，else语句不执行</strong>，也就是说break会同时跳出for和else的整程序组（suite）。而<strong>continue会在循环中跳过else语句，然后在循环完毕后执行else语句</strong>。</p>
+<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">10</span>):</div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>, n):</div><div class="line">        <span class="keyword">if</span> n % x == <span class="number">0</span>:</div><div class="line">            print(n, <span class="string">'equals'</span>, x, <span class="string">'*'</span>, n//x)</div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="comment"># loop fell through without finding a factor</span></div><div class="line">        print(n, <span class="string">'is a prime number'</span>)</div></pre></td></tr></table></figure></p>
+<p>你能不用for else语句来实现相同的功能么？</p>
 
       
     </div>
