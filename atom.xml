@@ -38,6 +38,26 @@
   </entry>
   
   <entry>
+    <title>Python笔记（三）--for else还有这种操作？</title>
+    <link href="http://chant00.com/2017/06/22/2017-06-25/"/>
+    <id>http://chant00.com/2017/06/22/2017-06-25/</id>
+    <published>2017-06-22T02:25:49.000Z</published>
+    <updated>2017-06-25T11:14:11.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python笔记（二）--容器</title>
     <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B02/"/>
     <id>http://chant00.com/2017/06/22/python笔记2/</id>
@@ -58,11 +78,11 @@
   </entry>
   
   <entry>
-    <title>Python笔记--数据类型</title>
+    <title>Python笔记（一）--数据类型</title>
     <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B01/"/>
     <id>http://chant00.com/2017/06/22/python笔记1/</id>
     <published>2017-06-22T02:24:49.000Z</published>
-    <updated>2017-06-22T08:36:09.000Z</updated>
+    <updated>2017-06-25T08:28:54.000Z</updated>
     
     <summary type="html">
     
