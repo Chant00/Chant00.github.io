@@ -104,10 +104,10 @@
 <meta name="description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python笔记（三）--for else还有这种操作？">
-<meta property="og:url" content="http://chant00.com/2017/06/22/2017-06-25/index.html">
+<meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-25T11:14:11.000Z">
+<meta property="og:updated_time" content="2017-06-25T11:44:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（三）--for else还有这种操作？">
 <meta name="twitter:description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
@@ -138,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/2017/06/22/2017-06-25/"/>
+  <link rel="canonical" href="http://chant00.com/2017/06/25/2017-06-25/"/>
 
 
 
@@ -338,7 +338,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/22/2017-06-25/">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/25/2017-06-25/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chant">
@@ -367,8 +367,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-22T10:25:49+08:00">
-                2017-06-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-25T07:25:49+08:00">
+                2017-06-25
               </time>
             
 
@@ -407,7 +407,7 @@
 
           
           
-             <span id="/2017/06/22/2017-06-25/" class="leancloud_visitors" data-flag-title="Python笔记（三）--for else还有这种操作？">
+             <span id="/2017/06/25/2017-06-25/" class="leancloud_visitors" data-flag-title="Python笔记（三）--for else还有这种操作？">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,7 +435,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
 <a id="more"></a>
 <p>关于for循环操作可变数组时，<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(a)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> a:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        a.remove(x)</div><div class="line">print(a)  <span class="comment"># [2, -3, -2, 3]</span></div><div class="line">print(<span class="string">"========================="</span>)</div><div class="line">b = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(b)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> b[:]:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        b.remove(x)</div><div class="line">print(b)  <span class="comment"># [2, 3]</span></div></pre></td></tr></table></figure></p>
 <blockquote>
@@ -488,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/22/python笔记2/" rel="next" title="Python笔记（二）--容器">
-                <i class="fa fa-chevron-left"></i> Python笔记（二）--容器
+              <a href="/2017/06/24/java数据结构/" rel="next" title="Java基本数据类型转换原理以及数据溢出处理">
+                <i class="fa fa-chevron-left"></i> Java基本数据类型转换原理以及数据溢出处理
               </a>
             
           </div>
@@ -497,10 +497,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/24/java数据结构/" rel="prev" title="Java基本数据类型转换原理以及数据溢出处理">
-                Java基本数据类型转换原理以及数据溢出处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -864,8 +860,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://chant00.com/2017/06/22/2017-06-25/';
-          this.page.identifier = '2017/06/22/2017-06-25/';
+          this.page.url = 'http://chant00.com/2017/06/25/2017-06-25/';
+          this.page.identifier = '2017/06/25/2017-06-25/';
           this.page.title = 'Python笔记（三）--for else还有这种操作？';
         };
         var d = document, s = d.createElement('script');
