@@ -101,16 +101,16 @@
 
 
 
-<meta name="description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta name="description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python笔记（三）--for else还有这种操作？">
 <meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-25T11:44:32.000Z">
+<meta property="og:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta property="og:updated_time" content="2017-06-25T11:46:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（三）--for else还有这种操作？">
-<meta name="twitter:description" content="在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta name="twitter:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
 
 
 
@@ -435,7 +435,7 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>在学习Python的过程中，法相很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
 <a id="more"></a>
 <p>关于for循环操作可变数组时，<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(a)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> a:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        a.remove(x)</div><div class="line">print(a)  <span class="comment"># [2, -3, -2, 3]</span></div><div class="line">print(<span class="string">"========================="</span>)</div><div class="line">b = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(b)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> b[:]:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        b.remove(x)</div><div class="line">print(b)  <span class="comment"># [2, 3]</span></div></pre></td></tr></table></figure></p>
 <blockquote>
