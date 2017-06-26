@@ -101,16 +101,16 @@
 
 
 
-<meta name="description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta name="description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python笔记（三）-- for else还有这种操作？">
+<meta property="og:title" content="Python笔记（三）-- Important Warning">
 <meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-26T04:42:48.000Z">
+<meta property="og:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta property="og:updated_time" content="2017-06-26T06:07:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python笔记（三）-- for else还有这种操作？">
-<meta name="twitter:description" content="在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
+<meta name="twitter:title" content="Python笔记（三）-- Important Warning">
+<meta name="twitter:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title>Python笔记（三）-- for else还有这种操作？ | Chant</title>
+  <title>Python笔记（三）-- Important Warning | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -355,7 +355,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python笔记（三）-- for else还有这种操作？</h1>
+          <h1 class="post-title" itemprop="name headline">Python笔记（三）-- Important Warning</h1>
         
 
         <div class="post-meta">
@@ -407,7 +407,7 @@
 
           
           
-             <span id="/2017/06/25/2017-06-25/" class="leancloud_visitors" data-flag-title="Python笔记（三）-- for else还有这种操作？">
+             <span id="/2017/06/25/2017-06-25/" class="leancloud_visitors" data-flag-title="Python笔记（三）-- Important Warning">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -435,9 +435,9 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>本篇整理下python中容易出错的那些坑。<br>在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
 <a id="more"></a>
-<p>关于for循环操作可变数组时，<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(a)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> a:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        a.remove(x)</div><div class="line">print(a)  <span class="comment"># [2, -3, -2, 3]</span></div><div class="line">print(<span class="string">"========================="</span>)</div><div class="line">b = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(b)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> b[:]:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        b.remove(x)</div><div class="line">print(b)  <span class="comment"># [2, 3]</span></div></pre></td></tr></table></figure></p>
+<h3 id="for循环操作可变序列"><a href="#for循环操作可变序列" class="headerlink" title="for循环操作可变序列"></a>for循环操作可变序列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(a)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> a:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        a.remove(x)</div><div class="line">print(a)  <span class="comment"># [2, -3, -2, 3]</span></div><div class="line">print(<span class="string">"========================="</span>)</div><div class="line">b = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(b)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> b[:]:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        b.remove(x)</div><div class="line">print(b)  <span class="comment"># [2, 3]</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Note</strong> There is a <strong>subtlety</strong> when the sequence is being modified by the loop (this can only occur for mutable sequences, i.e. lists). <strong>An internal counter is used to keep track of which item is used next</strong>, and this is incremented on each iteration. When this counter has reached the length of the sequence the loop terminates. This means that if the suite deletes the current (or a previous) item from the sequence, the next item will be skipped (since it gets the index of the current item which has already been treated). Likewise, if the suite inserts an item in the sequence before the current item, the current item will be treated again the next time through the loop. This can lead to nasty bugs that <strong>can be avoided by making a temporary copy using a slice of the whole sequence.</strong><br>简而言之，循环时指针会移动，所以直接删除是不安全的。而解决办法也很精妙（真是完美契合subtlety这个词）,使用b[:]会在内存中临时复制出一个b，在b[:]中循环，在原本的b上remove。</p>
 </blockquote>
@@ -447,6 +447,10 @@
 </blockquote>
 <p>也就是说，<strong>正常情况下else语句会在循环完成（遍历完整个expression_list）后执行</strong>。但是<strong>如果有break发生时，else语句不执行</strong>，也就是说break会同时跳出for和else的整程序组（suite）。而<strong>continue会在循环中跳过else语句，然后在循环完毕后执行else语句</strong>。</p>
 <p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">10</span>):</div><div class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">2</span>, n):</div><div class="line">        <span class="keyword">if</span> n % x == <span class="number">0</span>:</div><div class="line">            print(n, <span class="string">'equals'</span>, x, <span class="string">'*'</span>, n//x)</div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="comment"># loop fell through without finding a factor</span></div><div class="line">        print(n, <span class="string">'is a prime number'</span>)</div></pre></td></tr></table></figure></p>
+<p>换个说法再来解释一遍：</p>
+<blockquote>
+<p>Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. </p>
+</blockquote>
 <p>你能不用for else语句来实现相同的功能么？</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
 <li><a href="https://docs.python.org/3/tutorial/datastructures.html#data-structures" target="_blank" rel="external">官方文档–Data Structures</a></li>
@@ -695,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for-else"><span class="nav-number">1.</span> <span class="nav-text">for else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">2.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环操作可变序列"><span class="nav-number">1.</span> <span class="nav-text">for循环操作可变序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-else"><span class="nav-number">2.</span> <span class="nav-text">for else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
@@ -867,7 +871,7 @@
         var disqus_config = function () {
           this.page.url = 'http://chant00.com/2017/06/25/2017-06-25/';
           this.page.identifier = '2017/06/25/2017-06-25/';
-          this.page.title = 'Python笔记（三）-- for else还有这种操作？';
+          this.page.title = 'Python笔记（三）-- Important Warning';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';
