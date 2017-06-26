@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-25T12:22:22.000Z</updated>
+  <updated>2017-06-26T04:42:48.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python笔记（三）--for else还有这种操作？</title>
+    <title>Python笔记（三）-- for else还有这种操作？</title>
     <link href="http://chant00.com/2017/06/25/2017-06-25/"/>
     <id>http://chant00.com/2017/06/25/2017-06-25/</id>
     <published>2017-06-24T23:25:49.000Z</published>
-    <updated>2017-06-25T12:22:22.000Z</updated>
+    <updated>2017-06-26T04:42:48.000Z</updated>
     
     <summary type="html">
     
@@ -62,11 +62,11 @@
     <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B02/"/>
     <id>http://chant00.com/2017/06/22/python笔记2/</id>
     <published>2017-06-22T02:25:49.000Z</published>
-    <updated>2017-06-25T05:12:39.000Z</updated>
+    <updated>2017-06-26T04:42:43.000Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;list-和-tuple&quot;&gt;&lt;a href=&quot;#list-和-tuple&quot; class=&quot;headerlink&quot; title=&quot;list 和 tuple&quot;&gt;&lt;/a&gt;list 和 tuple&lt;/h3&gt;&lt;p&gt;list 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。&lt;br&gt;
+      &lt;h3 id=&quot;List-和-Tuple&quot;&gt;&lt;a href=&quot;#List-和-Tuple&quot; class=&quot;headerlink&quot; title=&quot;List 和 Tuple&quot;&gt;&lt;/a&gt;List 和 Tuple&lt;/h3&gt;&lt;p&gt;list 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。&lt;/p&gt;
     
     </summary>
     
@@ -82,7 +82,7 @@
     <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B01/"/>
     <id>http://chant00.com/2017/06/22/python笔记1/</id>
     <published>2017-06-22T02:24:49.000Z</published>
-    <updated>2017-06-25T08:28:54.000Z</updated>
+    <updated>2017-06-26T02:23:28.000Z</updated>
     
     <summary type="html">
     
