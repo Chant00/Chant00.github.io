@@ -103,13 +103,13 @@
 
 <meta name="description" content="List 和 Tuplelist 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python笔记（二）--容器">
+<meta property="og:title" content="Python笔记（二）-- 容器">
 <meta property="og:url" content="http://chant00.com/2017/06/22/python笔记2/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="List 和 Tuplelist 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。">
-<meta property="og:updated_time" content="2017-06-26T04:42:43.000Z">
+<meta property="og:updated_time" content="2017-06-26T04:46:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python笔记（二）--容器">
+<meta name="twitter:title" content="Python笔记（二）-- 容器">
 <meta name="twitter:description" content="List 和 Tuplelist 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。">
 
 
@@ -144,7 +144,7 @@
 
 
 
-  <title>Python笔记（二）--容器 | Chant</title>
+  <title>Python笔记（二）-- 容器 | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -355,7 +355,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python笔记（二）--容器</h1>
+          <h1 class="post-title" itemprop="name headline">Python笔记（二）-- 容器</h1>
         
 
         <div class="post-meta">
@@ -407,7 +407,7 @@
 
           
           
-             <span id="/2017/06/22/python笔记2/" class="leancloud_visitors" data-flag-title="Python笔记（二）--容器">
+             <span id="/2017/06/22/python笔记2/" class="leancloud_visitors" data-flag-title="Python笔记（二）-- 容器">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -478,7 +478,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; for i, v in enumerate([&apos;tic&apos;, &apos;tac&apos;, &apos;toe&apos;]):</div><div class="line">...     print(i, v)</div><div class="line">...</div><div class="line">0 tic</div><div class="line">1 tac</div><div class="line">2 toe</div></pre></td></tr></table></figure>
 <p>To loop over two or more sequences at the same time, the entries can be paired with the <code>zip()</code> function.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; questions = [&apos;name&apos;, &apos;quest&apos;, &apos;favorite color&apos;]</div><div class="line">&gt;&gt;&gt; answers = [&apos;lancelot&apos;, &apos;the holy grail&apos;, &apos;blue&apos;]</div><div class="line">&gt;&gt;&gt; for q, a in zip(questions, answers):</div><div class="line">...     print(&apos;What is your &#123;0&#125;?  It is &#123;1&#125;.&apos;.format(q, a))</div><div class="line">...</div><div class="line">What is your name?  It is lancelot.</div><div class="line">What is your quest?  It is the holy grail.</div><div class="line">What is your favorite color?  It is blue.</div></pre></td></tr></table></figure></p>
 <p>To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the <code>reversed()</code> function.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; for i in reversed(range(1, 10, 2)):</div><div class="line">...     print(i)</div><div class="line">...</div><div class="line">9</div><div class="line">7</div><div class="line">5</div><div class="line">3</div><div class="line">1</div></pre></td></tr></table></figure></p>
-<p>To loop over a sequence in sorted order, use the <code>sorted()</code> function which returns a new sorted list <strong>while leaving the source unaltered</strong>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; basket = [&apos;apple&apos;, &apos;orange&apos;, &apos;apple&apos;, &apos;pear&apos;, &apos;orange&apos;, &apos;banana&apos;]</div><div class="line">&gt;&gt;&gt; a = sorted(set(basket))</div><div class="line">&gt;&gt;&gt; print(a)</div><div class="line">[&apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;, &apos;pear&apos;]  #注意sort还有去重的效果</div><div class="line">&gt;&gt;&gt; print(basket)</div><div class="line">[&apos;apple&apos;, &apos;orange&apos;, &apos;apple&apos;, &apos;pear&apos;, &apos;orange&apos;, &apos;banana&apos;]</div></pre></td></tr></table></figure></p>
+<p>To loop over a sequence in sorted order, use the <code>sorted()</code> function which returns a new sorted list <strong>while leaving the source unaltered</strong>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; basket = [&apos;apple&apos;, &apos;orange&apos;, &apos;apple&apos;, &apos;pear&apos;, &apos;orange&apos;, &apos;banana&apos;]</div><div class="line">&gt;&gt;&gt; a = sorted(set(basket))</div><div class="line">&gt;&gt;&gt; print(a)</div><div class="line">[&apos;apple&apos;, &apos;banana&apos;, &apos;orange&apos;, &apos;pear&apos;]  # 注意sort还有去重的效果</div><div class="line">&gt;&gt;&gt; print(basket)</div><div class="line">[&apos;apple&apos;, &apos;orange&apos;, &apos;apple&apos;, &apos;pear&apos;, &apos;orange&apos;, &apos;banana&apos;]</div></pre></td></tr></table></figure></p>
 <p>It is sometimes tempting to change a list while you are looping over it; however, it is often simpler and safer to create a new list instead.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; import math</div><div class="line">&gt;&gt;&gt; raw_data = [56.2, float(&apos;NaN&apos;), 51.7, 55.3, 52.5, float(&apos;NaN&apos;), 47.8]</div><div class="line">&gt;&gt;&gt; filtered_data = []</div><div class="line">&gt;&gt;&gt; for value in raw_data:</div><div class="line">...     if not math.isnan(value):</div><div class="line">...         filtered_data.append(value)</div><div class="line">...</div><div class="line">&gt;&gt;&gt; filtered_data</div><div class="line">[56.2, 51.7, 55.3, 52.5, 47.8]</div></pre></td></tr></table></figure></p>
 <p>或者参见<a href="http://chant00.com/2017/06/25/2017-06-25/">Python笔记（三）– for else还有这种操作</a>中的临时复制法。</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
@@ -906,7 +906,7 @@
         var disqus_config = function () {
           this.page.url = 'http://chant00.com/2017/06/22/python笔记2/';
           this.page.identifier = '2017/06/22/python笔记2/';
-          this.page.title = 'Python笔记（二）--容器';
+          this.page.title = 'Python笔记（二）-- 容器';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';
