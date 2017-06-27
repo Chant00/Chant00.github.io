@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-27T09:16:58.000Z</updated>
+  <updated>2017-06-27T09:20:54.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,16 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python笔记（三）-- 函数</title>
+    <title>Python笔记（四）-- 函数</title>
     <link href="http://chant00.com/2017/06/26/2017-06-26/"/>
     <id>http://chant00.com/2017/06/26/2017-06-26/</id>
     <published>2017-06-26T00:25:49.000Z</published>
-    <updated>2017-06-27T09:16:58.000Z</updated>
+    <updated>2017-06-27T09:20:54.000Z</updated>
     
     <summary type="html">
     
-      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;空函数&quot;&gt;&lt;a href=&quot;
+      &lt;p&gt;函数中的各种参数，lambda表达式，递归函数，汉诺塔示例。&lt;/p&gt;
     
     </summary>
     
