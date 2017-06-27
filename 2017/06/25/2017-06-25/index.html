@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-26T08:48:58.000Z">
+<meta property="og:updated_time" content="2017-06-27T09:28:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（三）-- Important Warning">
 <meta name="twitter:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
@@ -435,7 +435,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>本篇整理下python中容易出错的那些坑。<br>在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>本篇整理下python中容易出错的那些坑。<br>在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。</p>
 <a id="more"></a>
 <h3 id="for循环操作可变序列"><a href="#for循环操作可变序列" class="headerlink" title="for循环操作可变序列"></a>for循环操作可变序列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(a)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> a:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        a.remove(x)</div><div class="line">print(a)  <span class="comment"># [2, -3, -2, 3]</span></div><div class="line">print(<span class="string">"========================="</span>)</div><div class="line">b = [<span class="number">-1</span>, <span class="number">2</span>, <span class="number">-4</span>, <span class="number">-3</span>, <span class="number">-1</span>, <span class="number">-2</span>, <span class="number">3</span>]</div><div class="line">print(b)</div><div class="line"><span class="keyword">for</span> x <span class="keyword">in</span> b[:]:</div><div class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span>:</div><div class="line">        b.remove(x)</div><div class="line">print(b)  <span class="comment"># [2, 3]</span></div></pre></td></tr></table></figure>
 <blockquote>
@@ -452,7 +452,7 @@
 <p>Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the list (with for) or when the condition becomes false (with while), but not when the loop is terminated by a break statement. </p>
 </blockquote>
 <p>你能不用for else语句来实现相同的功能么？(if x == n-1:)</p>
-<h3 id="默认参数函数"><a href="#默认参数函数" class="headerlink" title="默认参数函数"></a>默认参数函数</h3><blockquote>
+<h3 id="默认参数函数"><a href="#默认参数函数" class="headerlink" title="默认参数函数 "></a>默认参数函数<span id="默认参数函数"> </span></h3><blockquote>
 <p><strong>Important warning</strong>: The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. For example, the following function accumulates the arguments passed to it on subsequent calls:</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(a, L=[])</span>:</span></div><div class="line">    L.append(a)</div><div class="line">    <span class="keyword">return</span> L</div><div class="line"></div><div class="line">print(f(<span class="number">1</span>))</div><div class="line">print(f(<span class="number">2</span>))</div><div class="line">print(f(<span class="number">3</span>))</div><div class="line"><span class="comment"># 输出结果为  </span></div><div class="line">[<span class="number">1</span>]</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>]</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div></pre></td></tr></table></figure>
@@ -708,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环操作可变序列"><span class="nav-number">1.</span> <span class="nav-text">for循环操作可变序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-else"><span class="nav-number">2.</span> <span class="nav-text">for else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认参数函数"><span class="nav-number">3.</span> <span class="nav-text">默认参数函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环操作可变序列"><span class="nav-number">1.</span> <span class="nav-text">for循环操作可变序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-else"><span class="nav-number">2.</span> <span class="nav-text">for else</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认参数函数"><span class="nav-number">3.</span> <span class="nav-text">默认参数函数 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
