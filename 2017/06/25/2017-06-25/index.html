@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://chant00.com/2017/06/25/2017-06-25/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
-<meta property="og:updated_time" content="2017-06-27T09:50:04.000Z">
+<meta property="og:updated_time" content="2017-06-27T09:54:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（三）-- Important Warning">
 <meta name="twitter:description" content="本篇整理下python中容易出错的那些坑。在学习Python的过程中，发现其很多与java不同的地方，很多人并没有仔细研读过python，只是大概地看下相关的语法就开始上手写代码去了，最容易被忽视的就是简单的for，if等控制语句，实际上python的控制语句与java等高级语言是不同的，所谓失之毫厘差之千里，请看下面的例子。">
@@ -458,7 +458,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(a, L=[])</span>:</span></div><div class="line">    L.append(a)</div><div class="line">    <span class="keyword">return</span> L</div><div class="line"></div><div class="line">print(f(<span class="number">1</span>))</div><div class="line">print(f(<span class="number">2</span>))</div><div class="line">print(f(<span class="number">3</span>))</div><div class="line"><span class="comment"># 输出结果为  </span></div><div class="line">[<span class="number">1</span>]</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>]</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</div></pre></td></tr></table></figure>
 <p>解决办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">def f(a, L=None):</div><div class="line">    if L is None:</div><div class="line">        L = []</div><div class="line">    L.append(a)</div><div class="line">    return L</div><div class="line"></div><div class="line">print(f(1), f(2), f(3))  # [1] [2] [3]</div></pre></td></tr></table></figure></p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
-<li><a href="https://docs.python.org/3/tutorial/datastructures.html#data-structures" target="_blank" rel="external">官方文档–Data Structures</a></li>
+<li><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" target="_blank" rel="external">官方文档–More Control Flow Tools</a></li>
 </ol>
 
       
