@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-27T09:53:51.000Z</updated>
+  <updated>2017-06-27T10:12:25.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python笔记（四）-- 高级特性</title>
+    <link href="http://chant00.com/2017/06/27/2017-06-27/"/>
+    <id>http://chant00.com/2017/06/27/2017-06-27/</id>
+    <published>2017-06-27T00:25:49.000Z</published>
+    <updated>2017-06-27T10:12:25.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;切片（slice）&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Python笔记（四）-- 函数</title>
@@ -40,7 +61,7 @@
     <link href="http://chant00.com/2017/06/25/2017-06-25/"/>
     <id>http://chant00.com/2017/06/25/2017-06-25/</id>
     <published>2017-06-24T23:25:49.000Z</published>
-    <updated>2017-06-27T09:54:51.000Z</updated>
+    <updated>2017-06-27T10:17:00.000Z</updated>
     
     <summary type="html">
     
