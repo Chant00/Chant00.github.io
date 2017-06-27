@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="函数中的各种参数，lambda表达式，递归函数，汉诺塔示例。">
 <meta property="og:image" content="http://chant00.com/media/Hannoi.png">
-<meta property="og:updated_time" content="2017-06-27T09:45:00.000Z">
+<meta property="og:updated_time" content="2017-06-27T09:53:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（四）-- 函数">
 <meta name="twitter:description" content="函数中的各种参数，lambda表达式，递归函数，汉诺塔示例。">
@@ -469,7 +469,7 @@
 <p>一些语言可以通过尾递归来解决这个问题，但是Python标准的解释器没有针对尾递归做优化，任何递归函数都存在栈溢出的问题。</p>
 <h4 id="汉诺塔–递归函数的应用实例"><a href="#汉诺塔–递归函数的应用实例" class="headerlink" title="汉诺塔–递归函数的应用实例"></a><a href="http://baike.baidu.com/item/%E6%B1%89%E8%AF%BA%E5%A1%94/3468295" target="_blank" rel="external">汉诺塔</a>–递归函数的应用实例</h4><p>请编写<code>move(n, a, b, c)</code>函数，它接收参数<code>n</code>，表示3个柱子<code>A</code>、<code>B</code>、<code>C</code>中第1个柱子<code>A</code>的盘子数量，然后打印出把所有盘子从<code>A</code>借助<code>B</code>移动到<code>C</code>的方法。<br>画图分析一下：<br><img src="/media/Hannoi.png" alt="Hannoi"><br>从图中的分析可以看出<code>f(n,a,b,c)=f(n-1,a,c,b)+f(1,a,b,c)+f(n-1,b,a,c)</code>，于是使用递归函数，代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(n, a, b, c)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</div><div class="line">        print(a + <span class="string">'--&gt;'</span> + c)</div><div class="line">        <span class="keyword">return</span></div><div class="line">    move(n<span class="number">-1</span>, a, c, b)</div><div class="line">    move(<span class="number">1</span>, a, b, c)</div><div class="line">    move(n<span class="number">-1</span>, b, a, c)</div><div class="line"></div><div class="line"></div><div class="line">move(<span class="number">7</span>, <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>)</div></pre></td></tr></table></figure></p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
-<li><a href="https://docs.python.org/3/tutorial/datastructures.html#data-structures" target="_blank" rel="external">官方文档–Data Structures</a></li>
+<li><a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" target="_blank" rel="external">官方文档– Defining Functions</a></li>
 <li><a href="https://morvanzhou.github.io/tutorials/python-basic/basic/" target="_blank" rel="external">莫烦Python</a></li>
 <li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="external">廖雪峰的Python教程</a></li>
 </ol>
