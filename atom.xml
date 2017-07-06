@@ -60,6 +60,26 @@
   </entry>
   
   <entry>
+    <title>Python笔记（五）-- 高级特性</title>
+    <link href="http://chant00.com/2017/06/27/pyhthonNote5/"/>
+    <id>http://chant00.com/2017/06/27/pyhthonNote5/</id>
+    <published>2017-06-27T00:25:49.000Z</published>
+    <updated>2017-07-06T11:12:02.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;切片，全局变量，生成器&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python笔记（四）-- 函数</title>
     <link href="http://chant00.com/2017/06/26/2017-06-26/"/>
     <id>http://chant00.com/2017/06/26/2017-06-26/</id>

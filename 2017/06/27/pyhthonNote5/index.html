@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="," />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -102,10 +102,9 @@
 
 
 <meta name="description" content="切片，全局变量，生成器">
-<meta name="keywords">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Python笔记（五）-- 高级特性">
-<meta property="og:url" content="http://chant00.com/pyhthonNote5.html">
+<meta property="og:url" content="http://chant00.com/2017/06/27/pyhthonNote5/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="切片，全局变量，生成器">
 <meta property="og:updated_time" content="2017-07-06T11:12:02.000Z">
@@ -139,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/pyhthonNote5.html"/>
+  <link rel="canonical" href="http://chant00.com/2017/06/27/pyhthonNote5/"/>
 
 
 
@@ -330,17 +329,113 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">Python笔记（五）-- 高级特性</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/27/pyhthonNote5/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chant">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chant">
+    </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python笔记（五）-- 高级特性</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-27T08:25:49+08:00">
+                2017-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/27/pyhthonNote5/" class="leancloud_visitors" data-flag-title="Python笔记（五）-- 高级特性">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-      <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>切片，全局变量，生成器</p>
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>切片，全局变量，生成器</p>
 <a id="more"></a>
 <h3 id="切片（slice）"><a href="#切片（slice）" class="headerlink" title="切片（slice）"></a>切片（slice）</h3><p>切片（slice）用于取一个list或tuple的部分元素,比如，一个list如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L = [&apos;Michael&apos;, &apos;Sarah&apos;, &apos;Tracy&apos;, &apos;Bob&apos;, &apos;Jack&apos;]</div></pre></td></tr></table></figure></p>
 <p><code>L[0:3]</code>表示，从索引<code>0</code>开始取，直到索引<code>3</code>为止，但不包括索引<code>3</code>。即索引<code>0，1，2</code>，正好是3个元素。如果第一个索引是0，还可以省略：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; L[:3]</div><div class="line">[&apos;Michael&apos;, &apos;Sarah&apos;, &apos;Tracy&apos;]</div></pre></td></tr></table></figure></p>
@@ -374,7 +469,75 @@
 <li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431756919644a792ee4ead724ef7afab3f7f771b04f5000" target="_blank" rel="external">廖雪峰python教程</a></li>
 </ol>
 
-    
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/26/2017-06-26/" rel="next" title="Python笔记（四）-- 函数">
+                <i class="fa fa-chevron-left"></i> Python笔记（四）-- 函数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/05/eclipseConnectHadoop/" rel="prev" title="mac下eclipse连接hadoop集群开发API">
+                mac下eclipse连接hadoop集群开发API <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -438,7 +601,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -701,10 +864,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
@@ -723,8 +886,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://chant00.com/pyhthonNote5.html';
-          this.page.identifier = 'pyhthonNote5.html';
+          this.page.url = 'http://chant00.com/2017/06/27/pyhthonNote5/';
+          this.page.identifier = '2017/06/27/pyhthonNote5/';
           this.page.title = 'Python笔记（五）-- 高级特性';
         };
         var d = document, s = d.createElement('script');
