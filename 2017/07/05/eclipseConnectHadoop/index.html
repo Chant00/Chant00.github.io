@@ -107,8 +107,8 @@
 <meta property="og:url" content="http://chant00.com/2017/07/05/eclipseConnectHadoop/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="mac下eclipse连接hadoop集群开发API">
-<meta property="og:image" content="https://segmentfault.com/img/bVuKUH">
-<meta property="og:image" content="https://segmentfault.com/img/bVuKUI">
+<meta property="og:image" content="http://chant00.com/media/14993397905137.jpg">
+<meta property="og:image" content="http://chant00.com/media/14993398079962.jpg">
 <meta property="og:image" content="http://chant00.com/media/14992580520903.jpg">
 <meta property="og:image" content="http://chant00.com/media/14992583403456.jpg">
 <meta property="og:image" content="http://chant00.com/media/14992582007966.jpg">
@@ -130,11 +130,11 @@
 <meta property="og:image" content="http://chant00.com/media/14992711067747.jpg">
 <meta property="og:image" content="http://chant00.com/media/14992711579156.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993018233145.jpg">
-<meta property="og:updated_time" content="2017-07-06T11:09:15.000Z">
+<meta property="og:updated_time" content="2017-07-06T11:17:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac下eclipse连接hadoop集群开发API">
 <meta name="twitter:description" content="mac下eclipse连接hadoop集群开发API">
-<meta name="twitter:image" content="https://segmentfault.com/img/bVuKUH">
+<meta name="twitter:image" content="http://chant00.com/media/14993397905137.jpg">
 
 
 
@@ -463,7 +463,8 @@
 <a id="more"></a>
 <h3 id="下载安装Eclipse"><a href="#下载安装Eclipse" class="headerlink" title="下载安装Eclipse"></a>下载安装Eclipse</h3><p><a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/mars2" target="_blank" rel="external">Eclipse IDE for Java Developers</a></p>
 <h3 id="配置Eclipse"><a href="#配置Eclipse" class="headerlink" title="配置Eclipse"></a>配置Eclipse</h3><h4 id="下载Hadoop-Eclipse-Plugin"><a href="#下载Hadoop-Eclipse-Plugin" class="headerlink" title="下载Hadoop-Eclipse-Plugin"></a>下载Hadoop-Eclipse-Plugin</h4><p>可下载 Github 上的 <a href="https://github.com/winghc/hadoop2x-eclipse-plugin" target="_blank" rel="external">hadoop2x-eclipse-plugin</a>（<a href="https://github.com/winghc/hadoop2x-eclipse-plugin/tree/master/release" target="_blank" rel="external">选择下载hadoop-eclipse-plugin-2.6.0.jar</a>）</p>
-<h4 id="安装Hadoop-Eclipse-Plugin"><a href="#安装Hadoop-Eclipse-Plugin" class="headerlink" title="安装Hadoop-Eclipse-Plugin"></a>安装Hadoop-Eclipse-Plugin</h4><p>在Applications中找个Eclise, 右键, Show Package Contents<br><img src="https://segmentfault.com/img/bVuKUH" alt=""><br>将插件复制到plugins目录下<br><img src="https://segmentfault.com/img/bVuKUI" alt=""><br>然后重新打开Eclipse，添加插件。<br><img src="/media/14992580520903.jpg" alt=""></p>
+<h4 id="安装Hadoop-Eclipse-Plugin"><a href="#安装Hadoop-Eclipse-Plugin" class="headerlink" title="安装Hadoop-Eclipse-Plugin"></a>安装Hadoop-Eclipse-Plugin</h4><p>在Applications中找个Eclise, 右键, Show Package Contents<br><img src="/media/14993397905137.jpg" alt=""></p>
+<p>将插件复制到plugins目录下<br><img src="/media/14993398079962.jpg" alt=""><br>然后重新打开Eclipse，添加插件。<br><img src="/media/14992580520903.jpg" alt=""></p>
 <h3 id="连接Hadoop集群"><a href="#连接Hadoop集群" class="headerlink" title="连接Hadoop集群"></a>连接Hadoop集群</h3><h4 id="配置Hadoop安装目录"><a href="#配置Hadoop安装目录" class="headerlink" title="配置Hadoop安装目录"></a>配置Hadoop安装目录</h4><p>1)<code>mkdir  /Users/Chant/opt</code>将源码包和部署包都接到到这里。<br>2)配置环境变量<code>vim ~/.zshrc</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export HADOOP_PREFIX=/Users/Chant/opt/hadoop-2.6.5</div><div class="line">export PATH=&quot;$ANACONDA_HOME/bin:/usr/local/bin:$PATH:$HADOOP_HOME/bin&quot;</div></pre></td></tr></table></figure>
 <p>3)在Eclipse中指向该安装目录（Eclipse–&gt;偏好设置）<br><img src="/media/14992583403456.jpg" alt=""><br><img src="/media/14992582007966.jpg" alt=""><br>需要改Location name, Location name 这里就是起个名字，随便起。Port填的是8020,这个由你的集群配置决定（去web页面可以查看端口）。<br><img src="/media/14992599466396.jpg" alt=""></p>
