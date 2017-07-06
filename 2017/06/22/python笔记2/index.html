@@ -107,7 +107,7 @@
 <meta property="og:url" content="http://chant00.com/2017/06/22/python笔记2/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="List 和 Tuplelist 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。">
-<meta property="og:updated_time" content="2017-06-26T06:10:42.000Z">
+<meta property="og:updated_time" content="2017-06-29T02:49:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（二）-- 容器">
 <meta name="twitter:description" content="List 和 Tuplelist 和 tuple均为有序表，即可用索引访问，但是list可变，tuple不可变。">
@@ -472,6 +472,10 @@
 <pre><code>1.    查找和插入的时间随着元素的增加而增加；
 2.    占用空间小，浪费内存很少。
 </code></pre><p>所以，dict是用空间来换取时间的一种方法。</p>
+<h4 id="Dictionary的迭代取出"><a href="#Dictionary的迭代取出" class="headerlink" title="Dictionary的迭代取出"></a>Dictionary的迭代取出</h4><p>因为dict的存储不是按照list的方式顺序排列，所以，迭代出的结果顺序很可能不一样。</p>
+<p>默认情况下，dict迭代的是key。如果要迭代value，可以用<code>for value in d.values()</code>，如果要同时迭代key和value，可以用<code>for k, v in d.items()</code>。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>d = &#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">3</span>&#125;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> d:</div><div class="line"><span class="meta">... </span>    print(key)</div><div class="line">...</div><div class="line">a</div><div class="line">c</div><div class="line">b</div><div class="line"><span class="comment"># 字符串也能迭代</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> ch <span class="keyword">in</span> <span class="string">'ABC'</span>:</div><div class="line"><span class="meta">... </span>    print(ch)</div><div class="line">...</div><div class="line">A</div><div class="line">B</div><div class="line">C</div></pre></td></tr></table></figure></p>
+<p>当我们使用for循环时，只要作用于一个可迭代对象，for循环就可以正常运行，而我们不太关心该对象究竟是list还是其他数据类型。</p>
+<p>那么，如何判断一个对象是可迭代对象呢？方法是通过collections模块的Iterable类型判断：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(<span class="string">'abc'</span>, Iterable) <span class="comment"># str是否可迭代</span></div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], Iterable) <span class="comment"># list是否可迭代</span></div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>isinstance(<span class="number">123</span>, Iterable) <span class="comment"># 整数是否可迭代</span></div><div class="line"><span class="keyword">False</span></div></pre></td></tr></table></figure></p>
 <h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>set是无序不重复的集合(A set is an unordered collection with no duplicate elements.)。可以这样理解：<em>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。</em></p>
 <p>由于官方文档写得实在是太好，再加上想练习英语，所以我打算直接贴英文原文了。<br>Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary.</p>
 <p>Here is a brief demonstration:</p>
@@ -630,7 +634,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -641,7 +645,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -652,7 +656,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -745,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#List-和-Tuple"><span class="nav-number">1.</span> <span class="nav-text">List 和 Tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nested-List-Comprehensions"><span class="nav-number">1.2.</span> <span class="nav-text">Nested List Comprehensions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tuple"><span class="nav-number">1.3.</span> <span class="nav-text">Tuple</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary和Set"><span class="nav-number">2.</span> <span class="nav-text">Dictionary和Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dict"><span class="nav-number">2.1.</span> <span class="nav-text">Dict</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">3.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Looping-Techniques"><span class="nav-number">4.</span> <span class="nav-text">Looping Techniques</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展阅读Comparing-Sequences-and-Other-Types"><span class="nav-number">5.</span> <span class="nav-text">扩展阅读Comparing Sequences and Other Types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#List-和-Tuple"><span class="nav-number">1.</span> <span class="nav-text">List 和 Tuple</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List"><span class="nav-number">1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nested-List-Comprehensions"><span class="nav-number">1.2.</span> <span class="nav-text">Nested List Comprehensions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tuple"><span class="nav-number">1.3.</span> <span class="nav-text">Tuple</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dictionary和Set"><span class="nav-number">2.</span> <span class="nav-text">Dictionary和Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dict"><span class="nav-number">2.1.</span> <span class="nav-text">Dict</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dictionary的迭代取出"><span class="nav-number">2.2.</span> <span class="nav-text">Dictionary的迭代取出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">3.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Looping-Techniques"><span class="nav-number">4.</span> <span class="nav-text">Looping Techniques</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展阅读Comparing-Sequences-and-Other-Types"><span class="nav-number">5.</span> <span class="nav-text">扩展阅读Comparing Sequences and Other Types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

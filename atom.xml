@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-06-27T10:18:07.000Z</updated>
+  <updated>2017-07-06T10:45:28.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,22 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python笔记（四）-- 高级特性</title>
-    <link href="http://chant00.com/2017/06/27/2017-06-27/"/>
-    <id>http://chant00.com/2017/06/27/2017-06-27/</id>
-    <published>2017-06-27T00:25:49.000Z</published>
-    <updated>2017-06-27T10:18:07.000Z</updated>
+    <title>yarn配置测试</title>
+    <link href="http://chant00.com/2017/07/06/yarnTest/"/>
+    <id>http://chant00.com/2017/07/06/yarnTest/</id>
+    <published>2017-07-06T02:24:49.000Z</published>
+    <updated>2017-07-06T10:45:28.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;切片，&lt;/p&gt;
+      &lt;p&gt;mac下IDEA连接hadoop集群开发API&lt;/p&gt;
     
     </summary>
     
-      <category term="Python" scheme="http://chant00.com/categories/Python/"/>
+      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
     
     
-      <category term="Python" scheme="http://chant00.com/tags/Python/"/>
+      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
+    
+      <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac下eclipse连接hadoop集群开发API</title>
+    <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
+    <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
+    <published>2017-07-05T02:24:49.000Z</published>
+    <updated>2017-07-06T11:09:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;mac下eclipse连接hadoop集群开发API&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+    
+    
+      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
     
   </entry>
   
@@ -102,7 +126,7 @@
     <link href="http://chant00.com/2017/06/22/python%E7%AC%94%E8%AE%B02/"/>
     <id>http://chant00.com/2017/06/22/python笔记2/</id>
     <published>2017-06-22T02:25:49.000Z</published>
-    <updated>2017-06-26T06:10:42.000Z</updated>
+    <updated>2017-06-29T02:49:21.000Z</updated>
     
     <summary type="html">
     
