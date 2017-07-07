@@ -101,22 +101,25 @@
 
 
 
-<meta name="description" content="mac下IDEA连接hadoop集群开发API">
+<meta name="description" content="YARN：Yet Another Resource Negotiator">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yarn配置测试">
+<meta property="og:title" content="Hadoop--yarn详解及配置测试">
 <meta property="og:url" content="http://chant00.com/2017/07/06/yarnTest/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="mac下IDEA连接hadoop集群开发API">
+<meta property="og:description" content="YARN：Yet Another Resource Negotiator">
+<meta property="og:image" content="http://chant00.com/media/14994348192650.jpg">
+<meta property="og:image" content="http://chant00.com/media/14994393606145.jpg">
+<meta property="og:image" content="http://chant00.com/media/14994399512137.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993252047602.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993259856360.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993259500580.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993304809083.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993306116184.jpg">
-<meta property="og:updated_time" content="2017-07-06T10:45:28.000Z">
+<meta property="og:updated_time" content="2017-07-07T15:27:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yarn配置测试">
-<meta name="twitter:description" content="mac下IDEA连接hadoop集群开发API">
-<meta name="twitter:image" content="http://chant00.com/media/14993252047602.jpg">
+<meta name="twitter:title" content="Hadoop--yarn详解及配置测试">
+<meta name="twitter:description" content="YARN：Yet Another Resource Negotiator">
+<meta name="twitter:image" content="http://chant00.com/media/14994348192650.jpg">
 
 
 
@@ -150,7 +153,7 @@
 
 
 
-  <title>yarn配置测试 | Chant</title>
+  <title>Hadoop--yarn详解及配置测试 | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -361,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">yarn配置测试</h1>
+          <h1 class="post-title" itemprop="name headline">Hadoop--yarn详解及配置测试</h1>
         
 
         <div class="post-meta">
@@ -413,7 +416,7 @@
 
           
           
-             <span id="/2017/07/06/yarnTest/" class="leancloud_visitors" data-flag-title="yarn配置测试">
+             <span id="/2017/07/06/yarnTest/" class="leancloud_visitors" data-flag-title="Hadoop--yarn详解及配置测试">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -441,18 +444,22 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>mac下IDEA连接hadoop集群开发API</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>YARN：Yet Another Resource Negotiator</p>
 <a id="more"></a>
-<p><img src="/media/14993252047602.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# vi mapred-site.xml</div><div class="line">&lt;configuration&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</div><div class="line">        &lt;value&gt;yarn&lt;/value&gt;</div><div class="line">  &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/14994348192650.jpg" alt=""></p>
+<p>Client通过RS(ResourceManager)来提交作业，RS选择一个节点创建AppMaster进程，AppMaster启动后向RS申请资源（申请Container），然后RS去通知NodeManager来启动Container进程，然后AppMaster向Container分发任务（比如让它反射哪个类）。即任务调度（任务运行的先后顺序，重试机制）由AppMaster来完成，资源（每个节点硬件资源，Container也是资源）管理全部交给RS管理。</p>
+<p>图中的客户端提交了两个作业，每个作业都有自己的AppMaster，其中一个AppMaster死了不会影响另一个AppMaster，任务调度不是单点运行，一个任务故障不会影响另一个任务，其实，AppMaster也是一种Container，其容错机制为：如果AppMaster挂了，MR会另起一个AppMaster。解决了1.0里面的jobTracker负载过重，单点故障问题。<br><img src="/media/14994393606145.jpg" alt=""><br>下图是spark提交作业到yarn流程图，给以后的spark笔记做个铺垫吧。<br><img src="/media/14994399512137.jpg" alt=""></p>
+<h3 id="搭建yarn"><a href="#搭建yarn" class="headerlink" title="搭建yarn"></a>搭建yarn</h3><p><img src="/media/14993252047602.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# vi mapred-site.xml</div><div class="line">&lt;configuration&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</div><div class="line">        &lt;value&gt;yarn&lt;/value&gt;</div><div class="line">  &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# vi yarn-site.xml</div><div class="line">&lt;configuration&gt;</div><div class="line"></div><div class="line">&lt;!-- Site specific YARN configuration properties --&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</div><div class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line">&lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.ha.enabled&lt;/name&gt;</div><div class="line">   &lt;value&gt;true&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.cluster-id&lt;/name&gt;</div><div class="line">   &lt;value&gt;cluster1&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.ha.rm-ids&lt;/name&gt;</div><div class="line">   &lt;value&gt;rm1,rm2&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.hostname.rm1&lt;/name&gt;</div><div class="line">   &lt;value&gt;node03&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.hostname.rm2&lt;/name&gt;</div><div class="line">   &lt;value&gt;node04&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.zk-address&lt;/name&gt;</div><div class="line">   &lt;value&gt;node02:2181,node03:2181,node04:2181&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"></div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure>
 <p>分发配置到集群。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root@node01 hadoop]# scp mapred-site.xml yarn-site.xml node02:`pwd`</div><div class="line">#node03和node04同理</div></pre></td></tr></table></figure></p>
 <p>node01上启动yarn。nodemanager会启动。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# start-yarn.sh</div><div class="line">starting yarn daemons</div><div class="line">starting resourcemanager, logging to /opt/sxt/hadoop-2.6.5/logs/yarn-root-resourcemanager-node01.out</div><div class="line">node04: starting nodemanager, logging to /opt/sxt/hadoop-2.6.5/logs/yarn-root-nodemanager-node04.out</div><div class="line">node02: starting nodemanager, logging to /opt/sxt/hadoop-2.6.5/logs/yarn-root-nodemanager-node02.out</div><div class="line">node03: starting nodemanager, logging to /opt/sxt/hadoop-2.6.5/logs/yarn-root-nodemanager-node03.out</div><div class="line">[root@node01 hadoop]#</div></pre></td></tr></table></figure></p>
 <p>但是yarnmanager不会，需要zai node03和node04上单独启动。记得jps验证一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@node03 etc]# yarn-daemon.sh start resourcemanager</div><div class="line">starting resourcemanager, logging to /opt/sxt/hadoop-2.6.5/logs/yarn-root-resourcemanager-node03.out</div><div class="line">[root@node03 etc]# jps</div><div class="line">1703 QuorumPeerMain</div><div class="line">3316 ResourceManager</div><div class="line">3540 Jps</div><div class="line">2748 JournalNode</div><div class="line">3178 NodeManager</div><div class="line">2668 DataNode</div><div class="line"># node04同理</div></pre></td></tr></table></figure></p>
 <p>访问<a href="http://node03:8088/cluster和http://node04:8088/cluster。" target="_blank" rel="external">http://node03:8088/cluster和http://node04:8088/cluster。</a><br>讲道理，node04会发生跳转到node03。但是我的出错了。clusterID都不一致了。<br><img src="/media/14993259856360.jpg" alt=""><br><img src="/media/14993259500580.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node03 logs]# cd /opt/sxt/hadoop-2.6.5/logs</div><div class="line">[root@node03 logs]# vi yarn-root-resourcemanager-node03.log</div></pre></td></tr></table></figure>
-<p>发现是hosts文件配置错误<br><img src="/media/14993304809083.jpg" alt=""><br>修改hosts文件后再启动resourcemanager，jps查看进程启动成功，访问node03:8088发生跳转。<br><img src="/media/14993306116184.jpg" alt=""></p>
-<p><code>/opt/sxt/hadoop-2.6.5/share/hadoop/mapreduce</code>文件夹下zhao’dao执行wordcount程序，然后查看输出是否正确。<br>在任务执行过程中，可以去其它节点jps查看下进程，node02会多了一个<code>YarncChild</code>，node03会多了个<code>MRAppMaster</code>，node04多了两个<code>YarnChild</code>。作业结束，这些进程也就消失了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@node01 mapreduce]# hadoop jar hadoop-mapreduce-examples-2.6.5.jar wordcount /user/root /output</div></pre></td></tr></table></figure></p>
-<p><code>ResourceManager</code>和<code>NodeManager</code>是yarn框架的常服务，提交任务后，会在node03启动<code>MRAppMaster</code>并和<code>ResourceManager</code>去通信，然后申请<code>container</code>（容器）, 也就是那三个<code>YarncChild</code>，这三个容器中运行<code>map task</code> 和<code>reduce task</code>。</p>
+<p>发现是hosts文件配置错误<br><img src="/media/14993304809083.jpg" alt=""></p>
+<p>修改hosts文件后再启动resourcemanager，jps查看进程启动成功，访问node03:8088发生跳转。<br><img src="/media/14993306116184.jpg" alt=""></p>
+<h3 id="WordCount测试"><a href="#WordCount测试" class="headerlink" title="WordCount测试"></a>WordCount测试</h3><p><code>/opt/sxt/hadoop-2.6.5/share/hadoop/mapreduce</code>文件夹下执行example包中的wordcount程序，然后查看输出是否正确。<br>在任务执行过程中，可以去其它节点jps查看下进程，node02会多了一个<code>YarncChild</code>，node03会多了个<code>MRAppMaster</code>，node04多了两个<code>YarnChild</code>。作业结束，这些进程也就消失了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@node01 mapreduce]# hadoop jar hadoop-mapreduce-examples-2.6.5.jar wordcount /user/root /output</div></pre></td></tr></table></figure></p>
+<p><code>ResourceManager</code>和<code>NodeManager</code>是yarn框架的常服务，提交任务后，会在node03启动<code>MRAppMaster</code>并和<code>ResourceManager</code>去通信，然后申请<code>Container</code>, 也就是那三个<code>YarncChild</code>，这三个<code>Container</code>中运行<code>map task</code> 和<code>reduce task</code>。</p>
 
       
     </div>
@@ -559,8 +566,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -680,6 +696,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建yarn"><span class="nav-number">1.</span> <span class="nav-text">搭建yarn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WordCount测试"><span class="nav-number">2.</span> <span class="nav-text">WordCount测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -846,7 +878,7 @@
         var disqus_config = function () {
           this.page.url = 'http://chant00.com/2017/07/06/yarnTest/';
           this.page.identifier = '2017/07/06/yarnTest/';
-          this.page.title = 'yarn配置测试';
+          this.page.title = 'Hadoop--yarn详解及配置测试';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';

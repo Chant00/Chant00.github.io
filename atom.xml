@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-06T10:45:28.000Z</updated>
+  <updated>2017-07-07T15:27:43.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,15 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>yarn配置测试</title>
+    <title>Hadoop--yarn详解及配置测试</title>
     <link href="http://chant00.com/2017/07/06/yarnTest/"/>
     <id>http://chant00.com/2017/07/06/yarnTest/</id>
     <published>2017-07-06T02:24:49.000Z</published>
-    <updated>2017-07-06T10:45:28.000Z</updated>
+    <updated>2017-07-07T15:27:43.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;mac下IDEA连接hadoop集群开发API&lt;/p&gt;
+      &lt;p&gt;YARN：Yet Another Resource Negotiator&lt;/p&gt;
     
     </summary>
     
@@ -42,7 +42,7 @@
     <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
     <published>2017-07-05T02:24:49.000Z</published>
-    <updated>2017-07-07T13:23:26.000Z</updated>
+    <updated>2017-07-07T13:37:13.000Z</updated>
     
     <summary type="html">
     
