@@ -103,7 +103,7 @@
 
 <meta name="description" content="YARN：Yet Another Resource Negotiator">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hadoop--yarn详解及配置测试">
+<meta property="og:title" content="HADOOP--yarn详解及配置测试">
 <meta property="og:url" content="http://chant00.com/2017/07/06/yarnTest/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="YARN：Yet Another Resource Negotiator">
@@ -115,9 +115,9 @@
 <meta property="og:image" content="http://chant00.com/media/14993259500580.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993304809083.jpg">
 <meta property="og:image" content="http://chant00.com/media/14993306116184.jpg">
-<meta property="og:updated_time" content="2017-07-07T15:27:43.000Z">
+<meta property="og:updated_time" content="2017-07-08T01:43:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hadoop--yarn详解及配置测试">
+<meta name="twitter:title" content="HADOOP--yarn详解及配置测试">
 <meta name="twitter:description" content="YARN：Yet Another Resource Negotiator">
 <meta name="twitter:image" content="http://chant00.com/media/14994348192650.jpg">
 
@@ -153,7 +153,7 @@
 
 
 
-  <title>Hadoop--yarn详解及配置测试 | Chant</title>
+  <title>HADOOP--yarn详解及配置测试 | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -364,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hadoop--yarn详解及配置测试</h1>
+          <h1 class="post-title" itemprop="name headline">HADOOP--yarn详解及配置测试</h1>
         
 
         <div class="post-meta">
@@ -416,7 +416,7 @@
 
           
           
-             <span id="/2017/07/06/yarnTest/" class="leancloud_visitors" data-flag-title="Hadoop--yarn详解及配置测试">
+             <span id="/2017/07/06/yarnTest/" class="leancloud_visitors" data-flag-title="HADOOP--yarn详解及配置测试">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,10 +444,10 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>YARN：Yet Another Resource Negotiator</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>YARN：Yet Another Resource Negotiator</p>
 <a id="more"></a>
 <p><img src="/media/14994348192650.jpg" alt=""></p>
-<p>Client通过RS(ResourceManager)来提交作业，RS选择一个节点创建AppMaster进程，AppMaster启动后向RS申请资源（申请Container），然后RS去通知NodeManager来启动Container进程，然后AppMaster向Container分发任务（比如让它反射哪个类）。即任务调度（任务运行的先后顺序，重试机制）由AppMaster来完成，资源（每个节点硬件资源，Container也是资源）管理全部交给RS管理。</p>
+<p>Client通过RS(ResourceManager)来提交作业，RS选择一个节点创建AppMaster进程，AppMaster启动后向RS申请资源（申请Container），然后RS去通知NodeManager来启动Container进程，然后AppMaster向Container分发任务（比如让它反射哪个类）。即任务调度（任务运行的先后顺序，重试机制）、任务监控和容错等由AppMaster来完成，资源（每个节点硬件资源，Container也是资源）管理全部交给RS管理。</p>
 <p>图中的客户端提交了两个作业，每个作业都有自己的AppMaster，其中一个AppMaster死了不会影响另一个AppMaster，任务调度不是单点运行，一个任务故障不会影响另一个任务，其实，AppMaster也是一种Container，其容错机制为：如果AppMaster挂了，MR会另起一个AppMaster。解决了1.0里面的jobTracker负载过重，单点故障问题。<br><img src="/media/14994393606145.jpg" alt=""><br>下图是spark提交作业到yarn流程图，给以后的spark笔记做个铺垫吧。<br><img src="/media/14994399512137.jpg" alt=""></p>
 <h3 id="搭建yarn"><a href="#搭建yarn" class="headerlink" title="搭建yarn"></a>搭建yarn</h3><p><img src="/media/14993252047602.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# vi mapred-site.xml</div><div class="line">&lt;configuration&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</div><div class="line">        &lt;value&gt;yarn&lt;/value&gt;</div><div class="line">  &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">[root@node01 hadoop]# vi yarn-site.xml</div><div class="line">&lt;configuration&gt;</div><div class="line"></div><div class="line">&lt;!-- Site specific YARN configuration properties --&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</div><div class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line">&lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.ha.enabled&lt;/name&gt;</div><div class="line">   &lt;value&gt;true&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.cluster-id&lt;/name&gt;</div><div class="line">   &lt;value&gt;cluster1&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.ha.rm-ids&lt;/name&gt;</div><div class="line">   &lt;value&gt;rm1,rm2&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.hostname.rm1&lt;/name&gt;</div><div class="line">   &lt;value&gt;node03&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.hostname.rm2&lt;/name&gt;</div><div class="line">   &lt;value&gt;node04&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"> &lt;property&gt;</div><div class="line">   &lt;name&gt;yarn.resourcemanager.zk-address&lt;/name&gt;</div><div class="line">   &lt;value&gt;node02:2181,node03:2181,node04:2181&lt;/value&gt;</div><div class="line"> &lt;/property&gt;</div><div class="line"></div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure>
@@ -504,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/05/eclipseConnectHadoop/" rel="next" title="mac下eclipse连接hadoop集群开发API">
-                <i class="fa fa-chevron-left"></i> mac下eclipse连接hadoop集群开发API
+              <a href="/2017/07/05/eclipseConnectHadoop/" rel="next" title="HADOOP--mac下eclipse连接hadoop集群开发API">
+                <i class="fa fa-chevron-left"></i> HADOOP--mac下eclipse连接hadoop集群开发API
               </a>
             
           </div>
@@ -591,7 +591,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -878,7 +878,7 @@
         var disqus_config = function () {
           this.page.url = 'http://chant00.com/2017/07/06/yarnTest/';
           this.page.identifier = '2017/07/06/yarnTest/';
-          this.page.title = 'Hadoop--yarn详解及配置测试';
+          this.page.title = 'HADOOP--yarn详解及配置测试';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';

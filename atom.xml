@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-07T15:27:43.000Z</updated>
+  <updated>2017-07-08T01:43:45.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hadoop--yarn详解及配置测试</title>
+    <title>HADOOP--yarn详解及配置测试</title>
     <link href="http://chant00.com/2017/07/06/yarnTest/"/>
     <id>http://chant00.com/2017/07/06/yarnTest/</id>
     <published>2017-07-06T02:24:49.000Z</published>
-    <updated>2017-07-07T15:27:43.000Z</updated>
+    <updated>2017-07-08T01:43:45.000Z</updated>
     
     <summary type="html">
     
@@ -38,11 +38,11 @@
   </entry>
   
   <entry>
-    <title>mac下eclipse连接hadoop集群开发API</title>
+    <title>HADOOP--mac下eclipse连接hadoop集群开发API</title>
     <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
     <published>2017-07-05T02:24:49.000Z</published>
-    <updated>2017-07-07T13:37:13.000Z</updated>
+    <updated>2017-07-07T15:29:11.000Z</updated>
     
     <summary type="html">
     
@@ -60,11 +60,33 @@
   </entry>
   
   <entry>
-    <title>mac下IDEA连接hadoop集群开发API</title>
+    <title>HADOOP--MapReduce深入源码</title>
+    <link href="http://chant00.com/2017/07/05/2017-07-08/"/>
+    <id>http://chant00.com/2017/07/05/2017-07-08/</id>
+    <published>2017-07-05T00:47:49.000Z</published>
+    <updated>2017-07-09T02:25:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MapReduce客户端提交过程的源码，以及手写wordCount测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+    
+    
+      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--mac下IDEA连接hadoop集群开发API</title>
     <link href="http://chant00.com/2017/07/05/IDEAConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/IDEAConnectHadoop/</id>
     <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-06T13:06:48.000Z</updated>
+    <updated>2017-07-07T15:28:45.000Z</updated>
     
     <summary type="html">
     
@@ -426,29 +448,6 @@
       <category term="教程" scheme="http://chant00.com/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="Hexo" scheme="http://chant00.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java远程调用shell脚本</title>
-    <link href="http://chant00.com/2017/06/04/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8shell%E8%84%9A%E6%9C%AC/"/>
-    <id>http://chant00.com/2017/06/04/java远程调用shell脚本/</id>
-    <published>2017-06-04T14:10:49.000Z</published>
-    <updated>2017-06-08T09:23:11.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;h3 id=&quot;目的：&quot;&gt;&lt;a href=&quot;#目的：&quot; class=&quot;headerlink&quot; title=&quot;目的：&quot;&gt;&lt;/a&gt;目的：&lt;/h3&gt;&lt;p&gt;java程序调用远程服务器的shell脚本来实现服务的起、停、重启。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://chant00.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chant00.com/tags/java/"/>
-    
-      <category term="shell" scheme="http://chant00.com/tags/shell/"/>
     
   </entry>
   
