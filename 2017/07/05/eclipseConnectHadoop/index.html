@@ -134,7 +134,7 @@
 <meta property="og:image" content="http://chant00.com/media/14993018233145.jpg">
 <meta property="og:image" content="http://chant00.com/media/14994342174813.jpg">
 <meta property="og:image" content="http://chant00.com/media/14994344970762.jpg">
-<meta property="og:updated_time" content="2017-07-07T15:29:11.000Z">
+<meta property="og:updated_time" content="2017-07-11T11:57:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HADOOP--mac下eclipse连接hadoop集群开发API">
 <meta name="twitter:description" content="mac下eclipse连接hadoop集群开发API">
@@ -418,8 +418,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">hadoop</span>
+                  <a href="/categories/Bigdata/" itemprop="url" rel="index">
+                    <span itemprop="name">Bigdata</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Bigdata/Hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">Hadoop</span>
                   </a>
                 </span>
 
@@ -469,7 +480,7 @@
 <h3 id="配置Eclipse"><a href="#配置Eclipse" class="headerlink" title="配置Eclipse"></a>配置Eclipse</h3><h4 id="下载Hadoop-Eclipse-Plugin"><a href="#下载Hadoop-Eclipse-Plugin" class="headerlink" title="下载Hadoop-Eclipse-Plugin"></a>下载Hadoop-Eclipse-Plugin</h4><p>可下载 Github 上的 <a href="https://github.com/winghc/hadoop2x-eclipse-plugin" target="_blank" rel="external">hadoop2x-eclipse-plugin</a>（<a href="https://github.com/winghc/hadoop2x-eclipse-plugin/tree/master/release" target="_blank" rel="external">选择下载hadoop-eclipse-plugin-2.6.0.jar</a>）</p>
 <h4 id="安装Hadoop-Eclipse-Plugin"><a href="#安装Hadoop-Eclipse-Plugin" class="headerlink" title="安装Hadoop-Eclipse-Plugin"></a>安装Hadoop-Eclipse-Plugin</h4><p>在Applications中找个Eclise, 右键, Show Package Contents<br><img src="/media/14993397905137.jpg" alt=""></p>
 <p>将插件复制到plugins目录下<br><img src="/media/14993398079962.jpg" alt=""><br>然后重新打开Eclipse，添加插件。<br><img src="/media/14992580520903.jpg" alt=""></p>
-<h3 id="连接Hadoop集群"><a href="#连接Hadoop集群" class="headerlink" title="连接Hadoop集群"></a>连接Hadoop集群</h3><h4 id="配置Hadoop安装目录"><a href="#配置Hadoop安装目录" class="headerlink" title="配置Hadoop安装目录"></a>配置Hadoop安装目录</h4><p>1)<code>mkdir  /Users/Chant/opt</code>将源码包和部署包都接到到这里。<br>2)配置环境变量<code>vim ~/.zshrc</code></p>
+<h3 id="连接Hadoop集群"><a href="#连接Hadoop集群" class="headerlink" title="连接Hadoop集群"></a>连接Hadoop集群</h3><h4 id="配置Hadoop安装目录"><a href="#配置Hadoop安装目录" class="headerlink" title="配置Hadoop安装目录"></a>配置Hadoop安装目录</h4><p>1)<code>mkdir  /Users/Chant/opt</code>将源码包和部署包都解压到这里。<br>2)配置环境变量<code>vim ~/.zshrc</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export HADOOP_PREFIX=/Users/Chant/opt/hadoop-2.6.5</div><div class="line">export PATH=&quot;$ANACONDA_HOME/bin:/usr/local/bin:$PATH:$HADOOP_HOME/bin&quot;</div></pre></td></tr></table></figure>
 <p>3)在Eclipse中指向该安装目录（Eclipse–&gt;偏好设置）<br><img src="/media/14992583403456.jpg" alt=""><br><img src="/media/14992582007966.jpg" alt=""><br>需要改Location name, Location name 这里就是起个名字，随便起。Port填的是8020,这个由你的集群配置决定（去web页面可以查看端口）。<br><img src="/media/14992599466396.jpg" alt=""></p>
 <p> ( 勾选Use M/R的话，需要在hosts文件中添加<code>192.168.14.11  Master # 添加Master的IP</code><br>，Master会引用Mac中的hosts配置的IP )<br><img src="/media/14992601883397.jpg" alt=""></p>
@@ -540,8 +551,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/05/2017-07-08/" rel="next" title="HADOOP--MapReduce深入源码">
-                <i class="fa fa-chevron-left"></i> HADOOP--MapReduce深入源码
+              <a href="/2017/07/05/2017-07-08/" rel="next" title="HADOOP--MapReduce深入源码-Client">
+                <i class="fa fa-chevron-left"></i> HADOOP--MapReduce深入源码-Client
               </a>
             
           </div>
@@ -631,7 +642,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -642,7 +653,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -653,7 +664,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-08T01:43:45.000Z</updated>
+  <updated>2017-07-11T11:56:01.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hive--安装测试</title>
+    <link href="http://chant00.com/2017/07/11/2017-07-11/"/>
+    <id>http://chant00.com/2017/07/11/2017-07-11/</id>
+    <published>2017-07-11T00:47:49.000Z</published>
+    <updated>2017-07-11T11:56:01.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HADOOP--yarn详解及配置测试</title>
     <link href="http://chant00.com/2017/07/06/yarnTest/"/>
     <id>http://chant00.com/2017/07/06/yarnTest/</id>
     <published>2017-07-06T02:24:49.000Z</published>
-    <updated>2017-07-08T01:43:45.000Z</updated>
+    <updated>2017-07-11T11:57:28.000Z</updated>
     
     <summary type="html">
     
@@ -28,12 +52,14 @@
     
     </summary>
     
-      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
     
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
     
-      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
     
       <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -42,7 +68,7 @@
     <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
     <published>2017-07-05T02:24:49.000Z</published>
-    <updated>2017-07-07T15:29:11.000Z</updated>
+    <updated>2017-07-11T11:57:08.000Z</updated>
     
     <summary type="html">
     
@@ -50,7 +76,9 @@
     
     </summary>
     
-      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
     
     
       <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
@@ -60,11 +88,11 @@
   </entry>
   
   <entry>
-    <title>HADOOP--MapReduce深入源码</title>
+    <title>HADOOP--MapReduce深入源码-Client</title>
     <link href="http://chant00.com/2017/07/05/2017-07-08/"/>
     <id>http://chant00.com/2017/07/05/2017-07-08/</id>
     <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-09T02:25:54.000Z</updated>
+    <updated>2017-07-11T11:57:35.000Z</updated>
     
     <summary type="html">
     
@@ -72,12 +100,14 @@
     
     </summary>
     
-      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
     
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
     
-      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
     
       <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -86,7 +116,7 @@
     <link href="http://chant00.com/2017/07/05/IDEAConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/IDEAConnectHadoop/</id>
     <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-07T15:28:45.000Z</updated>
+    <updated>2017-07-11T11:57:19.000Z</updated>
     
     <summary type="html">
     
@@ -94,12 +124,38 @@
     
     </summary>
     
-      <category term="hadoop" scheme="http://chant00.com/categories/hadoop/"/>
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
     
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
     
-      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
     
       <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--MapReduce深入源码-Mapper</title>
+    <link href="http://chant00.com/2017/07/05/2017-07-09/"/>
+    <id>http://chant00.com/2017/07/05/2017-07-09/</id>
+    <published>2017-07-05T00:47:49.000Z</published>
+    <updated>2017-07-11T11:57:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -402,52 +458,6 @@
       <category term="English" scheme="http://chant00.com/tags/English/"/>
     
       <category term="英语学习" scheme="http://chant00.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HIVE和HBASE区别</title>
-    <link href="http://chant00.com/2017/06/06/2017-06-06/"/>
-    <id>http://chant00.com/2017/06/06/2017-06-06/</id>
-    <published>2017-06-06T06:45:30.000Z</published>
-    <updated>2017-06-08T09:21:01.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/media/hiveHbase.jpg&quot; alt=&quot;hiveHbase&quot;&gt;&lt;br&gt;从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
-    
-      <category term="Hbase" scheme="http://chant00.com/tags/Hbase/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在hexo博客中插入图片，音乐，视频，公式</title>
-    <link href="http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/"/>
-    <id>http://chant00.com/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/</id>
-    <published>2017-06-05T16:45:09.000Z</published>
-    <updated>2017-06-12T02:23:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;摘要：&quot;&gt;&lt;a href=&quot;#摘要：&quot; class=&quot;headerlink&quot; title=&quot;摘要：&quot;&gt;&lt;/a&gt;摘要：&lt;/h3&gt;&lt;p&gt;如何简洁优雅地在hexo博客中插入图片，音乐，视频，公式.&lt;br&gt;这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://chant00.com/categories/Hexo/"/>
-    
-    
-      <category term="教程" scheme="http://chant00.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="Hexo" scheme="http://chant00.com/tags/Hexo/"/>
     
   </entry>
   

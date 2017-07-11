@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hadoop,API," />
+  <meta name="keywords" content="API,Hadoop," />
 
 
 
@@ -103,7 +103,7 @@
 
 <meta name="description" content="MapReduce客户端提交过程的源码，以及手写wordCount测试。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HADOOP--MapReduce深入源码">
+<meta property="og:title" content="HADOOP--MapReduce深入源码-Client">
 <meta property="og:url" content="http://chant00.com/2017/07/05/2017-07-08/index.html">
 <meta property="og:site_name" content="Chant">
 <meta property="og:description" content="MapReduce客户端提交过程的源码，以及手写wordCount测试。">
@@ -139,9 +139,9 @@
 <meta property="og:image" content="http://chant00.com/media/14995188891177.jpg">
 <meta property="og:image" content="http://chant00.com/media/14995203459118.jpg">
 <meta property="og:image" content="http://chant00.com/media/14995206610285.jpg">
-<meta property="og:updated_time" content="2017-07-09T02:25:54.000Z">
+<meta property="og:updated_time" content="2017-07-11T11:57:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HADOOP--MapReduce深入源码">
+<meta name="twitter:title" content="HADOOP--MapReduce深入源码-Client">
 <meta name="twitter:description" content="MapReduce客户端提交过程的源码，以及手写wordCount测试。">
 <meta name="twitter:image" content="http://chant00.com/media/14994962770738.jpg">
 
@@ -177,7 +177,7 @@
 
 
 
-  <title>HADOOP--MapReduce深入源码 | Chant</title>
+  <title>HADOOP--MapReduce深入源码-Client | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -388,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HADOOP--MapReduce深入源码</h1>
+          <h1 class="post-title" itemprop="name headline">HADOOP--MapReduce深入源码-Client</h1>
         
 
         <div class="post-meta">
@@ -423,8 +423,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">hadoop</span>
+                  <a href="/categories/Bigdata/" itemprop="url" rel="index">
+                    <span itemprop="name">Bigdata</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Bigdata/Hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">Hadoop</span>
                   </a>
                 </span>
 
@@ -440,7 +451,7 @@
 
           
           
-             <span id="/2017/07/05/2017-07-08/" class="leancloud_visitors" data-flag-title="HADOOP--MapReduce深入源码">
+             <span id="/2017/07/05/2017-07-08/" class="leancloud_visitors" data-flag-title="HADOOP--MapReduce深入源码-Client">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -470,7 +481,7 @@
       
         <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>MapReduce客户端提交过程的源码，以及手写wordCount测试。</p>
 <a id="more"></a>
-<p><img src="/media/14994962770738.jpg" alt=""><br>    点击submit<br>    <img src="/media/14994976308246.jpg" alt=""><br>点击submitJobInternal</p>
+<h3 id="一入源码深似海，套路深深深几许"><a href="#一入源码深似海，套路深深深几许" class="headerlink" title="一入源码深似海，套路深深深几许"></a>一入源码深似海，套路深深深几许</h3><p><img src="/media/14994962770738.jpg" alt=""><br>    点击submit<br>    <img src="/media/14994976308246.jpg" alt=""><br>点击submitJobInternal</p>
 <p><img src="/media/14994975896838.jpg" alt=""><br>往下翻，看到客户端启动后先创建切片列表<br><img src="/media/14994979479066.jpg" alt=""><br>由于我使用的是新的API，所以点击writeNewSplites<br><img src="/media/14994981822598.jpg" alt=""><br><img src="/media/14995015879844.jpg" alt=""><br>这里不是直接点，而是command+option+B打开继承关系，选择JobContextImpl。<br><img src="/media/14995018131633.jpg" alt=""><br>这里用户如果设置了InputFormat.class则取用户自己实现的，否则取默认值TextInputFormat.class<br><img src="/media/14995020179380.jpg" alt=""><br>也就是说可以在自己的代码中设置InputFormat.class，自己去实现ooxx.class这个类，这样就可以控制它是按行还是按一块数据来输入。<br><img src="/media/14995021927734.jpg" alt=""><br><code>setInputFormatClass</code>里面设置的就是<code>INPUT_FORMAT_CLASS_ATTR</code>，而<code>getInputFormatClass</code>里get的也是这个<code>INPUT_FORMAT_CLASS_ATTR</code>。</p>
 <p><img src="/media/14995024907919.jpg" alt=""><br>这里顺带说一下,进入Job.java,点击JobContext–&gt;MRJobConfig<br><img src="/media/14995031276068.jpg" alt=""><br><img src="/media/14995031995282.jpg" alt=""><br>可以看到很多常量属性，这与你的hadoop配置文件有关，搜索Default,找到<code>DEFAULT_MAP_MEMORY_MB</code>，可以看到他有默认配置且为1G。这里是一个调优点。当你的数据每一行都是好几百兆时，1G的内存会导致频繁的磁盘IO？？？，或者内存溢出，当你确定计算没有问题但是提交计算总是报内存溢出，可以试试将它调大。<br><img src="/media/14995032482659.jpg" alt=""><br><code>DEFAULT_REDUCE_MEMORY_MB</code>只有<code>1G</code>，这导致你的buffer会很小，会频繁地触发磁盘IO（比如一次读3G数据到内存后写入磁盘一次，和读3次1G后写3次到磁盘。IO调用次数越多，开销越大）。所以<code>DEFAULT_REDUCE_MEMORY_MB</code>基本上是必然要调的。<br><img src="/media/14995037299878.jpg" alt=""><br>回到<code>TextInputFormat</code>，Ctrl+H打开继承层级，发现它继承自<code>FileInputFormat</code>，对比我们创建输入路径时的语句，可见<code>TextInputFormat</code>是通过继承来获取到父类中的Job配置和input路径。<br><img src="/media/14995053176686.jpg" alt=""></p>
 <p><img src="/media/14995054935710.jpg" alt=""><br>接下来，看getSplits。打开实现关系，选择<code>FileInputFormat</code>。<br><img src="/media/14995062535540.jpg" alt=""><br><img src="/media/14995077347877.jpg" alt=""><br>点击<code>getFormatMinSplitSize</code>，可见其固定返回<code>1</code>。<br><img src="/media/14995069849740.jpg" alt=""></p>
@@ -484,9 +495,9 @@
 </ol>
 <h3 id="测试理解"><a href="#测试理解" class="headerlink" title="测试理解"></a>测试理解</h3><p>写一个<a href="#wc">WordCount程序</a>，在Mapper中添加一行<code>Thread.sleep(999999);</code>如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (itr.hasMoreTokens()) &#123;</div><div class="line">    word.set(itr.nextToken());</div><div class="line">    Thread.sleep(<span class="number">999999</span>);</div><div class="line">    context.write(word, one);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>打jar包拷贝到你的HDFS主节点，运行。<br><img src="/media/14995203459118.jpg" alt=""><br>看到<code>map 0% reduce 0%</code>后，新开一个ssh窗口,查看hdfs的根目录，发现多了一个tmp目录，一步步深入其中。<br><img src="/media/14995206610285.jpg" alt=""><br>可以将这些文件get到本地，然后发现这里面的job.jar和一开始上传的testHadoop-1.0-SNAPSHOT.jar大小一样，其实内容也是一样的，集群中任一节点启动MapTask任务后，就会把这个jar包拿过去，然后反射出里面的MyMapper。然后任一节点启动ReduceTask任务后，也会hdfs中吧这个jar包拿过去，反射出里面的MyReducer,这样就可以分布式地计算了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-rw-r--r-- 1 root root  13K Jul  7 03:44 testHadoop-1.0-SNAPSHOT.jar</div><div class="line">-rw-r--r-- 1 root root  13K Jul  7 03:50 job.jar</div></pre></td></tr></table></figure></p>
+<p>打jar包拷贝到你的HDFS主节点，运行。<br><img src="/media/14995203459118.jpg" alt=""><br>看到<code>map 0% reduce 0%</code>后，新开一个ssh窗口,查看hdfs的根目录，发现多了一个tmp目录，一步步深入其中。<br><img src="/media/14995206610285.jpg" alt=""><br>可以将这些文件get到本地，然后发现这里面的job.jar和一开始上传的testHadoop-1.0-SNAPSHOT.jar大小一样，其实内容也是一样的，集群中任一节点启动MapTask任务后，就会把这个jar包拿过去，然后反射出里面的MyMapper。然后任一节点启动ReduceTask任务后，也会从hdfs中把这个jar包拿过去，反射出里面的MyReducer,这样就可以分布式地计算了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-rw-r--r-- 1 root root  13K Jul  7 03:44 testHadoop-1.0-SNAPSHOT.jar</div><div class="line">-rw-r--r-- 1 root root  13K Jul  7 03:50 job.jar</div></pre></td></tr></table></figure></p>
 <p>查看job.split,发现里面的乱码，这部分乱码之前源码中看到的<code>makeSplit</code>的参数，即split列表中的信息：文件，偏移量，split长度（大小    ），节点主机名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node01 tmp]# vi job.split</div><div class="line">SPL^@^@^@^A/org.apache.hadoop.mapreduce.lib.input.FileSplit*hdfs://mycluster/sxt/mr/wc/input/hello.txt^@^@^@^@^@^@^@^@^@^@^@^@^@%ú?</div></pre></td></tr></table></figure></p>
-<h3 id="WoedCount示例"><a href="#WoedCount示例" class="headerlink" title="WoedCount示例"></a><span id="wc">WoedCount示例</span></h3><p>将Job，Mapper，Reducer的example里的代码拼起来就刚好是一个WordCount程序，自己稍作修改就行。</p>
+<h3 id="WordCount示例"><a href="#WordCount示例" class="headerlink" title="WordCount示例"></a><span id="wc">WordCount示例</span></h3><p>将Job，Mapper，Reducer的example里的代码拼起来就刚好是一个WordCount程序，自己稍作修改就行。</p>
 <h4 id="Client类"><a href="#Client类" class="headerlink" title="Client类"></a>Client类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.chant.mr.wc;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.conf.Configuration;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.FileSystem;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.fs.Path;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Job;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.db.DBInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Chant on 2017/7/8.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyJob</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException, InterruptedException </span>&#123;</div><div class="line">        Configuration conf = <span class="keyword">new</span> Configuration(<span class="keyword">true</span>);</div><div class="line">        Job job = Job.getInstance(conf);</div><div class="line"></div><div class="line">        <span class="comment">// Create a new Job</span></div><div class="line"><span class="comment">//        Job job = Job.getInstance();</span></div><div class="line">        job.setJarByClass(MyJob.class);</div><div class="line"></div><div class="line">        <span class="comment">// Specify various job-specific parameters</span></div><div class="line">        job.setJobName(<span class="string">"myjob"</span>);</div><div class="line"></div><div class="line"><span class="comment">//        job.setInputPath(new Path("in"));</span></div><div class="line"><span class="comment">//        job.setOutputPath(new Path("out"));</span></div><div class="line"></div><div class="line"><span class="comment">//        上面的是示例里的传统方法，现在用以下方法,因为还可以从数据库或者其他地方拿数据。</span></div><div class="line">        Path input = <span class="keyword">new</span> Path(<span class="string">"/sxt/mr/wc/input"</span>);</div><div class="line">        FileInputFormat.addInputPath(job,input);</div><div class="line"><span class="comment">//        DBInputFormat.setInput();</span></div><div class="line">        Path output = <span class="keyword">new</span> Path(<span class="string">"/sxt/mr/wc/output"</span>);</div><div class="line">        <span class="keyword">if</span> (output.getFileSystem(conf).exists(output))<span class="comment">//也可以用FileSystem fs = FileSystem.get(conf);然后fs.exist(output)</span></div><div class="line">        &#123;</div><div class="line">            output.getFileSystem(conf).delete(output);</div><div class="line">        &#125;</div><div class="line">        FileOutputFormat.setOutputPath(job,output);</div><div class="line"></div><div class="line">        job.setMapperClass(MyMapper.class);</div><div class="line"><span class="comment">//      map的输出结果到buffer环里，会序列化。需要告诉reduce你这个反序列化后是什么类型，reduce会将反序列化后的类型强转为对应类型。</span></div><div class="line">        job.setMapOutputKeyClass(Text.class);</div><div class="line">        job.setMapOutputValueClass(IntWritable.class);</div><div class="line">        job.setReducerClass(MyReducer.class);</div><div class="line"></div><div class="line">        <span class="comment">// Submit the job, then poll for progress until the job is complete</span></div><div class="line">        job.waitForCompletion(<span class="keyword">true</span>);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="Mapper类"><a href="#Mapper类" class="headerlink" title="Mapper类"></a>Mapper类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.chant.mr.wc;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Mapper;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"><span class="keyword">import</span> java.util.StringTokenizer;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Chant on 2017/7/8.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">Object</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt; </span>&#123;</div><div class="line"><span class="comment">//    为什么要把word和one定义到map之外呢？ 因为map端可能读入很多行，有10万行就调用十万次map方法，如果word和one定义到map里面，就会创建10万个word和one对象，gc就会很忙，程序阻塞。</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> IntWritable one = <span class="keyword">new</span> IntWritable(<span class="number">1</span>);</div><div class="line">    <span class="keyword">private</span> Text word = <span class="keyword">new</span> Text();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(Object key, Text value, Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</div><div class="line">        StringTokenizer itr = <span class="keyword">new</span> StringTokenizer(value.toString());</div><div class="line">        <span class="keyword">while</span> (itr.hasMoreTokens()) &#123;</div><div class="line">            word.set(itr.nextToken());</div><div class="line">            Thread.sleep(<span class="number">999999</span>);</div><div class="line">            context.write(word, one);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="Reduceer类"><a href="#Reduceer类" class="headerlink" title="Reduceer类"></a>Reduceer类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.chant.mr.wc;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.IntWritable;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.io.Text;</div><div class="line"><span class="keyword">import</span> org.apache.hadoop.mapreduce.Reducer;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by Chant on 2017/7/8.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyReducer</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>,<span class="title">IntWritable</span>, <span class="title">Text</span>,<span class="title">IntWritable</span>&gt; </span>&#123;</div><div class="line">    <span class="keyword">private</span> IntWritable result = <span class="keyword">new</span> IntWritable();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;IntWritable&gt; values,</span></span></div><div class="line">                       Context context) <span class="keyword">throws</span> IOException, InterruptedException &#123;</div><div class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (IntWritable val : values) &#123;</div><div class="line">            sum += val.get();</div><div class="line">        &#125;</div><div class="line">        result.set(sum);</div><div class="line">        context.write(key, result);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -519,9 +530,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
-          
             <a href="/tags/API/" rel="tag"># API</a>
+          
+            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
           
         </div>
       
@@ -625,7 +636,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -636,7 +647,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -647,7 +658,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -740,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试理解"><span class="nav-number">1.</span> <span class="nav-text">测试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WoedCount示例"><span class="nav-number">2.</span> <span class="nav-text">WoedCount示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Client类"><span class="nav-number">2.1.</span> <span class="nav-text">Client类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mapper类"><span class="nav-number">2.2.</span> <span class="nav-text">Mapper类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reduceer类"><span class="nav-number">2.3.</span> <span class="nav-text">Reduceer类</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一入源码深似海，套路深深深几许"><span class="nav-number">1.</span> <span class="nav-text">一入源码深似海，套路深深深几许</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试理解"><span class="nav-number">2.</span> <span class="nav-text">测试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WordCount示例"><span class="nav-number">3.</span> <span class="nav-text">WordCount示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Client类"><span class="nav-number">3.1.</span> <span class="nav-text">Client类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mapper类"><span class="nav-number">3.2.</span> <span class="nav-text">Mapper类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reduceer类"><span class="nav-number">3.3.</span> <span class="nav-text">Reduceer类</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -912,7 +923,7 @@
         var disqus_config = function () {
           this.page.url = 'http://chant00.com/2017/07/05/2017-07-08/';
           this.page.identifier = '2017/07/05/2017-07-08/';
-          this.page.title = 'HADOOP--MapReduce深入源码';
+          this.page.title = 'HADOOP--MapReduce深入源码-Client';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';
