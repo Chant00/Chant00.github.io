@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://chant00.com/media/14997721461733.jpg">
 <meta property="og:image" content="http://chant00.com/media/14997730474712.jpg">
 <meta property="og:image" content="http://chant00.com/media/14997733354266.jpg">
-<meta property="og:updated_time" content="2017-07-11T11:56:01.000Z">
+<meta property="og:updated_time" content="2017-07-12T12:14:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hive--安装测试">
 <meta name="twitter:description" content="hive的三种模式简介及其搭建测试。">
@@ -463,7 +463,7 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>hive的三种模式简介及其搭建测试。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>hive的三种模式简介及其搭建测试。</p>
 <a id="more"></a>
 <h3 id="Hive的三种模式"><a href="#Hive的三种模式" class="headerlink" title="Hive的三种模式"></a>Hive的三种模式</h3><h4 id="local模式。"><a href="#local模式。" class="headerlink" title="local模式。"></a>local模式。</h4><p>此模式连接到一个In-memory 的数据库Derby，一般用于Unit Test。<br><img src="/media/14997700836027.jpg" alt=""></p>
 <h3 id="Hive单用户模式"><a href="#Hive单用户模式" class="headerlink" title="Hive单用户模式"></a>Hive单用户模式</h3><p>通过网络连接到一个数据库中，是最经常使用到的模式。<br><img src="/media/14997566330190.jpg" alt=""></p>
@@ -478,7 +478,7 @@
 <p>此时启动hive的话会报错，jline包不兼容，可以去看一下hadoop下的jline包与hive的jline包版本不一致，所以需要用高版本替换低版本。<br><img src="/media/14997515135888.jpg" alt=""></p>
 <p><img src="/media/14997517060354.jpg" alt=""><br><img src="/media/14997517950247.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@node01 lib]# cd /opt/sxt/hadoop-2.6.5/share/hadoop/yarn/lib</div><div class="line">[root@node01 lib]# rm -f jline-0.9.94.jar</div><div class="line">[root@node01 lib]# cp /opt/hive-1.2.1/lib/jline-2.12.jar ./</div><div class="line">[root@node01 lib]# ls jline-2.12.jar</div></pre></td></tr></table></figure>
-<p>接着启动hive成功。<br><img src="/media/14997519752129.jpg" alt=""><br>可以坐下一些练习测试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hive&gt; show tables;</div><div class="line">hive&gt; create table tbl (id int, name string);</div><div class="line">hive&gt; show tables;</div><div class="line">大部分语句都会转成MapReduce来运行。</div><div class="line">hive&gt; insert into tbl values (1,&apos;xiaoming&apos;);</div><div class="line">hive&gt; select count(*) from tbl;</div><div class="line">select * from不会转成MapReduce，因为它只需要读取，没有计算。</div><div class="line">hive&gt; select * from tbl;</div></pre></td></tr></table></figure></p>
+<p>接着启动hive成功。<br><img src="/media/14997519752129.jpg" alt=""><br>可以做一些练习测试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hive&gt; show tables;</div><div class="line">hive&gt; create table tbl (id int, name string);</div><div class="line">hive&gt; show tables;</div><div class="line">大部分语句都会转成MapReduce来运行。</div><div class="line">hive&gt; insert into tbl values (1,&apos;xiaoming&apos;);</div><div class="line">hive&gt; select count(*) from tbl;</div><div class="line">select * from不会转成MapReduce，因为它只需要读取，没有计算。</div><div class="line">hive&gt; select * from tbl;</div></pre></td></tr></table></figure></p>
 <p><img src="/media/14997523101665.jpg" alt=""><br><img src="/media/14997524868023.jpg" alt=""><br>访问node01:50070可以看到之前配置文件中配置的<br><code>&lt;name&gt;hive.metastore.warehouse.dir&lt;/name&gt;  
  &lt;value&gt;/user/hive_remote/warehouse&lt;/value&gt;</code><br> 在hdfs中创建了这个目录，并用于存储我们创建的表数据。<br><img src="/media/14997526791793.jpg" alt=""><br><img src="/media/14997528517919.jpg" alt=""></p>
 <p>单用户模式，元数据存储在mysql中,可以连接数据库查看一下。<br><img src="/media/14997699351027.jpg" alt=""><br><img src="/media/14997699580246.jpg" alt=""></p>
