@@ -139,7 +139,7 @@
 <meta property="og:image" content="http://chant00.com/media/14995188891177.jpg">
 <meta property="og:image" content="http://chant00.com/media/14995203459118.jpg">
 <meta property="og:image" content="http://chant00.com/media/14995206610285.jpg">
-<meta property="og:updated_time" content="2017-07-11T11:57:35.000Z">
+<meta property="og:updated_time" content="2017-07-12T12:16:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HADOOP--MapReduce深入源码-Client">
 <meta name="twitter:description" content="MapReduce客户端提交过程的源码，以及手写wordCount测试。">
@@ -479,9 +479,9 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>MapReduce客户端提交过程的源码，以及手写wordCount测试。</p>
+        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>MapReduce客户端提交过程的源码，以及手写wordCount测试。</p>
 <a id="more"></a>
-<h3 id="一入源码深似海，套路深深深几许"><a href="#一入源码深似海，套路深深深几许" class="headerlink" title="一入源码深似海，套路深深深几许"></a>一入源码深似海，套路深深深几许</h3><p><img src="/media/14994962770738.jpg" alt=""><br>    点击submit<br>    <img src="/media/14994976308246.jpg" alt=""><br>点击submitJobInternal</p>
+<h3 id="一入源码深似海，源码深深深几许"><a href="#一入源码深似海，源码深深深几许" class="headerlink" title="一入源码深似海，源码深深深几许"></a>一入源码深似海，源码深深深几许</h3><p><img src="/media/14994962770738.jpg" alt=""><br>    点击submit<br>    <img src="/media/14994976308246.jpg" alt=""><br>点击submitJobInternal</p>
 <p><img src="/media/14994975896838.jpg" alt=""><br>往下翻，看到客户端启动后先创建切片列表<br><img src="/media/14994979479066.jpg" alt=""><br>由于我使用的是新的API，所以点击writeNewSplites<br><img src="/media/14994981822598.jpg" alt=""><br><img src="/media/14995015879844.jpg" alt=""><br>这里不是直接点，而是command+option+B打开继承关系，选择JobContextImpl。<br><img src="/media/14995018131633.jpg" alt=""><br>这里用户如果设置了InputFormat.class则取用户自己实现的，否则取默认值TextInputFormat.class<br><img src="/media/14995020179380.jpg" alt=""><br>也就是说可以在自己的代码中设置InputFormat.class，自己去实现ooxx.class这个类，这样就可以控制它是按行还是按一块数据来输入。<br><img src="/media/14995021927734.jpg" alt=""><br><code>setInputFormatClass</code>里面设置的就是<code>INPUT_FORMAT_CLASS_ATTR</code>，而<code>getInputFormatClass</code>里get的也是这个<code>INPUT_FORMAT_CLASS_ATTR</code>。</p>
 <p><img src="/media/14995024907919.jpg" alt=""><br>这里顺带说一下,进入Job.java,点击JobContext–&gt;MRJobConfig<br><img src="/media/14995031276068.jpg" alt=""><br><img src="/media/14995031995282.jpg" alt=""><br>可以看到很多常量属性，这与你的hadoop配置文件有关，搜索Default,找到<code>DEFAULT_MAP_MEMORY_MB</code>，可以看到他有默认配置且为1G。这里是一个调优点。当你的数据每一行都是好几百兆时，1G的内存会导致频繁的磁盘IO？？？，或者内存溢出，当你确定计算没有问题但是提交计算总是报内存溢出，可以试试将它调大。<br><img src="/media/14995032482659.jpg" alt=""><br><code>DEFAULT_REDUCE_MEMORY_MB</code>只有<code>1G</code>，这导致你的buffer会很小，会频繁地触发磁盘IO（比如一次读3G数据到内存后写入磁盘一次，和读3次1G后写3次到磁盘。IO调用次数越多，开销越大）。所以<code>DEFAULT_REDUCE_MEMORY_MB</code>基本上是必然要调的。<br><img src="/media/14995037299878.jpg" alt=""><br>回到<code>TextInputFormat</code>，Ctrl+H打开继承层级，发现它继承自<code>FileInputFormat</code>，对比我们创建输入路径时的语句，可见<code>TextInputFormat</code>是通过继承来获取到父类中的Job配置和input路径。<br><img src="/media/14995053176686.jpg" alt=""></p>
 <p><img src="/media/14995054935710.jpg" alt=""><br>接下来，看getSplits。打开实现关系，选择<code>FileInputFormat</code>。<br><img src="/media/14995062535540.jpg" alt=""><br><img src="/media/14995077347877.jpg" alt=""><br>点击<code>getFormatMinSplitSize</code>，可见其固定返回<code>1</code>。<br><img src="/media/14995069849740.jpg" alt=""></p>
@@ -751,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一入源码深似海，套路深深深几许"><span class="nav-number">1.</span> <span class="nav-text">一入源码深似海，套路深深深几许</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试理解"><span class="nav-number">2.</span> <span class="nav-text">测试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WordCount示例"><span class="nav-number">3.</span> <span class="nav-text">WordCount示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Client类"><span class="nav-number">3.1.</span> <span class="nav-text">Client类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mapper类"><span class="nav-number">3.2.</span> <span class="nav-text">Mapper类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reduceer类"><span class="nav-number">3.3.</span> <span class="nav-text">Reduceer类</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一入源码深似海，源码深深深几许"><span class="nav-number">1.</span> <span class="nav-text">一入源码深似海，源码深深深几许</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试理解"><span class="nav-number">2.</span> <span class="nav-text">测试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WordCount示例"><span class="nav-number">3.</span> <span class="nav-text">WordCount示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Client类"><span class="nav-number">3.1.</span> <span class="nav-text">Client类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mapper类"><span class="nav-number">3.2.</span> <span class="nav-text">Mapper类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reduceer类"><span class="nav-number">3.3.</span> <span class="nav-text">Reduceer类</span></a></li></ol></li></ol></div>
             
 
           </div>
