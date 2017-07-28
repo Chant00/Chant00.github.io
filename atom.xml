@@ -40,6 +40,30 @@
   </entry>
   
   <entry>
+    <title>Hive--DDL和DML练习</title>
+    <link href="http://chant00.com/2017/07/11/2017-07-12/"/>
+    <id>http://chant00.com/2017/07/11/2017-07-12/</id>
+    <published>2017-07-11T00:47:49.000Z</published>
+    <updated>2017-07-12T14:22:10.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HADOOP--yarn详解及配置测试</title>
     <link href="http://chant00.com/2017/07/06/yarnTest/"/>
     <id>http://chant00.com/2017/07/06/yarnTest/</id>
@@ -68,7 +92,7 @@
     <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
     <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
     <published>2017-07-05T02:24:49.000Z</published>
-    <updated>2017-07-11T11:57:08.000Z</updated>
+    <updated>2017-07-15T07:31:31.000Z</updated>
     
     <summary type="html">
     
@@ -84,6 +108,30 @@
       <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
     
       <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--MapReduce深入源码-Mapper</title>
+    <link href="http://chant00.com/2017/07/05/2017-07-09/"/>
+    <id>http://chant00.com/2017/07/05/2017-07-09/</id>
+    <published>2017-07-05T00:47:49.000Z</published>
+    <updated>2017-07-11T11:57:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -136,26 +184,23 @@
   </entry>
   
   <entry>
-    <title>HADOOP--MapReduce深入源码-Mapper</title>
-    <link href="http://chant00.com/2017/07/05/2017-07-09/"/>
-    <id>http://chant00.com/2017/07/05/2017-07-09/</id>
-    <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-11T11:57:41.000Z</updated>
+    <title>盖茨推荐的一堂30分钟的经济学</title>
+    <link href="http://chant00.com/2017/06/29/economic/"/>
+    <id>http://chant00.com/2017/06/29/economic/</id>
+    <published>2017-06-29T00:25:49.000Z</published>
+    <updated>2017-07-28T18:45:12.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
+      &lt;p&gt;“This knowledge would help everyone as investors and citizens. Watching is a worthwhile 30 minutes investment.”&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;–Bill Gates&lt;/p&gt;
     
     </summary>
     
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+      <category term="眼界" scheme="http://chant00.com/categories/%E7%9C%BC%E7%95%8C/"/>
     
     
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+      <category term="Economic" scheme="http://chant00.com/tags/Economic/"/>
     
   </entry>
   
@@ -410,54 +455,6 @@
       <category term="test" scheme="http://chant00.com/tags/test/"/>
     
       <category term="English" scheme="http://chant00.com/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>概率论迷思</title>
-    <link href="http://chant00.com/2017/06/07/2017-06-07/"/>
-    <id>http://chant00.com/2017/06/07/2017-06-07/</id>
-    <published>2017-06-07T02:58:19.000Z</published>
-    <updated>2017-06-09T08:19:22.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。&lt;br&gt;概率论的神奇之处在于，它居然能从不确定性中找到确定性。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
-    
-      <category term="重读概率论" scheme="http://chant00.com/categories/Algorithm/%E9%87%8D%E8%AF%BB%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    
-      <category term="概率论" scheme="http://chant00.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-      <category term="先验概率" scheme="http://chant00.com/tags/%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
-    
-      <category term="后验概率" scheme="http://chant00.com/tags/%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那些你常用但是却不知道如何用英文表达的句子</title>
-    <link href="http://chant00.com/2017/06/06/2017-06-06homeTest/"/>
-    <id>http://chant00.com/2017/06/06/2017-06-06homeTest/</id>
-    <published>2017-06-06T13:09:23.000Z</published>
-    <updated>2017-06-10T07:31:07.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;掌握另外一种语言（外语），真正的难点在于掌握它与已习得语言（母语）的不重合之处。直观的一一对应，其实没什么难度：“那是一本书”对应着“That’s a book”。而那些你常用到的句子或短语，翻译成英文，却一听就知道是中式英文。&lt;em&gt;“若果我没记错的话…”&lt;/em&gt; 用英语怎么说？是 &lt;em&gt;If I didn’t remembered wrong…&lt;/em&gt;吗？是英语里就没有这样的表达，还是我们不知道它的地道表达方式呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
-    
-    
-      <category term="English" scheme="http://chant00.com/tags/English/"/>
-    
-      <category term="英语学习" scheme="http://chant00.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
