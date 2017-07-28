@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-12T12:14:27.000Z</updated>
+  <updated>2017-07-28T18:48:26.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>盖茨推荐的一堂30分钟的经济学</title>
+    <link href="http://chant00.com/2017/07/29/economic/"/>
+    <id>http://chant00.com/2017/07/29/economic/</id>
+    <published>2017-07-29T00:25:49.000Z</published>
+    <updated>2017-07-28T18:48:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“This knowledge would help everyone as investors and citizens. Watching is a worthwhile 30 minutes investment.”&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;–Bill Gates&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="眼界" scheme="http://chant00.com/categories/%E7%9C%BC%E7%95%8C/"/>
+    
+    
+      <category term="Economic" scheme="http://chant00.com/tags/Economic/"/>
+    
+  </entry>
   
   <entry>
     <title>Hive--安装测试</title>
@@ -180,27 +201,6 @@
       <category term="API" scheme="http://chant00.com/tags/API/"/>
     
       <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>盖茨推荐的一堂30分钟的经济学</title>
-    <link href="http://chant00.com/2017/06/29/economic/"/>
-    <id>http://chant00.com/2017/06/29/economic/</id>
-    <published>2017-06-29T00:25:49.000Z</published>
-    <updated>2017-07-28T18:45:12.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;“This knowledge would help everyone as investors and citizens. Watching is a worthwhile 30 minutes investment.”&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;–Bill Gates&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="眼界" scheme="http://chant00.com/categories/%E7%9C%BC%E7%95%8C/"/>
-    
-    
-      <category term="Economic" scheme="http://chant00.com/tags/Economic/"/>
     
   </entry>
   
