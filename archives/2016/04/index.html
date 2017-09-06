@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="API,Hadoop," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -101,67 +101,15 @@
 
 
 
-<meta name="description" content="MapReduce Mapper源码解析。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HADOOP--MapReduce深入源码-Mapper">
-<meta property="og:url" content="http://chant00.com/2016/07/05/2017-07-09/index.html">
+<meta name="description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chant">
+<meta property="og:url" content="http://chant00.com/archives/2016/04/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="MapReduce Mapper源码解析。">
-<meta property="og:image" content="http://chant00.com/media/14995696404843.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995672958410.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995679038071.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995681364052.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995686446311.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995704000309.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995707677080.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995709201355.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995714180841.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995757654480.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995758414235.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995759005455.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995770824467.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995771372268.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995785708960.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995791596139.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995795557303.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995796165400.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995796472058.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995802096406.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995804200488.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995804759309.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995812632943.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995817066618.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995823599196.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995839522428.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995844559599.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995844734895.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995846425063.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995848059707.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995856044812.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995861787231.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995862555967.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995882713215.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995894009318.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995896515266.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995900898726.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995907872803.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995913435756.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995920657978.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995924688993.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995932329419.jpg">
-<meta property="og:image" content="http://chant00.com/media/14995937397162.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996024630223.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996038786664.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996050578045.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996154968147.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996179321851.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996180479848.jpg">
-<meta property="og:image" content="http://chant00.com/media/14996190257092.jpg">
-<meta property="og:updated_time" content="2017-09-06T13:09:10.000Z">
+<meta property="og:description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HADOOP--MapReduce深入源码-Mapper">
-<meta name="twitter:description" content="MapReduce Mapper源码解析。">
-<meta name="twitter:image" content="http://chant00.com/media/14995696404843.jpg">
+<meta name="twitter:title" content="Chant">
+<meta name="twitter:description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
 
 
 
@@ -189,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/2016/07/05/2017-07-09/"/>
+  <link rel="canonical" href="http://chant00.com/archives/2016/04/"/>
 
 
 
 
 
-  <title>HADOOP--MapReduce深入源码-Mapper | Chant</title>
+  <title>Archive | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -231,7 +179,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -379,231 +327,66 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chant00.com/2016/07/05/2017-07-09/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chant">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chant">
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      Um..! 27 posts in total. Keep on posting.
     </span>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">HADOOP--MapReduce深入源码-Mapper</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-05T08:47:49+08:00">
-                2016-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">Bigdata</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Bigdata/Hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">Hadoop</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2016/07/05/2017-07-09/" class="leancloud_visitors" data-flag-title="HADOOP--MapReduce深入源码-Mapper">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
 
       
       
-
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>MapReduce Mapper源码解析。</p>
-<a id="more"></a>
-<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p>鼠标移到Mapper上，查看文档，先看个大概，有个大概的逻辑框架后再去看源码。<br><img src="/media/14995696404843.jpg" alt=""></p>
-<p>点击Mapper，<code>Command+F12</code>查看文件结构，找到<span id="run">run</span>方法。<br><img src="/media/14995672958410.jpg" alt=""></p>
-<p>setup开启服务连接（比如连接数据库，打开某个文件）中间循环传一行执行一次map，最后cleanup关闭连接，释放资源。setup和cleanup中除了一行注释外，并无操作，所以是需要我们自己来实现。<br><img src="/media/14995679038071.jpg" alt=""><br><img src="/media/14995681364052.jpg" alt=""><br><img src="/media/14995686446311.jpg" alt=""><br>可以看出map的输入来自<code>context.nextKeyValue()</code>，输出通过<code>context.write()</code>。<br>即：context.nextKeyValue()–&gt;Mapper.map()–&gt;context.write()<br>随便找个地方输入<code>MapTask</code>，然后点击，进入到<code>org.apache.hadoop.mapred</code>下的<code>MapTask</code>，选中<code>MapTask</code>,Command+F12打开文件结构，键盘敲击<code>run</code>找到run方法并进入。<br><img src="/media/14995704000309.jpg" alt=""><br>从注释看出，运行任务时，打印出的map百分之几的那些进度信息是在这里定义的。<br><img src="/media/14995707677080.jpg" alt=""><br>往下翻找到<code>runNewMapper</code>并点击（因为我们用的是新的API）。<br><img src="/media/14995709201355.jpg" alt=""><br>看注释，找到<code>// get an output object</code>，里面有一段try代码块，可以看到先初始化，然后调用了<code>mapper.run()</code>，之前看过的这个<a href="#run">mapper.run()</a>就是通过循环一行行去读数据并执行map方法。<br><img src="/media/14995714180841.jpg" alt=""></p>
-<h3 id="反射Mapper"><a href="#反射Mapper" class="headerlink" title="反射Mapper"></a>反射Mapper</h3><p>往上翻，回到<code>runNewMapper</code>的第二个注释<code>// make a mapper</code>（第一个注释是准备创建上下文，所以就略过了，主要看计算框架）。<br>打开<code>getMapperClass()</code>的继承关系，找到<code>JobContextImpl</code><br><img src="/media/14995757654480.jpg" alt=""><br>可以看到，它的默认取得是<code>Mapper.class</code><br><img src="/media/14995758414235.jpg" alt=""><br>而<code>Mapper</code>中的<code>map</code>是默认直接输出，开发时的业务运算逻辑就没写进去，所以这个<code>MAP_CLASS_ATTR</code>肯定是要由用户配置的，<code>Mapper</code>类由开发人员自己实现（比如<code>WordCount</code>中的<code>MyMapper</code>）。所以最终<code>// make a mapper</code>阶段就是将用户所写的Mapper反射出来成一个对象。<br><img src="/media/14995759005455.jpg" alt=""></p>
-<h3 id="输入input"><a href="#输入input" class="headerlink" title="输入input"></a>输入input</h3><p><code>// make the input format</code>阶段也是同理，上一篇客户端源码中已经讲过，默认取<code>TextInputFormat.class</code>，可通过<code>job.setInputFormatClass()</code>来设置<code>INPUT_FORMAT_CLASS_ATTR</code>。<br><img src="/media/14995770824467.jpg" alt=""><br><img src="/media/14995771372268.jpg" alt=""><br><code>// rebuild the input split</code>阶段，一个split对应一个map，客户端会生成split列表，这个split列表支撑了计算向数据移动，这里是其中的一个计算map任务，把split重新构造了一下。<br><img src="/media/14995785708960.jpg" alt=""><br>往下继续，点击<code>NewTrackingRecordReader</code>，<br><img src="/media/14995791596139.jpg" alt=""></p>
-<p><img src="/media/14995795557303.jpg" alt=""><br><img src="/media/14995796165400.jpg" alt=""><br><img src="/media/14995796472058.jpg" alt=""><br>可见，<code>input = new NewTrackingRecordReader</code><br>，<code>NewTrackingRecordReader</code>底层有一个<code>real</code>，而这个<code>real</code>是由<code>createRecordReader</code>返回的一个<code>LineRecordReader</code>。</p>
-<p>所以翻到try代码块中的<code>Initialize</code>初始化阶段，打开实现关系，input是<code>NewTrackingRecordReader</code>，所以这里应该选择<code>NewTrackingRecordReader</code><br><img src="/media/14995802096406.jpg" alt=""><br>发现里面调用的是<code>real</code>的初始化<br><img src="/media/14995804200488.jpg" alt=""><br>打开实现关系，real是<code>LineRecordReader</code>，所以选择<code>LineRecordReader</code>。<br><img src="/media/14995804759309.jpg" alt=""><br><code>LineRecordReader</code>中的<code>initialize</code>首先准备好了split的开始和结束位置，然后通过文件路径拿到文件。<br><img src="/media/14995812632943.jpg" alt=""><br>接着看注释<code>// open the file and seek to the start of the split</code>，其实注释说得很清楚了，先open开启文件的IO输入流，如果这里从头开始读，一定会读到别的block块或者别的split去了，所以一定要用seek方法，将你这个计算要读的split的起始位置的偏移量给这个流设置进去。<br><img src="/media/14995817066618.jpg" alt=""><br>流开启后，通过<code>in</code>将输入流<code>fileIn</code>绑定到<code>SplitLineReader</code>，注意看注释及那段代码，通过<br><code>in</code>将第一行抛弃（里面new了一个匿名对象Text，匿名对象用完就被销毁了，以此达到抛弃第一行的目的，同时将偏移量start移到了下一行），避免出现文件切割造成的乱码和单词被切开的问题。初始化的主要功能就是这个。<br><img src="/media/14995823599196.jpg" alt=""><br>计算向数据移动是由客户端来支撑的，本地化数据读取就是由初始化的这段代码来完成的。</p>
-<p>初始化后调用run方法，run方法循环迭代<code>context.nextKeyValue()</code>同时调用map方法，这个<code>context</code>来自于<code>mapper.run(mapperContext)</code>调用时传入的<code>mapperContext</code>，<code>mapperContext</code>来自于<code>mapContext</code>，<code>mapContext</code>中传的参数有输入<code>input</code>和输出<code>output</code>。<br><img src="/media/14995839522428.jpg" alt=""><br>点击<code>MapContextImpl</code>，其输入reader就是之前的input<br><img src="/media/14995844559599.jpg" alt=""><br>它的<code>nextKeyValue()</code>调用的<code>reader</code>的<code>nextKeyValue()</code>，也就是<code>input</code>的<code>nextKeyValue()</code>，而<code>input</code>是<code>NewTrackingRecorder</code>。<br><img src="/media/14995844734895.jpg" alt=""><br>所以，打开继承关系，找到<code>NewTrackingRecorder</code>并进入。<br><img src="/media/14995846425063.jpg" alt=""><br>里面实际调用的是<code>real</code>的<code>nextKeyValue</code>，而<code>real</code>是<code>LineReacordReader</code>，所以打开实现关系，找到<code>LineReacordReader</code>进入。<br><img src="/media/14995848059707.jpg" alt=""><br>可以看到，<code>nextKeyValue</code>主要做了四件事：</p>
-<ol>
-<li>set方法设置pos</li>
-<li>给<code>Key</code>和<code>Value</code>赋值</li>
-<li><code>pos</code>更新</li>
-<li>返回布尔型</li>
-</ol>
-<p>而<code>getCurrentKey()</code>和<code>getCurrentValue()</code>就只是直接返回<code>Key</code>和<code>Value</code>就好了。<br><img src="/media/14995856044812.jpg" alt=""><br>整理一下整个流程：<br><img src="/media/14995861787231.jpg" alt=""><br>用逻辑语言描述一遍：<br><img src="/media/14995862555967.jpg" alt=""></p>
-<h3 id="输出ouput"><a href="#输出ouput" class="headerlink" title="输出ouput"></a>输出ouput</h3><p>看完了输入，接下来看输出。<br>回到<code>runNewMapper()</code>，找到注释<code>// get an output object</code><br><img src="/media/14995882713215.jpg" alt=""><br>所以<code>reduce</code>是可以设置的，使用语句<code>job.setNumReduceTasks(n)</code>来设置<code>recude</code>数量，key多的话就多设置reduce，因为多个reduce是并行计算的。<br>点击<code>NewOutputCollector</code>，可见分区数量等于reduce数量。而分区器<code>partitioner</code>是通过反射得到的。打开<code>getPartitionerClass</code>的实现关系，找到<code>JobContextImpl</code>进入。<br><img src="/media/14995894009318.jpg" alt=""><br>可以看到用户可以设置<code>partitioner</code>，不设置的话，其默认值是<code>HashPartitioner</code><br><img src="/media/14995896515266.jpg" alt=""><br>通过语句<code>job.setPartitionerClass(cls);</code>来设置<code>partitioner</code>，自己实现这个<code>partitioner</code>类。<br>点击<code>HashPartitioner</code>，可以看到其实它和简单，就是将<code>Key</code>的哈希值和<code>Reduce</code>数取模，返回余数，打标签，让<code>Reducer</code>知道这条数据该去哪个<code>Reduce</code>。<br>这里是一个调优的重点。因为<code>HashPartioner</code>并不清楚数据具体情况，有可能发生数据倾斜（比如，大部分数据取模后都等于1，都到同一个<code>Reduce</code>里去了），这里可以根据具体场景自己实现<code>Partitioner</code>。举个栗子：比如数据是乱序的数字，需求是全排序。那么可以在自己实现的<code>Partioner</code>中写个判断，1~100返回0，100~200返回1，这样来尽量让他们均匀的分布到每个<code>Reduce</code>中去。<br><img src="/media/14995900898726.jpg" alt=""><br>回到<code>NewOutputCollector</code>，如果<code>partions</code>等于<code>1</code>，那就直接返回0，所有数据去到同一个<code>Reduce</code>。<br><img src="/media/14995907872803.jpg" alt=""><br>点击<code>createSortingCollector</code><br><img src="/media/14995913435756.jpg" alt=""></p>
-<p>先找到<code>return collector</code>，再一步步往上看。<code>collector</code>反射于<code>subClazz</code>，<code>subClazz</code>来自于<code>clazz</code>，<code>clazz</code>是for循环传入的<code>collectorClasses</code>，<code>collectorClasses</code>来自用户配置或默认的<code>MapOutputBuffer</code>。所以这个<code>collector</code>默认是<code>MapOutputBuffer</code>（下图中按数字顺序查看）。<br><img src="/media/14995920657978.jpg" alt=""><br>而这个<code>MapOutputBuffer</code>就是环形缓冲区（后面再讲，这个环形是个挺机智的机制😂）。可以点进去看一下，它有1109行代码，如果你能写一个更好的环形缓冲区，那就可以上天了。关于环形缓冲区源码详细解析请戳<a href="http://blog.csdn.net/wangqinghuan1993/article/details/53785403" target="_blank" rel="external">MapReduce之mapOutputBuffer解析</a>。<br><img src="/media/14995924688993.jpg" alt=""></p>
-<p>我们来看一下这个环形缓冲区的初始化，找到<code>colletor.init()</code>打开实现关系，找到<code>MapOutputBuffer</code>进入。<br><img src="/media/14995932329419.jpg" alt=""><br><code>MAP_SORT_SPILL_PERCENT</code>就是环形缓冲区溢写的阈值，默认为80%。<code>IO_SORT_MB</code>就是环形缓冲区的大小，默认<code>100M</code>。<br>这是两个调优点，如果数据一行就好几百兆，那么显然要调大<code>IO_SORT_MB</code>。如果map运算速度比较快，剩下的20%不足以满足map的输出（比如：80%被锁住正在溢写，而剩下20%由于map计算较快，也已经也已经写满，就阻塞了），那么应该调小<code>MAP_SORT_SPILL_PERCENT</code>，可以直接调成50%，看看有没有提升，再去微调，不要一点点的调。<br>在默认情况下，block大小<code>hadoop1.0</code>是<code>64M</code>，<code>hadoop2.0</code>是<code>128M</code>，而split大小默认等于block大小，所以map会读取<code>128M</code>，输出的时候也就差不多100M左右，最多溢写两次，所以<code>IO_SORT_MB</code>默认情况下还是可以的。</p>
-<p><img src="/media/14995937397162.jpg" alt=""></p>
-<p>hadoop在执行MapReduce任务时，在map阶段，map函数产生的输出，并不是直接写入磁盘的。为了提高效率，它将输出结果先写入到内存中（即环形内存缓冲区，默认大小100M），再从缓冲区（溢）写入磁盘。<br>缓存为什么要设计成环形的？有什么好处？<br>答：使输入输出并行工作，即“写缓冲”可以和“溢写”并行。“溢写”工作由单独的线程来做。 </p>
-<p>往下看，可以看到默认的排序器用的是快速排序<code>QuickSorter</code>，这里也是一个调优点，可以自行配置排序器。<br><img src="/media/14996024630223.jpg" alt=""><br>继续往下，K/V序列化这里，看到有一个比较器。<br><img src="/media/14996038786664.jpg" alt=""><br>点击<code>getOutputComparator</code>，经鼠标放到<code>getMapOutputKeyClass</code>上，可以看到这里默认取的是map输出的key的比较器，你也可以用<code>job.setSortComparatorClass(cls);</code>配置自己实现的比较器，这就允许你map输出时用的比较器和放到环形缓冲区后最终输出时的比较器可以不同。<br><img src="/media/14996050578045.jpg" alt=""><br>我们可以找个简单的类型比如<code>IntWritable</code>来看一下它的<code>comparator</code><br><img src="/media/14996154968147.jpg" alt=""><br>继续看<code>MapOutputBuffer</code>的<code>init()</code>，往下翻，可以看到<code>// combiner</code>，这个<code>combiner</code>在一开始的概览里有描述</p>
-<blockquote>
-<p>Users can optionally specify a combiner, via Job.setCombinerClass(Class), to perform local aggregation of the intermediate outputs, which helps to cut down the amount of data transferred from the Mapper to the Reducer.</p>
-</blockquote>
-<p>就是可以调用combiner在map端合并数据，这样就可以减少要传输的数据量和reduce端的压力。但是要注意的是，不是什么数据都适合简单的合并，比如平均数，简单的合并后是不对的（比如：$(\frac{a+b}{2}+\frac{c+d}{2})/2\neq\frac{a+b+c+d}{4}$），这时候需要注意书写正确的合并方法。<br>往下找到try代码块中的<code>spillThread</code>，<code>shift+Command+B</code>打开声明类型<br><img src="/media/14996179321851.jpg" alt=""><br>找到try代码块中<code>sortAndSpill</code>，看名字就知道这方法是负责排序和溢写。<br><img src="/media/14996180479848.jpg" alt=""><br>可以看到排序用的<code>sorter</code>，而之前已经看到过<code>sorter</code>的默认排序方法是快速排序。<br><img src="/media/14996190257092.jpg" alt=""></p>
-<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>以下是环形缓冲区的一些源码解读和排序算法的文章：</p>
-<ol>
-<li><a href="http://blog.csdn.net/wangqinghuan1993/article/details/53785403" target="_blank" rel="external">MapReduce之mapOutputBuffer解析–详细</a></li>
-<li><a href="http://bigdatadecode.club/MapReduce%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90--%E7%8E%AF%E5%BD%A2%E7%BC%93%E5%86%B2%E5%8C%BA.html" target="_blank" rel="external">MapReduce源码解析–环形缓冲区–详细</a></li>
-<li><a href="http://thinkinginhadoop.iteye.com/blog/709964" target="_blank" rel="external">map的环形内存缓冲区–概览</a></li>
-<li><a href="http://www.cnblogs.com/eniac12/p/5329396.html" target="_blank" rel="external">常用排序算法总结</a></li>
-</ol>
 
-      
-    </div>
-
-    <div>
       
         
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/API/" rel="tag"># API</a>
-          
-            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
-          
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
       
-
-      
-      
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/07/05/IDEAConnectHadoop/" rel="next" title="HADOOP--mac下IDEA连接hadoop集群开发API">
-                <i class="fa fa-chevron-left"></i> HADOOP--mac下IDEA连接hadoop集群开发API
-              </a>
-            
-          </div>
 
-          <span class="post-nav-divider"></span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/05/2017-07-08/" rel="prev" title="HADOOP--MapReduce深入源码-Client">
-                HADOOP--MapReduce深入源码-Client <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/04/04/java远程调用shell脚本/" itemprop="url">
+              
+                <span itemprop="name">java远程调用shell脚本</span>
+              
+            </a>
+        
+      </h2>
 
-      
-      
-    </footer>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-04-04T22:10:49+08:00"
+              content="2016-04-04" >
+          04-04
+        </time>
+      </div>
+
+    </header>
   </article>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+    
+
+  </section>
+
+  
+
 
 
           </div>
@@ -611,17 +394,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -641,17 +413,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -771,22 +534,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概览"><span class="nav-number">1.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反射Mapper"><span class="nav-number">2.</span> <span class="nav-text">反射Mapper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入input"><span class="nav-number">3.</span> <span class="nav-text">输入input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出ouput"><span class="nav-number">4.</span> <span class="nav-text">输出ouput</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -929,9 +676,11 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
-
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
 
 
   
@@ -948,18 +697,6 @@
 
     
 
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://chant00.com/2016/07/05/2017-07-09/';
-          this.page.identifier = '2016/07/05/2017-07-09/';
-          this.page.title = 'HADOOP--MapReduce深入源码-Mapper';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://chant-1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
     
 
   
@@ -1440,6 +1177,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

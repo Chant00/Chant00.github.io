@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java,数据类型," />
+  <meta name="keywords" content="java," />
 
 
 
@@ -101,19 +101,16 @@
 
 
 
-<meta name="description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
+<meta name="description" content="怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基本数据类型转换原理以及数据溢出处理">
-<meta property="og:url" content="http://chant00.com/2017/06/24/java数据结构/index.html">
+<meta property="og:title" content="Java阻塞与非阻塞的同步异步，以及回调">
+<meta property="og:url" content="http://chant00.com/2016/08/19/回调/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
-<meta property="og:image" content="http://chant00.com/media/1.gif">
-<meta property="og:image" content="http://chant00.com/media/2.gif">
-<meta property="og:updated_time" content="2017-06-24T16:31:20.000Z">
+<meta property="og:description" content="怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？">
+<meta property="og:updated_time" content="2017-09-06T13:34:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基本数据类型转换原理以及数据溢出处理">
-<meta name="twitter:description" content="朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。">
-<meta name="twitter:image" content="http://chant00.com/media/1.gif">
+<meta name="twitter:title" content="Java阻塞与非阻塞的同步异步，以及回调">
+<meta name="twitter:description" content="怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？">
 
 
 
@@ -141,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/2017/06/24/java数据结构/"/>
+  <link rel="canonical" href="http://chant00.com/2016/08/19/回调/"/>
 
 
 
 
 
-  <title>Java基本数据类型转换原理以及数据溢出处理 | Chant</title>
+  <title>Java阻塞与非阻塞的同步异步，以及回调 | Chant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -341,7 +338,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/06/24/java数据结构/">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2016/08/19/回调/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chant">
@@ -358,7 +355,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java基本数据类型转换原理以及数据溢出处理</h1>
+          <h1 class="post-title" itemprop="name headline">Java阻塞与非阻塞的同步异步，以及回调</h1>
         
 
         <div class="post-meta">
@@ -370,8 +367,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-24T10:24:49+08:00">
-                2017-06-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-19T10:59:49+08:00">
+                2016-08-19
               </time>
             
 
@@ -410,7 +407,7 @@
 
           
           
-             <span id="/2017/06/24/java数据结构/" class="leancloud_visitors" data-flag-title="Java基本数据类型转换原理以及数据溢出处理">
+             <span id="/2016/08/19/回调/" class="leancloud_visitors" data-flag-title="Java阻塞与非阻塞的同步异步，以及回调">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -438,116 +435,58 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>朋友发来的一个小问题，让我又把java底层数据原理深入学习了一遍。<br><a id="more"></a></p>
-<h3 id="Java中x-x-1-与x-1-的一点区别"><a href="#Java中x-x-1-与x-1-的一点区别" class="headerlink" title="Java中x=x+1 与x+=1 的一点区别"></a>Java中x=x+1 与x+=1 的一点区别</h3><p>许多程序员都会认为这里的表达式（s1 +=1）只是上面表达式（s1 = s1 + 1）的简写方式,至少以前我是这样认为的。但是这并不十分准确。</p>
-<blockquote>
-<p>Java语言规范中讲到，复合赋值<code>E1 op= E2</code>等价于简单赋值<code>E1 = (T)((E1)op(E2)</code> 其中T是E1的数据类型,op为操作符。这种类型转换或者是一个恒等转换,或者是一个窄化转换.</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？</p>
+<a id="more"></a>
+<h3 id="阻塞非阻塞与同步异步"><a href="#阻塞非阻塞与同步异步" class="headerlink" title="阻塞非阻塞与同步异步"></a>阻塞非阻塞与同步异步</h3><p>“阻塞”与”非阻塞”与”同步”与“异步”不能简单的从字面理解，提供一个从分布式系统角度的回答。</p>
+<h4 id="1-同步与异步"><a href="#1-同步与异步" class="headerlink" title="1.同步与异步"></a>1.同步与异步</h4><blockquote>
+<p>同步和异步关注的是消息通信机制 (synchronous communication/ asynchronous communication)所谓同步，就是在发出一个<em>调用</em>时，在没有得到结果之前，该<em>调用</em>就不返回。但是一旦调用返回，就得到返回值了。换句话说，就是由<em>调用者</em>主动等待这个<em>调用</em>的结果。</p>
+<p>而异步则是相反，<em>调用</em>在发出之后，这个调用就直接返回了，所以没有返回结果。换句话说，当一个异步过程调用发出后，调用者不会立刻得到结果。而是在<em>调用</em>发出后，<em>被调用者</em>通过状态、通知来通知调用者，或通过回调函数处理这个调用。典型的异步编程模型比如Node.js</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlusEqualTest</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">short</span> s1 = <span class="number">1</span>;</div><div class="line">        s1 = (<span class="keyword">short</span>) (s1 + <span class="number">1</span>);<span class="comment">//如果不加转换是不能通过编译的</span></div><div class="line">        System.out.println(<span class="string">"s1 = "</span> + s1);</div><div class="line"></div><div class="line">        <span class="keyword">short</span> s2 = <span class="number">1</span>;</div><div class="line">        s2 += <span class="number">1</span>;</div><div class="line">        System.out.println(<span class="string">"s2 = "</span> + s2);</div><div class="line"></div><div class="line">        <span class="keyword">short</span> s3 = Short.MAX_VALUE;<span class="comment">//32767</span></div><div class="line">        <span class="keyword">short</span> s4 = s3;</div><div class="line">        s3 += <span class="number">1</span>;</div><div class="line">        System.out.println(<span class="string">"s3 += 1 结果为"</span> + s3);</div><div class="line">        s4 = (<span class="keyword">short</span>) (s4 + <span class="number">1</span>);</div><div class="line">        System.out.println(<span class="string">"s3 = (short)(s3 + 1) 结果为"</span> + s4);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//输出结果如下：</span></div><div class="line">s1 = <span class="number">2</span></div><div class="line">s2 = <span class="number">2</span></div><div class="line">s3 += <span class="number">1</span> 结果为-<span class="number">32768</span></div><div class="line">s3 = (<span class="keyword">short</span>)(s3 + <span class="number">1</span>) 结果为-<span class="number">32768</span></div></pre></td></tr></table></figure>
-<h3 id="数据溢出咋办呢"><a href="#数据溢出咋办呢" class="headerlink" title="数据溢出咋办呢"></a>数据溢出咋办呢</h3><p>如上程序，为什么s3 = (short)(s3 + 1) 结果为-32768呢？很明显是数据超出其表示范围了，可是数据溢出后是怎么处理的呢？此事说来话长……</p>
-<h4 id="数据类型基础知识储备"><a href="#数据类型基础知识储备" class="headerlink" title="数据类型基础知识储备"></a>数据类型基础知识储备</h4><table>
-<thead>
-<tr>
-<th>基本类型</th>
-<th>位数</th>
-<th>范围</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>byte(字节)</td>
-<td>8</td>
-<td>-128 至 127</td>
-<td>0</td>
-</tr>
-<tr>
-<td>shot(短整型)</td>
-<td>16</td>
-<td>-32768(-2^15 ) 至 32767(2^15-1 )</td>
-<td>0</td>
-</tr>
-<tr>
-<td>int(整型)</td>
-<td>32</td>
-<td>-2147483648(-2^31 )至2147483647(2^31-1 )</td>
-<td>0</td>
-</tr>
-<tr>
-<td>long(长整型)</td>
-<td>64</td>
-<td>-2^63 至2^63-1</td>
-<td>0L或0l</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>1</td>
-<td>0,1或true，false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>char</td>
-<td>8</td>
-<td>\u0000至\uffff</td>
-<td>\u0000\</td>
-</tr>
-<tr>
-<td>float</td>
-<td>32</td>
-<td>1.4E-45至3.4028235E38</td>
-<td>0.0f</td>
-</tr>
-<tr>
-<td>double</td>
-<td>64</td>
-<td>4.9E-324至1.7976931348623157E308</td>
-<td>0.0d</td>
-</tr>
-</tbody>
-</table>
-<h4 id="类型转换的原理"><a href="#类型转换的原理" class="headerlink" title="类型转换的原理"></a>类型转换的原理</h4><ul>
-<li><strong>真值</strong>：这个就看字面意思，<code>int a = -1</code>;a的真值就是<code>-1</code>.</li>
-<li><strong>原码</strong>：int类型的-1的二进制表示，由于-1是负数，又是int类型的，所以他需要32个二进制来表示，二进制的最高位是符号位，所以为1，1的二进制为1，所以-1的二进制表示为<code>1000 0000 0000 0000 0000 0000 0000 0001</code>；</li>
-<li><strong>反码</strong>：正数的反码就是原码，负数的反码是在原码的基础上，符号位不变，其余位取反。所以int类型的-1的反码是<code>1111 1111 1111 1111 1111 1111 1111 1110</code>。</li>
-<li><strong>补码</strong>：正数的补码就是原码，负数的补码是在其反码的基础上加1。所以，int类型的-1的补码是 <code>1111 1111 1111 1111 1111 1111 1111 1111</code>。</li>
-<li><strong>补位</strong>：补位是二进制中在扩充位数的时候，位数不够需要在左边补齐，补齐的方式为如果是正数的补位，左边全部补0，负数左边全部补1（也就是说补位的时候补足的是符号位）。</li>
-</ul>
-<h5 id="自动转换（从高位向低位转换）："><a href="#自动转换（从高位向低位转换）：" class="headerlink" title="自动转换（从高位向低位转换）："></a>自动转换（从高位向低位转换）：</h5><p>将a位的变量A转换为b位的B：A–&gt;补码–&gt;截取（去掉前a-b位，只保留后b位）–&gt;补码–&gt;B。<br>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=-<span class="number">1</span>；<span class="keyword">byte</span> b=（<span class="keyword">byte</span>）a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure></p>
-<p>1000 0000 0000 0000 0000 0000 0000 0001<br>补码<br>1111 1111 1111 1111 1111 1111 1111 1111<br>截取（保留后8位）<br><del>1111 1111 1111 1111 1111 1111</del> 1111 1111<br>即1111 1111<br>补码<br>1000 0001<br>即真值为-1</p>
-<h5 id="强制转换（从低位向高位转换时）："><a href="#强制转换（从低位向高位转换时）：" class="headerlink" title="强制转换（从低位向高位转换时）："></a>强制转换（从低位向高位转换时）：</h5><p>(byte-&gt;short-&gt;int-&gt;long-&gt;float-&gt;double)<br>补码–&gt;补位–&gt;补码<br>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> a =-<span class="number">1</span>；<span class="keyword">int</span> b=a；<span class="comment">//b的结果是-1。</span></div></pre></td></tr></table></figure></p>
-<p>1000 0001<br>补码<br>1111 1111<br>补位<br>1111 1111 1111 1111 1111 1111 1111 1111<br>补码<br>1000 0000 0000 0000 0000 0000 0000 0001<br>即真值为-1</p>
-<h5 id="数据溢出处理"><a href="#数据溢出处理" class="headerlink" title="数据溢出处理"></a>数据溢出处理</h5><p>示例1：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">255</span>;<span class="keyword">byte</span> b=(<span class="keyword">byte</span>)a; <span class="comment">//b的值为什么是-1?</span></div></pre></td></tr></table></figure></p>
-<p>0000 0000 0000 0000 0000 0000 1111 1111<br>补码<br>0000 0000 0000 0000 0000 0000 1111 1111<br>截取<br>1111 1111<br>补码<br>1000 0001<br>即真值为-1<br>示例2：<br>大家在自己算一下（byte）234的结果是什么，然后在IDE里在运行下看和自己手写算出来的一样吗。这里（byte）234的手写结果是150，但是150是超出了byte的表示范围的，所以这里还有一次转化？？？后面是怎么转化的呢？</p>
-<h3 id="定点数与浮点数区别"><a href="#定点数与浮点数区别" class="headerlink" title="定点数与浮点数区别"></a>定点数与浮点数区别</h3><h4 id="定点数"><a href="#定点数" class="headerlink" title="定点数"></a>定点数</h4><p>在计算机系统的发展过程中，曾经提出过多种方法表达实数。典型的比如相对于浮点数的定点数（Fixed Point Number）。在这种表达方式中，小数点固定的位于实数所有数字中间的某个位置。货币的表达就可以使用这种方式，比如 99.00 或者 00.99 可以用于表达具有四位精度（Precision），小数点后有两位的货币值。<em>由于小数点位置固定，所以可以直接用四位数值来表达相应的数值</em>。<em>SQL 中的 NUMBER 数据类型就是利用定点数来定义的</em>。还有一种提议的表达方式为有理数表达方式，即用两个整数的比值来表达实数。<br>定点数表达法的缺点在于其形式过于僵硬，固定的小数点位置决定了固定位数的整数部分和小数部分，不利于同时表达特别大的数或者特别小的数。</p>
-<h4 id="浮点数（float-point-number）"><a href="#浮点数（float-point-number）" class="headerlink" title="浮点数（float-point-number）"></a>浮点数（float-point-number）</h4><p>最终，绝大多数现代的计算机系统采纳了所谓的浮点数表达方式。<em>这种表达方式利用科学计数法来表达实数，即用一个尾数（Mantissa ），一个基数（Base），一个指数（Exponent）以及一个表示正负的符号来表达实数</em>。比如 123.45 用十进制科学计数法可以表达为 1.2345 × 10^2 ，其中 1.2345 为尾数，10 为基数，2 为指数。浮点数利用指数达到了浮动小数点的效果，从而可以灵活地表达更大范围的实数。</p>
-<p><strong>NOTE</strong>: 尾数有时也称为有效数字（Significand）。尾数实际上是有效数字的非正式说法。</p>
-<p>同样的数值可以有多种浮点数表达方式，比如上面例子中的 123.45 可以表达为 12.345 × 10^1 ，0.12345 × 10^3 或者 1.2345 × 10^2 。因为这种多样性，有必要对其加以规范化以达到统一表达的目标。规范的（Normalized）浮点数表达方式具有如下形式：</p>
-<p>$±d_0.d_1d_2…d_i × β^e , (0 ≤ d_i &lt; β)$</p>
-<p>其中 d.dd…d 即尾数，β 为基数，e 为指数。尾数中数字的个数称为精度，在本文中用 p 来表示。每个数字 d 介于 0 和基数之间，包括 0。小数点左侧的数字不为 0。</p>
-<p>基于规范表达的浮点数对应的具体值可由下面的表达式计算而得：<br>$±(d_0 + d<em>1β^{e-1} + … + d</em>{i-1}β ^ {e-(i-1)}+ d_iβ^{e-i} ), (0 ≤ d_i &lt; β)$<br>对于十进制的浮点数，即基数 β 等于 10 的浮点数而言，上面的表达式非常容易理解，也很直白。计算机内部的数值表达是基于二进制的。从上面的表达式，我们可以知道，二进制数同样可以有小数点，也同样具有类似于十进制的表达方式。只是此时 β 等于 2，而每个数字$d_i$ 只能在 0 和 1 之间取值。比如二进制数 1001.101 相当于 1 × 2^3 + 0 × 2^2 + 0 × 2^1 + 1 × 2^0 + 1 × 2^-1 + 0 × 2^-2 + 1 × 2^-3 ，对应于十进制的 9.625。其规范浮点数表达为 1.001101 × 2^3。</p>
-<h4 id="IEEE-浮点数"><a href="#IEEE-浮点数" class="headerlink" title="IEEE 浮点数"></a>IEEE 浮点数</h4><p>计算机中是用有限的连续字节保存浮点数的。保存这些浮点数当然必须有特定的格式，Java 平台上的浮点数类型 float 和 double 采纳了 IEEE 754 标准中所定义的单精度 32 位浮点数和双精度 64 位浮点数的格式。</p>
-<h5 id="float和double内存结构"><a href="#float和double内存结构" class="headerlink" title="float和double内存结构"></a>float和double内存结构</h5><p>在 IEEE 标准中，浮点数是将特定长度的连续字节的所有二进制位分割为特定宽度的符号域，指数域和尾数域三个域，其中保存的值分别用于表示给定二进制浮点数中的符号，指数和尾数。<br>float的指数位有8位，而double的指数位有11位，分布如下：<br><img src="/media/1.gif" alt="1"></p>
-<p>float：<br>        1bit（符号位） 8bits（指数位） 23bits（尾数位）<br><img src="/media/2.gif" alt="2"></p>
-<p>double：<br>        1bit（符号位） 11bits（指数位） 52bits（尾数位）</p>
-<p>第二个域为指数域（图中标注为指数位），对应于我们之前介绍的二进制科学计数法中的指数部分。其中单精度数为 8 位，双精度数为 11 位。以单精度数为例，8 位的指数为可以表达 0 到 255 之间的 255 个指数值。但是，指数可以为正数，也可以为负数。为了处理负指数的情况，实际的指数值按要求需要加上一个偏差（Bias）值作为保存在指数域中的值，单精度数的偏差值为 127，而双精度数的偏差值为 1023。比如，单精度的实际指数值 0 在指数域中将保存为 127；而保存在指数域中的 64 则表示实际的指数值 -63。 偏差的引入使得对于单精度数，实际可以表达的指数值的范围就变成 -127 到 128 之间（包含两端）。我们不久还将看到，实际的指数值 -127（保存为 全 0）以及 +128（保存为全 1）保留用作特殊值的处理。这样，实际可以表达的有效指数范围就在 -127 和 127 之间。在本文中，最小指数和最大指数分别用 emin 和 emax 来表达。</p>
-<p>于是，float的指数范围为<code>-128~+127</code>，而double的指数范围为<code>-1024~+1023</code>，并且指数位是按补码的形式来划分的。<br>其中负指数决定了浮点数所能表达的绝对值最小的非零数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。<br>float的范围为???<code>-2^128 ~ +2^127</code>，也即<code>-3.40E+38 ~ +3.40E+38</code>；double的范围为???<code>-2^1024 ~ +2^1023</code>，也即<code>-1.79E+308(这里与IDEA打印出的最小值不符，博主会慢慢查证再来修改) ~ +1.79E+308</code>。</p>
-<p>之所以不能用f1==f2来判断两个数相等，是因为虽然f1和f2在可能是两个不同的数字，但是受到浮点数表示精度的限制，有可能会错误的判断两个数相等</p>
-<h5 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h5><p>float和double的精度是由尾数的位数来决定的。浮点数在内存中是按科学计数法来存储的，其整数部分始终是一个隐含着的“1”，由于它是不变的，故不能对精度造成影响。</p>
+<p>举个通俗的例子：</p>
+<blockquote>
+<p>你打电话问书店老板有没有《分布式系统》这本书，如果是同步通信机制，书店老板会说，你稍等，”我查一下”，然后开始查啊查，等查好了（可能是5秒，也可能是一天）告诉你结果（返回结果）。</p>
+<p>而异步通信机制，书店老板直接告诉你我查一下啊，查好了打电话给你，然后直接挂电话了（不返回结果）。然后查好了，他会主动打电话给你。在这里老板通过“回电”这种方式来回调。</p>
+</blockquote>
+<h4 id="2-阻塞与非阻塞"><a href="#2-阻塞与非阻塞" class="headerlink" title="2.阻塞与非阻塞"></a>2.阻塞与非阻塞</h4><blockquote>
+<p>阻塞和非阻塞关注的是程序在等待调用结果（消息，返回值）时的状态.<br>阻塞调用是指调用结果返回之前，当前线程会被挂起。调用线程只有在得到结果之后才会返回。非阻塞调用指在不能立刻得到结果之前，该调用不会阻塞当前线程。</p>
+<p>还是上面的例子，你打电话问书店老板有没有《分布式系统》这本书，你如果是阻塞式调用，你会一直把自己“挂起”，直到得到这本书有没有的结果，如果是非阻塞式调用，你不管老板有没有告诉你，你自己先一边去玩了， 当然你也要偶尔过几分钟check一下老板有没有返回结果。在这里阻塞与非阻塞与是否同步异步无关。跟老板通过什么方式回答你结果无关。</p>
+</blockquote>
+<h3 id="同步异步的经典例子"><a href="#同步异步的经典例子" class="headerlink" title="同步异步的经典例子"></a>同步异步的经典例子</h3><p>老张爱喝茶，废话不说，煮开水。<br>出场人物：老张，水壶两把（普通水壶，简称水壶；会响的水壶，简称响水壶)。</p>
 <ul>
-<li>float：2^23 = 8388608，一共七位，由于最左为1的一位省略了，这意味着最多能表示8位数： 2*8388608 = 16777216 。有8位有效数字，但绝对能保证的为7位，也即==float的精度为7~8位有效数字==；</li>
-<li>double：2^52 = 4503599627370496，一共16位，同理，==double的精度为16~17位==。</li>
+<li>老张把水壶放到火上，立等水开。（同步阻塞）</li>
 </ul>
-<p>图例中的第三个域为尾数域，其中单精度数为 23 位长，双精度数为 52 位长。除了我们将要讲到的某些特殊值外，IEEE 标准要求浮点数必须是规范的。这意味着尾数的小数点左侧必须为 1，因此我们在保存尾数的时候，可以省略小数点前面这个 1，从而腾出一个二进制位来保存更多的尾数。这样我们实际上用 23 位长的尾数域表达了 24 位的尾数。比如对于单精度数而言，二进制的 1001.101（对应于十进制的 9.625）可以表达为 1.001101 × 23，所以实际保存在尾数域中的值为 00110100000000000000000，即去掉小数点左侧的 1，并用 0 在右侧补齐。</p>
-<p>值得注意的是，对于单精度数，由于我们只有 24 位的尾数（其中一位隐藏），所以可以表达的最大尾数为 224 - 1 = 16,777,215。特别的，16,777,216 是偶数，所以我们可以通过将它除以 2 并相应地调整指数来保存这个数，这样 16,777,216 同样可以被精确的保存。相反，数值 16,777,217 则无法被精确的保存。由此，我们可以看到单精度的浮点数可以表达的十进制数值中，真正有效的数字不高于 8 位。事实上，对相对误差的数值分析结果显示有效的精度大约为 7.22 位。参考下面的示例：</p>
-<p>true value|16,777,215|16,777,216|16,777,217|16,777,218|16,777,219<br>|—|—|—|—|—|—<br>stored value|16,777,215|1.6777215E7|1.6777216E7|1.6777216E7|1.6777218E7</p>
-<p>根据标准要求，无法精确保存的值必须向最接近的可保存的值进行舍入。这有点像我们熟悉的十进制的四舍五入，即不足一半则舍，一半以上（包括一半）则进。不过对于二进制浮点数而言，还多一条规矩，就是当需要舍入的值刚好是一半时，不是简单地进，而是在前后两个等距接近的可保存的值中，取其中最后一位有效数字为零者。从上面的示例中可以看出，奇数都被舍入为偶数，且有舍有进。我们可以将这种舍入误差理解为”半位”的误差。所以，为了避免 7.22 对很多人造成的困惑，有些文章经常以 7.5 位来说明单精度浮点数的精度问题。</p>
-<p>可以试试在IDE中运行一下代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> f1 = <span class="number">16777215f</span>;  </div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;  </div><div class="line">    System.out.println(f1);  </div><div class="line">    f1++;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>输出结果除了第一个是1.6777215E7其余全都是1.6777216E7，不是for循环出了问题，而是因为16,777,216在计算机中即1.6777216E7，+1后依旧等于1.6777216E7。</p>
+<p>老张觉得自己有点傻</p>
+<ul>
+<li>老张把水壶放到火上，去客厅看电视，时不时去厨房看看水开没有。（同步非阻塞）</li>
+</ul>
+<p>老张还是觉得自己有点傻，于是变高端了，买了把会响笛的那种水壶。水开之后,能大声发出嘀~~~~的噪音。</p>
+<ul>
+<li>老张把响水壶放到火上，立等水开。（异步阻塞）</li>
+</ul>
+<p>老张觉得这样傻等意义不大</p>
+<ul>
+<li>老张把响水壶放到火上，去客厅看电视，水壶响之前不再去看它了，响了再去拿壶。（异步非阻塞）</li>
+</ul>
+<p>老张觉得自己聪明了。</p>
+<p>所谓同步异步，只是对于水壶而言。<br>普通水壶，同步；响水壶，异步。<br>虽然都能干活，但响水壶可以在自己完工之后，提示老张水开了。这是普通水壶所不能及的。同步只能让调用者去轮询自己（情况2中），造成老张效率的低下。</p>
+<p>所谓阻塞非阻塞，仅仅对于老张而言。<br>立等的老张，阻塞；看电视的老张，非阻塞。<br>情况1和情况3中老张就是阻塞的，媳妇喊他都不知道。虽然3中响水壶是异步的可对于立等的老张没有太大的意义。所以一般异步是配合非阻塞使用的，这样才能发挥异步的效用。</p>
+<h3 id="回调的经典例子"><a href="#回调的经典例子" class="headerlink" title="回调的经典例子"></a>回调的经典例子</h3><p>回调：就是A类中调用B类中的某个方法C，然后B类中反过来调用A类中的方法D，D这个方法就叫回调方法，这样子说你是不是有点晕晕的，其实我刚开始也是这样不理解，看了人家说比较经典的回调方式：<br>    •    Class A实现接口CallBack callback——背景1<br>    •    class A中包含一个class B的引用b ——背景2<br>    •    class B有一个参数为callback的方法f(CallBack callback) ——背景3<br>    •    A的对象a调用B的方法 f(CallBack callback) ——A类调用B类的某个方法 C<br>    •    然后b就可以在f(CallBack callback)方法中调用A的方法 ——B类调用A类的某个方法D</p>
+<h3 id="回调代码示例"><a href="#回调代码示例" class="headerlink" title="回调代码示例"></a>回调代码示例</h3><p>告诉他干活的结果。这个例子其实是一个回调+异步的例子，再举一个例子，A程序员写了一段程序a，其中预留了回调函数接口，并封装好了该程序，程序员B让a调用自己的程序b中的一个方法，于是，他通过a中的接口回调自己b中的方法，到这里你可能似懂非懂了。</p>
+<p>首先创建一个回调接口，让老板得告知干完活如何找到他的方式：留下老板办公室地址：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.easyway.test;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 此接口为联系的方式，不论是电话号码还是联系地址，作为</div><div class="line"> * 老板都必须要实现此接口</div><div class="line"> * <span class="doctag">@author</span> Administrator</div><div class="line"> *</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CallBackInterface</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>创建回调对象，就是老板本人，因为员工干完活后要给他打电话，因此老板必须实现回调接口，不然员工去哪里找老板？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.easyway.test;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 老板是作为上层应用身份出现的，下层应用（员工）是不知道</div><div class="line"> * 有哪些方法，因此他想被下层应用（员工）调用必须实现此接口</div><div class="line"> * <span class="doctag">@author</span> Administrator</div><div class="line"> *</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Boss</span> <span class="keyword">implements</span> <span class="title">CallBackInterface</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"收到了！！"</span> + System.currentTimeMillis());</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>创建控制类，也就是员工对象，他必须持有老板的地址（回调接口），即使老板换了一茬又一茬，办公室不变，总能找到对应的老板。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.easyway.test;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 员工类，必须要记住，这是一个底层类，底层是不了解上层服务的</div><div class="line"> * <span class="doctag">@author</span> Administrator</div><div class="line"> *</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> CallBackInterface callBack = <span class="keyword">null</span>;</div><div class="line">	</div><div class="line">	<span class="comment">//告诉员工老板的联系方式，也就是注册</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCallBack</span><span class="params">(CallBackInterface callBack)</span></span>&#123;</div><div class="line">		<span class="keyword">this</span>.callBack = callBack;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//工人干活</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doSome</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="comment">//1.开始干活了</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</div><div class="line">			System.out.println(<span class="string">"第【"</span> + i + <span class="string">"】事情干完了！"</span>);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="comment">//2.告诉老板干完了</span></div><div class="line">		callBack.execute();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>测试类代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> net.easyway.test;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		</div><div class="line">		Employee emp = <span class="keyword">new</span> Employee();</div><div class="line">		</div><div class="line">		<span class="comment">//将回调对象（上层对象）传入，注册</span></div><div class="line">		emp.setCallBack(<span class="keyword">new</span> Boss());</div><div class="line">		</div><div class="line">		<span class="comment">//开启控制器对象运行</span></div><div class="line">		emp.doSome();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="回调总结"><a href="#回调总结" class="headerlink" title="回调总结"></a>回调总结</h3><p>要明确的一点是，首先要搞清回调函数出现的原因，也就是适用场景，才能搞清楚回调机制，不然事倍功半。</p>
+<p>最后，再举一例，为了使我们写的函数接近完美，就把一部分功能外包给别人，让别人个性化定制，至于别人怎么实现不管，我唯一要做的就是定义好相关接口，<strong>这一设计允许了底层代码调用高层定义的子程序，增强程序灵活性，和反射有着异曲同工之妙，这才是回调的真正原因！</strong></p>
+<p>用一段话来总结下回调：上层模块封装时，很难预料下层模块会如何实现，因此，上层模块只需定义好自己需要但不能预料的接口（也就是回调接口），当下层模块调用上层模块时，根据当前需要的实现回调接口，并通过注册或参数方式传入上层模块即可，这样就实现下层调用上层，并且上层还能根据传入的引用来调用下层的具体实现，将程序的灵活性大大的增加了。</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ol>
-<li><a href="http://www.cnblogs.com/heshan664754022/archive/2013/04/01/2994028.html" target="_blank" rel="external">Java中x=x+1 与x+=1 的一点区别</a></li>
-<li><a href="http://lwx522.iteye.com/blog/2087638" target="_blank" rel="external">java中数据溢出处理</a></li>
-<li><a href="https://my.oschina.net/u/190643/blog/652174" target="_blank" rel="external">java 类型转换的原理</a></li>
-<li><a href="http://blog.csdn.net/cppptr/article/details/573372" target="_blank" rel="external">深入浅出浮点数Floating Point Number In a Nutshell</a></li>
+<li><a href="http://blog.csdn.net/bjyfb/article/details/10462555#" target="_blank" rel="external">Java回调机制解析–代码</a></li>
+<li><a href="http://blog.csdn.net/xiaanming/article/details/8703708/" target="_blank" rel="external">经典的回调方式</a></li>
+<li><a href="https://www.zhihu.com/question/19732473" target="_blank" rel="external">怎样理解阻塞非阻塞与同步异步的区别？</a></li>
 </ol>
 
       
@@ -580,8 +519,6 @@
           
             <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/数据类型/" rel="tag"># 数据类型</a>
-          
         </div>
       
 
@@ -593,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/22/python笔记2/" rel="next" title="Python笔记（二）-- 容器">
-                <i class="fa fa-chevron-left"></i> Python笔记（二）-- 容器
+              <a href="/2016/08/17/2017-06-17/" rel="next" title="IDEA中文乱码问题">
+                <i class="fa fa-chevron-left"></i> IDEA中文乱码问题
               </a>
             
           </div>
@@ -603,8 +540,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/25/2017-06-25/" rel="prev" title="Python笔记（三）-- Important Warning">
-                Python笔记（三）-- Important Warning <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/24/java数据结构/" rel="prev" title="Java基本数据类型转换原理以及数据溢出处理">
+                Java基本数据类型转换原理以及数据溢出处理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -799,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中x-x-1-与x-1-的一点区别"><span class="nav-number">1.</span> <span class="nav-text">Java中x=x+1 与x+=1 的一点区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据溢出咋办呢"><span class="nav-number">2.</span> <span class="nav-text">数据溢出咋办呢</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型基础知识储备"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型基础知识储备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型转换的原理"><span class="nav-number">2.2.</span> <span class="nav-text">类型转换的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自动转换（从高位向低位转换）："><span class="nav-number">2.2.1.</span> <span class="nav-text">自动转换（从高位向低位转换）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强制转换（从低位向高位转换时）："><span class="nav-number">2.2.2.</span> <span class="nav-text">强制转换（从低位向高位转换时）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据溢出处理"><span class="nav-number">2.2.3.</span> <span class="nav-text">数据溢出处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定点数与浮点数区别"><span class="nav-number">3.</span> <span class="nav-text">定点数与浮点数区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定点数"><span class="nav-number">3.1.</span> <span class="nav-text">定点数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮点数（float-point-number）"><span class="nav-number">3.2.</span> <span class="nav-text">浮点数（float-point-number）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IEEE-浮点数"><span class="nav-number">3.3.</span> <span class="nav-text">IEEE 浮点数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#float和double内存结构"><span class="nav-number">3.3.1.</span> <span class="nav-text">float和double内存结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#精度"><span class="nav-number">3.3.2.</span> <span class="nav-text">精度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞非阻塞与同步异步"><span class="nav-number">1.</span> <span class="nav-text">阻塞非阻塞与同步异步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-同步与异步"><span class="nav-number">1.1.</span> <span class="nav-text">1.同步与异步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-阻塞与非阻塞"><span class="nav-number">1.2.</span> <span class="nav-text">2.阻塞与非阻塞</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步异步的经典例子"><span class="nav-number">2.</span> <span class="nav-text">同步异步的经典例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回调的经典例子"><span class="nav-number">3.</span> <span class="nav-text">回调的经典例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回调代码示例"><span class="nav-number">4.</span> <span class="nav-text">回调代码示例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回调总结"><span class="nav-number">5.</span> <span class="nav-text">回调总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">6.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
@@ -969,9 +906,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://chant00.com/2017/06/24/java数据结构/';
-          this.page.identifier = '2017/06/24/java数据结构/';
-          this.page.title = 'Java基本数据类型转换原理以及数据溢出处理';
+          this.page.url = 'http://chant00.com/2016/08/19/回调/';
+          this.page.identifier = '2016/08/19/回调/';
+          this.page.title = 'Java阻塞与非阻塞的同步异步，以及回调';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://chant-1.disqus.com/embed.js';
