@@ -2,16 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://chant00.com/2016/08/08/Hadoop-mapper%E6%BA%90%E7%A0%81/</loc>
+    <loc>http://chant00.com/2016/10/11/Hive%E5%AE%89%E8%A3%85/</loc>
     
-    <lastmod>2017-09-06T14:25:00.000Z</lastmod>
+    <lastmod>2017-09-06T14:36:19.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/</loc>
+    <loc>http://chant00.com/2017/06/05/English-Aron's%20story/</loc>
     
-    <lastmod>2017-09-06T13:50:31.000Z</lastmod>
+    <lastmod>2017-09-06T14:36:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2017/06/11/English-cogs/</loc>
+    
+    <lastmod>2017-09-06T14:36:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2016/12/07/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    
+    <lastmod>2017-09-06T14:35:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2017/06/06/English-%E5%B8%B8%E7%94%A8%E5%8F%A5/</loc>
+    
+    <lastmod>2017-09-06T14:35:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2016/03/06/HIVE%E5%92%8CHBASE%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2017-09-06T14:35:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2015/11/04/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/</loc>
+    
+    <lastmod>2017-09-06T14:34:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2016/11/11/Hive-DDl/</loc>
+    
+    <lastmod>2017-09-06T14:33:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2016/09/05/Hadoop-client%E6%BA%90%E7%A0%81/</loc>
+    
+    <lastmod>2017-09-06T14:32:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://chant00.com/2016/09/08/Hadoop-mapper%E6%BA%90%E7%A0%81/</loc>
+    
+    <lastmod>2017-09-06T14:32:15.000Z</lastmod>
     
   </url>
   
@@ -58,58 +114,9 @@
   </url>
   
   <url>
-    <loc>http://chant00.com/2016/07/11/Hive%E5%AE%89%E8%A3%85/</loc>
-    
-    <lastmod>2017-09-06T13:47:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2016/07/11/Hive-DDl/</loc>
-    
-    <lastmod>2017-09-06T13:46:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2017/06/06/HIVE%E5%92%8CHBASE%E5%8C%BA%E5%88%AB/</loc>
-    
-    <lastmod>2017-09-06T13:45:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2017/06/11/English-cogs/</loc>
-    
-    <lastmod>2017-09-06T13:43:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://chant00.com/2016/08/17/IDEA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2017-09-06T13:43:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2017/06/10/English-Aron's%20story/</loc>
-    
-    <lastmod>2017-09-06T13:41:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2017/06/06/English-%E5%B8%B8%E7%94%A8%E5%8F%A5/</loc>
-    
-    <lastmod>2017-09-06T13:41:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2016/05/05/Hadoop-client%E6%BA%90%E7%A0%81/</loc>
-    
-    <lastmod>2017-09-06T13:34:40.000Z</lastmod>
     
   </url>
   
@@ -124,13 +131,6 @@
     <loc>http://chant00.com/2016/04/04/java%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8shell%E8%84%9A%E6%9C%AC/</loc>
     
     <lastmod>2017-09-06T13:33:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2017/06/07/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
-    
-    <lastmod>2017-09-06T13:33:08.000Z</lastmod>
     
   </url>
   

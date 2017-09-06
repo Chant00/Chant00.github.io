@@ -140,8 +140,8 @@
     <title>挣脱你的轨道--一则公益小短片《cogs》</title>
     <link href="http://chant00.com/2017/06/11/English-cogs/"/>
     <id>http://chant00.com/2017/06/11/English-cogs/</id>
-    <published>2017-06-11T07:08:30.000Z</published>
-    <updated>2017-09-06T13:43:58.000Z</updated>
+    <published>2017-06-10T19:51:49.000Z</published>
+    <updated>2017-09-06T14:36:00.000Z</updated>
     
     <summary type="html">
     
@@ -161,59 +161,11 @@
   </entry>
   
   <entry>
-    <title>Aaron Ralston’s Story</title>
-    <link href="http://chant00.com/2017/06/10/English-Aron&#39;s%20story/"/>
-    <id>http://chant00.com/2017/06/10/English-Aron&#39;s story/</id>
-    <published>2017-06-10T15:47:27.000Z</published>
-    <updated>2017-09-06T13:41:08.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Aaron Ralston, a 27-year-old mountain sports fanatic from Colorado in the United States, found himself in &lt;strong&gt;dire straits&lt;/strong&gt; &lt;em&gt;alone in a canyon&lt;/em&gt; in the desert when a 500kg rock came crashing down the &lt;strong&gt;canyon&lt;/strong&gt; to &lt;strong&gt;smash&lt;/strong&gt; his right hand and trap it against the canyon wall.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
-    
-    
-      <category term="test" scheme="http://chant00.com/tags/test/"/>
-    
-      <category term="English" scheme="http://chant00.com/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>概率论迷思</title>
-    <link href="http://chant00.com/2017/06/07/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    <id>http://chant00.com/2017/06/07/概率论/</id>
-    <published>2017-06-07T02:58:19.000Z</published>
-    <updated>2017-09-06T13:33:08.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。&lt;br&gt;概率论的神奇之处在于，它居然能从不确定性中找到确定性。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
-    
-      <category term="重读概率论" scheme="http://chant00.com/categories/Algorithm/%E9%87%8D%E8%AF%BB%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    
-      <category term="概率论" scheme="http://chant00.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-      <category term="先验概率" scheme="http://chant00.com/tags/%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
-    
-      <category term="后验概率" scheme="http://chant00.com/tags/%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>那些你常用但是却不知道如何用英文表达的句子</title>
     <link href="http://chant00.com/2017/06/06/English-%E5%B8%B8%E7%94%A8%E5%8F%A5/"/>
     <id>http://chant00.com/2017/06/06/English-常用句/</id>
-    <published>2017-06-06T13:09:23.000Z</published>
-    <updated>2017-09-06T13:41:00.000Z</updated>
+    <published>2017-06-06T12:51:49.000Z</published>
+    <updated>2017-09-06T14:35:54.000Z</updated>
     
     <summary type="html">
     
@@ -231,48 +183,24 @@
   </entry>
   
   <entry>
-    <title>HIVE和HBASE区别</title>
-    <link href="http://chant00.com/2017/06/06/HIVE%E5%92%8CHBASE%E5%8C%BA%E5%88%AB/"/>
-    <id>http://chant00.com/2017/06/06/HIVE和HBASE区别/</id>
-    <published>2017-06-06T06:45:30.000Z</published>
-    <updated>2017-09-06T13:45:36.000Z</updated>
+    <title>Aaron Ralston’s Story</title>
+    <link href="http://chant00.com/2017/06/05/English-Aron&#39;s%20story/"/>
+    <id>http://chant00.com/2017/06/05/English-Aron&#39;s story/</id>
+    <published>2017-06-05T15:51:49.000Z</published>
+    <updated>2017-09-06T14:36:03.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/media/hiveHbase.jpg&quot; alt=&quot;hiveHbase&quot;&gt;&lt;br&gt;从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。&lt;/p&gt;
+      &lt;p&gt;Aaron Ralston, a 27-year-old mountain sports fanatic from Colorado in the United States, found himself in &lt;strong&gt;dire straits&lt;/strong&gt; &lt;em&gt;alone in a canyon&lt;/em&gt; in the desert when a 500kg rock came crashing down the &lt;strong&gt;canyon&lt;/strong&gt; to &lt;strong&gt;smash&lt;/strong&gt; his right hand and trap it against the canyon wall.&lt;/p&gt;
     
     </summary>
     
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
     
     
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+      <category term="test" scheme="http://chant00.com/tags/test/"/>
     
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
-    
-      <category term="Hbase" scheme="http://chant00.com/tags/Hbase/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在hexo博客中插入图片，音乐，视频，公式</title>
-    <link href="http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/"/>
-    <id>http://chant00.com/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/</id>
-    <published>2017-06-05T16:45:09.000Z</published>
-    <updated>2017-09-06T13:50:31.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;摘要：&quot;&gt;&lt;a href=&quot;#摘要：&quot; class=&quot;headerlink&quot; title=&quot;摘要：&quot;&gt;&lt;/a&gt;摘要：&lt;/h3&gt;&lt;p&gt;如何简洁优雅地在hexo博客中插入图片，音乐，视频，公式.&lt;br&gt;这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="http://chant00.com/categories/Hexo/"/>
-    
-    
-      <category term="教程" scheme="http://chant00.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="Hexo" scheme="http://chant00.com/tags/Hexo/"/>
+      <category term="English" scheme="http://chant00.com/tags/English/"/>
     
   </entry>
   
@@ -295,6 +223,128 @@
       <category term="java" scheme="http://chant00.com/tags/java/"/>
     
       <category term="数据类型" scheme="http://chant00.com/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率论迷思</title>
+    <link href="http://chant00.com/2016/12/07/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    <id>http://chant00.com/2016/12/07/概率论/</id>
+    <published>2016-12-07T12:51:49.000Z</published>
+    <updated>2017-09-06T14:35:57.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。&lt;br&gt;概率论的神奇之处在于，它居然能从不确定性中找到确定性。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+      <category term="重读概率论" scheme="http://chant00.com/categories/Algorithm/%E9%87%8D%E8%AF%BB%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+      <category term="概率论" scheme="http://chant00.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+      <category term="先验概率" scheme="http://chant00.com/tags/%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
+    
+      <category term="后验概率" scheme="http://chant00.com/tags/%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hive--DDL和DML练习</title>
+    <link href="http://chant00.com/2016/11/11/Hive-DDl/"/>
+    <id>http://chant00.com/2016/11/11/Hive-DDl/</id>
+    <published>2016-11-11T00:47:49.000Z</published>
+    <updated>2017-09-06T14:33:07.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hive--安装测试</title>
+    <link href="http://chant00.com/2016/10/11/Hive%E5%AE%89%E8%A3%85/"/>
+    <id>http://chant00.com/2016/10/11/Hive安装/</id>
+    <published>2016-10-11T00:47:49.000Z</published>
+    <updated>2017-09-06T14:36:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--MapReduce深入源码-Mapper</title>
+    <link href="http://chant00.com/2016/09/08/Hadoop-mapper%E6%BA%90%E7%A0%81/"/>
+    <id>http://chant00.com/2016/09/08/Hadoop-mapper源码/</id>
+    <published>2016-09-08T00:47:49.000Z</published>
+    <updated>2017-09-06T14:32:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--MapReduce深入源码-Client</title>
+    <link href="http://chant00.com/2016/09/05/Hadoop-client%E6%BA%90%E7%A0%81/"/>
+    <id>http://chant00.com/2016/09/05/Hadoop-client源码/</id>
+    <published>2016-09-05T00:47:49.000Z</published>
+    <updated>2017-09-06T14:32:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MapReduce客户端提交过程的源码，以及手写wordCount测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -341,26 +391,26 @@
   </entry>
   
   <entry>
-    <title>HADOOP--MapReduce深入源码-Mapper</title>
-    <link href="http://chant00.com/2016/08/08/Hadoop-mapper%E6%BA%90%E7%A0%81/"/>
-    <id>http://chant00.com/2016/08/08/Hadoop-mapper源码/</id>
-    <published>2016-08-08T00:47:49.000Z</published>
-    <updated>2017-09-06T14:25:00.000Z</updated>
+    <title>IDEA中使用maven编译Spark源码</title>
+    <link href="http://chant00.com/2016/08/06/sparkSourceCompile/"/>
+    <id>http://chant00.com/2016/08/06/sparkSourceCompile/</id>
+    <published>2016-08-06T00:47:49.000Z</published>
+    <updated>2017-09-06T13:08:54.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
+      &lt;p&gt;Spark源码编译及测试。&lt;/p&gt;
     
     </summary>
     
       <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
     
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+      <category term="Spark" scheme="http://chant00.com/categories/Bigdata/Spark/"/>
     
     
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
     
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+      <category term="Spark" scheme="http://chant00.com/tags/Spark/"/>
     
   </entry>
   
@@ -389,74 +439,26 @@
   </entry>
   
   <entry>
-    <title>IDEA中使用maven编译Spark源码</title>
-    <link href="http://chant00.com/2016/08/06/sparkSourceCompile/"/>
-    <id>http://chant00.com/2016/08/06/sparkSourceCompile/</id>
-    <published>2016-08-06T00:47:49.000Z</published>
-    <updated>2017-09-06T13:08:54.000Z</updated>
+    <title>HADOOP--yarn详解及配置测试</title>
+    <link href="http://chant00.com/2016/07/06/Hadoop-yarnTest/"/>
+    <id>http://chant00.com/2016/07/06/Hadoop-yarnTest/</id>
+    <published>2016-07-06T02:24:49.000Z</published>
+    <updated>2017-09-06T13:47:26.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Spark源码编译及测试。&lt;/p&gt;
+      &lt;p&gt;YARN：Yet Another Resource Negotiator&lt;/p&gt;
     
     </summary>
     
       <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
     
-      <category term="Spark" scheme="http://chant00.com/categories/Bigdata/Spark/"/>
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
     
     
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+      <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
     
-      <category term="Spark" scheme="http://chant00.com/tags/Spark/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hive--安装测试</title>
-    <link href="http://chant00.com/2016/07/11/Hive%E5%AE%89%E8%A3%85/"/>
-    <id>http://chant00.com/2016/07/11/Hive安装/</id>
-    <published>2016-07-11T00:47:49.000Z</published>
-    <updated>2017-09-06T13:47:17.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hive--DDL和DML练习</title>
-    <link href="http://chant00.com/2016/07/11/Hive-DDl/"/>
-    <id>http://chant00.com/2016/07/11/Hive-DDl/</id>
-    <published>2016-07-11T00:47:49.000Z</published>
-    <updated>2017-09-06T13:46:02.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
