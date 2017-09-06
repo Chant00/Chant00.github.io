@@ -17,8 +17,8 @@
   
   <entry>
     <title>盖茨推荐的一堂30分钟的经济学</title>
-    <link href="http://chant00.com/2017/07/29/economic/"/>
-    <id>http://chant00.com/2017/07/29/economic/</id>
+    <link href="http://chant00.com/2017/07/29/English-economic/"/>
+    <id>http://chant00.com/2017/07/29/English-economic/</id>
     <published>2017-07-29T00:25:49.000Z</published>
     <updated>2017-07-29T02:41:18.000Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>Python笔记（四）-- 函数</title>
-    <link href="http://chant00.com/2017/06/26/2017-06-26/"/>
-    <id>http://chant00.com/2017/06/26/2017-06-26/</id>
+    <link href="http://chant00.com/2017/06/26/Python%E7%AC%94%E8%AE%B04%E5%87%BD%E6%95%B0/"/>
+    <id>http://chant00.com/2017/06/26/Python笔记4函数/</id>
     <published>2017-06-26T00:25:49.000Z</published>
     <updated>2017-06-27T09:53:51.000Z</updated>
     
@@ -78,8 +78,8 @@
   
   <entry>
     <title>Python笔记（三）-- Important Warning</title>
-    <link href="http://chant00.com/2017/06/25/2017-06-25/"/>
-    <id>http://chant00.com/2017/06/25/2017-06-25/</id>
+    <link href="http://chant00.com/2017/06/25/Python%E7%AC%94%E8%AE%B03warning/"/>
+    <id>http://chant00.com/2017/06/25/Python笔记3warning/</id>
     <published>2017-06-24T23:25:49.000Z</published>
     <updated>2017-06-27T10:17:00.000Z</updated>
     
@@ -138,10 +138,10 @@
   
   <entry>
     <title>挣脱你的轨道--一则公益小短片《cogs》</title>
-    <link href="http://chant00.com/2017/06/11/cogs/"/>
-    <id>http://chant00.com/2017/06/11/cogs/</id>
+    <link href="http://chant00.com/2017/06/11/English-cogs/"/>
+    <id>http://chant00.com/2017/06/11/English-cogs/</id>
     <published>2017-06-11T07:08:30.000Z</published>
-    <updated>2017-06-12T02:35:36.000Z</updated>
+    <updated>2017-09-06T13:43:58.000Z</updated>
     
     <summary type="html">
     
@@ -162,10 +162,10 @@
   
   <entry>
     <title>Aaron Ralston’s Story</title>
-    <link href="http://chant00.com/2017/06/10/2017-06-10/"/>
-    <id>http://chant00.com/2017/06/10/2017-06-10/</id>
+    <link href="http://chant00.com/2017/06/10/English-Aron&#39;s%20story/"/>
+    <id>http://chant00.com/2017/06/10/English-Aron&#39;s story/</id>
     <published>2017-06-10T15:47:27.000Z</published>
-    <updated>2017-06-10T15:47:43.000Z</updated>
+    <updated>2017-09-06T13:41:08.000Z</updated>
     
     <summary type="html">
     
@@ -184,10 +184,10 @@
   
   <entry>
     <title>概率论迷思</title>
-    <link href="http://chant00.com/2017/06/07/2017-06-07/"/>
-    <id>http://chant00.com/2017/06/07/2017-06-07/</id>
+    <link href="http://chant00.com/2017/06/07/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    <id>http://chant00.com/2017/06/07/概率论/</id>
     <published>2017-06-07T02:58:19.000Z</published>
-    <updated>2017-06-09T08:19:22.000Z</updated>
+    <updated>2017-09-06T13:33:08.000Z</updated>
     
     <summary type="html">
     
@@ -210,10 +210,10 @@
   
   <entry>
     <title>那些你常用但是却不知道如何用英文表达的句子</title>
-    <link href="http://chant00.com/2017/06/06/2017-06-06homeTest/"/>
-    <id>http://chant00.com/2017/06/06/2017-06-06homeTest/</id>
+    <link href="http://chant00.com/2017/06/06/English-%E5%B8%B8%E7%94%A8%E5%8F%A5/"/>
+    <id>http://chant00.com/2017/06/06/English-常用句/</id>
     <published>2017-06-06T13:09:23.000Z</published>
-    <updated>2017-06-10T07:31:07.000Z</updated>
+    <updated>2017-09-06T13:41:00.000Z</updated>
     
     <summary type="html">
     
@@ -232,10 +232,10 @@
   
   <entry>
     <title>HIVE和HBASE区别</title>
-    <link href="http://chant00.com/2017/06/06/2017-06-06/"/>
-    <id>http://chant00.com/2017/06/06/2017-06-06/</id>
+    <link href="http://chant00.com/2017/06/06/HIVE%E5%92%8CHBASE%E5%8C%BA%E5%88%AB/"/>
+    <id>http://chant00.com/2017/06/06/HIVE和HBASE区别/</id>
     <published>2017-06-06T06:45:30.000Z</published>
-    <updated>2017-09-06T13:33:27.000Z</updated>
+    <updated>2017-09-06T13:45:36.000Z</updated>
     
     <summary type="html">
     
@@ -259,7 +259,7 @@
     <link href="http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/"/>
     <id>http://chant00.com/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/</id>
     <published>2017-06-05T16:45:09.000Z</published>
-    <updated>2017-09-06T13:33:35.000Z</updated>
+    <updated>2017-09-06T13:50:31.000Z</updated>
     
     <summary type="html">
     
@@ -300,10 +300,10 @@
   
   <entry>
     <title>Java阻塞与非阻塞的同步异步，以及回调</title>
-    <link href="http://chant00.com/2016/08/19/%E5%9B%9E%E8%B0%83/"/>
-    <id>http://chant00.com/2016/08/19/回调/</id>
+    <link href="http://chant00.com/2016/08/19/java%E5%9B%9E%E8%B0%83/"/>
+    <id>http://chant00.com/2016/08/19/java回调/</id>
     <published>2016-08-19T02:59:49.000Z</published>
-    <updated>2017-09-06T13:34:08.000Z</updated>
+    <updated>2017-09-06T13:49:45.000Z</updated>
     
     <summary type="html">
     
@@ -320,10 +320,10 @@
   
   <entry>
     <title>IDEA中文乱码问题</title>
-    <link href="http://chant00.com/2016/08/17/2017-06-17/"/>
-    <id>http://chant00.com/2016/08/17/2017-06-17/</id>
+    <link href="http://chant00.com/2016/08/17/IDEA%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://chant00.com/2016/08/17/IDEA中文乱码问题/</id>
     <published>2016-08-17T14:10:49.000Z</published>
-    <updated>2017-09-06T13:33:50.000Z</updated>
+    <updated>2017-09-06T13:43:39.000Z</updated>
     
     <summary type="html">
     
@@ -389,11 +389,11 @@
   </entry>
   
   <entry>
-    <title>Hive--DDL和DML练习</title>
-    <link href="http://chant00.com/2016/07/11/2017-07-12/"/>
-    <id>http://chant00.com/2016/07/11/2017-07-12/</id>
+    <title>Hive--安装测试</title>
+    <link href="http://chant00.com/2016/07/11/Hive%E5%AE%89%E8%A3%85/"/>
+    <id>http://chant00.com/2016/07/11/Hive安装/</id>
     <published>2016-07-11T00:47:49.000Z</published>
-    <updated>2017-09-06T13:09:02.000Z</updated>
+    <updated>2017-09-06T13:47:17.000Z</updated>
     
     <summary type="html">
     
@@ -413,11 +413,11 @@
   </entry>
   
   <entry>
-    <title>Hive--安装测试</title>
-    <link href="http://chant00.com/2016/07/11/2017-07-11/"/>
-    <id>http://chant00.com/2016/07/11/2017-07-11/</id>
+    <title>Hive--DDL和DML练习</title>
+    <link href="http://chant00.com/2016/07/11/Hive-DDl/"/>
+    <id>http://chant00.com/2016/07/11/Hive-DDl/</id>
     <published>2016-07-11T00:47:49.000Z</published>
-    <updated>2017-09-06T13:09:20.000Z</updated>
+    <updated>2017-09-06T13:46:02.000Z</updated>
     
     <summary type="html">
     
@@ -438,10 +438,10 @@
   
   <entry>
     <title>HADOOP--yarn详解及配置测试</title>
-    <link href="http://chant00.com/2016/07/06/yarnTest/"/>
-    <id>http://chant00.com/2016/07/06/yarnTest/</id>
+    <link href="http://chant00.com/2016/07/06/Hadoop-yarnTest/"/>
+    <id>http://chant00.com/2016/07/06/Hadoop-yarnTest/</id>
     <published>2016-07-06T02:24:49.000Z</published>
-    <updated>2017-09-06T13:09:24.000Z</updated>
+    <updated>2017-09-06T13:47:26.000Z</updated>
     
     <summary type="html">
     
