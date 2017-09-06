@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-08-06T14:30:09.000Z</updated>
+  <updated>2017-07-29T02:41:18.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,30 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>IDEA中使用maven编译Spark源码</title>
-    <link href="http://chant00.com/2017/08/06/sparkSourceCompile/"/>
-    <id>http://chant00.com/2017/08/06/sparkSourceCompile/</id>
-    <published>2017-08-06T00:47:49.000Z</published>
-    <updated>2017-08-06T14:30:09.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Spark源码编译及测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Spark" scheme="http://chant00.com/categories/Bigdata/Spark/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Spark" scheme="http://chant00.com/tags/Spark/"/>
-    
-  </entry>
   
   <entry>
     <title>盖茨推荐的一堂30分钟的经济学</title>
@@ -57,174 +33,6 @@
     
     
       <category term="Economic" scheme="http://chant00.com/tags/Economic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hive--DDL和DML练习</title>
-    <link href="http://chant00.com/2017/07/11/2017-07-12/"/>
-    <id>http://chant00.com/2017/07/11/2017-07-12/</id>
-    <published>2017-07-11T00:47:49.000Z</published>
-    <updated>2017-07-12T14:22:10.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hive--安装测试</title>
-    <link href="http://chant00.com/2017/07/11/2017-07-11/"/>
-    <id>http://chant00.com/2017/07/11/2017-07-11/</id>
-    <published>2017-07-11T00:47:49.000Z</published>
-    <updated>2017-07-12T12:14:27.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--yarn详解及配置测试</title>
-    <link href="http://chant00.com/2017/07/06/yarnTest/"/>
-    <id>http://chant00.com/2017/07/06/yarnTest/</id>
-    <published>2017-07-06T02:24:49.000Z</published>
-    <updated>2017-07-11T11:57:28.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;YARN：Yet Another Resource Negotiator&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--mac下eclipse连接hadoop集群开发API</title>
-    <link href="http://chant00.com/2017/07/05/eclipseConnectHadoop/"/>
-    <id>http://chant00.com/2017/07/05/eclipseConnectHadoop/</id>
-    <published>2017-07-05T02:24:49.000Z</published>
-    <updated>2017-07-15T07:31:31.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;mac下eclipse连接hadoop集群开发API&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--MapReduce深入源码-Client</title>
-    <link href="http://chant00.com/2017/07/05/2017-07-08/"/>
-    <id>http://chant00.com/2017/07/05/2017-07-08/</id>
-    <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-12T12:16:02.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MapReduce客户端提交过程的源码，以及手写wordCount测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--mac下IDEA连接hadoop集群开发API</title>
-    <link href="http://chant00.com/2017/07/05/IDEAConnectHadoop/"/>
-    <id>http://chant00.com/2017/07/05/IDEAConnectHadoop/</id>
-    <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-11T11:57:19.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;mac下IDEA连接hadoop集群开发API&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--MapReduce深入源码-Mapper</title>
-    <link href="http://chant00.com/2017/07/05/2017-07-09/"/>
-    <id>http://chant00.com/2017/07/05/2017-07-09/</id>
-    <published>2017-07-05T00:47:49.000Z</published>
-    <updated>2017-07-11T11:57:41.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
@@ -373,70 +181,6 @@
   </entry>
   
   <entry>
-    <title>Java阻塞与非阻塞的同步异步，以及回调</title>
-    <link href="http://chant00.com/2017/06/19/%E5%9B%9E%E8%B0%83/"/>
-    <id>http://chant00.com/2017/06/19/回调/</id>
-    <published>2017-06-19T02:59:49.000Z</published>
-    <updated>2017-06-19T15:25:14.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;怎样理解阻塞非阻塞与同步异步的区别，回调又是什么鬼？&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://chant00.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chant00.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java设计模式--六大原则</title>
-    <link href="http://chant00.com/2017/06/19/2017-06-19/"/>
-    <id>http://chant00.com/2017/06/19/2017-06-19/</id>
-    <published>2017-06-18T18:10:49.000Z</published>
-    <updated>2017-06-19T15:34:18.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;传说Java有六大心法，23种武功招式。分别就是Java设计模式六大原则和常用的23种设计模式了。传说掌握心法再配合招式，便能独步天下，称霸武林。这里先来学习下这6大心法。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://chant00.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chant00.com/tags/java/"/>
-    
-      <category term="设计模式" scheme="http://chant00.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA中文乱码问题</title>
-    <link href="http://chant00.com/2017/06/17/2017-06-17/"/>
-    <id>http://chant00.com/2017/06/17/2017-06-17/</id>
-    <published>2017-06-17T14:10:49.000Z</published>
-    <updated>2017-06-17T16:07:56.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;导入eclipse项目时，出现中文乱码的所有解决办法。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://chant00.com/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://chant00.com/tags/java/"/>
-    
-      <category term="IDEA" scheme="http://chant00.com/tags/IDEA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>挣脱你的轨道--一则公益小短片《cogs》</title>
     <link href="http://chant00.com/2017/06/11/cogs/"/>
     <id>http://chant00.com/2017/06/11/cogs/</id>
@@ -457,6 +201,267 @@
       <category term="cogs" scheme="http://chant00.com/tags/cogs/"/>
     
       <category term="animated short film" scheme="http://chant00.com/tags/animated-short-film/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Aaron Ralston’s Story</title>
+    <link href="http://chant00.com/2017/06/10/2017-06-10/"/>
+    <id>http://chant00.com/2017/06/10/2017-06-10/</id>
+    <published>2017-06-10T15:47:27.000Z</published>
+    <updated>2017-06-10T15:47:43.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Aaron Ralston, a 27-year-old mountain sports fanatic from Colorado in the United States, found himself in &lt;strong&gt;dire straits&lt;/strong&gt; &lt;em&gt;alone in a canyon&lt;/em&gt; in the desert when a 500kg rock came crashing down the &lt;strong&gt;canyon&lt;/strong&gt; to &lt;strong&gt;smash&lt;/strong&gt; his right hand and trap it against the canyon wall.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
+    
+    
+      <category term="test" scheme="http://chant00.com/tags/test/"/>
+    
+      <category term="English" scheme="http://chant00.com/tags/English/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率论迷思</title>
+    <link href="http://chant00.com/2017/06/07/2017-06-07/"/>
+    <id>http://chant00.com/2017/06/07/2017-06-07/</id>
+    <published>2017-06-07T02:58:19.000Z</published>
+    <updated>2017-06-09T08:19:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当你抛起一枚硬币，你不知道它会是正面还是反面，但你确切的知道正面与反面的概率都是50%。&lt;br&gt;概率论的神奇之处在于，它居然能从不确定性中找到确定性。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+      <category term="重读概率论" scheme="http://chant00.com/categories/Algorithm/%E9%87%8D%E8%AF%BB%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+      <category term="概率论" scheme="http://chant00.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+      <category term="先验概率" scheme="http://chant00.com/tags/%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
+    
+      <category term="后验概率" scheme="http://chant00.com/tags/%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>那些你常用但是却不知道如何用英文表达的句子</title>
+    <link href="http://chant00.com/2017/06/06/2017-06-06homeTest/"/>
+    <id>http://chant00.com/2017/06/06/2017-06-06homeTest/</id>
+    <published>2017-06-06T13:09:23.000Z</published>
+    <updated>2017-06-10T07:31:07.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;掌握另外一种语言（外语），真正的难点在于掌握它与已习得语言（母语）的不重合之处。直观的一一对应，其实没什么难度：“那是一本书”对应着“That’s a book”。而那些你常用到的句子或短语，翻译成英文，却一听就知道是中式英文。&lt;em&gt;“若果我没记错的话…”&lt;/em&gt; 用英语怎么说？是 &lt;em&gt;If I didn’t remembered wrong…&lt;/em&gt;吗？是英语里就没有这样的表达，还是我们不知道它的地道表达方式呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="English Learning" scheme="http://chant00.com/categories/English-Learning/"/>
+    
+    
+      <category term="English" scheme="http://chant00.com/tags/English/"/>
+    
+      <category term="英语学习" scheme="http://chant00.com/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HIVE和HBASE区别</title>
+    <link href="http://chant00.com/2017/06/06/2017-06-06/"/>
+    <id>http://chant00.com/2017/06/06/2017-06-06/</id>
+    <published>2017-06-06T06:45:30.000Z</published>
+    <updated>2017-09-06T13:10:18.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/media/hiveHbase.jpg&quot; alt=&quot;hiveHbase&quot;&gt;&lt;br&gt;从架构图中不难看出，Hive是运行在MapReduce之上的，而Hbase则是在更底层的HDFS之上，他们的读写和查询特点也因此而迥然不同。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+      <category term="Hbase" scheme="http://chant00.com/tags/Hbase/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在hexo博客中插入图片，音乐，视频，公式</title>
+    <link href="http://chant00.com/2017/06/06/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%EF%BC%8C%E9%9F%B3%E4%B9%90%EF%BC%8C%E8%A7%86%E5%B1%8F%EF%BC%8C%E5%85%AC%E5%BC%8F/"/>
+    <id>http://chant00.com/2017/06/06/在hexo博客中插入图片，音乐，视屏，公式/</id>
+    <published>2017-06-05T16:45:09.000Z</published>
+    <updated>2017-09-06T13:11:35.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;摘要：&quot;&gt;&lt;a href=&quot;#摘要：&quot; class=&quot;headerlink&quot; title=&quot;摘要：&quot;&gt;&lt;/a&gt;摘要：&lt;/h3&gt;&lt;p&gt;如何简洁优雅地在hexo博客中插入图片，音乐，视频，公式.&lt;br&gt;这篇博客本来是拿来测试图片音乐的插入的，但是测着测着，忽然灵光一现，为什么不直接写成一篇博客呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://chant00.com/categories/Hexo/"/>
+    
+    
+      <category term="教程" scheme="http://chant00.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="Hexo" scheme="http://chant00.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zookeeper详解</title>
+    <link href="http://chant00.com/2016/08/06/zookeeper/"/>
+    <id>http://chant00.com/2016/08/06/zookeeper/</id>
+    <published>2016-08-06T00:47:49.000Z</published>
+    <updated>2017-09-06T13:08:46.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;zookeeper学习笔记。&lt;/p&gt;
+&lt;h3 id=&quot;Zookeeper介
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Zookeeper" scheme="http://chant00.com/categories/Bigdata/Zookeeper/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Zookeeper" scheme="http://chant00.com/tags/Zookeeper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA中使用maven编译Spark源码</title>
+    <link href="http://chant00.com/2016/08/06/sparkSourceCompile/"/>
+    <id>http://chant00.com/2016/08/06/sparkSourceCompile/</id>
+    <published>2016-08-06T00:47:49.000Z</published>
+    <updated>2017-09-06T13:08:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Spark源码编译及测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Spark" scheme="http://chant00.com/categories/Bigdata/Spark/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Spark" scheme="http://chant00.com/tags/Spark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hive--DDL和DML练习</title>
+    <link href="http://chant00.com/2016/07/11/2017-07-12/"/>
+    <id>http://chant00.com/2016/07/11/2017-07-12/</id>
+    <published>2016-07-11T00:47:49.000Z</published>
+    <updated>2017-09-06T13:09:02.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hive--安装测试</title>
+    <link href="http://chant00.com/2016/07/11/2017-07-11/"/>
+    <id>http://chant00.com/2016/07/11/2017-07-11/</id>
+    <published>2016-07-11T00:47:49.000Z</published>
+    <updated>2017-09-06T13:09:20.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--yarn详解及配置测试</title>
+    <link href="http://chant00.com/2016/07/06/yarnTest/"/>
+    <id>http://chant00.com/2016/07/06/yarnTest/</id>
+    <published>2016-07-06T02:24:49.000Z</published>
+    <updated>2017-09-06T13:09:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;YARN：Yet Another Resource Negotiator&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HADOOP--mac下eclipse连接hadoop集群开发API</title>
+    <link href="http://chant00.com/2016/07/05/eclipseConnectHadoop/"/>
+    <id>http://chant00.com/2016/07/05/eclipseConnectHadoop/</id>
+    <published>2016-07-05T02:24:49.000Z</published>
+    <updated>2017-09-06T13:09:33.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;mac下eclipse连接hadoop集群开发API&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="hadoop" scheme="http://chant00.com/tags/hadoop/"/>
+    
+      <category term="API" scheme="http://chant00.com/tags/API/"/>
     
   </entry>
   
