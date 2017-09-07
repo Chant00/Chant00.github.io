@@ -277,6 +277,30 @@
   </entry>
   
   <entry>
+    <title>HADOOP--hadoop运行原理及其搭建</title>
+    <link href="http://chant00.com/2016/11/08/HADOOP--hadoop%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
+    <id>http://chant00.com/2016/11/08/HADOOP--hadoop运行原理及其搭建/</id>
+    <published>2016-11-08T00:47:49.000Z</published>
+    <updated>2017-09-07T16:48:07.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hadoop从运行机制到搭建，加网上常见的天气、好友推荐及协同过滤案列的实践。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
+    
+    
+      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
+    
+      <category term="hadoop原理及其搭建" scheme="http://chant00.com/tags/hadoop%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hive--DDL和DML练习</title>
     <link href="http://chant00.com/2016/10/13/Hive-DDl/"/>
     <id>http://chant00.com/2016/10/13/Hive-DDl/</id>
@@ -435,30 +459,6 @@
       <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
     
       <category term="Zookeeper" scheme="http://chant00.com/tags/Zookeeper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--yarn详解及配置测试</title>
-    <link href="http://chant00.com/2016/07/06/Hadoop-yarnTest/"/>
-    <id>http://chant00.com/2016/07/06/Hadoop-yarnTest/</id>
-    <published>2016-07-06T02:24:49.000Z</published>
-    <updated>2017-09-06T13:47:26.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;YARN：Yet Another Resource Negotiator&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="yarn" scheme="http://chant00.com/tags/yarn/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
   </entry>
   
