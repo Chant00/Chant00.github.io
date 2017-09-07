@@ -1,0 +1,1610 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Fredericka the Great:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Bigdata,LVS+Keepalived+Nginx,loadBalance," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chant" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="LVS+Keepalived+Nginx实战,从背景介绍到搭建测试。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LVS+Keepalived+Nginx实战">
+<meta property="og:url" content="http://chant00.com/2016/06/16/LVS+Keepalived+Nginx /index.html">
+<meta property="og:site_name" content="Chant">
+<meta property="og:description" content="LVS+Keepalived+Nginx实战,从背景介绍到搭建测试。">
+<meta property="og:image" content="http://chant00.com/media/15047573747821.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047574073608.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047574624113.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047574811248.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047574996103.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047575152435.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047575331222.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047575497785.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047575700477.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047576314796.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047576561294.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047576776282.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047576893162.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047577198993.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047577465859.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047577628596.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047577989868.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047578304785.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047578861881.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047579466018.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047581338605.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047581494765.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047581662945.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047581774541.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047581910009.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047582023574.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047582411230.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047582598470.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047584286734.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047584845722.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047585249283.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047601660395.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047602222252.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047602410373.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047602535239.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047602621470.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047603840755.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047604199991.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047605018502.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047605303986.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047606408961.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047606665281.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047607056608.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047608009293.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047608164279.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047610237892.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047610422893.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047610611929.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047611324177.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047611414148.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047611772320.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047614965019.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047615039367.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047615802728.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047618005746.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047618184934.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047618338801.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047623896470.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047624434343.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047630453611.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047630533096.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047630634649.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047631163853.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047632771149.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047633372997.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047634107134.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047634305537.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047634566668.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047634819415.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047634952712.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047635427949.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047636171632.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047636262466.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047636631100.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047636905659.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047637710536.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047637796051.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047638906250.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047638995853.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639107483.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639192820.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639545241.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639640513.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639714042.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047639790106.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047640666922.jpg">
+<meta property="og:image" content="http://chant00.com/media/15047641327978.jpg">
+<meta property="og:updated_time" content="2017-09-07T06:05:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LVS+Keepalived+Nginx实战">
+<meta name="twitter:description" content="LVS+Keepalived+Nginx实战,从背景介绍到搭建测试。">
+<meta name="twitter:image" content="http://chant00.com/media/15047573747821.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://chant00.com/2016/06/16/LVS+Keepalived+Nginx /"/>
+
+
+
+
+
+  <title>LVS+Keepalived+Nginx实战 | Chant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?20a728b896cddba838b0448e60f910f5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-favourite">
+          <a href="/favourite" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            颜如玉
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2016/06/16/LVS+Keepalived+Nginx /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chant">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LVS+Keepalived+Nginx实战</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-16T08:47:49+08:00">
+                2016-06-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Bigdata/" itemprop="url" rel="index">
+                    <span itemprop="name">Bigdata</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Bigdata/loadBalance/" itemprop="url" rel="index">
+                    <span itemprop="name">loadBalance</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/06/16/LVS+Keepalived+Nginx /" class="leancloud_visitors" data-flag-title="LVS+Keepalived+Nginx实战">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>LVS+Keepalived+Nginx实战,从背景介绍到搭建测试。</p>
+<a id="more"></a>
+<h3 id="大型网站架构演进历程"><a href="#大型网站架构演进历程" class="headerlink" title="大型网站架构演进历程"></a>大型网站架构演进历程</h3><h4 id="初始阶段"><a href="#初始阶段" class="headerlink" title="初始阶段"></a>初始阶段</h4><p>应用程序、数据库、文件等所有资源在一台服务器上。典型架构Linux+Apache+Mysql+PHP，简称LAMP。<br><img src="/media/15047573747821.jpg" alt=""></p>
+<h4 id="应用服务和数据服务分离"><a href="#应用服务和数据服务分离" class="headerlink" title="应用服务和数据服务分离"></a>应用服务和数据服务分离</h4><p>随着网站业务的发展，一台服务器逐渐不能满足需求：越来越多的用户访问导致性能越来越差，越来越多的数据导致存储空间不足。这时就需要将应用和数据分离。这三台服务器对硬件资源的要求各不相同，应用服务器要处理大量业务逻辑，因此需要更快更强大的CPU；数据库服务器需要磁盘检索和数据缓存，因此需要更大的硬盘和内存，文件服务器需要存储大量用户上传的文件，因此需要更大的硬盘。<br><img src="/media/15047574073608.jpg" alt=""></p>
+<h4 id="使用缓存改善网站性能"><a href="#使用缓存改善网站性能" class="headerlink" title="使用缓存改善网站性能"></a>使用缓存改善网站性能</h4><p>网站访问特点和现实世界的财富分配一样遵循二八定律：80%的业务访问集中在20%的数据上。例如淘宝买家浏览的商品集中在少部分成交数多、评价良好的商品上；百度搜索关键词集中在少部分热门词汇上。网站使用的缓存分为两种：缓存在应用服务器上的本地缓存和缓存在专门的分布式缓存服务器的远程缓存。本地缓存的速度更快一些，但是受应用服务器内存限制，其缓存数量有限，而且会出现与应用程序争用内存的情况。远程分布式缓存可以使用集群的方式，部署大内存的服务器作为专门的缓存服务器，可以在理论上做到不受内存容器限制的缓存服务。<br><img src="/media/15047574624113.jpg" alt=""></p>
+<h4 id="使用应用服务器集群改善网站并发处理处理能力"><a href="#使用应用服务器集群改善网站并发处理处理能力" class="headerlink" title="使用应用服务器集群改善网站并发处理处理能力"></a>使用应用服务器集群改善网站并发处理处理能力</h4><p>使用集群是网站解决高并发、海量数据问题的常用手段。通过使用应用服务器集群，改善负载压力，实现系统的可伸缩性。通过负载均衡调度服务器，可将来自用户浏览器的访问请求分发到应用服务器集群中的任何一台服务器。当有更多的用户时，在集群中加入更多的应用服务器即可。当一台服务器的处理能力、存储空间不足时，不要企图去更换更强大的服务器，对答应网站而言，不管多么强大的服务器，都满足不了网站持续增长的业务需求，这种情况下，跟恰当的做法是增加一台服务器分担缘由服务器的访问及存储压力。<br><img src="/media/15047574811248.jpg" alt=""></p>
+<h4 id="数据库读写分离"><a href="#数据库读写分离" class="headerlink" title="数据库读写分离"></a>数据库读写分离</h4><p>网站在使用缓存后，是绝大部分数据读操作访问都可以不通过数据库就能完成，但是仍有一部分读操作（缓存访问不命中、缓存过期）和全部的写操作需要访问数据库，在网站的规模达到一定规模后，数据库因为负载压力过高而成为网站的瓶颈。目前大部分的主流数据库都提供主从热备的功能，通过配置两台数据库主从关系，可以将一台数据库服务器的数据更新同步到另一台服务器上。网站利用数据库的这一功能，实现数据库读写分离，从而改善数据库负载压力。<br><img src="/media/15047574996103.jpg" alt=""></p>
+<h4 id="使用反向代理和CDN加速网站响应"><a href="#使用反向代理和CDN加速网站响应" class="headerlink" title="使用反向代理和CDN加速网站响应"></a>使用反向代理和CDN加速网站响应</h4><p>使用网站业务不断发展，用户规模越来越大，由于中国复杂的网络环境，不同地区的用户访问网站时，速度差别也极大。使用CDN和反向代理的目的都是早返回数据给用户。一方面加快用户访问速度，另一方面也减轻后端服务器的负载压力。CDN和反向代理的基本原理都是缓存，区别在于CDN部署在网络提供商的机房，使用户在请求网站服务时，可以从距离自己最近的网络提供商机房提取数据；而反向代理则部署在网站的中心机房，当用户请求到达中心机房后，首先访问的服务器是反向代理服务器，如果反向代理服务器缓存着用户请求的资源，就将其直接返回给用户。<br><img src="/media/15047575152435.jpg" alt=""></p>
+<h4 id="使用分布式文件系统和分布式数据库系统"><a href="#使用分布式文件系统和分布式数据库系统" class="headerlink" title="使用分布式文件系统和分布式数据库系统"></a>使用分布式文件系统和分布式数据库系统</h4><p>分布式数据库是网站数据库拆分的最后手段，只有在单表数据规模非常庞大时才使用。网站最长使用的数据库拆分手段是业务分库，将不同业务的数据库部署在不同的物理服务器上。<br><img src="/media/15047575331222.jpg" alt=""></p>
+<h4 id="业务拆分"><a href="#业务拆分" class="headerlink" title="业务拆分"></a>业务拆分</h4><p>大型网站为了应付日益复杂的业务场景，通过使用分而治之的手段将整个网站业务分为不同的产品线，如大型电商网站会将首页、商铺、订单、买家、卖家等拆分成不同的产品线，分归不同的业务团队负责。将一个网站拆分成不同的应用，每个应用独立部署维护。应用之间可以通过超链接建立联系，也可以通过消息队列进行数据转发，也可通过同一个数据库系统构建一个关联的完整系统。<br><img src="/media/15047575497785.jpg" alt=""></p>
+<h4 id="使用NoSQL和搜索引擎"><a href="#使用NoSQL和搜索引擎" class="headerlink" title="使用NoSQL和搜索引擎"></a>使用NoSQL和搜索引擎</h4><p>随着网站业务越来越复杂，对数据存储和检索的需求也越来越复杂，网站需要采用一些非数据库技术如NoSQL和非数据库查询技术如搜索引擎。源自互联网的技术手段，对可伸缩的分布式特性具有更好的支持。应用服务器则通过一个统一的数据模块访问各种数据，减轻应用程序管理诸多数据的麻烦。<br><img src="/media/15047575700477.jpg" alt=""></p>
+<h4 id="分布式服务"><a href="#分布式服务" class="headerlink" title="分布式服务"></a>分布式服务</h4><p>随着业务拆分越来越小，存储系统越来越庞大，应用系统的整体复杂度呈指数级增加，部署维护越来越难。由于所有应用要和所有数据库系统连接，在数万台服务器规模的网站中，这些连接的数目是服务器规模的平方，导致数据库连接资源不足，拒绝服务。各个应用系统需要执行很多相同的业务操作，比如用户管理、商品管理等。可以将这些共用业务提取出来，独立部署。应用系统只需要通过调用共用业务服务完成具体业务操作。<br><img src="/media/15047576314796.jpg" alt=""></p>
+<h3 id="大型网站架构核心技术"><a href="#大型网站架构核心技术" class="headerlink" title="大型网站架构核心技术"></a>大型网站架构核心技术</h3><h4 id="分布式缓存系统"><a href="#分布式缓存系统" class="headerlink" title="分布式缓存系统"></a>分布式缓存系统</h4><h5 id="分布式缓存概述"><a href="#分布式缓存概述" class="headerlink" title="分布式缓存概述"></a>分布式缓存概述</h5><p>分布式缓存系统是进化的产物。<br>本地缓存 -&gt; 集群缓存 -&gt; 分布式缓存（数据网格）。<br><img src="/media/15047576561294.jpg" alt=""><br>性能：<br>访问缓存中的一个对象比直接访问远端数据存储引擎(例如数据库)要快很多。<br>直接访问一个已经存在的对象比从数据创建一个对象要快。<br>数据网格支持一些性能调优特性可能不被集群缓存所支持，例如，应用程序可以根据数据之间关联关系的紧密程度来确保相互关联的对象被保存在相同的缓存节点。<br>一致性：<br>本地缓存只有在应用程序被部署到单一的应用服务器上的时候才有意义，如果它被部署到了多台应用服务器上的话, 那么本地缓存一点意义都没有，问题出在过期数据。集群缓存是通过复制和让缓存数据失效来解决这个问题的。<br>除了支持JTA事物之外，分布式缓存还支持XA（分布式）和两阶段提交事物。<br>可伸缩性：<br>集群缓存和数据网格的区别就在于可伸缩性。数据网格是可伸缩的。缓存数据是通过动态的分区被分发的。结果就是，增加一个缓存节点既提高了吞吐量也提高了容量。<br>独立性：<br>允许分布式缓存能够独立于应用服务器而被独立的扩展. 也让其服务器能够被指派与应用服务器不同的资源。<br>这样的架构也让数据网格的基础架构能够独立于应用服务器的惯例和调整。<br>能够独立于应用而被升级，应用的重新部署也不会对数据网格本身产生任何影响。<br><img src="/media/15047576776282.jpg" alt=""><br>基础架构：<br>使用在基础架构中作为顶级系统的独立数据网格服务。<br><img src="/media/15047576893162.jpg" alt=""></p>
+<p>使用分布式缓存的好处是它的可扩展性和独立性，并且，作为顶级基础设施组件，它能够同时提供本地缓存和集群缓存所能够提供的性能和一致性。</p>
+<h5 id="典型应用场景"><a href="#典型应用场景" class="headerlink" title="典型应用场景"></a>典型应用场景</h5><p>页面缓存：<br>    用来缓存Web页面的内容片段，包括HTML、CSS和图片等，多应用于社交网站等。<br>应用对象缓存：<br>    缓存系统作为ORM框架的二级缓存对外提供服务，目的是减轻数据库的负载压力，加速应用访问。<br>状态缓存：<br>    缓存包括Session会话状态及应用横向扩展时的状态数据等，这类数据一般是难以恢复的，对可用性要求较高，多应用于高可用集群。<br>并行处理：<br>    通常涉及大量中间计算结果需要共享。<br>事件处理：<br>    分布式缓存提供了针对事件流的连续查询（continuous query）处理技术，满足实时性需求。</p>
+<h5 id="Memcached分布式缓存系统"><a href="#Memcached分布式缓存系统" class="headerlink" title="Memcached分布式缓存系统"></a>Memcached分布式缓存系统</h5><p>Memcached 是一个高性能的分布式内存对象缓存系统，用于动态Web应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提高动态、数据库驱动网站的速度。<br>Memcached是基于一个存储键/值对的HashMap。其守护进程是用C写的，但是客户端可以用任何语言来编写，并通过memcached协议与守护进程通信。<br><img src="/media/15047577198993.jpg" alt=""></p>
+<p>Memcached的存储方式：<br>    为了提高性能，Memcached中保存的数据都存储在Memcached内置的内存存储空间中。由于数据仅存在于内存中，因此重启Memcached、重启操作系统会导致全部数据消失。另外，内容容量达到指定值之后，就基于LRU（Least Recently Used，近期最少使用）算法自动删除不使用的缓存。Memcached本身是为缓存而设计的服务器，因此并没有过多考虑数据的永久性问题。</p>
+<h5 id="Redis分布式缓存系统"><a href="#Redis分布式缓存系统" class="headerlink" title="Redis分布式缓存系统"></a>Redis分布式缓存系统</h5><p>Redis是一个key-value存储系统。和Memcached类似，它支持存储的value类型相对更多，包括string（字符串）、list（链表）、set（集合）、zset（sorted set –有序集合）和hash（哈希类型）。这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，Redis支持各种不同方式的排序。<br>与Memcached一样，为了保证效率，数据都是缓存在内存中。区别的是Redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。<br><img src="/media/15047577465859.jpg" alt=""><br>Redis支持语言：<br><img src="/media/15047577628596.jpg" alt=""><br>Redis的存储方式：<br>Redis的存储分为：内存存储、磁盘存储和log文件三部分，配置文件中有三个参数对其进行配置。<br>save seconds updates，save配置，指出在多长时间内，有多少次更新操作，就将数据同步到数据文件。这个可以多个条件配合，比如默认配置文件中的设置，就设置了三个条件。<br>appendonly yes/no ，appendonly配置，指出是否在每次更新操作后进行日志记录，如果不开启，可能会在断电时导致一段时间内的数据丢失。因为redis本身同步数据文件是按上面的save条件来同步的，所以有的数据会在一段时间内只存在于内存中。<br>appendfsync no/always/everysec ，appendfsync配置，no表示等操作系统进行数据缓存同步到磁盘，always表示每次更新操作后手动调用fsync()将数据写到磁盘，everysec表示每秒同步一次。</p>
+<h5 id="两种分布式缓存系统比较"><a href="#两种分布式缓存系统比较" class="headerlink" title="两种分布式缓存系统比较"></a>两种分布式缓存系统比较</h5><p>存储数据位置：<br>Redis中，并不是所有的数据都一直存储在内存中的，这是和Memcached相比一个最大的区别。<br>数据类型支持：<br>Redis不仅仅支持简单的k/v类型的数据，同时还提供list，set，hash等数据结构的存储。<br>对数据备份的支持：<br>    Redis支持数据的备份，即master-slave模式的数据备份。<br>数据持久化：<br>Redis支持数据的持久化，可以将内存中的数据保持在磁盘中，重启的时候可以再次加载进行使用。</p>
+<h4 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h4><h5 id="负载均衡概述"><a href="#负载均衡概述" class="headerlink" title="负载均衡概述"></a>负载均衡概述</h5><p>负载均衡建立在现有网络结构之上，它提供了一种廉价有效透明的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网络的灵活性和可用性。负载均衡，英文名称为Load Balance，其意思就是分摊到多个操作单元上进行执行，例如Web服务器、FTP服务器、企业关键应用服务器和其它关键任务服务器等，从而共同完成工作任务。<br>服务器负载均衡从字面意义来讲可以理解为，单台服务器不能称之为均衡，只有多个服务器才能称之为均衡，也就是说：多个服务器组成的这样一个系统，我们称之为服务器均衡系统。负载均衡组成的方式：<br>负载均衡的服务器（管理器）<br>被均衡的服务器集群（客户机）<br>负载均衡管理器，是整个负载均衡的控制服务器（DR），所有用户的请求都要先经过这台服务器，然后由此服务器根据各个实际处理服务器状态将请求具体分配到某个实际处理<br>服务器中，用户是感觉不到后端的服务器的，他们只看到当前这台DR服务器。DR服务器只负责转发和安装相应的管理软件，所以一般企业负载均衡服务器非常重要，但是资源使用非常少，所以不必用非常高的配置来担当负载均衡管理器。</p>
+<p>负载均衡分类：软/硬件<br>软件负载均衡解决方案是指在一台或多台服务器相应的操作系统上安装一个或多个附加软件来实现负载均衡，它的优点是基于特定环境，配置简单，使用灵活，成本低廉，可以满足一般的负载均衡需求。软件解决方案缺点也较多，因为每台服务器上安装额外的软件运行会消耗系统不定量的资源，越是功能强大的模块，消耗得越多，所以当连接请求特别大的时候，软件本身会成为服务器工作成败的一个关键；软件可扩展性并不是很好，受到操作系统的限制；由于操作系统本身的Bug，往往会引起安全问题。</p>
+<p>硬件负载均衡解决方案是直接在服务器和外部网络间安装负载均衡设备，这种设备通常称之为负载均衡器，由于专门的设备完成专门的任务，独立于操作系统，整体性能得到大量提高，加上多样化的负载均衡策略，智能化的流量管理，可达到最佳的负载均衡需求。负载均衡器有多种多样的形式，除了作为独立意义上的负载均衡器外，有些负载均衡器集成在交换设备中，置于服务器与Internet链接之间，有些则以两块网络适配器将这一功能集成到PC中，一块连接到Internet上，一块连接到后端服务器群的内部网络上。<br>一般而言，硬件负载均衡在功能、性能上优于软件方式，不过成本昂贵。</p>
+<p>部署方式：路由模式<br>负载均衡有三种部署方式：路由模式、桥接模式、服务直接返回模式。<br>路由模式部署灵活，约60%的用户采用这种方式部署；桥接模式不改变现有的网络架构；服务直接返回（DSR）比较适合吞吐量大特别是内容分发的网络应用。约30%的用户采用这种模式。<br>    服务器的网关必须设置成负载均衡机的LAN口地址，且与WAN口分属不同的逻辑网络。因此所有返回的流量也都经过负载均衡。这种方式对网络的改动小，能均衡任何下行流量。<br><img src="/media/15047577989868.jpg" alt=""></p>
+<h5 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h5><p>在当业务系统服务器无法支撑当前的业务量时，用户可以选择更高性能的服务器。但更为合理的做法是通过在既有业务服务器基础上，增量的方式增加相同功能的服务器，将计算任务分摊到后台多台较低配置的服务器处理，每台服务器都可以响应服务请求。实现合理安排客户请求并加快了请求相应速度，来提高用户体验。而用户仅感受到是一台高性能服务器在提供服务。<br><img src="/media/15047578304785.jpg" alt=""></p>
+<h5 id="负载均衡硬件"><a href="#负载均衡硬件" class="headerlink" title="负载均衡硬件"></a>负载均衡硬件</h5><p><img src="/media/15047578861881.jpg" alt=""></p>
+<h5 id="负载均衡软件"><a href="#负载均衡软件" class="headerlink" title="负载均衡软件"></a>负载均衡软件</h5><p><img src="/media/15047579466018.jpg" alt=""></p>
+<h4 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h4><h5 id="消息队列概述"><a href="#消息队列概述" class="headerlink" title="消息队列概述"></a>消息队列概述</h5><p>介绍：消息队列中间件是分布式系统中重要的组件，主要解决应用耦合，异步消息，流量削锋等问题。实现高性能，高可用，可伸缩和最终一致性架构。是大型分布式系统不可缺少的中间件。<br>常用消息队列系统：目前在生产环境，使用较多的消息队列有ActiveMQ，RabbitMQ，ZeroMQ，Kafka，MetaMQ，RocketMQ等。</p>
+<h5 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h5><p>异步处理：<br><img src="/media/15047581338605.jpg" alt=""><br>流量削峰：<br><img src="/media/15047581494765.jpg" alt=""><br>应用解耦：<br><img src="/media/15047581662945.jpg" alt=""><br>日志处理：<br><img src="/media/15047581774541.jpg" alt=""><br>消息通讯—点到点方式：<br><img src="/media/15047581910009.jpg" alt=""><br>消息通讯—发布订阅方式：<br><img src="/media/15047582023574.jpg" alt=""></p>
+<h5 id="开源消息队列软件RabbitMQ"><a href="#开源消息队列软件RabbitMQ" class="headerlink" title="开源消息队列软件RabbitMQ"></a>开源消息队列软件RabbitMQ</h5><p>RabbitMQ是流行的开源消息队列系统，用erlang语言开发。RabbitMQ是一个在AMQP基础上完整的，可复用的企业消息系统。他遵循Mozilla Public License开源协议。<br><img src="/media/15047582411230.jpg" alt=""><br>AMQP当中有四个概念非常重要: 虚拟主机（virtual host），交换机（exchange），队列（queue）和绑定（binding）。一个虚拟主机持有一组交换机、队列和绑定。<br><img src="/media/15047582598470.jpg" alt=""></p>
+<h4 id="页面静态化技术"><a href="#页面静态化技术" class="headerlink" title="页面静态化技术"></a>页面静态化技术</h4><h5 id="页面静态化概述"><a href="#页面静态化概述" class="headerlink" title="页面静态化概述"></a>页面静态化概述</h5><h6 id="静态页面："><a href="#静态页面：" class="headerlink" title="静态页面："></a>静态页面：</h6><p>最早的时候，网站内容是通过在主机空间中放置大量的静态网页实现的。为了方便对这些分散在不同目录的静态网页的管理，（一般是通过FTP)，象frontpage/dreamweaver这样软件甚至直接提供了向主页空间以FTP方式直接访问文件的功能。以静态网页为主的网站最大的困难在于对网页的管理，在这种框架里，网页框架和网页中的内容混杂在一起，很大程度地加大了内容管理的难度。为了减轻这种管理的成本，发展出了一系列的技术，甚至连css本身，原本也是针对这种乱七八糟的网页维护而设计的，目的就是把网页表达的框架和内容本身抽象分离出来。<br>A．静态网页的内容稳定，页面加载速度快。<br>B．静态网页的没有数据库支持，在网站制作和维护方面的工作量较大。<br>C．静态网页的交互性差，有很大的局限性。</p>
+<h6 id="动态页面："><a href="#动态页面：" class="headerlink" title="动态页面："></a>动态页面：</h6><p>通过执行asp、php、jsp和.net等程序生成客户端网页代码的网页。通常可以通过网站后台管理系统对网站的内容进行更新管理。发布新闻，发布公司产品，交流互动，博客，网上调查等，这都是动态网站的一些功能。也是我们常见的。 常见的扩展名有：.asp、php、jsp、cgi和aspx 等。 注意：动态页面的“动态”是网站与客户端用户互动的意思，而非网页上有动画的就是动态页面。<br>A．交互性好。<br>　　B．动态网页的信息都需要从数据库中读取，每打开一个一面就需要去获取一次数据库，如果访问人数很多，也就会对服务器增加很大的荷载，从而影响这个网站的运行速度。<br>其实大家都知道，效率最高、消耗最小的就是纯静态化的html页面，所以我们尽可能使我们的网站上的页面采用静态页面来实现，这个最简单的方法其实也是最有效的方法。<br>为什么需要动态页面静态化：<br>1)    搜索引擎的优化<br>尽管搜索机器人有点讨厌，各个网站不但不会再象从前一样把它封起来，反而热情无比地搞SEO，所谓的面向搜索引擎的优化，其中就包括访问地址的改写，令动态网页看上去是静态网页，以便更多更大量地被搜索引擎收录，从而最大限度地提高自已的内容被目标接收的机会。但是，在完全以动态技术开发的网站，转眼中要求变换成静态网页提供，同时，无论如何，动态网页的内容管理功能也是必须保留的；就如同一辆飞驶的奔驰忽然要求180度转弯，要付出的成本代价是非常大的，是否真的值得，也确实让人怀疑。<br>2)    提高程序性能<br>很多大型网站，进去的时候看它很复杂的页面，但是加载也没有耗费多长时间，除了其它必要原因以外，静态化也是其中必需考虑的技术之一。<br>先于用户获取资源或数据库数据进而通过静态化处理，生成静态页面，所有人都访问这一个静态页面，而静态化处理的页面本身的访问速度要较动态页面快很多倍，因此程序性能会有大大的提升。<br>静态化在页面上的体现为：访问速度加快，用户体验性明显提升；在后台体现为：访问脱离数据库，减轻了数据库访问压力。</p>
+<h5 id="FreeMarker实现页面静态化"><a href="#FreeMarker实现页面静态化" class="headerlink" title="FreeMarker实现页面静态化"></a>FreeMarker实现页面静态化</h5><p>FreeMarker是什么：<br>FreeMarker是一个基于Java的开发包和类库的一种将模板和数据进行整合并输出文本的通用工具，FreeMarker实现页面静态化的原理是：将页面中所需要的样式写入到FreeMarker模板文件中，然后将页面所需要的数据进行动态绑定并放入到Map中，然后通过FreeMarker的模板解析类process()方法完成静态页面的生成。<br>模板引擎：一种基于模板的、用来生成输出文本的通用工具；基于Java的开发包和类库。<br>FreeMarker能做什么：<br>MVC框架中的View层组件、html页面静态化、代码生成工具和CMS模板引擎。<br>为什么要用FreeMarker：<br>程序逻辑（Java 程序）和页面设计（FreeMarker模板）分离；<br>    分层清晰，利于分工合作；<br>    主流Web框架良好的集成（struts2，springmvc）；<br>    简单易学、功能强大；<br>免费开源。<br><img src="/media/15047584286734.jpg" alt=""></p>
+<h5 id="Velocity实现页面静态化"><a href="#Velocity实现页面静态化" class="headerlink" title="Velocity实现页面静态化"></a>Velocity实现页面静态化</h5><p>Velocity是什么：<br>    Velocity是一个基于Java的模板引擎（template engine）。它允许任何人仅仅使用简单的模板语言（template language）来引用由Java代码定义的对象。<br>Velocity的应用：<br>     当Velocity应用于Web开发时，界面设计人员可以和Java程序开发人员同步开发一个遵循MVC架构的web站点，也就是说，页面设计人员可以只关注页面的显示效果，而由Java程序开发人员关注业务逻辑编码。Velocity将Java代码从web页面中分离出来，这样为web站点的长期维护提供了便利，同时也为我们在JSP和PHP之外又提供了一种可选的方案。</p>
+<h4 id="分布式数据库中间件"><a href="#分布式数据库中间件" class="headerlink" title="分布式数据库中间件"></a>分布式数据库中间件</h4><h5 id="分布式数据库中间件概述"><a href="#分布式数据库中间件概述" class="headerlink" title="分布式数据库中间件概述"></a>分布式数据库中间件概述</h5><p>虽然云计算时代，传统数据库存在着先天性的弊端，但是NoSQL数据库又无法将其替代。如果传统数据易于扩展，可切分，就可以避免单机（单库）的性能缺陷。传统数据库系统随着规模的增大，遇到了主要问题:<br>单个表数据量太大；<br>单个库数据量太大；<br>单台数据量服务器压力很大；<br>读写速度遇到瓶颈。<br>当面临以上问题时，我们会想到的第一种解决方式就是 向上扩展(scale up) 简单来说就是不断增加硬件性能。此时我们不得不依赖于第二种方式： 水平扩展 。 直接增加机器，把数据库放到不同服务器上，在应用到数据库之间加一个proxy进行路由，这样就可以解决上面的问题了。</p>
+<h5 id="分布式数据库中间件比较"><a href="#分布式数据库中间件比较" class="headerlink" title="分布式数据库中间件比较"></a>分布式数据库中间件比较</h5><p><img src="/media/15047584845722.jpg" alt=""></p>
+<h5 id="分布式数据库中间件MyCat"><a href="#分布式数据库中间件MyCat" class="headerlink" title="分布式数据库中间件MyCat"></a>分布式数据库中间件MyCat</h5><p>MyCat是一个开源的分布式数据库系统，是一个实现了MySQL协议的服务器，前端用户可以把它看作是一个数据库代理，用MySQL客户端工具和命令行访问，而其后端可以用MySQL原生协议与多个MySQL服务器通信，也可以用JDBC协议与大多数主流数据库服务器通信。其核心功能是分表分库，即将一个大表水平切分为N个小表，存储在后端MySQL服务器里或者其他数据库里。<br>    MyCat使用手册：<a href="http://mycat.org.cn/document/Mycat_V1.6.0.pdf" target="_blank" rel="external">http://mycat.org.cn/document/Mycat_V1.6.0.pdf</a><br><img src="/media/15047585249283.jpg" alt=""><br>MyCat的技术原理：<br>MyCat技术原理中最重要的一个动词是“拦截”，它拦截了用户发送过来的SQL语句，首先对SQL语句做了一些特定的分析：如分片分析、路由分析、读写分离分析、缓存分析等，然后将此SQL发往后端的真实数据库，并将返回的结果做适当的处理，最终再返回给用户。<br><img src="/media/15047601660395.jpg" alt=""><br>MyCat的核心功能：<br>1．    支持水平切分<br><img src="/media/15047602222252.jpg" alt=""><br>2．    支持垂直切分<br><img src="/media/15047602410373.jpg" alt=""></p>
+<p>3．    支持读写分离<br>4．    支持全局表<br><img src="/media/15047602535239.jpg" alt=""><br>5．    支持独创的ER关系分片，解决E-R分片难处理问题<br>存在关联关系的父子表在数据插入的过程中，子表会被MyCat路由到其相关父表记录的节点上，从而父子表的Join查询可以下推到各个数据库节点上完成，这是最高效的跨节点Join处理技术<br><img src="/media/15047602621470.jpg" alt=""></p>
+<h3 id="LVS"><a href="#LVS" class="headerlink" title="LVS"></a>LVS</h3><p>LVS使用的三种模式：NAT、TUN、DR</p>
+<h4 id="NAT模式-网络地址转换"><a href="#NAT模式-网络地址转换" class="headerlink" title="NAT模式-网络地址转换"></a>NAT模式-网络地址转换</h4><p>Virtual Server via Network Address Translation（VS/NAT）<br>    通过网路地址转换，调度器重写请求报文的目标地址，根据预设的调度算法，将请求分派给后端的真实服务器，真实服务器的响应报文通过调度器时，报文的源地址被重写，再返回给客户，完成整个负载调度过程。<br><img src="/media/15047603840755.jpg" alt="图1  VS/NAT的体系结构"><br><img src="/media/15047604199991.jpg" alt="图2 NAT模式工作流程图"><br>NAT模式特点：<br>1．    NAT技术请求和响应的报文都必须经过调度器地址重写然后再转发，返回时再改写<br>2．    只需要在LB（调度器）上配置WAN IP即可，也要有LAN IP和内部通信，内部RS只需要配置LAN IP<br>3．    每台内部节点RS的网关要配成LB的LAN物理网卡地址，这样才能确保数据返回时仍能经过LB<br>4．    由于请求与回传数据都必须经过负载均衡器，因此访问量大时LB有瓶颈<br>5．    支持对IP及端口进行转换</p>
+<h4 id="TUN模式-隧道模式"><a href="#TUN模式-隧道模式" class="headerlink" title="TUN模式-隧道模式"></a>TUN模式-隧道模式</h4><p>Virtual Server via IP Tunneling（VS/TUN）<br>    为了解决NAT模式的瓶颈问题，调度器把请求报文通过IP隧道转发至真实服务器，而真实服务器将响应直接返回给客户，这样调度器只处理请求报文，由于一般网络服务应答数据比请求数据大很多，采用TUN模式后，集群系统的吞吐量可以提高10倍。<br>    TUN的连接调度和管理与NAT一样，只是转发报文的方法不同，调度器根据各个服务器的负载情况，动态地选择一台服务器，将请求报文封装在另一个IP报文中，再将封装后的报文转发给选出的服务器，服务器收到报文后，先将报文解封获得来自目标地址为VIP的报文，服务器发现VIP地址被配置在本地的IP隧道设备上，所以就处理这个请求，然后根据路由表将响应报文直接返回给客户。<br><img src="/media/15047605018502.jpg" alt="图3  VS/TUN的体系结构"><br><img src="/media/15047605303986.jpg" alt="图4  VS/TUN的工作流程图"><br>TUN模式的特点：<br>1．    负载均衡器把请求的报文通过IP隧道的方式（不改写请求报文的地址，而是直接封装成另外的IP报文）转发给真实服务器，真实服务器处理请求后把响应直接返回给客户端。<br>2．    由于真实服务器把响应后的报文直接返回给客户端，因此虽然理论上只要能出网，无需外网IP地址，但RS最好有一个外网IP地址，这样效率高。<br>3．    由于调度器只处理入站报文，因此集群系统的效率会提高10倍以上，但是隧道模式会带来一定的开销，它适合LAN/WAN。<br>4．    LAN环境下不如DR模式效率高，有的系统还需要考虑IP隧道的支持问题，还需要绑定VIP，配置复杂。<br>5．    LAN下多采用DR，WAN环境下可以用TUN模式，但是在WAN下更多的被DNS+haproxy/nginx等代理取代，因此TUN模式在国内公司已经使用的很少。</p>
+<h4 id="DR模式-直接路由"><a href="#DR模式-直接路由" class="headerlink" title="DR模式-直接路由"></a>DR模式-直接路由</h4><p>Virtual Server via Direct Routing（VS/DR）<br>VS/DR模式是通过改写请求报文的目标MAC地址，将请求发给真实服务器的，而真实服务器将响应后的处理结果直接返回给客户端用户。同VS/TUN技术一样，VS/DR技术可极大地提高集群系统的伸缩性。而且，这种方法没有IP隧道的开销，对集群中的真实服务器也没有必须支持IP隧道协议的要求，但是要求调度器与真实服务器都有一块网卡连在同一物理网段上。<br><img src="/media/15047606408961.jpg" alt="图5 VS/DR的体系结构"><br>在LVS-DR配置中，Dierctor将所有入站请求转发给集群内部节点，但集群内部节点直接将它们的回复发送给客户端计算机（没有通过Director回来）。如图所示：<br><img src="/media/15047606665281.jpg" alt="图6 DR直接路由工作模式逻辑图"><br>VS/DR模式是互联网使用的最多的一种模式。VS/DR模式的工作流程如下图7所示。它的连接调度和管理与VS/NAT和VS/TUN中的一样，它的报文转发方法和前两种又有不同，将报文直接路由给目标服务器。在VS/DR中，调度器根据各个服务器的负载情况、连接数等因素，动态的选择一台服务器，不修改目的IP地址和目的端口，也不封装IP报文，而是将请求的数据帧的MAC地址改为选出服务器的MAC地址，再将修改后的数据帧在服务器组的局域网上发送。因为请求数据帧的MAC地址是选出的真实服务器，所以服务器肯定可以收到这个数据帧，从中可以获得该IP报文。当真实服务器发现报文的目标地址VIP是在本地的网络设备上，服务器就会处理这个报文，然后根据路由表将响应报文直接返回给用户。<br><img src="/media/15047607056608.jpg" alt="图7 VS/DR工作流程图"><br>DR模式的特点：<br>1．    通过在调度器LB上修改数据包的目标MAC地址实现转发。注意，源地址仍然是CIP地址，目标地址仍然是VIP。<br>2．    由于只有请求的报文经过负载均衡器，而回传的报文无需经过负载均衡器，因此，访问量大的时候效率很高（和NAT相比）。<br>3．    因DR模式是通过MAC地址改写机制实现的转发，因此，所有RS节点和调度器LB只能在一个LAN中。（小缺点）<br>4．    需要注意RS节点的VIP的绑定（lo:VIP）和ARP抑制问题。强调，RS节点的默认网关不需要是LB的IP，而是出口路由器的IP。由于仅进行了MAC地址的改写，因此，LB无法改变请求的目标端口（和NAT主要区别）。LB几乎支持所有的UNIX，Linux系统，目前无Windows版，但是RS节点可以是windows。<br>5．    总体来说DR模式效率很高，但是配置也比较麻烦，访问量不是特别大的企业可以用haproxy/nginx取代它。直接对外的访问业务，例如：web服务做RS节点，最好用公网IP地址，不直接对外的业务，例如MySQL，存储系统RS节点，最好用内部IP地址。</p>
+<h4 id="3种模式的对比"><a href="#3种模式的对比" class="headerlink" title="3种模式的对比"></a>3种模式的对比</h4><p><img src="/media/15047608009293.jpg" alt=""></p>
+<h4 id="在LINUX环境下搭建DR模式"><a href="#在LINUX环境下搭建DR模式" class="headerlink" title="在LINUX环境下搭建DR模式"></a>在LINUX环境下搭建DR模式</h4><h6 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h6><p><img src="/media/15047608164279.jpg" alt=""></p>
+<h6 id="一些概念"><a href="#一些概念" class="headerlink" title="一些概念"></a>一些概念</h6><p>VIP: 虚拟服务器地址<br>DIP: 转发的网络地址，有两个作用：<br>和RIP通信：ARP协议，获取Real Server的RIP：MAC地址<br>转发Client的数据包到RIP上（隐藏的VIP）<br>RIP: 后端真实主机（后端服务器）<br>CIP: 客户端IP地址<br>VIP: 虚拟主机IP</p>
+<h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><h6 id="1-准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）"><a href="#1-准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）" class="headerlink" title="1.准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）"></a>1.准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）</h6><p>node001：LVS，IP：192.168.9.101<br>node002：Real Server，IP：192.168.9.102<br>node003：Real Server，IP：192.168.9.103</p>
+<h6 id="2-在LVS的eth0-0接口上配置VIP"><a href="#2-在LVS的eth0-0接口上配置VIP" class="headerlink" title="2.在LVS的eth0:0接口上配置VIP"></a>2.在LVS的eth0:0接口上配置VIP</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">3. [root@node001 ~]# ifconfig eth0:0 192.168.9.100/24</div><div class="line">[root@node001 ~]# ifconfig</div><div class="line">eth0     inet addr:192.168.9.101  Bcast:192.168.9.255  Mask:255.255.255.0  </div><div class="line">eth0:0   inet addr:192.168.9.100  Bcast:192.168.9.255  Mask:255.255.255.0</div></pre></td></tr></table></figure>
+<p>24代表该IP的子网掩码为255.255.255.0<br>注意，要想让配置永久生效，应修改配置文件<br>vi /etc/sysconfig/network-scripts/ifcfg-eth0:0<br>DEVICE=eth0:0<br>IPADDR=192.168.9.100<br>NETMASK=255.255.255.0</p>
+<h6 id="3-修改node002和node003的内核ARP通告和响应级别（隐藏VIP）"><a href="#3-修改node002和node003的内核ARP通告和响应级别（隐藏VIP）" class="headerlink" title="3.    修改node002和node003的内核ARP通告和响应级别（隐藏VIP）"></a>3.    修改node002和node003的内核ARP通告和响应级别（隐藏VIP）</h6><p>arp_ignore: 定义接收到ARP请求时的响应级别<br>0：只要本地配置的有相应地址，就给予响应<br>1：仅在请求的目标(MAC)地址配置请求到达的接口上的时候，才给予响应；<br>arp_announce：定义将自己地址向外通告时的通告级别<br>0：将本地任何接口上的任何地址向外通告<br>1：试图仅向目标网络通告与其网络匹配的地址<br>2：仅向与本地接口上地址匹配的网络进行通告</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[root@node002 ~]# echo 1 &gt; /proc/sys/net/ipv4/conf/eth0/arp_ignore </div><div class="line">[root@node002 ~]# echo 2 &gt; /proc/sys/net/ipv4/conf/eth0/arp_announce</div><div class="line">#后两步可选，为保险起见，防止再配置的网卡进行通告，可以这么设置</div><div class="line">[root@node002 ~]# echo 1 &gt; /proc/sys/net/ipv4/conf/all/arp_ignore </div><div class="line">[root@node002 ~]# echo 2 &gt; /proc/sys/net/ipv4/conf/all/arp_announce</div><div class="line">[root@node003 ~]# echo 1 &gt; /proc/sys/net/ipv4/conf/eth0/arp_ignore </div><div class="line">[root@node003 ~]# echo 2 &gt; /proc/sys/net/ipv4/conf/eth0/arp_announce</div><div class="line">[root@node003 ~]# echo 1 &gt; /proc/sys/net/ipv4/conf/all/arp_ignore </div><div class="line">[root@node003 ~]# echo 2 &gt; /proc/sys/net/ipv4/conf/all/arp_announce</div></pre></td></tr></table></figure>
+<h6 id="4-在node002和node003上配置VIP"><a href="#4-在node002和node003上配置VIP" class="headerlink" title="4.    在node002和node003上配置VIP"></a>4.    在node002和node003上配置VIP</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node002 ~]# ifconfig lo:0 192.168.9.100 netmask 255.255.255.255</div><div class="line">[root@node003 ~]# ifconfig lo:0 192.168.9.100 netmask 255.255.255.255</div></pre></td></tr></table></figure>
+<p>注意，要想让配置永久生效，应修改配置文件<br>vi /etc/sysconfig/network-scripts/ifcfg-lo:0<br>DEVICE=lo:0<br>IPADDR=192.168.9.100<br>NETMASK=255.255.255.255</p>
+<h6 id="5-在node002和node003上安装httpd"><a href="#5-在node002和node003上安装httpd" class="headerlink" title="5.    在node002和node003上安装httpd"></a>5.    在node002和node003上安装httpd</h6><p>（apache静态web server，默认端口号80）服务并启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@node002 ~]# yum install httpd –y</div><div class="line">[root@node002 ~]# cd /var/www/html</div><div class="line">[root@node002 html]# vi index.html</div><div class="line">&lt;h1&gt;From 192.168.9.102&lt;/h1&gt;</div><div class="line">[root@node002 html]# service httpd start</div><div class="line">[root@node002 html]# chkconfig httpd on 设置httpd服务开机启动</div><div class="line"></div><div class="line">[root@node003 ~]# yum install httpd –y</div><div class="line">[root@node003 ~]# cd /var/www/html</div><div class="line">[root@node003 html]# vi index.html</div><div class="line">&lt;h1&gt;From 192.168.9.103&lt;/h1&gt;</div><div class="line">[root@node002 html]# service httpd start</div><div class="line">[root@node002 html]# chkconfig httpd on</div></pre></td></tr></table></figure>
+<p>浏览器访问node002和node003，验证一下：<br><img src="/media/15047610237892.jpg" alt=""><br><img src="/media/15047610422893.jpg" alt=""><br>但此时还不能通过LVS访问RS<br><img src="/media/15047610611929.jpg" alt=""></p>
+<h6 id="6-在LVS上安装ipvsadm客户端"><a href="#6-在LVS上安装ipvsadm客户端" class="headerlink" title="6.    在LVS上安装ipvsadm客户端"></a>6.    在LVS上安装ipvsadm客户端</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">[root@node001 network-scripts]# yum install ipvsadm –y</div><div class="line">添加监听的IP</div><div class="line">[root@node001 network-scripts]# ipvsadm -A -t 192.168.9.100:80 -s rr</div><div class="line">查看是否设置成功</div><div class="line">[root@node001 network-scripts]# ipvsadm -ln</div><div class="line">IP Virtual Server version 1.2.1 (size=4096)</div><div class="line">Prot LocalAddress:Port Scheduler Flags</div><div class="line">  -&gt; RemoteAddress:Port           Forward Weight ActiveConn InActConn</div><div class="line">TCP  192.168.9.100:80 rr</div><div class="line">添加后台主机</div><div class="line">[root@node001 network-scripts]# ipvsadm -a -t 192.168.9.100:80 -r 192.168.9.102 -g</div><div class="line">[root@node001 network-scripts]# ipvsadm -a -t 192.168.9.100:80 -r 192.168.9.103 -g</div><div class="line">验证</div><div class="line">[root@node001 network-scripts]# ipvsadm -ln</div><div class="line">IP Virtual Server version 1.2.1 (size=4096)</div><div class="line">Prot LocalAddress:Port Scheduler Flags</div><div class="line">  -&gt; RemoteAddress:Port           Forward Weight ActiveConn InActConn</div><div class="line">TCP  192.168.9.100:80 rr</div><div class="line">  -&gt; 192.168.9.102:80             Route   1      0          0         </div><div class="line">  -&gt; 192.168.9.103:80             Route   1      0          0</div></pre></td></tr></table></figure>
+<p>去页面验证：<br>在浏览器输入192.168.9.100并反复刷新，页面交替显示node002和node003的主页，说明LVS集群配置成功。<br> <img src="/media/15047611324177.jpg" alt=""><br><img src="/media/15047611414148.jpg" alt=""><br>也可以通过ipvsadm –lnc命令查看LVS调度状态。<br>说明<br>ipvsadm -A -t 192.168.9.100:80 -s rr命令中，rr指定了LVS调度RS的算法，rr代表轮询，即依次循环的调用所有的RS节点，其他算法还有wrr、dh、sh等。<br>-t: TCP协议的集群<br>-u: UDP协议的集群<br>-f: FWM: 防火墙标记<br>添加：-A<br>修改：-E<br>删除：-D -t|u|f service-address</p>
+<h3 id="LVS-Keepalived搭建高可用集群"><a href="#LVS-Keepalived搭建高可用集群" class="headerlink" title="LVS+Keepalived搭建高可用集群"></a>LVS+Keepalived搭建高可用集群</h3><h4 id="Keepalived介绍"><a href="#Keepalived介绍" class="headerlink" title="Keepalived介绍"></a>Keepalived介绍</h4><p>LVS的弊端：</p>
+<ol>
+<li>后端：需要镜像服务器</li>
+<li>后端：没有健康检查机制</li>
+<li>自身：单点故障（LVS出现故障后，整个集群都不能正常使用）<br>keepalived是集群管理中保证集群高可用（High Available）的服务软件，对LVS进行了改进：</li>
+<li>使用心跳机制探测后端RS是否提供服务。<br>a)    探测网卡接口是否down，如果是，从LVS中删除该RS<br>b)    检测到down的机器又up，则从LVS中再次添加该RS</li>
+<li>LVS DR，使用主从（HA）模式，即LVS有备用的机器<br>Keepalived结构图：<br><img src="/media/15047611772320.jpg" alt=""><h4 id="LINUX中搭建LINUX中搭建LVS-Keepalived集群"><a href="#LINUX中搭建LINUX中搭建LVS-Keepalived集群" class="headerlink" title="LINUX中搭建LINUX中搭建LVS+Keepalived集群"></a>LINUX中搭建LINUX中搭建LVS+Keepalived集群</h4><h6 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h6>需要修改集群中RS的内核ARP通告和响应级别，配置好VIP，并启动httpd服务，LVS不需要做任何配置<h6 id="1-在node001和node004上安装keepalived"><a href="#1-在node001和node004上安装keepalived" class="headerlink" title="1.    在node001和node004上安装keepalived"></a>1.    在node001和node004上安装keepalived</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node001 ~]# yum install keepalived –y</div><div class="line">[root@node004 ~]# yum install keepalived –y</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h6 id="2-修改keepalived的配置文件"><a href="#2-修改keepalived的配置文件" class="headerlink" title="2.    修改keepalived的配置文件"></a>2.    修改keepalived的配置文件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@node001 ~]# cd /etc/keepalived/</div><div class="line">[root@node001 keepalived]# cp keepalived.conf keepalived.conf.bak</div><div class="line">[root@node001 keepalived]# vi keepalived.conf</div></pre></td></tr></table></figure>
+<p>对keepalived.conf配置文件做说明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">! Configuration File for keepalived</div><div class="line">&lt;!-- global_defs start--&gt;</div><div class="line">global_defs &#123;</div><div class="line">   notification_email &#123;</div><div class="line">     acassen@firewall.loc</div><div class="line">     failover@firewall.loc</div><div class="line">     sysadmin@firewall.loc</div><div class="line">   &#125;</div><div class="line">   notification_email_from Alexandre.Cassen@firewall.loc</div><div class="line">   smtp_server 192.168.200.1</div><div class="line">   smtp_connect_timeout 30</div><div class="line">   router_id LVS_DEVEL</div><div class="line">&#125;</div><div class="line">&lt;!-- global_defs end--&gt;</div><div class="line">&lt;!-- vrrp_instance VI_1 start--&gt;</div><div class="line">vrrp_instance VI_1 &#123;</div><div class="line">    state MASTER //指定本机是主机还是从机，node004改为BACKUP</div><div class="line">    interface eth0</div><div class="line">    virtual_router_id 51</div><div class="line">    priority 100 //从机的改为其一半</div><div class="line">    advert_int 1</div><div class="line">    authentication &#123;</div><div class="line">        auth_type PASS</div><div class="line">        auth_pass 1111</div><div class="line">    &#125;</div><div class="line">    virtual_ipaddress &#123;</div><div class="line">        192.168.9.100/24 dev eth0 label eth0:0 //指定监听的接口</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//可以添加多台LVS</div><div class="line">virtual_server 192.168.9.100 80 &#123;</div><div class="line">    delay_loop 6</div><div class="line">    lb_algo rr  //LVS调度RS的算法</div><div class="line">    lb_kind DR //LVS的模式</div><div class="line">    nat_mask 255.255.255.0 //LVS的子网掩码</div><div class="line">    persistence_timeout 0</div><div class="line">    protocol TCP</div><div class="line"></div><div class="line">    real_server 192.168.9.102 80 &#123; //指定RS的IP和端口</div><div class="line">        weight 1</div><div class="line">        HTTP_GET &#123; //监听的协议</div><div class="line">            url &#123;</div><div class="line">              path /</div><div class="line">              status_code 200 //根据状态码检测RS是否运行正常</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            connect_timeout 3</div><div class="line">            nb_get_retry 3</div><div class="line">            delay_before_retry 3</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //另一台RS，可以添加多台</div><div class="line">    real_server 192.168.9.103 80 &#123;</div><div class="line">        weight 1</div><div class="line">        HTTP_GET &#123;</div><div class="line">            url &#123;</div><div class="line">              path /</div><div class="line">              status_code 200</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            connect_timeout 3</div><div class="line">            nb_get_retry 3</div><div class="line">            delay_before_retry 3</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&lt;!-- vrrp_instance VI_1 end-&gt;</div></pre></td></tr></table></figure>
+<p>修改配置文件用到一些VI命令：<br>dG：从当前行到最后一行全部删除<br>:.,$-1y：从当前行到倒数第二行全部复制</p>
+<h6 id="3-修改node004的keepalived配置文件"><a href="#3-修改node004的keepalived配置文件" class="headerlink" title="3.    修改node004的keepalived配置文件"></a>3.    修改node004的keepalived配置文件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[root@node004 ~]# cd /etc/keepalived/</div><div class="line">[root@node004 keepalived]# mv keepalived.conf keepalived.conf.bak</div><div class="line">[root@node001 keepalived]# scp keepalived.conf root@node004:`pwd`</div><div class="line">[root@node004 keepalived]# vi keepalived.conf</div><div class="line"></div><div class="line">vrrp_instance VI_1 &#123;</div><div class="line">state BACKUP</div><div class="line">interface eth0</div><div class="line">virtual_router_id 51</div><div class="line">priority 50 //是主机的一半</div><div class="line">……</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="4-启动keepalived服务"><a href="#4-启动keepalived服务" class="headerlink" title="4.    启动keepalived服务"></a>4.    启动keepalived服务</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node001 keepalived]# service keepalived start</div><div class="line">[root@node004 keepalived]# service keepalived start</div></pre></td></tr></table></figure>
+<h6 id="5-配置完成，进行测试"><a href="#5-配置完成，进行测试" class="headerlink" title="5.    配置完成，进行测试"></a>5.    配置完成，进行测试</h6><p><img src="/media/15047614965019.jpg" alt=""><br><img src="/media/15047615039367.jpg" alt=""><br>LVS功能正常<br>破坏掉主机的eth0网卡<br><code>[root@node001 keepalived]# ifconfig eth0 down</code><br>发现VIP已经漂移到node004<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@node004 keepalived]# ifconfig</div><div class="line">eth0    	inet addr:192.168.9.104  Bcast:192.168.9.255  Mask:255.255.255.0          </div><div class="line">eth0:0    Link encap:Ethernet  HWaddr 00:0C:29:54:A1:77  </div><div class="line">inet addr:192.168.9.100  Bcast:0.0.0.0  Mask:255.255.255.0</div><div class="line">UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</div></pre></td></tr></table></figure></p>
+<p>浏览器也不受影响<br><img src="/media/15047615802728.jpg" alt=""><br>再恢复node001的eth0网卡，VIP再次漂移回node001<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[root@node001 keepalived]# ifconfig eth0 down</div><div class="line">[root@node001 keepalived]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:67:1D:65  </div><div class="line">          inet addr:192.168.9.101  Bcast:192.168.9.255  Mask:255.255.255.0         </div><div class="line">eth0:0    Link encap:Ethernet  HWaddr 00:0C:29:67:1D:65  </div><div class="line">          inet addr:192.168.9.100  Bcast:0.0.0.0  Mask:255.255.255.0</div><div class="line">[root@node004 keepalived]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:54:A1:77  </div><div class="line">          inet addr:192.168.9.104  Bcast:192.168.9.255  Mask:255.255.255.0</div></pre></td></tr></table></figure></p>
+<p>杀掉keepalived进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@node001 ~]# ps –ef</div><div class="line">root       1136      1  0 21:26 ?        00:00:00 /usr/sbin/keepalived -D</div><div class="line">root       1138   1136  0 21:26 ?        00:00:00 /usr/sbin/keepalived -D</div><div class="line">root       1139   1136  0 21:26 ?        00:00:00 /usr/sbin/keepalived –D</div><div class="line">[root@node001 ~]# kill -9 1136</div><div class="line">[root@node004 keepalived]# ps –ef</div><div class="line">root       1145      1  0 21:27 ?        00:00:00 /usr/sbin/keepalived -D</div><div class="line">root       1146   1145  0 21:27 ?        00:00:00 /usr/sbin/keepalived -D</div><div class="line">root       1147   1145  0 21:27 ?        00:00:00 /usr/sbin/keepalived –D</div><div class="line">[root@node004 keepalived]# kill -9 1145</div><div class="line">多次查看进程，确保杀死所有keepalived进程</div></pre></td></tr></table></figure></p>
+<p>此时主机和从机都拥有了VIP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@node001 ~]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:67:1D:65  </div><div class="line">          inet addr:192.168.9.101  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">eth0:0    Link encap:Ethernet  HWaddr 00:0C:29:67:1D:65  </div><div class="line">          inet addr:192.168.9.100  Bcast:0.0.0.0  Mask:255.255.255.0</div><div class="line">[root@node004 keepalived]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:54:A1:77  </div><div class="line">          inet addr:192.168.9.104  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">eth0:0    Link encap:Ethernet  HWaddr 00:0C:29:54:A1:77  </div><div class="line">          inet addr:192.168.9.100  Bcast:0.0.0.0  Mask:255.255.255.0</div></pre></td></tr></table></figure></p>
+<p>这种情况说明keepalived会出现问题，在互联网中出现这种情况后，会导致发送的数据包同时发送到主机和从机，需要使用zookeeper来解决这个问题。</p>
+<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><h4 id="Nginx简介"><a href="#Nginx简介" class="headerlink" title="Nginx简介"></a>Nginx简介</h4><p>Nginx（”engine x”）是一个高性能的HTTP和反向代理服务器，也是一个 IMAP/POP3/SMTP 代理服务器。第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。官方测试nginx能够支撑5万并发链接，并且cpu、内存等资源消耗却非常低，运行非常稳定。2011年6月1日，nginx 1.0.4发布。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：新浪、网易、腾讯等。<br>功能：web服务器、web reverse proxy、smtp reverse proxy<br><img src="/media/15047618005746.jpg" alt=""></p>
+<h5 id="Nginx和apache的比较"><a href="#Nginx和apache的比较" class="headerlink" title="Nginx和apache的比较"></a>Nginx和apache的比较</h5><ol>
+<li>nginx相对于apache的优点：<br>轻量级，同样起web服务，比apache占用更少的内存及资源 ；<br>抗并发，nginx处理请求是异步非阻塞的，而apache则是阻塞型的，在高并发下nginx 能保持低资源低消耗高性能 ；<br>高度模块化的设计，编写模块相对简单 ；<br>社区活跃，各种高性能模块出品迅速。</li>
+<li>apache 相对于nginx 的优点：<br>rewrite ，比nginx的rewrite强大 ；<br>模块超多，基本想到的都可以找到 ；<br>少bug，nginx的bug相对较多。 </li>
+<li>Nginx配置简洁，Apache复杂 。</li>
+<li>最核心的区别在于apache是同步多进程模型，一个连接对应一个进程；nginx是异步的，多个连接（万级别）可以对应一个进程。<h5 id="单个tomcat支持的最高并发"><a href="#单个tomcat支持的最高并发" class="headerlink" title="单个tomcat支持的最高并发"></a>单个tomcat支持的最高并发</h5><img src="/media/15047618184934.jpg" alt=""><h5 id="解决高并发和单个服务器过载问题"><a href="#解决高并发和单个服务器过载问题" class="headerlink" title="解决高并发和单个服务器过载问题"></a>解决高并发和单个服务器过载问题</h5><img src="/media/15047618338801.jpg" alt=""><h4 id="Tengine安装"><a href="#Tengine安装" class="headerlink" title="Tengine安装"></a>Tengine安装</h4>Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。</li>
+</ol>
+<h6 id="1-解压安装包"><a href="#1-解压安装包" class="headerlink" title="1.    解压安装包"></a>1.    解压安装包</h6><p><code>[root@node001 local]# tar xf tengine-2.1.0.tar.gz</code></p>
+<h6 id="2-进入tengine目录"><a href="#2-进入tengine目录" class="headerlink" title="2.    进入tengine目录"></a>2.    进入tengine目录</h6><p><code>[root@node001 local]# cd tengine-2.1.0/</code></p>
+<h6 id="3-查看README文件，找到安装方法"><a href="#3-查看README文件，找到安装方法" class="headerlink" title="3.    查看README文件，找到安装方法"></a>3.    查看README文件，找到安装方法</h6><p>To install Tengine, just follow these three steps:<br>    $ ./configure<br>    $ make</p>
+<pre><code># make install
+</code></pre><h6 id="4-执行configure文件，指定安装目录"><a href="#4-执行configure文件，指定安装目录" class="headerlink" title="4.    执行configure文件，指定安装目录"></a>4.    执行configure文件，指定安装目录</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@node001 tengine-2.1.0]# ./configure --prefix=/usr/local/nginx</div><div class="line">使用如下命令查看更多安装选项</div><div class="line">[root@node01 tengine-2.1.0]# ./configure --help</div><div class="line">  --help                             print this message</div><div class="line"></div><div class="line">  --prefix=PATH                      set installation prefix</div><div class="line">  --sbin-path=PATH                   set nginx binary pathname</div><div class="line">  --conf-path=PATH                   set nginx.conf pathname</div><div class="line">  --error-log-path=PATH              set error log pathname</div><div class="line"> ……</div></pre></td></tr></table></figure>
+<h6 id="5-报错："><a href="#5-报错：" class="headerlink" title="5.报错："></a>5.报错：</h6><p>./configure: error: C compiler cc is not found</p>
+<h6 id="6-安装gcc，再执行configure文件"><a href="#6-安装gcc，再执行configure文件" class="headerlink" title="6.安装gcc，再执行configure文件"></a>6.安装gcc，再执行configure文件</h6><p> [root@node001 tengine-2.1.0]# yum install gcc</p>
+<h6 id="7-报错："><a href="#7-报错：" class="headerlink" title="7.    报错："></a>7.    报错：</h6><p>./configure: error: the HTTP rewrite module requires the PCRE library.</p>
+<h6 id="8-查看PCRE有哪些版本"><a href="#8-查看PCRE有哪些版本" class="headerlink" title="8.    查看PCRE有哪些版本"></a>8.    查看PCRE有哪些版本</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[root@node001 tengine-2.1.0]# yum search pcre</div><div class="line">pcre-devel.i686 : Development files for pcre</div><div class="line">pcre-devel.x86_64 : Development files for pcre</div><div class="line">pcre-static.x86_64 : Static library for pcre</div><div class="line">pcre.x86_64 : Perl-compatible regular expression library</div><div class="line">pcre.i686 : Perl-compatible regular expression library</div></pre></td></tr></table></figure>
+<h6 id="9-选择安装开发版，系统自动识别安装什么位数的软件"><a href="#9-选择安装开发版，系统自动识别安装什么位数的软件" class="headerlink" title="9.    选择安装开发版，系统自动识别安装什么位数的软件"></a>9.    选择安装开发版，系统自动识别安装什么位数的软件</h6><p><code>[root@node001 tengine-2.1.0]# yum install pcre-devel</code></p>
+<h6 id="10-再执行configure文件"><a href="#10-再执行configure文件" class="headerlink" title="10.    再执行configure文件"></a>10.    再执行configure文件</h6><p><code>[root@node001 tengine-2.1.0]# ./configure --prefix=/usr/local/nginx</code></p>
+<h6 id="11-报错："><a href="#11-报错：" class="headerlink" title="11.    报错："></a>11.    报错：</h6><p>./configure: error: SSL modules require the OpenSSL library.</p>
+<h6 id="12-根据pcre的经验，安装OpenSSL开发版"><a href="#12-根据pcre的经验，安装OpenSSL开发版" class="headerlink" title="12.    根据pcre的经验，安装OpenSSL开发版"></a>12.    根据pcre的经验，安装OpenSSL开发版</h6><p><code>[root@node001 tengine-2.1.0]# yum install openssl-devel</code></p>
+<h6 id="13-再执行configure文件"><a href="#13-再执行configure文件" class="headerlink" title="13.    再执行configure文件"></a>13.    再执行configure文件</h6><p><code>[root@node001 tengine-2.1.0]# ./configure --prefix=/usr/local/nginx</code><br>看到如下信息说明configure文件执行成功：<br><img src="/media/15047623896470.jpg" alt=""></p>
+<h6 id="14-执行make命令"><a href="#14-执行make命令" class="headerlink" title="14.    执行make命令"></a>14.    执行make命令</h6><p><code>[root@node001 tengine-2.1.0]# make</code></p>
+<h6 id="15-执行make-install命令"><a href="#15-执行make-install命令" class="headerlink" title="15.    执行make install命令"></a>15.    执行make install命令</h6><p><code>[root@node001 tengine-2.1.0]# make install</code></p>
+<h6 id="16-将nginx文件放到-etc-init-d目录下，并做修改"><a href="#16-将nginx文件放到-etc-init-d目录下，并做修改" class="headerlink" title="16.    将nginx文件放到/etc/init.d目录下，并做修改"></a>16.    将nginx文件放到/etc/init.d目录下，并做修改</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@node001 tengine-2.1.0]# vi /etc/init.d/nginx</div><div class="line">nginx=&quot;/usr/local/nginx/sbin/nginx&quot;</div><div class="line">NGINX_CONF_FILE=&quot;/usr/local/nginx/conf/nginx.conf&quot;</div></pre></td></tr></table></figure>
+<h6 id="17-给nginx文件赋予执行权限"><a href="#17-给nginx文件赋予执行权限" class="headerlink" title="17.    给nginx文件赋予执行权限"></a>17.    给nginx文件赋予执行权限</h6><p><code>[root@node001 tengine-2.1.0]# chmod +x nginx</code></p>
+<h6 id="18-启动服务"><a href="#18-启动服务" class="headerlink" title="18.    启动服务"></a>18.    启动服务</h6><p><code>[root@node001 sbin]# service nginx start</code></p>
+<h6 id="19-验证是否启动"><a href="#19-验证是否启动" class="headerlink" title="19.    验证是否启动"></a>19.    验证是否启动</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node001 sbin]# service nginx status</div><div class="line">nginx (pid 6510 6508) is running...</div></pre></td></tr></table></figure>
+<h6 id="20-去网页验证，看到如下页面说明nginx安装成功！"><a href="#20-去网页验证，看到如下页面说明nginx安装成功！" class="headerlink" title="20.去网页验证，看到如下页面说明nginx安装成功！"></a>20.去网页验证，看到如下页面说明nginx安装成功！</h6><p><img src="/media/15047624434343.jpg" alt=""></p>
+<h4 id="Nginx配置解析"><a href="#Nginx配置解析" class="headerlink" title="Nginx配置解析"></a>Nginx配置解析</h4><h5 id="nginx-conf配置文件的结构"><a href="#nginx-conf配置文件的结构" class="headerlink" title="nginx.conf配置文件的结构"></a>nginx.conf配置文件的结构</h5><p>……<br>events{<br>……<br>}<br>http {<br>……<br>    server{<br>……<br>}<br>server{<br>……<br>}<br>}</p>
+<h5 id="全局的配置"><a href="#全局的配置" class="headerlink" title="全局的配置"></a>全局的配置</h5><p>user  nobody; #定义Nginx运行的用户和用户组<br>说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 tengine-2.1.0]# ps -fe | grep nginx</div><div class="line">root       1367   1335  0 13:18 pts/1    00:00:00 vi nginx.conf</div><div class="line">root       1608      1  0 14:32 ?        00:00:00 nginx: master process /opt/sxt/nginx/sbin/nginx –c  /opt/sxt/nginx/conf/nginx.conf</div><div class="line">nobody     1610   1608  0 14:32 ?        00:00:00 nginx: worker process                             </div><div class="line">root       1626   1097  0 14:45 pts/0    00:00:00 grep nginx</div><div class="line">[root@node01 tengine-2.1.0]# service nginx status</div><div class="line">nginx (pid 1610 1608) 正在运行...</div></pre></td></tr></table></figure></p>
+<p>master process不负责处理客户端连接请求，负责对worker process的监管，而worker process负责处理客户端请求。Nginx支持热加载和热升级，比如更新了配置文件后执行reload命令，master会开出一个新进程去读取更新过的配置文件，而worker进程继续保持从旧请求的连接，直到旧进程死亡，新进程会与新请求连接。master process由root启动，worker process由nobody启动，权限较小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">worker_processes  1; #nginx进程数，建议设置为等于虚拟机CPU总核心数</div><div class="line">error_log  logs/error.log;</div><div class="line">error_log  logs/error.log  notice;</div><div class="line">error_log  logs/error.log  info;</div><div class="line">#全局错误日志定义类型，[ debug | info | notice | warn | error | crit ]</div><div class="line">pid  logs/nginx.pid; #进程文件</div></pre></td></tr></table></figure></p>
+<h5 id="event下的一些配置及其意义"><a href="#event下的一些配置及其意义" class="headerlink" title="event下的一些配置及其意义"></a>event下的一些配置及其意义</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">use epoll;</div><div class="line">#参考事件模型，use [ kqueue | rtsig | epoll | /dev/poll | select | poll ]；</div><div class="line">#epoll模型是Linux 2.6以上版本内核中的高性能网络I/O模型</div><div class="line">#如果跑在FreeBSD上面，就用kqueue模型。</div><div class="line">worker_connections  1024; #单个进程最大连接数（最大连接数=连接数*进程数）</div><div class="line">  #假设worker_processes为8</div><div class="line">#系统可以打开的最大文件数和内存大小成正比</div><div class="line">#查看自己的系统可以打开的最大文件数 cat /proc/sys/fs/file-max ：97318</div><div class="line">#并发连接总数小于系统可以打开的文件总数，这样就在操作系统可以承受的范围之内</div><div class="line">#选择最大连接数为80000</div><div class="line">#在设置了反向代理的情况下，根据经验，最大连接数应该再除以4，就是20000</div><div class="line">#所以单个进程最大连接数为20000/8 = 2500</div><div class="line">#同时应该调整系统的单个进程可以打开的文件数</div><div class="line">#使用ulimit –a查看到open file =1024</div><div class="line">#应该调整系统的单个进程最大打开文件数（该数值x进程数&lt;=97318）</div><div class="line">#ulimit -SHn 10000</div></pre></td></tr></table></figure>
+<h5 id="http下的一些配置及其意义"><a href="#http下的一些配置及其意义" class="headerlink" title="http下的一些配置及其意义"></a>http下的一些配置及其意义</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">include       mime.types; #文件扩展名与文件类型映射表</div><div class="line">default_type  application/octet-stream; #默认文件类型</div><div class="line"></div><div class="line">log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</div><div class="line">                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</div><div class="line">                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</div><div class="line">	#日志格式</div><div class="line">access_log  logs/access.log  main; #日志文件位置</div><div class="line">sendfile  	   on; </div><div class="line">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off.</div><div class="line">原理，比如Nginx接受用户对某文件的请求，nginx不能直接读取磁盘的内容，需要经过内核的调用，nginx告诉内核需要读取x文件，内核会读取x文件到内核的内存中，在把这个文件copy到nginx的内存堆中，nginx得知数据已经准备好，会再把这个文件发给内核，内核切片之后发送给用户。当并发数过大时太耗费资源，所以这个选项的存在是为了减少文件在两个内存之间的copy，提高效率。</div><div class="line">keepalive_timeout  0; #长连接超时时间，单位是秒（与keeplived软件无关）</div><div class="line">#gzip  on; #开启gzip压缩输出</div></pre></td></tr></table></figure>
+<h5 id="server下的一些配置及其意义"><a href="#server下的一些配置及其意义" class="headerlink" title="server下的一些配置及其意义"></a>server下的一些配置及其意义</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">listen       80; #监听的IP和地址</div><div class="line">server_name  www.bbb.com; #主机名</div><div class="line">     location / &#123;</div><div class="line">          root   /opt; #网页文件存放的目录</div><div class="line">index  index.html index.htm;</div><div class="line">#默认首页文件，顺序从小到右，如果找不到index.html，则index.htm为首页</div><div class="line">          autoindex on; #开启目录列表访问，合适下载服务器，默认关闭。</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h4 id="虚拟主机"><a href="#虚拟主机" class="headerlink" title="虚拟主机"></a>虚拟主机</h4><p>虚拟主机是一种特殊的软硬件技术，它可以将网络上的每一台计算机分成多个虚拟主机，每个虚拟主机可以独立对外提供www服务，这样就可以实现一台主机对外提供多个web服务，每个虚拟主机之间是独立的，互不影响的。</p>
+<h5 id="基于IP的虚拟主机"><a href="#基于IP的虚拟主机" class="headerlink" title="基于IP的虚拟主机"></a>基于IP的虚拟主机</h5><h6 id="1-查看服务器的IP地址"><a href="#1-查看服务器的IP地址" class="headerlink" title="1.    查看服务器的IP地址"></a>1.    查看服务器的IP地址</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:A6:C6:18  </div><div class="line">          inet addr:192.168.9.11  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">lo        Link encap:Local Loopback  </div><div class="line">          ine######           inet addr:127.0.0.1  Mask:255.0.0.0</div></pre></td></tr></table></figure>
+<h6 id="在eth0网卡设备上添加两个IP别名192-168-9-98和192-168-9-99"><a href="#在eth0网卡设备上添加两个IP别名192-168-9-98和192-168-9-99" class="headerlink" title="在eth0网卡设备上添加两个IP别名192.168.9.98和192.168.9.99"></a>在eth0网卡设备上添加两个IP别名192.168.9.98和192.168.9.99</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# ifconfig eth0:1 192.168.9.98 broadcast 192.168.9.255 netmask 255.255.255.0 up</div><div class="line">[root@node01 ~]# route add -host 192.168.9.98 dev eth0:1</div><div class="line">[root@node01 ~]# ifconfig eth0:2 192.168.9.99 broadcast 192.168.9.255 netmask 255.255.255.0 up</div><div class="line">[root@node01 ~]# route add -host 192.168.9.99 dev eth0:2</div></pre></td></tr></table></figure>
+<p>注意：以上配置只是临时生效，想让它们永久生效，可以将这两条ifconfig和route命令添加到/etc/rc.local文件中，让系统开机时自动运行。在文件末尾增加以下内容，保存退出即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#!/bin/sh</div><div class="line">#</div><div class="line"># This script will be executed *after* all the other init scripts.</div><div class="line"># You can put your own initialization stuff in here if you don&apos;t</div><div class="line"># want to do the full Sys V style init stuff.</div><div class="line"></div><div class="line">touch /var/lock/subsys/local</div><div class="line"></div><div class="line">ifconfig eth0:1 192.168.9.98 broadcast 192.168.9.255 netmask 255.255.255.0 up</div><div class="line">route add -host 192.168.9.98 dev eth0:1</div><div class="line">ifconfig eth0:2 192.168.9.99 broadcast 192.168.9.255 netmask 255.255.255.0 up</div><div class="line">route add -host 192.168.9.99 dev eth0:2</div></pre></td></tr></table></figure></p>
+<h6 id="3-验证是否配置成功"><a href="#3-验证是否配置成功" class="headerlink" title="3.    验证是否配置成功"></a>3.    验证是否配置成功</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# ifconfig</div><div class="line">eth0      Link encap:Ethernet  HWaddr 00:0C:29:A6:C6:18  </div><div class="line">          inet addr:192.168.9.11  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">eth0:1    Link encap:Ethernet  HWaddr 00:0C:29:A6:C6:18  </div><div class="line">          inet addr:192.168.9.98  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</div><div class="line">eth0:2    Link encap:Ethernet  HWaddr 00:0C:29:A6:C6:18  </div><div class="line">          inet addr:192.168.9.99  Bcast:192.168.9.255  Mask:255.255.255.0</div><div class="line">          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1</div></pre></td></tr></table></figure>
+<h6 id="4-配置基于IP的虚拟主机"><a href="#4-配置基于IP的虚拟主机" class="headerlink" title="4.    配置基于IP的虚拟主机"></a>4.    配置基于IP的虚拟主机</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# vi /opt/sxt/nginx/conf/nginx.conf</div><div class="line">http &#123;</div><div class="line">server &#123;</div><div class="line">        listen       192.168.9.11:80;</div><div class="line">        server_name  192.168.9.11;</div><div class="line">        access_log  logs/host.access.log  main;</div><div class="line">        location / &#123;</div><div class="line">            root   /var/www/server1;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen       192.168.9.98:80;</div><div class="line">        listen       192.168.9.98;</div><div class="line">        access_log  logs/host.access.log  main;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">             root   /var/www/server2;</div><div class="line">             index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen       192.168.9.99:80;</div><div class="line">        server_name  192.168.9.99;</div><div class="line">        access_log  logs/host.access.log  main;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">             root   /var/www/server3;</div><div class="line">             index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="5-在-var-www-下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index-html"><a href="#5-在-var-www-下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index-html" class="headerlink" title="5.在/var/www/下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index.html"></a>5.在/var/www/下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index.html</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# mkdir -p /var/www/server&#123;1,2,3&#125;</div><div class="line">[root@node01 ~]# vi /var/www/server1/index.html</div><div class="line">&lt;h1&gt;From Virtual Host 1:192.168.9.11&lt;/h1&gt;</div><div class="line">[root@node01 ~]# vi /var/www/server2/index.html</div><div class="line">&lt;h1&gt;From Virtual Host 2:192.168.9.98&lt;/h1&gt;</div><div class="line">[root@node01 ~]# vi /var/www/server3/index.html</div><div class="line">&lt;h1&gt;From Virtual Host 3:192.168.9.99&lt;/h1&gt;</div></pre></td></tr></table></figure>
+<h6 id="6-开启nginx服务（如果已经启动则重启nginx服务）"><a href="#6-开启nginx服务（如果已经启动则重启nginx服务）" class="headerlink" title="6.    开启nginx服务（如果已经启动则重启nginx服务）"></a>6.    开启nginx服务（如果已经启动则重启nginx服务）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# service nginx start</div><div class="line">[root@node01 ~]# service nginx reload</div></pre></td></tr></table></figure>
+<h6 id="7-在网页查看效果"><a href="#7-在网页查看效果" class="headerlink" title="7.    在网页查看效果"></a>7.    在网页查看效果</h6><p><img src="/media/15047630453611.jpg" alt=""><br><img src="/media/15047630533096.jpg" alt=""><br><img src="/media/15047630634649.jpg" alt=""></p>
+<h5 id="基于域名的虚拟主机"><a href="#基于域名的虚拟主机" class="headerlink" title="基于域名的虚拟主机"></a>基于域名的虚拟主机</h5><h6 id="1-在nginx-conf文件中配置"><a href="#1-在nginx-conf文件中配置" class="headerlink" title="1.在nginx.conf文件中配置"></a>1.在nginx.conf文件中配置</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">http &#123;</div><div class="line">server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  www.aaa.com;</div><div class="line">        location / &#123;</div><div class="line">            root   /var;</div><div class="line">            autoindex  on;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  www.bbb.com;</div><div class="line">        location / &#123;</div><div class="line">             root   /opt;</div><div class="line">             autoindex on;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="2-修改Windows的hosts文件"><a href="#2-修改Windows的hosts文件" class="headerlink" title="2.    修改Windows的hosts文件"></a>2.    修改Windows的hosts文件</h6><p><code>192.168.9.11 node01 www.aaa.com www.bbb.com</code><br><img src="/media/15047631163853.jpg" alt=""></p>
+<h6 id="3-重启服务"><a href="#3-重启服务" class="headerlink" title="3.重启服务"></a>3.重启服务</h6><p>[root@node01 ###### [root@node01 ~]# service nginx reload</p>
+<h6 id="4-去网页验证"><a href="#4-去网页验证" class="headerlink" title="4.去网页验证"></a>4.去网页验证</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# ll /var</div><div class="line">总用量 60</div><div class="line">drwxr-xr-x.  6 root root 4096 6月  29 11:50 cache</div><div class="line">drwxr-xr-x.  3 root root 4096 5月  22 12:05 db</div><div class="line">drwxr-xr-x.  3 root root 4096 5月  22 12:05 empty</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 games</div><div class="line">drwxr-xr-x. 17 root root 4096 6月  29 11:50 lib</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 local</div><div class="line">drwxrwxr-x.  5 root lock 4096 7月   3 07:50 lock</div><div class="line">drwxr-xr-x.  4 root root 4096 7月   3 12:39 log</div><div class="line">lrwxrwxrwx.  1 root root   10 5月  22 12:04 mail -&gt; spool/mail</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 nis</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 opt</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 preserve</div><div class="line">drwxr-xr-x. 13 root root 4096 7月   3 12:39 run</div><div class="line">drwxr-xr-x.  8 root root 4096 5月  22 12:05 spool</div><div class="line">drwxrwxrwt.  2 root root 4096 6月  30 09:41 tmp</div><div class="line">drwxr-xr-x.  2 root root 4096 9月  23 2011 yp</div></pre></td></tr></table></figure>
+<p><img src="/media/15047632771149.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@node01 ~]# ll /opt</div><div class="line">总用量 4</div><div class="line">drwxr-xr-x 3 root root 4096 6月  29 09:46 sxt</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047633372997.jpg" alt=""><br>注意：确认配置没有问题的情况下如果报错，可尝试service nginx restart（当reload不能解决问题时）</p>
+<h4 id="location映射"><a href="#location映射" class="headerlink" title="location映射"></a>location映射</h4><h5 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h5><p>location [ = | ~ | ~<em> | ^~ ] uri { … }<br>    location URI {}：<br>        对当前路径及子路径下的所有对象都生效；<br>    location = URI {}：<br>注意URL最好为具体路径。精确匹配指定的路径，不包括子路径，因此，只对当前资源生效；<br>    location ~ URI {}与location ~</em> URI {}：<br>        模式匹配URI，此处的URI可使用正则表达式，~区分字符大小写，~<em>不区分字符大小写；<br>    location ^~ URI {}:<br>        不使用正则表达式<br>    优先级：= &gt; ^~ &gt; ~|~</em> &gt;  /|/dir/</p>
+<p>精确匹配优先级最高，如果找到，停止搜索<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       192.168.9.11:80;</div><div class="line">        server_name  192.168.9.11;</div><div class="line">        location = /images/test.png &#123;</div><div class="line">           return 601;</div><div class="line">        &#125;</div><div class="line">        location /images/test &#123;</div><div class="line">           return 602;</div><div class="line">        &#125;</div><div class="line">        location /images &#123;</div><div class="line">           return 603;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047634107134.jpg" alt=""><br>所有剩下的常规字符串，最长的匹配<br><img src="/media/15047634305537.jpg" alt=""><br><img src="/media/15047634566668.jpg" alt=""></p>
+<p>如果这个匹配使用^〜前缀，搜索停止<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">location /images/test &#123;</div><div class="line">    return 602;</div><div class="line">&#125;</div><div class="line">location ^~ /images &#123;</div><div class="line">    return 604;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047634819415.jpg" alt=""><br>正则表达式按照顺序匹配<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">location ~ login &#123;</div><div class="line">   return 605;</div><div class="line">&#125;</div><div class="line">location ~ (.*)\.html$ &#123;</div><div class="line">   return 606;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047634952712.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">location ~ (.*)\.html$ &#123;</div><div class="line">   return 606;</div><div class="line">&#125;</div><div class="line">location ~ login &#123;</div><div class="line">   return 605;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047635427949.jpg" alt=""></p>
+<h5 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h5><ol>
+<li>“普通 location” 的匹配规则是“最大前缀”，因此“普通 location ”的确与 location 编辑顺序无关；</li>
+<li>“正则 location” 的匹配规则是“顺序匹配，且只要匹配到第一个就停止后面的匹配”；</li>
+<li>“普通location ”与“正则 location ”之间的匹配顺序是先匹配普通 location ，再“考虑”匹配正则 location ；也就是说匹配完“普通 location ”后，有的时候需要继续匹配“正则 location ”，有的时候则不需要继续匹配“正则 location ”。两种情况下，不需要继续匹配正则 location ：<br>1)    当普通 location 前面指定了“ ^~ ”，特别告诉 Nginx 本条普通 location 一旦匹配上，则不需要继续正则匹配；<br>2)    当普通location 恰好严格匹配上，不是最大前缀匹配，则不再继续匹配正则<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5>location匹配顺序：<br>先普通<br>顺序无关<br>最大前缀<br>被打断<br>^~<br>完全匹配<br>再正则<br>不完全匹配<br>有顺序<br>先匹配，先应用，即时退出匹配<h4 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">        listen       192.168.9.11:80;</div><div class="line">        server_name  192.168.9.11;</div><div class="line">        location / &#123;</div><div class="line">           root html;</div><div class="line">           index index.html index.htm;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="/media/15047636171632.jpg" alt=""><br><img src="/media/15047636262466.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">location /mp3 &#123;</div><div class="line">   proxy_pass http://192</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047636631100.jpg" alt=""><br>前提：node03安装了httpd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /baidu &#123;</div><div class="line">    proxy_pass http://www.baidu.com/;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047636905659.jpg" alt=""><br>客户端发生了跳转！<a href="http://www.baidu.com会被百度转换为https://www.baidu.com再返回" target="_blank" rel="external">http://www.baidu.com会被百度转换为https://www.baidu.com再返回</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">location /baidu &#123;</div><div class="line">    proxy_pass https://www.baidu.com/;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="Nginx负载均衡"><a href="#Nginx负载均衡" class="headerlink" title="Nginx负载均衡"></a>Nginx负载均衡</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">upstream httpd &#123;</div><div class="line">    server 192.168.9.12:80;</div><div class="line">    server 192.168.9.13:80;</div><div class="line">&#125;   </div><div class="line">server &#123;</div><div class="line">    listen       192.168.9.11:80;</div><div class="line">    server_name  192.168.9.11;</div><div class="line">        location /mp3 &#123;</div><div class="line">           proxy_pass http://httpd/;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="/media/15047637710536.jpg" alt=""><br><img src="/media/15047637796051.jpg" alt=""></p>
+<h4 id="Nginx的session一致性问题"><a href="#Nginx的session一致性问题" class="headerlink" title="Nginx的session一致性问题"></a>Nginx的session一致性问题</h4><p>http协议是无状态的，即你连续访问某个网页100次和访问1次对服务器来说是没有区别对待的，因为它记不住你。那么，在一些场合，确实需要服务器记住当前用户怎么办？比如用户登录邮箱后，接下来要收邮件、写邮件，总不能每次操作都让用户输入用户名和密码吧，为了解决这个问题，session的方案就被提了出来，事实上它并不是什么新技术，而且也不能脱离http协议以及任何现有的web技术。<br>session的常见实现形式是会话cookie（session cookie），即未设置过期时间的cookie，这个cookie的默认生命周期为浏览器会话期间，只要关闭浏览器窗口，cookie就消失了。实现机制是当用户发起一个请求的时候，服务器会检查该请求中是否包含sessionid，如果未包含，则系统会创造一个名为JSESSIONID的输出 cookie返回给浏览器(只放入内存，并不存在硬盘中)，并将其以HashTable的形式写到服务器的内存里面；当已经包含sessionid是，服务端会检查找到与该session相匹配的信息，如果存在则直接使用该sessionid，若不存在则重新生成新的 session。这里需要注意的是session始终是有服务端创建的，并非浏览器自己生成的。但是浏览器的cookie被禁止后session就需要用get方法的URL重写的机制或使用POST方法提交隐藏表单的形式来实现。<br>session共享：<br>首先我们应该明白，为什么要实现共享，如果你的网站是存放在一个机器上，那么是不存在这个问题的，因为会话数据就在这台机器，但是如果你使用了负载均衡把请求分发到不同的机器呢？这个时候会话id在客户端是没有问题的，但是如果用户的两次请求到了两台不同的机器，而它的session数据可能存在其中一台机器，这个时候就会出现取不到session数据的情况，于是session的共享就成了一个问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">[root@node02 software]# rpm -i jdk-7u67-linux-x64.rpm</div><div class="line">[root@node02 software]# tar xf apache-tomcat-7.0.61.tar.gz</div><div class="line">[root@node02 software]# vi /etc/profile</div><div class="line">export JAVA_HOME=/usr/java/jdk1.7.0_67</div><div class="line">export PATH=$PATH:$JAVA_HOME/bin</div><div class="line">[root@node02 software]# . /etc/profile</div><div class="line">[root@node02 software]# java -version</div><div class="line">java version &quot;1.7.0_67&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.7.0_67-b01)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 24.65-b04, mixed mode)</div><div class="line">[root@node02 software]# jps</div><div class="line">1309 Jps</div><div class="line">[root@node02 software]# cd apache-tomcat-7.0.61/webapps/ROOT/</div><div class="line">[root@node02 ROOT]# cp index.jsp index.jsp.bak</div><div class="line">[root@node02 ROOT]# vi index.jsp</div><div class="line">From 192.168.9.12&lt;br&gt;</div><div class="line">session=&lt;%= session.getId() %&gt;</div></pre></td></tr></table></figure></p>
+<p>对node03做相同的配置，index.jsp改为From 192.168.9.13<br>启动node02和node03的tomcat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[root@node02 ~]# cd /usr/local/software/apache-tomcat-7.0.61/bin/</div><div class="line">[root@node02 bin]# ./startup.sh </div><div class="line">Using CATALINA_BASE:   /usr/local/software/apache-tomcat-7.0.61</div><div class="line">Using CATALINA_HOME:   /usr/local/software/apache-tomcat-7.0.61</div><div class="line">Using CATALINA_TMPDIR: /usr/local/software/apache-tomcat-7.0.61/temp</div><div class="line">Using JRE_HOME:        /usr/java/jdk1.7.0_67</div><div class="line">Using CLASSPATH:       /usr/local/software/apache-tomcat-7.0.61/bin/bootstrap.jar:/usr/local/softwar</div><div class="line">e/apache-tomcat-7.0.61/bin/tomcat-juli.jarTomcat started.</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047638906250.jpg" alt=""><br><img src="/media/15047638995853.jpg" alt=""><br>在两个页面交替访问192.168.9.12:8080和192.168.9.13:8080，sessionID不变<br><img src="/media/15047639107483.jpg" alt=""><br><img src="/media/15047639192820.jpg" alt=""></p>
+<p>在nginx上配置，让请求转到node02和node03<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">upstream tom &#123;</div><div class="line">    server 192.168.9.12:8080;</div><div class="line">    server 192.168.9.13:8080;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen       192.168.9.11:80;</div><div class="line">        server_name  192.168.9.11;</div><div class="line">        location /cat &#123;</div><div class="line">           proxy_pass http://tom/;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line">[root@node01 software]# service nginx reload</div></pre></td></tr></table></figure></p>
+<p><img src="/media/15047639545241.jpg" alt=""><br><img src="/media/15047639640513.jpg" alt=""><br><img src="/media/15047639714042.jpg" alt=""><br><img src="/media/15047639790106.jpg" alt=""><br>随着页面刷新，sessionId会一直改变！<br>解决这个问题：memcached（一个内存数据库）</p>
+<h6 id="1-安装memcached"><a href="#1-安装memcached" class="headerlink" title="1.安装memcached"></a>1.安装memcached</h6><p><code>[root@node01 software]# yum install memcached -y</code></p>
+<h6 id="2-启动memcached"><a href="#2-启动memcached" class="headerlink" title="2.    启动memcached"></a>2.    启动memcached</h6><p><code>[root@node01 software]# memcached -d -m 128m -p 11211 -l 192.168.9.11 -u root -P /tmp/</code></p>
+<h6 id="3-让node02和node03的tomcat使用memcached"><a href="#3-让node02和node03的tomcat使用memcached" class="headerlink" title="3.    让node02和node03的tomcat使用memcached"></a>3.    让node02和node03的tomcat使用memcached</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[root@node02 bin]# cd /usr/local/software/apache-tomcat-7.0.61/conf/</div><div class="line">[root@node02 conf]# vi context.xml</div><div class="line">加入如下配置：</div><div class="line">&lt;Manager className=&quot;de.javakaffee.web.msm.MemcachedBackupSessionManager&quot;</div><div class="line">        memcachedNodes=&quot;n1:192.168.9.11:11211&quot;</div><div class="line">        sticky=&quot;false&quot;</div><div class="line">        lockingMode=&quot;auto&quot;</div><div class="line">        sessionBackupAsync=&quot;false&quot;</div><div class="line">        requestUriIgnorePattern=&quot;.*\.(ico|png|gif|jpg|css|js)$&quot;</div><div class="line">        sessionBackupTimeout=&quot;1000&quot;       transcoderFactoryClass=&quot;de.javakaffee.web.msm.serializer.kryo.KryoTranscoderFactory&quot;</div><div class="line">    /&gt;</div></pre></td></tr></table></figure>
+<h6 id="4-把需要的jar包放到两台机器的tomcat的lib目录下"><a href="#4-把需要的jar包放到两台机器的tomcat的lib目录下" class="headerlink" title="4.    把需要的jar包放到两台机器的tomcat的lib目录下"></a>4.    把需要的jar包放到两台机器的tomcat的lib目录下</h6><p><img src="/media/15047640666922.jpg" alt=""></p>
+<h6 id="5-重启node02和node03的tomcat服务"><a href="#5-重启node02和node03的tomcat服务" class="headerlink" title="5.重启node02和node03的tomcat服务"></a>5.重启node02和node03的tomcat服务</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@node03 bin]# ./shutdown.sh</div><div class="line">[root@node03 bin]# ./startup.sh</div></pre></td></tr></table></figure>
+<p><img src="/media/15047641327978.jpg" alt=""><br>此时刷新页面，sessionId不会再改变，session在集群中的一致性问题得到解决，但还存在一种比memcached更优秀的内存数据库——redis.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Bigdata/" rel="tag"># Bigdata</a>
+          
+            <a href="/tags/LVS-Keepalived-Nginx/" rel="tag"># LVS+Keepalived+Nginx</a>
+          
+            <a href="/tags/loadBalance/" rel="tag"># loadBalance</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/04/java远程调用shell脚本/" rel="next" title="java远程调用shell脚本">
+                <i class="fa fa-chevron-left"></i> java远程调用shell脚本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/05/Hadoop-IDEAConnectHadoop/" rel="prev" title="HADOOP--mac下IDEA连接hadoop集群开发API">
+                HADOOP--mac下IDEA连接hadoop集群开发API <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Chant" />
+          <p class="site-author-name" itemprop="name">Chant</p>
+           
+              <p class="site-description motion-element" itemprop="description">Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Chant00" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/profile.php?id=100014951437344" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.douban.com/people/63254896/" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              值得一看：
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://isujin.com/" title="素锦" target="_blank">素锦</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhibimo.com/explore/books" title="知笔墨" target="_blank">知笔墨</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.danielaandrade.com/" title="Daniela Andrade" target="_blank">Daniela Andrade</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#大型网站架构演进历程"><span class="nav-number">1.</span> <span class="nav-text">大型网站架构演进历程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始阶段"><span class="nav-number">1.1.</span> <span class="nav-text">初始阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用服务和数据服务分离"><span class="nav-number">1.2.</span> <span class="nav-text">应用服务和数据服务分离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用缓存改善网站性能"><span class="nav-number">1.3.</span> <span class="nav-text">使用缓存改善网站性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用应用服务器集群改善网站并发处理处理能力"><span class="nav-number">1.4.</span> <span class="nav-text">使用应用服务器集群改善网站并发处理处理能力</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库读写分离"><span class="nav-number">1.5.</span> <span class="nav-text">数据库读写分离</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用反向代理和CDN加速网站响应"><span class="nav-number">1.6.</span> <span class="nav-text">使用反向代理和CDN加速网站响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用分布式文件系统和分布式数据库系统"><span class="nav-number">1.7.</span> <span class="nav-text">使用分布式文件系统和分布式数据库系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务拆分"><span class="nav-number">1.8.</span> <span class="nav-text">业务拆分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用NoSQL和搜索引擎"><span class="nav-number">1.9.</span> <span class="nav-text">使用NoSQL和搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式服务"><span class="nav-number">1.10.</span> <span class="nav-text">分布式服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大型网站架构核心技术"><span class="nav-number">2.</span> <span class="nav-text">大型网站架构核心技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式缓存系统"><span class="nav-number">2.1.</span> <span class="nav-text">分布式缓存系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#分布式缓存概述"><span class="nav-number">2.1.1.</span> <span class="nav-text">分布式缓存概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#典型应用场景"><span class="nav-number">2.1.2.</span> <span class="nav-text">典型应用场景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Memcached分布式缓存系统"><span class="nav-number">2.1.3.</span> <span class="nav-text">Memcached分布式缓存系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Redis分布式缓存系统"><span class="nav-number">2.1.4.</span> <span class="nav-text">Redis分布式缓存系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#两种分布式缓存系统比较"><span class="nav-number">2.1.5.</span> <span class="nav-text">两种分布式缓存系统比较</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#负载均衡"><span class="nav-number">2.2.</span> <span class="nav-text">负载均衡</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡概述"><span class="nav-number">2.2.1.</span> <span class="nav-text">负载均衡概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#应用场景"><span class="nav-number">2.2.2.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡硬件"><span class="nav-number">2.2.3.</span> <span class="nav-text">负载均衡硬件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡软件"><span class="nav-number">2.2.4.</span> <span class="nav-text">负载均衡软件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息队列"><span class="nav-number">2.3.</span> <span class="nav-text">消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#消息队列概述"><span class="nav-number">2.3.1.</span> <span class="nav-text">消息队列概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#应用场景-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#开源消息队列软件RabbitMQ"><span class="nav-number">2.3.3.</span> <span class="nav-text">开源消息队列软件RabbitMQ</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面静态化技术"><span class="nav-number">2.4.</span> <span class="nav-text">页面静态化技术</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#页面静态化概述"><span class="nav-number">2.4.1.</span> <span class="nav-text">页面静态化概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#静态页面："><span class="nav-number">2.4.1.1.</span> <span class="nav-text">静态页面：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#动态页面："><span class="nav-number">2.4.1.2.</span> <span class="nav-text">动态页面：</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#FreeMarker实现页面静态化"><span class="nav-number">2.4.2.</span> <span class="nav-text">FreeMarker实现页面静态化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Velocity实现页面静态化"><span class="nav-number">2.4.3.</span> <span class="nav-text">Velocity实现页面静态化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式数据库中间件"><span class="nav-number">2.5.</span> <span class="nav-text">分布式数据库中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#分布式数据库中间件概述"><span class="nav-number">2.5.1.</span> <span class="nav-text">分布式数据库中间件概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分布式数据库中间件比较"><span class="nav-number">2.5.2.</span> <span class="nav-text">分布式数据库中间件比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分布式数据库中间件MyCat"><span class="nav-number">2.5.3.</span> <span class="nav-text">分布式数据库中间件MyCat</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LVS"><span class="nav-number">3.</span> <span class="nav-text">LVS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NAT模式-网络地址转换"><span class="nav-number">3.1.</span> <span class="nav-text">NAT模式-网络地址转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TUN模式-隧道模式"><span class="nav-number">3.2.</span> <span class="nav-text">TUN模式-隧道模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DR模式-直接路由"><span class="nav-number">3.3.</span> <span class="nav-text">DR模式-直接路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3种模式的对比"><span class="nav-number">3.4.</span> <span class="nav-text">3种模式的对比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在LINUX环境下搭建DR模式"><span class="nav-number">3.5.</span> <span class="nav-text">在LINUX环境下搭建DR模式</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#原理图"><span class="nav-number">3.5.0.1.</span> <span class="nav-text">原理图</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#一些概念"><span class="nav-number">3.5.0.2.</span> <span class="nav-text">一些概念</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#步骤"><span class="nav-number">3.5.1.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）"><span class="nav-number">3.5.1.1.</span> <span class="nav-text">1.准备3台Linux机器并配置它们的eth0网卡的IP（在一个网段）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-在LVS的eth0-0接口上配置VIP"><span class="nav-number">3.5.1.2.</span> <span class="nav-text">2.在LVS的eth0:0接口上配置VIP</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-修改node002和node003的内核ARP通告和响应级别（隐藏VIP）"><span class="nav-number">3.5.1.3.</span> <span class="nav-text">3.    修改node002和node003的内核ARP通告和响应级别（隐藏VIP）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-在node002和node003上配置VIP"><span class="nav-number">3.5.1.4.</span> <span class="nav-text">4.    在node002和node003上配置VIP</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-在node002和node003上安装httpd"><span class="nav-number">3.5.1.5.</span> <span class="nav-text">5.    在node002和node003上安装httpd</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-在LVS上安装ipvsadm客户端"><span class="nav-number">3.5.1.6.</span> <span class="nav-text">6.    在LVS上安装ipvsadm客户端</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LVS-Keepalived搭建高可用集群"><span class="nav-number">4.</span> <span class="nav-text">LVS+Keepalived搭建高可用集群</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Keepalived介绍"><span class="nav-number">4.1.</span> <span class="nav-text">Keepalived介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LINUX中搭建LINUX中搭建LVS-Keepalived集群"><span class="nav-number">4.2.</span> <span class="nav-text">LINUX中搭建LINUX中搭建LVS+Keepalived集群</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#准备工作"><span class="nav-number">4.2.0.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1-在node001和node004上安装keepalived"><span class="nav-number">4.2.0.2.</span> <span class="nav-text">1.    在node001和node004上安装keepalived</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-修改keepalived的配置文件"><span class="nav-number">4.2.0.3.</span> <span class="nav-text">2.    修改keepalived的配置文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-修改node004的keepalived配置文件"><span class="nav-number">4.2.0.4.</span> <span class="nav-text">3.    修改node004的keepalived配置文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-启动keepalived服务"><span class="nav-number">4.2.0.5.</span> <span class="nav-text">4.    启动keepalived服务</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-配置完成，进行测试"><span class="nav-number">4.2.0.6.</span> <span class="nav-text">5.    配置完成，进行测试</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx"><span class="nav-number">5.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx简介"><span class="nav-number">5.1.</span> <span class="nav-text">Nginx简介</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Nginx和apache的比较"><span class="nav-number">5.1.1.</span> <span class="nav-text">Nginx和apache的比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#单个tomcat支持的最高并发"><span class="nav-number">5.1.2.</span> <span class="nav-text">单个tomcat支持的最高并发</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决高并发和单个服务器过载问题"><span class="nav-number">5.1.3.</span> <span class="nav-text">解决高并发和单个服务器过载问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tengine安装"><span class="nav-number">5.2.</span> <span class="nav-text">Tengine安装</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-解压安装包"><span class="nav-number">5.2.0.1.</span> <span class="nav-text">1.    解压安装包</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-进入tengine目录"><span class="nav-number">5.2.0.2.</span> <span class="nav-text">2.    进入tengine目录</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-查看README文件，找到安装方法"><span class="nav-number">5.2.0.3.</span> <span class="nav-text">3.    查看README文件，找到安装方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-执行configure文件，指定安装目录"><span class="nav-number">5.2.0.4.</span> <span class="nav-text">4.    执行configure文件，指定安装目录</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-报错："><span class="nav-number">5.2.0.5.</span> <span class="nav-text">5.报错：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-安装gcc，再执行configure文件"><span class="nav-number">5.2.0.6.</span> <span class="nav-text">6.安装gcc，再执行configure文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-报错："><span class="nav-number">5.2.0.7.</span> <span class="nav-text">7.    报错：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-查看PCRE有哪些版本"><span class="nav-number">5.2.0.8.</span> <span class="nav-text">8.    查看PCRE有哪些版本</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#9-选择安装开发版，系统自动识别安装什么位数的软件"><span class="nav-number">5.2.0.9.</span> <span class="nav-text">9.    选择安装开发版，系统自动识别安装什么位数的软件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#10-再执行configure文件"><span class="nav-number">5.2.0.10.</span> <span class="nav-text">10.    再执行configure文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#11-报错："><span class="nav-number">5.2.0.11.</span> <span class="nav-text">11.    报错：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#12-根据pcre的经验，安装OpenSSL开发版"><span class="nav-number">5.2.0.12.</span> <span class="nav-text">12.    根据pcre的经验，安装OpenSSL开发版</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#13-再执行configure文件"><span class="nav-number">5.2.0.13.</span> <span class="nav-text">13.    再执行configure文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#14-执行make命令"><span class="nav-number">5.2.0.14.</span> <span class="nav-text">14.    执行make命令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#15-执行make-install命令"><span class="nav-number">5.2.0.15.</span> <span class="nav-text">15.    执行make install命令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#16-将nginx文件放到-etc-init-d目录下，并做修改"><span class="nav-number">5.2.0.16.</span> <span class="nav-text">16.    将nginx文件放到/etc/init.d目录下，并做修改</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#17-给nginx文件赋予执行权限"><span class="nav-number">5.2.0.17.</span> <span class="nav-text">17.    给nginx文件赋予执行权限</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#18-启动服务"><span class="nav-number">5.2.0.18.</span> <span class="nav-text">18.    启动服务</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#19-验证是否启动"><span class="nav-number">5.2.0.19.</span> <span class="nav-text">19.    验证是否启动</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#20-去网页验证，看到如下页面说明nginx安装成功！"><span class="nav-number">5.2.0.20.</span> <span class="nav-text">20.去网页验证，看到如下页面说明nginx安装成功！</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx配置解析"><span class="nav-number">5.3.</span> <span class="nav-text">Nginx配置解析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#nginx-conf配置文件的结构"><span class="nav-number">5.3.1.</span> <span class="nav-text">nginx.conf配置文件的结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全局的配置"><span class="nav-number">5.3.2.</span> <span class="nav-text">全局的配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#event下的一些配置及其意义"><span class="nav-number">5.3.3.</span> <span class="nav-text">event下的一些配置及其意义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#http下的一些配置及其意义"><span class="nav-number">5.3.4.</span> <span class="nav-text">http下的一些配置及其意义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#server下的一些配置及其意义"><span class="nav-number">5.3.5.</span> <span class="nav-text">server下的一些配置及其意义</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚拟主机"><span class="nav-number">5.4.</span> <span class="nav-text">虚拟主机</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于IP的虚拟主机"><span class="nav-number">5.4.1.</span> <span class="nav-text">基于IP的虚拟主机</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-查看服务器的IP地址"><span class="nav-number">5.4.1.1.</span> <span class="nav-text">1.    查看服务器的IP地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#在eth0网卡设备上添加两个IP别名192-168-9-98和192-168-9-99"><span class="nav-number">5.4.1.2.</span> <span class="nav-text">在eth0网卡设备上添加两个IP别名192.168.9.98和192.168.9.99</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-验证是否配置成功"><span class="nav-number">5.4.1.3.</span> <span class="nav-text">3.    验证是否配置成功</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-配置基于IP的虚拟主机"><span class="nav-number">5.4.1.4.</span> <span class="nav-text">4.    配置基于IP的虚拟主机</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-在-var-www-下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index-html"><span class="nav-number">5.4.1.5.</span> <span class="nav-text">5.在/var/www/下创建3个文件夹server1、server2、server3，在其中分别定义三个虚拟主机的首页index.html</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-开启nginx服务（如果已经启动则重启nginx服务）"><span class="nav-number">5.4.1.6.</span> <span class="nav-text">6.    开启nginx服务（如果已经启动则重启nginx服务）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-在网页查看效果"><span class="nav-number">5.4.1.7.</span> <span class="nav-text">7.    在网页查看效果</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于域名的虚拟主机"><span class="nav-number">5.4.2.</span> <span class="nav-text">基于域名的虚拟主机</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-在nginx-conf文件中配置"><span class="nav-number">5.4.2.1.</span> <span class="nav-text">1.在nginx.conf文件中配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-修改Windows的hosts文件"><span class="nav-number">5.4.2.2.</span> <span class="nav-text">2.    修改Windows的hosts文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-重启服务"><span class="nav-number">5.4.2.3.</span> <span class="nav-text">3.重启服务</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-去网页验证"><span class="nav-number">5.4.2.4.</span> <span class="nav-text">4.去网页验证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#location映射"><span class="nav-number">5.5.</span> <span class="nav-text">location映射</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解析"><span class="nav-number">5.5.1.</span> <span class="nav-text">解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#说明"><span class="nav-number">5.5.2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">5.5.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反向代理"><span class="nav-number">5.6.</span> <span class="nav-text">反向代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx负载均衡"><span class="nav-number">5.7.</span> <span class="nav-text">Nginx负载均衡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx的session一致性问题"><span class="nav-number">5.8.</span> <span class="nav-text">Nginx的session一致性问题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-安装memcached"><span class="nav-number">5.8.0.1.</span> <span class="nav-text">1.安装memcached</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-启动memcached"><span class="nav-number">5.8.0.2.</span> <span class="nav-text">2.    启动memcached</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-让node02和node03的tomcat使用memcached"><span class="nav-number">5.8.0.3.</span> <span class="nav-text">3.    让node02和node03的tomcat使用memcached</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-把需要的jar包放到两台机器的tomcat的lib目录下"><span class="nav-number">5.8.0.4.</span> <span class="nav-text">4.    把需要的jar包放到两台机器的tomcat的lib目录下</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-重启node02和node03的tomcat服务"><span class="nav-number">5.8.0.5.</span> <span class="nav-text">5.重启node02和node03的tomcat服务</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chant</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://chant00.com/2016/06/16/LVS+Keepalived+Nginx /';
+          this.page.identifier = '2016/06/16/LVS+Keepalived+Nginx /';
+          this.page.title = 'LVS+Keepalived+Nginx实战';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://chant-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("7n9J9l0UCv4yQu1307uCu3oM-gzGzoHsz", "OUDiIhwsTbY8xOgAKOuYf7Xb");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
