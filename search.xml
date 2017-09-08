@@ -144,7 +144,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hive学习笔记]]></title>
-    <url>%2F2016%2F11%2F28%2F2017-09-08%2F</url>
+    <url>%2F2016%2F11%2F28%2F%20Hive%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[背景架构，原理，搭建，练习及优化 Hive的产生Hive产生的原因：方便非java编程者（熟悉SQL语言）对hdfs的数据做mapreduce操作。Hive是数据仓库数据库：用户与数据库交互，提交SQL语句后，马上见到执行结果；存放业务数据；数据库提出范式的概念是为了解决数据冗余和耦合的问题；数据库给业务数据提供存储支撑。数据仓库：不与用户交互；存放历史数据；反范式设计，专门引入冗余数据，保证数据完整。数据仓库面向分析，里面存放的数据用来做分析和挖掘。Hive将SQL转化为MapReduce可以识别的操作，承担解释器、编译器、优化器等角色Hive运行时，元数据（表的结构、属性）存储在关系型数据库里面。因为元数据信息需要高效的读取。 Hive的架构 用户接口主要有三个：Client（命令行），JDBC/ODBC 和 WEB GUI。其中最常用的是Client，Client启动的时候，会同时启动一个Hive副本。Client是Hive的客户端，用户连接至Hive Server。在启动 Client模式的时候，需要指出Hive Server所在节点，并且在该节点启动Hive Server。 WEB GUI是通过浏览器访问Hive。 Hive将元数据存储在数据库中，如mysql、derby。Hive中的元数据包括表的名字，表的列和分区及其属性，表的属性（是否为外部表等），表的数据所在目录等。解释器、编译器、优化器完成HQL查询语句从词法分析、语法分析、编译、优化以及查询计划的生成。生成的查询计划存储在HDFS中，并在随后有MapReduce调用执行。编译器将一个Hive QL转换操作符，操作符是Hive的最小的处理单元每个操作符代表HDFS的一个操作或者一道MapReduce作业。Operator是hive定义的一个处理过程，是一个树形结构：protected List]]></content>
       <categories>
         <category>Bigdata</category>
