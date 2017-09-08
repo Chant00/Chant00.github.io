@@ -129,7 +129,7 @@
 <meta property="og:image" content="http://chant00.com/media/15048846302709.jpg">
 <meta property="og:image" content="http://chant00.com/media/15048848890164.jpg">
 <meta property="og:image" content="http://chant00.com/media/15048849054786.jpg">
-<meta property="og:updated_time" content="2017-09-08T15:45:39.000Z">
+<meta property="og:updated_time" content="2017-09-08T15:47:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hive学习笔记">
 <meta name="twitter:description" content="背景架构，原理，搭建，练习及优化">
@@ -579,7 +579,7 @@
 <p>mapred.max.split.size<br>一个split的最大值，即每个map处理文件的最大值<br>mapred.min.split.size.per.node<br>一个节点上split的最小值<br>mapred.min.split.size.per.rack<br>一个机架上split的最小值</p>
 <p>Reduce数量相关的参数：</p>
 <p>mapred.reduce.tasks<br>强制指定reduce任务的数量<br>hive.exec.reducers.bytes.per.reducer<br>每个reduce任务处理的数据量<br>hive.exec.reducers.max<br>每个任务最大的reduce数</p>
-<h4 id="JVM重用"><a href="#JVM重用" class="headerlink" title="JVM重用"></a>JVM重用</h4><p>适用场景：<br>1)    小文件个数过多<br>2)    task个数过多<br>频繁的申请资源，释放资源降低了执行效率<br>通过set mapred.job.reuse.jvm.num.tasks=n; （n为task插槽个数）来设置，道理与“池”类似。<br>缺点：<br>设置开启之后，task插槽会一直占用资源，不论是否有task运行，直到所有的task即整个job全部执行完成时，才会释放所有的task插槽资源。</p>
+<h4 id="JVM重用"><a href="#JVM重用" class="headerlink" title="JVM重用"></a>JVM重用</h4><p>适用场景：<br>1)    小文件个数过多<br>2)    task个数过多<br>频繁的申请资源，释放资源降低了执行效率<br>通过set mapred.job.reuse.jvm.num.tasks=n; （n为task插槽个数）来设置，道理与“池”类似。<br>缺点：<br>设置开启之后，task插槽会一直占用资源，不论是否有task运行，直到所有的task即整个job全部执行完成时，才会释放所有的task插槽资源。<br>更多优化细节参考<a href="http://www.cnblogs.com/smartloli/p/4356660.html" target="_blank" rel="external">Hive性能优化</a></p>
 
       
     </div>
