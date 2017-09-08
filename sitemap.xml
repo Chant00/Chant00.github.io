@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chant00.com/2016/09/08/Hadoop-mapper%E6%BA%90%E7%A0%81/</loc>
+    
+    <lastmod>2017-09-08T05:56:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chant00.com/2016/11/08/HADOOP--hadoop%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/</loc>
     
-    <lastmod>2017-09-07T16:48:07.000Z</lastmod>
+    <lastmod>2017-09-08T03:49:57.000Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>http://chant00.com/2016/09/05/Hadoop-client%E6%BA%90%E7%A0%81/</loc>
     
     <lastmod>2017-09-06T14:32:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chant00.com/2016/09/08/Hadoop-mapper%E6%BA%90%E7%A0%81/</loc>
-    
-    <lastmod>2017-09-06T14:32:15.000Z</lastmod>
     
   </url>
   
