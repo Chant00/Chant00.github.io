@@ -277,11 +277,35 @@
   </entry>
   
   <entry>
+    <title>Hive学习笔记</title>
+    <link href="http://chant00.com/2016/11/28/2017-09-08/"/>
+    <id>http://chant00.com/2016/11/28/2017-09-08/</id>
+    <published>2016-11-28T00:47:49.000Z</published>
+    <updated>2017-09-08T15:39:25.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;背景架构，原理，搭建，练习及优化&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
+    
+    
+      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
+    
+      <category term="Hive原理及其搭建" scheme="http://chant00.com/tags/Hive%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HADOOP--hadoop运行原理及其搭建</title>
     <link href="http://chant00.com/2016/11/08/HADOOP--hadoop%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
     <id>http://chant00.com/2016/11/08/HADOOP--hadoop运行原理及其搭建/</id>
     <published>2016-11-08T00:47:49.000Z</published>
-    <updated>2017-09-08T03:49:57.000Z</updated>
+    <updated>2017-09-08T14:35:45.000Z</updated>
     
     <summary type="html">
     
@@ -435,30 +459,6 @@
       <category term="java" scheme="http://chant00.com/tags/java/"/>
     
       <category term="IDEA" scheme="http://chant00.com/tags/IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zookeeper详解</title>
-    <link href="http://chant00.com/2016/08/06/zookeeper/"/>
-    <id>http://chant00.com/2016/08/06/zookeeper/</id>
-    <published>2016-08-06T00:47:49.000Z</published>
-    <updated>2017-09-07T03:14:15.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;zookeeper学习笔记。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Zookeeper" scheme="http://chant00.com/categories/Bigdata/Zookeeper/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Zookeeper" scheme="http://chant00.com/tags/Zookeeper/"/>
     
   </entry>
   
