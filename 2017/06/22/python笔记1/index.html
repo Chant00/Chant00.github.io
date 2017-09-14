@@ -101,17 +101,17 @@
 
 
 
-<meta name="description" content="看完了尚学堂的java300集（除了手写服务器和设计模式部分），由于不是按顺序看的，最后复习了多线程，昨晚写完多线程的博客，java学习算是告一段落了，现在向Python发起进攻。有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗">
+<meta name="description" content="有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python笔记（一）--数据类型">
 <meta property="og:url" content="http://chant00.com/2017/06/22/python笔记1/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="看完了尚学堂的java300集（除了手写服务器和设计模式部分），由于不是按顺序看的，最后复习了多线程，昨晚写完多线程的博客，java学习算是告一段落了，现在向Python发起进攻。有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗">
+<meta property="og:description" content="有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。">
 <meta property="og:image" content="http://chant00.com/media/14981128490108.jpg">
-<meta property="og:updated_time" content="2017-06-26T02:23:28.000Z">
+<meta property="og:updated_time" content="2017-09-14T08:11:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记（一）--数据类型">
-<meta name="twitter:description" content="看完了尚学堂的java300集（除了手写服务器和设计模式部分），由于不是按顺序看的，最后复习了多线程，昨晚写完多线程的博客，java学习算是告一段落了，现在向Python发起进攻。有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗">
+<meta name="twitter:description" content="有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。">
 <meta name="twitter:image" content="http://chant00.com/media/14981128490108.jpg">
 
 
@@ -437,7 +437,7 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>看完了尚学堂的java300集（除了手写服务器和设计模式部分），由于不是按顺序看的，最后复习了多线程，昨晚写完多线程的博客，java学习算是告一段落了，现在向Python发起进攻。<br>有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。</p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>有的人用“Python还用学么？”来形容Python，看来Python实在是一门简单易学的语言，特别是在你已经掌握一门高级语言之后。但是千万不能因此就真的“不学”，完整的理论知识是你之后“敲键盘如有神”的基本条件。这里罗列一些我没见过的小知识点和它与java等语言的不同之处。仅作为个人笔记，不供参考。</p>
 <a id="more"></a>
 <h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，比如，1.23x109和12.3x108是相等的。浮点数可以用数学写法，如1.23，3.14，-9.01，等等。但是对于很大或很小的浮点数，就必须用科学计数法表示，把10用e替代，1.23x109就是1.23e9，或者12.3e8，0.000012可以写成1.2e-5，等等。</p>
 <p>整数和浮点数在计算机内部存储的方式是不同的，整数运算永远是精确的（除法难道也是精确的？是的！），而浮点数运算则可能会有四舍五入的误差。<br>顺便一提，与java不同，<code>9/4</code>输出结果为<code>2.5</code>，<code>9//4</code>输出结果为<code>2</code>。</p>
