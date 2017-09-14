@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-29T02:41:18.000Z</updated>
+  <updated>2017-09-12T11:12:59.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spark学习笔记--超全总结</title>
+    <link href="http://chant00.com/2017/09/12/test/"/>
+    <id>http://chant00.com/2017/09/12/test/</id>
+    <published>2017-09-12T00:47:49.000Z</published>
+    <updated>2017-09-12T11:12:59.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+    
+    </summary>
+    
+      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
+    
+      <category term="Spark" scheme="http://chant00.com/categories/Bigdata/Spark/"/>
+    
+    
+      <category term="Spark" scheme="http://chant00.com/tags/Spark/"/>
+    
+      <category term="Spark原理及其搭建" scheme="http://chant00.com/tags/Spark%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>盖茨推荐的一堂30分钟的经济学</title>
@@ -209,7 +234,7 @@
     <link href="http://chant00.com/2017/05/28/Spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://chant00.com/2017/05/28/Spark学习笔记/</id>
     <published>2017-05-28T00:47:49.000Z</published>
-    <updated>2017-09-11T15:52:37.000Z</updated>
+    <updated>2017-09-14T08:07:16.000Z</updated>
     
     <summary type="html">
     
@@ -430,30 +455,6 @@
     <summary type="html">
     
       &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--MapReduce深入源码-Client</title>
-    <link href="http://chant00.com/2016/09/05/Hadoop-client%E6%BA%90%E7%A0%81/"/>
-    <id>http://chant00.com/2016/09/05/Hadoop-client源码/</id>
-    <published>2016-09-05T00:47:49.000Z</published>
-    <updated>2017-09-06T14:32:16.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MapReduce客户端提交过程的源码，以及手写wordCount测试。&lt;/p&gt;
     
     </summary>
     
