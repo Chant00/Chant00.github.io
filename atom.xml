@@ -37,6 +37,30 @@
   </entry>
   
   <entry>
+    <title>那些年被教科书绕晕的概率论基础</title>
+    <link href="http://chant00.com/2017/07/28/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    <id>http://chant00.com/2017/07/28/概率论基础/</id>
+    <published>2017-07-28T00:47:49.000Z</published>
+    <updated>2017-09-16T08:08:03.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;整理一下概率论的基础知识，通俗易懂的大白话，让你真正理解这些基础定义。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+      <category term="概率论" scheme="http://chant00.com/categories/Algorithm/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+      <category term="likelihood" scheme="http://chant00.com/tags/likelihood/"/>
+    
+      <category term="probability" scheme="http://chant00.com/tags/probability/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spark学习笔记--超全总结</title>
     <link href="http://chant00.com/2017/07/28/Spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://chant00.com/2017/07/28/Spark学习笔记/</id>
@@ -430,30 +454,6 @@
     <summary type="html">
     
       &lt;p&gt;MapReduce Mapper源码解析。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-      <category term="API" scheme="http://chant00.com/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--MapReduce深入源码-Client</title>
-    <link href="http://chant00.com/2016/09/05/Hadoop-client%E6%BA%90%E7%A0%81/"/>
-    <id>http://chant00.com/2016/09/05/Hadoop-client源码/</id>
-    <published>2016-09-05T00:47:49.000Z</published>
-    <updated>2017-09-06T14:32:16.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MapReduce客户端提交过程的源码，以及手写wordCount测试。&lt;/p&gt;
     
     </summary>
     
