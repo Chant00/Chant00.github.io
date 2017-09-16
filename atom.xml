@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-07-29T02:41:18.000Z</updated>
+  <updated>2017-09-16T08:09:58.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>那些年被教科书绕晕的概率论基础</title>
+    <link href="http://chant00.com/2017/08/28/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    <id>http://chant00.com/2017/08/28/概率论基础/</id>
+    <published>2017-08-28T00:47:49.000Z</published>
+    <updated>2017-09-16T08:09:58.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;整理一下概率论的基础知识，通俗易懂的大白话，让你真正理解这些基础定义。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+      <category term="概率论" scheme="http://chant00.com/categories/Algorithm/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+      <category term="likelihood" scheme="http://chant00.com/tags/likelihood/"/>
+    
+      <category term="probability" scheme="http://chant00.com/tags/probability/"/>
+    
+  </entry>
   
   <entry>
     <title>盖茨推荐的一堂30分钟的经济学</title>
@@ -33,30 +57,6 @@
     
     
       <category term="Economic" scheme="http://chant00.com/tags/Economic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那些年被教科书绕晕的概率论基础</title>
-    <link href="http://chant00.com/2017/07/28/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    <id>http://chant00.com/2017/07/28/概率论基础/</id>
-    <published>2017-07-28T00:47:49.000Z</published>
-    <updated>2017-09-16T08:08:03.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;整理一下概率论的基础知识，通俗易懂的大白话，让你真正理解这些基础定义。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
-    
-      <category term="概率论" scheme="http://chant00.com/categories/Algorithm/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-    
-      <category term="likelihood" scheme="http://chant00.com/tags/likelihood/"/>
-    
-      <category term="probability" scheme="http://chant00.com/tags/probability/"/>
     
   </entry>
   
