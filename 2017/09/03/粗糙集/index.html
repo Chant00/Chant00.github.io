@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="粗糙集,模糊匹配," />
 
 
 
@@ -101,15 +101,16 @@
 
 
 
-<meta name="description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chant">
-<meta property="og:url" content="http://chant00.com/archives/2017/08/index.html">
+<meta name="description" content="在自然科学、社会科学和工程技术的很多领域中，都不同程度地涉及到对不确定因素和对不完备信息的处理。从实际系统中采集到的数据常常包含着噪声，不够精确甚至不完整。采用纯数学上的假设来消除或回避这种不确定性，效果往往不理想。反之，如果正视它对这些信息进行合适地处理，常常有助于相关实际系统问题的解决。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="粗糙集理论整理">
+<meta property="og:url" content="http://chant00.com/2017/09/03/粗糙集/index.html">
 <meta property="og:site_name" content="Chant">
-<meta property="og:description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
+<meta property="og:description" content="在自然科学、社会科学和工程技术的很多领域中，都不同程度地涉及到对不确定因素和对不完备信息的处理。从实际系统中采集到的数据常常包含着噪声，不够精确甚至不完整。采用纯数学上的假设来消除或回避这种不确定性，效果往往不理想。反之，如果正视它对这些信息进行合适地处理，常常有助于相关实际系统问题的解决。">
+<meta property="og:updated_time" content="2017-09-16T09:21:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chant">
-<meta name="twitter:description" content="Take things as they are with a cavalier attitude./用漫不经心的态度过随遇而安的生活">
+<meta name="twitter:title" content="粗糙集理论整理">
+<meta name="twitter:description" content="在自然科学、社会科学和工程技术的很多领域中，都不同程度地涉及到对不确定因素和对不完备信息的处理。从实际系统中采集到的数据常常包含着噪声，不够精确甚至不完整。采用纯数学上的假设来消除或回避这种不确定性，效果往往不理想。反之，如果正视它对这些信息进行合适地处理，常常有助于相关实际系统问题的解决。">
 
 
 
@@ -137,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://chant00.com/archives/2017/08/"/>
+  <link rel="canonical" href="http://chant00.com/2017/09/03/粗糙集/"/>
 
 
 
 
 
-  <title>Archive | Chant</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>粗糙集理论整理 | Chant</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -179,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -327,65 +328,301 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 34 posts in total. Keep on posting.
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://chant00.com/2017/09/03/粗糙集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chant">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chant">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">粗糙集理论整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-03T08:47:49+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithm/粗糙集/" itemprop="url" rel="index">
+                    <span itemprop="name">粗糙集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/03/粗糙集/" class="leancloud_visitors" data-flag-title="粗糙集理论整理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>在自然科学、社会科学和工程技术的很多领域中，都不同程度地涉及到对不确定因素和对不完备信息的处理。从实际系统中采集到的数据常常包含着噪声，不够精确甚至不完整。采用纯数学上的假设来消除或回避这种不确定性，效果往往不理想。反之，如果正视它对这些信息进行合适地处理，常常有助于相关实际系统问题的解决。</p>
+<hr>
+<a id="more"></a>
+<p>多年来，研究人员一直在努力寻找科学地处理不完整性和不确定性的有效途径。模糊集和基于概率方法的证据理论是处理不确定信息的两种方法，已应用于一些实际领域。但这些方法有时需要一些数据的附加信息或先验知识，如模糊隶属函数、基本概率指派函数和有关统计概率分布等，而这些信息有时并不容易得到。<br>1982年波兰学者Z. Paw lak 提出了粗糙集理论——它是一种刻画不完整性和不确定性的数学工具，能有效地分析不精确，不一致（inconsistent)、不完整（incomplete) 等各种不完备的信息，还可以对数据进行分析和推理，从中发现隐含的知识，揭示潜在的规律。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h4 id="知识"><a href="#知识" class="headerlink" title="知识"></a>知识</h4><p>“知识”这个概念在不同的范畴内有多种不同的含义。在粗糙集理论中，“知识”被认为是一种分类能力。人们的行为是基于分辨现实的或抽象的对象的能力，如在远古时代，人们为了生存必须能分辨出什么可以食用，什么不可以食用；医生给病人诊断，必须辨别出患者得的是哪一种病。这些根据事物的特征差别将其分门别类的能力均可以看作是某种“知识”。[4] </p>
+<h4 id="不可分辨关系"><a href="#不可分辨关系" class="headerlink" title="不可分辨关系"></a>不可分辨关系</h4><p>分类过程中，相差不大的个体被归于同一类，它们的关系就是不可分辨关系（indiscernibility relation). 假定只用两种黑白颜色把空间中的物体分割两类，{黑色物体},{白色物体},那么同为黑色的两个物体就是不可分辨的，因为描述它们特征属性的信息相同，都是黑色.<br>如果再引入方，圆的属性，又可以将物体进一步分割为四类： {黑色方物体},{黑色圆物体},{白色方物体},{白色圆物体}. 这时，如果两个同为黑色方物体，则它们还是不可分辨的. 不可分辨关系是一种等效关系（equivalence relationship），两个白色圆物体间的不可分辨关系可以理解为它们在白，圆两种属性下存在等效关系.</p>
+<h4 id="基本集"><a href="#基本集" class="headerlink" title="基本集"></a>基本集</h4><p>基本集（elementary set) 定义为由论域中相互间不可分辨的对象组成的集合，是组成论域知识的颗粒. 不可分辨关系这一概念在粗糙集理论中十分重要，它深刻地揭示出知识的颗粒状结构，是定义其它概念的基础. 知识可认为是一族 等效关系，它将论域分割成一系列的等效类。[5] </p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><p>粗糙集理论延拓了经典的集合论，把用于分类的知识嵌入集合内，作为集合组成的一部分. 一个对象a 是否属于集合X 需根据现有的知识来判断，可分为三种情况：<br>⑴ 对象a 肯定属于集合X ;<br>⑵ 对象a 肯定不属于集X ;<br>⑶ 对象a 可能属于也可能不属于集合X 。<br>集合的划分密切依赖于我们所掌握的关于论域的知识，是相对的而不是绝对的.给定一个有限的非空集合U 称为论域，I 为U 中的一族等效关系，即关于U 的知识，则二元对 K = (U,I) 称为一个近似空间（approximation space). 设x 为U 中的一个对象，X为U 的一个子集，I (x) 表示所有与x 不可分辨的对象所组成的集合，换句话说，是由x 决定的等效类，即I (x) 中的每个对象都与x 有相同的特征属性（attribute)。</p>
+<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><p>下面用一个具体的实例说明粗糙集的概念. 在粗糙集中使用信息表（information table) 描述论域中的数据集合. 根据学科领域的不同，它们可能代表医疗，金融，军事，过程控制等方面的数据. 信息表的形式和大家所熟悉的关系数据库中的关系数据模型很相似，是一张二维表格，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>教育程度</th>
+<th>是否找到了好工作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>王治|高中|否<br>马丽|高中|是<br>李得|小学|否<br>刘保|大学|是<br>赵凯|博士|是<br>表格的数据描述了一些人的教育程度以及是否找到了较好工作，旨在说明两者之间的关系. 其中王治,马丽，赵凯等称为对象（objects），一行描述一个对象. 表中的列描述对象的属性. 粗糙集理论中有两种属性： 条件属性（condition attribute) 和决策属性（decision attribute). 本例中”教育程度”为条件属性；”是否找到了好工作”为决策属性。<br>设O 表示找到了好工作的人的集合，则O = {马丽，刘保，赵凯},设I 表示属性”教育 程度”所构成的一个等效关系，根据教育程度的不同，该论域被分割为四个等效类： {王治，马丽},{李得},{刘保},{赵凯}. 王治和马丽在 同一个等效类中，他们都为高中文化程度，是 不可分辨的. 则：<br>集合O 的下逼近（即正区） 为 I *(O) = PO S (O) = {刘保，赵凯}<br>集合O 的负区为 N EG (O) = {李得}<br>集合O 的边界区为 BND (O) = {王治，马丽}<br>集合O 的上逼近为 I 3 (O) = PO S (O) + BND (O) = {刘保，赵凯，王治，马丽}<br>根据表1，可以归纳出下面几条规则，揭示了教育程度与是否能找到好工作之间的关系.<br>RULE 1: IF （教育程度= 大学） OR （教育程度= 博士） THEN （可以找到好工作）<br>RULE 2: IF （教育程度= 小学） THEN （找不到好工作）<br>RULE 3: IF （教育程度= 高中） THEN （可能找到好工作）<br>从这个简单的例子中，我们还可以体会到粗糙集理论在数据分析，寻找规律方面的作用.</p>
+<p>粗糙集方法的简单实用性是令人惊奇的，它能在创立后的不长时间内得到迅速应用是因为具有以下特点：<br>(1) 它能处理各种数据，包括不完整（incomplete) 的数据以及拥有众多变量的数据；<br>(2) 它能处理数据的不精确性和模棱两可（ambiguity），包括确定性和非确定性的情况；<br>(3) 它能求得知识的最小表达（reduct) 和知识的各种不同颗粒（granularity) 层次；<br>(4) 它能从数据中揭示出概念简单，易于操作的模式（pattern) ;<br>(5) 它能产生精确而又易于检查和证实的规则，特别适于智能控制中规则的自动生成</p>
+<h3 id="决策支持系统"><a href="#决策支持系统" class="headerlink" title="决策支持系统"></a>决策支持系统</h3><p>面对大量的信息以及各种不确定因素，要作出科学，合理的决策是非常困难的.决策支持系统是一组协助制定决策的工具，其重要特征就是能够执行IF THEN 规则进行判断分析. 粗糙集理论可以在分析以往大量经验数据的基础上找到这些规则，基于粗糙集的决策支持系统在这方面弥补了常规决策方法的不足，允许决策对象中存在一些不太明确，不太完整的属性，并经过推理得出基本上肯定的结论。[7]<br>下面举一个例子，说明粗糙集理论可以根据以往的病例归纳出诊断规则，帮助医生作出判断。下表描述了八个病人的症状. 从下表中可以归纳出以下几条确定的规则：</p>
+<table>
+<thead>
+<tr>
+<th>病人编号</th>
+<th>病理症状诊断结果</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>是否头痛</td>
+<td>体温</td>
+<td>是否感冒</td>
+<td></td>
+</tr>
+<tr>
+<td>病人1</td>
+<td>是</td>
+<td>正常</td>
+<td>否</td>
+</tr>
+<tr>
+<td>病人2</td>
+<td>是</td>
+<td>高</td>
+<td>是</td>
+</tr>
+<tr>
+<td>病人3</td>
+<td>是</td>
+<td>很高</td>
+<td>是</td>
+</tr>
+<tr>
+<td>病人4</td>
+<td>否</td>
+<td>正常</td>
+<td>否</td>
+</tr>
+<tr>
+<td>病人5</td>
+<td>否</td>
+<td>高</td>
+<td>否</td>
+</tr>
+<tr>
+<td>病人6</td>
+<td>否</td>
+<td>很高</td>
+<td>是</td>
+</tr>
+<tr>
+<td>病人7</td>
+<td>否</td>
+<td>高</td>
+<td>是</td>
+</tr>
+<tr>
+<td>病人8</td>
+<td>否</td>
+<td>很高</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>1.IF （体温正常） THEN （没感冒）<br>2.IF （头痛） AND （体温高） THEN （感冒）<br>3.IF （头痛） AND （体温很高） THEN （感冒）</p>
+</blockquote>
+<p>还有几条可能的规则：</p>
+<blockquote>
+<p>4.IF （头不痛） THEN （可能没感冒）<br>5.IF （体温高） THEN （可能感冒了）<br>6.IF （体温很高） THEN （可能感冒了）</p>
+</blockquote>
+<p>病人5 和病人7，病人6 和病人8，症状相同，但是一个感冒另一个却没感冒，这种情况称为不一致（inconsistent). 粗糙集就是靠这种IF THEN 规则的形式表示数据中蕴含的知识.</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li><a href="https://baike.baidu.com/item/%E7%B2%97%E7%B3%99%E9%9B%86/8248139?fr=aladdin" target="_blank" rel="external">粗糙集</a></li>
+<li><a href="https://baike.baidu.com/item/%E6%A8%A1%E7%B3%8A%E9%9B%86%E5%90%88/4555331?fromtitle=%E6%A8%A1%E7%B3%8A%E9%9B%86&amp;fromid=12598465" target="_blank" rel="external">模糊集合</a></li>
+<li><a href="https://baike.baidu.com/item/%E8%AE%BA%E5%9F%9F" target="_blank" rel="external">论域</a></li>
+<li><a href="http://blog.csdn.net/wodedipang_/article/details/49132397" target="_blank" rel="external">粗糙集的概念和一些例子</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/粗糙集/" rel="tag"># 粗糙集</a>
+          
+            <a href="/tags/模糊匹配/" rel="tag"># 模糊匹配</a>
+          
         </div>
       
+
+      
+      
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/28/概率论基础/" rel="next" title="那些年被教科书绕晕的概率论基础">
+                <i class="fa fa-chevron-left"></i> 那些年被教科书绕晕的概率论基础
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/概率论基础/" itemprop="url">
-              
-                <span itemprop="name">那些年被教科书绕晕的概率论基础</span>
-              
-            </a>
-        
-      </h2>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T08:47:49+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -393,6 +630,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -412,8 +660,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -541,6 +798,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#知识"><span class="nav-number">1.1.</span> <span class="nav-text">知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不可分辨关系"><span class="nav-number">1.2.</span> <span class="nav-text">不可分辨关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本集"><span class="nav-number">1.3.</span> <span class="nav-text">基本集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合"><span class="nav-number">1.4.</span> <span class="nav-text">集合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举个栗子"><span class="nav-number">2.</span> <span class="nav-text">举个栗子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#决策支持系统"><span class="nav-number">3.</span> <span class="nav-text">决策支持系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -683,11 +956,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
@@ -704,6 +975,18 @@
 
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://chant00.com/2017/09/03/粗糙集/';
+          this.page.identifier = '2017/09/03/粗糙集/';
+          this.page.title = '粗糙集理论整理';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://chant-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -1178,32 +1461,7 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
-
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -1221,6 +1479,11 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+
+
+  
+
+  
   
 
 
