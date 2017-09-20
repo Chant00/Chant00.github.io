@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-09-19T03:28:05.000Z</updated>
+  <updated>2017-09-20T11:20:27.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,18 +16,57 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>机器学习--互信息mutual information）的理解</title>
     <link href="http://chant00.com/2017/09/19/2017-09-19/"/>
     <id>http://chant00.com/2017/09/19/2017-09-19/</id>
-    <published>2017-09-19T03:27:58.000Z</published>
-    <updated>2017-09-19T03:28:05.000Z</updated>
+    <published>2017-09-19T00:47:49.000Z</published>
+    <updated>2017-09-20T11:20:27.000Z</updated>
     
     <summary type="html">
     
-      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;
+      &lt;p&gt;再做特征提取是时，那些特征重要，那些不重要呢？怎么确定那个自变量与因变量之间的相关性大小呢？三种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;逻辑回归中，权重大的特征自然就是相关性大的变量。&lt;/li&gt;
+&lt;li&gt;person相关系数&lt;/li&gt;
+&lt;li&gt;互信息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
     
     </summary>
     
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+    
+      <category term="相关性" scheme="http://chant00.com/tags/%E7%9B%B8%E5%85%B3%E6%80%A7/"/>
+    
+      <category term="机器学习" scheme="http://chant00.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="算法" scheme="http://chant00.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习--朴素贝叶斯分类</title>
+    <link href="http://chant00.com/2017/09/18/%E8%B4%9D%E5%8F%B6%E6%96%AF/"/>
+    <id>http://chant00.com/2017/09/18/贝叶斯/</id>
+    <published>2017-09-18T00:47:49.000Z</published>
+    <updated>2017-09-20T11:16:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很傻很天真却很很好很强大的贝叶斯定理。。。&lt;/p&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://chant00.com/categories/Algorithm/"/>
+    
+    
+      <category term="机器学习" scheme="http://chant00.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="算法" scheme="http://chant00.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="贝叶斯" scheme="http://chant00.com/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/"/>
     
   </entry>
   
@@ -106,7 +145,7 @@
     <link href="http://chant00.com/2017/07/28/Spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://chant00.com/2017/07/28/Spark学习笔记/</id>
     <published>2017-07-28T00:47:49.000Z</published>
-    <updated>2017-09-19T03:59:05.000Z</updated>
+    <updated>2017-09-19T04:04:08.000Z</updated>
     
     <summary type="html">
     
@@ -434,30 +473,6 @@
       <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
     
       <category term="hadoop原理及其搭建" scheme="http://chant00.com/tags/hadoop%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hive--DDL和DML练习</title>
-    <link href="http://chant00.com/2016/10/13/Hive-DDl/"/>
-    <id>http://chant00.com/2016/10/13/Hive-DDl/</id>
-    <published>2016-10-13T00:47:49.000Z</published>
-    <updated>2017-09-06T16:14:09.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hive的三种模式简介及其搭建测试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/categories/Bigdata/Hive/"/>
-    
-    
-      <category term="Bigdata" scheme="http://chant00.com/tags/Bigdata/"/>
-    
-      <category term="Hive" scheme="http://chant00.com/tags/Hive/"/>
     
   </entry>
   

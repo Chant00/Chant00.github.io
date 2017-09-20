@@ -194,7 +194,7 @@
 <meta property="og:image" content="http://chant00.com/media/15053704805816.jpg">
 <meta property="og:image" content="http://chant00.com/media/15053705012302.jpg">
 <meta property="og:image" content="http://chant00.com/media/SparkStreaming%E5%92%8CKafka%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86.png">
-<meta property="og:updated_time" content="2017-09-19T03:59:05.000Z">
+<meta property="og:updated_time" content="2017-09-19T04:04:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark学习笔记--超全总结">
 <meta name="twitter:description" content="Spark架构，运行原理，任务调度和资源调度分析，内存管理分析，SparkSQL，SparkSreaming与kafaka，数据倾斜的解决，调优。">
@@ -1009,8 +1009,8 @@
 <h5 id="Direct方式"><a href="#Direct方式" class="headerlink" title="Direct方式"></a>Direct方式</h5><p>把kafka当作一个存储系统，直接从kafka中读数据，SparkStreaming自己维护消费者的消费偏移量,不再将其存储到zookeeper。<br>与Receiver方式相比，他有的优点是：</p>
 <ol>
 <li>one-to-one,直接读取卡夫卡中数据，Partion数与kafka一致。</li>
-<li>Efficiency,不开启WAL也不会丢失数据，可以直接从kafka恢复。</li>
-<li>Exactly-once semantics,其实这只保证kafka与spark是一致的，之后写数据的时候还需要自己注意才能保证整个事务的一致性。而在receiver模式下，offset<br>交由卡发卡管理，而kafaka实际交由zookeeper管理，可能出现数据不一致。 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">SparkConf conf = <span class="keyword">new</span> SparkConf()</div><div class="line">         .setAppName(<span class="string">"SparkStreamingOnKafkaDirected"</span>)</div><div class="line">         .setMaster(<span class="string">"local[1]"</span>);</div><div class="line">         </div><div class="line">JavaStreamingContext jsc = <span class="keyword">new</span> JavaStreamingContext(conf, Durations.seconds(<span class="number">10</span>));</div><div class="line">         </div><div class="line">Map&lt;String, String&gt; kafkaParameters = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</div><div class="line">kafkaParameters.put(<span class="string">"metadata.broker.list"</span>, <span class="string">"node01:9092,node02:9092,node03:9092"</span>);</div><div class="line">         </div><div class="line">HashSet&lt;String&gt; topics = <span class="keyword">new</span> HashSet&lt;String&gt;();</div><div class="line">topics.add(<span class="string">"test_create_topic"</span>);</div><div class="line">JavaPairInputDStream&lt;String,String&gt; lines = KafkaUtils.createDirectStream(jsc,</div><div class="line">        String.class,</div><div class="line">        String.class,</div><div class="line">        StringDecoder.class,</div><div class="line">        StringDecoder.class,</div><div class="line">        kafkaParameters,</div><div class="line">        topics);</div><div class="line"><span class="comment">//对lines进行其他操作……</span></div></pre></td></tr></table></figure>
+<li>Efficiency,不开启WAL也不会丢失数据，因为事实上kafka的的数据保留时间只要设定合适，可以直接从kafka恢复。</li>
+<li>Exactly-once semantics,其实这只保证kafka与spark是一致的，之后写数据的时候还需要自己注意才能保证整个事务的一致性。而在receiver模式下，offset交由kafka管理，而kafaka实际交由zookeeper管理，可能出现数据不一致。 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">SparkConf conf = <span class="keyword">new</span> SparkConf()</div><div class="line">         .setAppName(<span class="string">"SparkStreamingOnKafkaDirected"</span>)</div><div class="line">         .setMaster(<span class="string">"local[1]"</span>);</div><div class="line">         </div><div class="line">JavaStreamingContext jsc = <span class="keyword">new</span> JavaStreamingContext(conf, Durations.seconds(<span class="number">10</span>));</div><div class="line">         </div><div class="line">Map&lt;String, String&gt; kafkaParameters = <span class="keyword">new</span> HashMap&lt;String, String&gt;();</div><div class="line">kafkaParameters.put(<span class="string">"metadata.broker.list"</span>, <span class="string">"node01:9092,node02:9092,node03:9092"</span>);</div><div class="line">         </div><div class="line">HashSet&lt;String&gt; topics = <span class="keyword">new</span> HashSet&lt;String&gt;();</div><div class="line">topics.add(<span class="string">"test_create_topic"</span>);</div><div class="line">JavaPairInputDStream&lt;String,String&gt; lines = KafkaUtils.createDirectStream(jsc,</div><div class="line">        String.class,</div><div class="line">        String.class,</div><div class="line">        StringDecoder.class,</div><div class="line">        StringDecoder.class,</div><div class="line">        kafkaParameters,</div><div class="line">        topics);</div><div class="line"><span class="comment">//对lines进行其他操作……</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h5 id="两种方式下提高SparkStreaming并行度的方法"><a href="#两种方式下提高SparkStreaming并行度的方法" class="headerlink" title="两种方式下提高SparkStreaming并行度的方法"></a>两种方式下提高SparkStreaming并行度的方法</h5><h6 id="Receiver方式调整SparkStreaming的并行度的方法："><a href="#Receiver方式调整SparkStreaming的并行度的方法：" class="headerlink" title="Receiver方式调整SparkStreaming的并行度的方法："></a>Receiver方式调整SparkStreaming的并行度的方法：</h6><ul>
@@ -1163,7 +1163,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1185,7 +1185,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">46</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
