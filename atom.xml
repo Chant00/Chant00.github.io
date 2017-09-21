@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chant00.com/"/>
-  <updated>2017-09-20T11:20:27.000Z</updated>
+  <updated>2017-09-21T10:42:50.000Z</updated>
   <id>http://chant00.com/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>机器学习--互信息mutual information）的理解</title>
-    <link href="http://chant00.com/2017/09/19/2017-09-19/"/>
-    <id>http://chant00.com/2017/09/19/2017-09-19/</id>
+    <title>kafka和flume的对比</title>
+    <link href="http://chant00.com/2017/09/20/kafkaVSFlume/"/>
+    <id>http://chant00.com/2017/09/20/kafkaVSFlume/</id>
+    <published>2017-09-20T00:47:49.000Z</published>
+    <updated>2017-09-21T10:42:50.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;flume和kafka对比：&lt;br&gt;Kafka、Flume都可以实现数据的传输，但它们的侧重点不同。&lt;br&gt;Kafka追求的是高吞吐量、高负载（topic下可以有多个partition）。&lt;br&gt;kafka是零拷贝，速度快。&lt;br&gt;Flume追求的是数据的多样性：数据来源的多样性、数据流向的多样性。&lt;br&gt;如果数据来源很单一、想要高吞吐的话可以使用Kafka。&lt;br&gt;如果数据来源很多、数据流向很多的话可以使用Flume。&lt;br&gt;也可以将Kafka和Flume结合起来使用。&lt;/p&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="BigData" scheme="http://chant00.com/categories/BigData/"/>
+    
+    
+      <category term="flume" scheme="http://chant00.com/tags/flume/"/>
+    
+      <category term="数据采集" scheme="http://chant00.com/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/"/>
+    
+      <category term="kafka" scheme="http://chant00.com/tags/kafka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习--互信息(mutual information）的理解</title>
+    <link href="http://chant00.com/2017/09/19/%E4%BA%92%E4%BF%A1%E6%81%AF/"/>
+    <id>http://chant00.com/2017/09/19/互信息/</id>
     <published>2017-09-19T00:47:49.000Z</published>
-    <updated>2017-09-20T11:20:27.000Z</updated>
+    <updated>2017-09-20T13:08:10.000Z</updated>
     
     <summary type="html">
     
@@ -145,7 +170,7 @@
     <link href="http://chant00.com/2017/07/28/Spark%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://chant00.com/2017/07/28/Spark学习笔记/</id>
     <published>2017-07-28T00:47:49.000Z</published>
-    <updated>2017-09-19T04:04:08.000Z</updated>
+    <updated>2017-09-20T16:00:04.000Z</updated>
     
     <summary type="html">
     
@@ -449,30 +474,6 @@
       <category term="HBase" scheme="http://chant00.com/tags/HBase/"/>
     
       <category term="HBase原理及其搭建" scheme="http://chant00.com/tags/HBase%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HADOOP--hadoop运行原理及其搭建</title>
-    <link href="http://chant00.com/2016/11/08/HADOOP--hadoop%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
-    <id>http://chant00.com/2016/11/08/HADOOP--hadoop运行原理及其搭建/</id>
-    <published>2016-11-08T00:47:49.000Z</published>
-    <updated>2017-09-08T14:35:45.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hadoop从运行机制到搭建，加网上常见的天气、好友推荐及协同过滤案列的实践。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Bigdata" scheme="http://chant00.com/categories/Bigdata/"/>
-    
-      <category term="Hadoop" scheme="http://chant00.com/categories/Bigdata/Hadoop/"/>
-    
-    
-      <category term="Hadoop" scheme="http://chant00.com/tags/Hadoop/"/>
-    
-      <category term="hadoop原理及其搭建" scheme="http://chant00.com/tags/hadoop%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
